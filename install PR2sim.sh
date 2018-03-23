@@ -7,11 +7,11 @@ sudo apt-get install ros-kinetic-pr2-common
 apt-get install ros-kinetic-ompl
 
 echo "Creating catkin Workspace for PR2 and MoveIt packages"
-sudo mkdir -p ~/PR2/src
-cd ~/PR2
-git clone https://github.com/DavidTrimoulet/PR2-Kinetic-Xenial.git
+cd ~
+git clone --recurse-submodules https://github.com/DavidTrimoulet/PR2-Kinetic-Xenial.git
+cd PR2-Kinetic-Xenial
 catkin_make
-source ~/PR2/devel/setup.bash
+source ~/PR2-Kinetic-Xenial/devel/setup.bash
 
 echo "Creating catkin Workspace for MoveIt tutorial"
 mkdir -p ~/moveItTuto/src
