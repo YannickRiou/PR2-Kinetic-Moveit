@@ -1,0 +1,27 @@
+sudo apt-get install libfcl0.5 libfcl-0.5-dev scons libbson-dev libglew-dev libglew1.13 ros-kinetic-octomap ros-kinetic-octomap-mapping ros-kinetic-octomap-msgs ros-kinetic-octomap-ros ros-kinetic-octomap-rviz-plugins ros-kinetic-octomap-server ros-kinetic-geometric-shapes ros-kinetic-warehouse-ros ros-kinetic-srdfdom ros-kinetic-object-recognition-msgs ros-kinetic-navigation ros-kinetic-ivcon ros-kinetic-convex-decomposition
+
+sudo apt-get install ros-kinetic-pr2-common
+apt-get install ros-kinetic-ompl
+echo "MoveIt tuto repo creation"
+
+sudo mkdir -p ~\PR2\src
+cd ~\PR2
+catkin_make
+cd ~\PR2\src
+git clone https://github.com/RichardKelley/kinetic_pr2.git
+git clone https://github.com/ros-controls/control_toolbox.git
+git clone https://github.com/ros-controls/realtime_tools.git
+cd ~\PR2
+catkin_make
+
+
+echo "MoveIt tuto repo creation"
+mkdir -p ~/moveittuto/src
+cd ~/moveittuto/src
+git clone https://github.com/ros-planning/moveit_tutorials.git
+git clone https://github.com/ros-planning/moveit_visual_tools
+git clone https://github.com/PickNikRobotics/rviz_visual_tools.git
+git clone https://github.com/davetcoleman/graph_msgs.git
+
+sudo apt-get install pip
+sudo pip install pyassimp
