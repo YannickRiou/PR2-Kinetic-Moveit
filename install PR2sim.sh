@@ -20,4 +20,4 @@ git clone https://github.com/ros-planning/moveit_tutorials.git
 sudo pip install pyassimp
 cd ~/moveItTuto
 catkin_make
-source ~/mmoveItTuto/devel/setup.bash
+source ~/moveItTuto/devel/setup.bash
