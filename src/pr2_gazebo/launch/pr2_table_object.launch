@@ -25,7 +25,7 @@
 
   <!-- spawn table and tabletop object
   <param name="table_description" 
-   command="$(find xacro)/xacro.py '$(find gazebo_worlds)/objects/table.urdf.xacro'" />
+   command="$(find xacro)/xacro '$(find gazebo_worlds)/objects/table.urdf.xacro'" />
   <node name="spawn_table" pkg="gazebo" type="spawn_model" args="-urdf -param table_description -model table_1" 
    respawn="false" output="screen" />
 
