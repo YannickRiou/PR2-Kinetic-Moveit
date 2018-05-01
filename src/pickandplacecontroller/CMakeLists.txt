@@ -1,45 +1,17 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(pr2_demo_controller)
+project(pickandplacecontroller)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
-add_compile_options(-std=c++11)
+# add_compile_options(-std=c++11)
 
-find_package(Eigen3 REQUIRED)
-
-# Eigen 3.2 (Wily) only provides EIGEN3_INCLUDE_DIR, not EIGEN3_INCLUDE_DIRS
-if(NOT EIGEN3_INCLUDE_DIRS)
-  set(EIGEN3_INCLUDE_DIRS ${EIGEN3_INCLUDE_DIR})
-endif()
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED 
-COMPONENTS
-    roscpp
-    rospy
-    std_msgs
-    genmsg
-    moveit_core
-    moveit_ros_planning
-    moveit_ros_planning_interface
-    pluginlib
-    geometric_shapes
-    moveit_visual_tools
-)
+find_package(catkin REQUIRED)
 
 ## System dependencies are found with CMake's conventions
+# find_package(Boost REQUIRED COMPONENTS system)
 
-
-find_package(Boost REQUIRED system filesystem date_time thread)
-
-catkin_package(
-  CATKIN_DEPENDS
-    moveit_core
-    moveit_ros_planning_interface
-    interactive_markers
-  DEPENDS
-    EIGEN3
-)
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
@@ -92,10 +64,10 @@ catkin_package(
 # )
 
 ## Generate added messages and services with any dependencies listed here
-#generate_messages(
+# generate_messages(
 #   DEPENDENCIES
 #   std_msgs  # Or other packages containing msgs
-#)
+# )
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -126,12 +98,12 @@ catkin_package(
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
-#catkin_package(
-#    INCLUDE_DIRS include
-#  LIBRARIES pr2_demo_controller
+catkin_package(
+#  INCLUDE_DIRS include
+#  LIBRARIES pickandplacecontroller
 #  CATKIN_DEPENDS other_catkin_pkg
 #  DEPENDS system_lib
-#)
+)
 
 ###########
 ## Build ##
@@ -139,13 +111,14 @@ catkin_package(
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
-include_directories(SYSTEM ${Boost_INCLUDE_DIR} ${EIGEN3_INCLUDE_DIRS})
-include_directories(${catkin_INCLUDE_DIRS})
-link_directories(${catkin_LIBRARY_DIRS})
+include_directories(
+# include
+# ${catkin_INCLUDE_DIRS}
+)
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/pr2_demo_controller.cpp
+#   src/${PROJECT_NAME}/pickandplacecontroller.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -156,8 +129,8 @@ link_directories(${catkin_LIBRARY_DIRS})
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(${PROJECT_NAME} src/pr2_demo_controller_node.cpp)
-target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+# add_executable(${PROJECT_NAME}_node src/pickandplacecontroller_node.cpp)
+
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -213,7 +186,7 @@ target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_pr2_demo_controller.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_pickandplacecontroller.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

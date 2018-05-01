@@ -1,51 +1,34 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(pr2_mechanism_msgs)
 
-add_compile_options(-std=c++11)
-
-find_package(catkin REQUIRED COMPONENTS
-  std_msgs
+find_package(catkin REQUIRED
   message_generation
+  std_msgs
   actionlib_msgs
-  actionlib
-)
+  )
 
-add_message_files(
-  FILES
+add_action_files(DIRECTORY action FILES
+  SwitchController.action
+  )
+
+add_message_files(DIRECTORY msg FILES
   ActuatorStatistics.msg
   ControllerStatistics.msg
   JointStatistics.msg
   MechanismStatistics.msg
-)
+  )
 
-add_service_files(
-  FILES
+add_service_files(DIRECTORY srv FILES
   ListControllers.srv
-  ListControllerTypes.srv
   LoadController.srv
-  ReloadControllerLibraries.srv
   SwitchController.srv
+  ListControllerTypes.srv
+  ReloadControllerLibraries.srv
   UnloadController.srv
 )
 
-add_action_files(
-  FILES
-  SwitchController.action
-)
-
-generate_messages(
-  DEPENDENCIES
-  std_msgs
-  actionlib_msgs
-)
+generate_messages(DEPENDENCIES std_msgs actionlib_msgs)
 
 catkin_package(
-  CATKIN_DEPENDS std_msgs message_runtime
+  CATKIN_DEPENDS message_runtime
 )
-
-include_directories(
-  ${catkin_INCLUDE_DIRS}
-)
-
-
-
