@@ -1,21 +1,19 @@
 <launch>
- 
   <arg name="gui" default="true"/>
-	
   <param name="/use_sim_time" value="true" />
-
   <!-- start up empty world -->
   <arg name="paused" default="true"/>
   <!-- TODO: throttled not implemented in gazebo_ros/pickplacesimu.launch
   <arg name="throttled" default="false"/>
   -->
-
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" value="$(find pickplacedemo)/worlds/pickplace.world"/>
     <!-- more default parameters can be changed here -->
   </include>
 
-  <include file="$(find pr2_gazebo)/launch/pr2.launch"/>
+  <include file="$(find pr2_gazebo)/launch/pr2.launch">
+    <env name="KINECT2" value="true"/>
+  </include>
 
   <!-- Run the map server -->
   <node name="map_server" pkg="map_server" type="map_server" args="$(find pickplacedemo)/map/my_map.yaml">
@@ -39,5 +37,25 @@
    </include>
  # The visualization component of MoveIt!
   <include file="$(find pr2_moveit_config)/launch/moveit_rviz.launch"/>
+
+  <!-- Run the vision package -->
+  <!-- Launch the tracking node -->
+  <node pkg="visp_auto_tracker" type="visp_auto_tracker" name="visp_auto_tracker" output="screen">
+    <param name="model_path" value="$(find visp_auto_tracker)/models" />
+    <param name="model_name" value="pattern" />
+    <param name="debug_display" value="True" />
+    <!-- param name="code_message" value="Ver1" / -->
+    
+    <remap from="/visp_auto_tracker/camera_info" to="/head_mount_kinect2/rgb/camera_info"/>
+    <remap from="/visp_auto_tracker/image_raw" to="/head_mount_kinect2/rgb/image_raw"/>
+  </node>
+
+  <!-- Launch the viewer -->
+  <!-- node pkg="visp_tracker" type="visp_tracker_viewer" name="tracker_mbt_viewer" output="screen">
+    <param name="camera_prefix" value="/camera" />
+    <param name="frame_size" value="0.1" />
+    <remap from="/camera/image_rect" to="/camera/image_raw"/>
+    <remap from="/object_position_covariance" to="/visp_auto_tracker/object_position_covariance"/>
+  </node -->
 
 </launch>
