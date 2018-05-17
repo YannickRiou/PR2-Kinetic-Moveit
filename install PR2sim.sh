@@ -4,7 +4,18 @@ echo "Installing dependancies"
 sudo apt-get install libfcl0.5 libfcl-0.5-dev scons libbson-dev libglew-dev libglew1.13 ros-kinetic-octomap ros-kinetic-octomap-mapping ros-kinetic-octomap-msgs ros-kinetic-octomap-ros ros-kinetic-octomap-rviz-plugins ros-kinetic-octomap-server ros-kinetic-geometric-shapes ros-kinetic-warehouse-ros ros-kinetic-srdfdom ros-kinetic-object-recognition-msgs ros-kinetic-navigation ros-kinetic-ivcon ros-kinetic-convex-decomposition python-pip
 
 sudo apt-get install ros-kinetic-pr2-common
-apt-get install ros-kinetic-ompl
+sudo apt-get install ros-kinetic-image-geometry
+sudo apt-get install ros-kinetic-cv-bridge
+sudo apt-get install ros-kinetic-perceptions-pcl
+sudo apt-get install ros-kinetic-gazebo-plugins
+sudo apt-get install ros-kinetic-ompl
+
+#gestion des contrler pour teleop
+sudo apt-get install libusb-dev
+sudo apt-get install libspnav-dev
+sudo apt-get install libbluetooth-dev
+sudo apt-get install libcwiid-dev
+
 
 echo "Creating catkin Workspace for PR2 and MoveIt packages"
 cd ~

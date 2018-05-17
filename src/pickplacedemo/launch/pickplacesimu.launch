@@ -1,5 +1,6 @@
 <launch>
-
+  <master auto="start"/>
+  
   <arg name="gui" default="true"/>
 	
   <param name="/use_sim_time" value="true" />
@@ -18,10 +19,12 @@
   <include file="$(find pr2_gazebo)/launch/pr2.launch"/>
 
   <!-- Run the map server -->
-  <node name="map_server" pkg="map_server" type="map_server" args="$(find pickplacedemo)/map/my_map.pgm my_map_resolution"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find pickplacedemo)/map/my_map.yaml">
+    <param name="frame_id" value="/odom_combined" />
+  </node>
 
-  <!--- Run AMCL -->
-  <include file="$(find amcl)/examples/amcl_omni.launch" />
+  #<!--- Run AMCL -->
+  #<include file="$(find amcl)/examples/amcl_omni.launch" />
 
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
     <rosparam file="$(find pickplacedemo)/navigationcost/costmap_common_params.yaml" command="load" ns="global_costmap" />
@@ -31,6 +34,7 @@
     <rosparam file="$(find pickplacedemo)/navigationcost/base_local_planner_params.yaml" command="load" />
   </node>
 
+  <!-- Run moveIt -->
   <include file="$(find pr2_moveit_config)/launch/move_group.launch">
     <arg name="publish_monitored_planning_scene" value="true" />
    </include>
