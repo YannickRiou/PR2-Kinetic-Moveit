@@ -1,6 +1,3 @@
-[submodule "src/control_toolbox"]
-	path = src/control_toolbox
-	url = https://github.com/ros-controls/control_toolbox.git
 [submodule "src/graph_msgs"]
 	path = src/graph_msgs
 	url = https://github.com/davetcoleman/graph_msgs.git
