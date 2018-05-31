@@ -16,11 +16,14 @@ sudo apt-get install libspnav-dev
 sudo apt-get install libbluetooth-dev
 sudo apt-get install libcwiid-dev
 
+#intallation du package de vision
 
 echo "Creating catkin Workspace for PR2 and MoveIt packages"
 cd ~
 git clone --recurse-submodules https://github.com/DavidTrimoulet/PR2-Kinetic-Xenial.git
 cd PR2-Kinetic-Xenial
+rosdep install --from-paths src/vision_visp/ --rosdistro kinetic
+rosdep install --from-paths src/ar_track_alvar/ --rosdistro kinetic
 catkin_make
 source ~/PR2-Kinetic-Xenial/devel/setup.bash
 

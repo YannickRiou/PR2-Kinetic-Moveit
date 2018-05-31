@@ -349,69 +349,6 @@
       </link>
       <pose frame=''>-0.219265 -0.317117 0 0 -0 0</pose>
     </model>
-    <model name='wood_cube_10cm_0'>
-      <link name='link'>
-        <pose frame=''>0 0 0.05 0 -0 0</pose>
-        <inertial>
-          <mass>0.5167</mass>
-          <inertia>
-            <ixx>0.000861167</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>0.000861167</iyy>
-            <iyz>0</iyz>
-            <izz>0.000861167</izz>
-          </inertia>
-        </inertial>
-        <collision name='collision'>
-          <geometry>
-            <box>
-              <size>0.1 0.1 0.1</size>
-            </box>
-          </geometry>
-          <surface>
-            <contact>
-              <poissons_ratio>0.347</poissons_ratio>
-              <elastic_modulus>8.8e+09</elastic_modulus>
-              <ode>
-                <kp>100000</kp>
-                <kd>100</kd>
-                <max_vel>100</max_vel>
-                <min_depth>0.001</min_depth>
-              </ode>
-            </contact>
-            <friction>
-              <torsional>
-                <coefficient>1</coefficient>
-                <use_patch_radius>0</use_patch_radius>
-                <surface_radius>0.01</surface_radius>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-            <bounce/>
-          </surface>
-          <max_contacts>10</max_contacts>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <box>
-              <size>0.1 0.1 0.1</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Wood</name>
-            </script>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-      <pose frame=''>0.212576 -0.36158 0 0 -0 0</pose>
-    </model>
     <model name='wood_cube_10cm_1'>
       <link name='link'>
         <pose frame=''>0 0 0.05 0 -0 0</pose>
@@ -476,10 +413,80 @@
       <pose frame=''>0.526906 -0.31812 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>446 431000000</sim_time>
-      <real_time>449 148688868</real_time>
-      <wall_time>1525176961 696012251</wall_time>
-      <iterations>446431</iterations>
+      <sim_time>1675 96000000</sim_time>
+      <real_time>264 39339029</real_time>
+      <wall_time>1527435569 118076697</wall_time>
+      <iterations>223994</iterations>
+      <model name='0a5'>
+        <pose frame=''>1.63574 -0.003485 1.04 9e-06 -0.000153 0.302592</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>1.63574 -0.003485 1.04 9e-06 -0.000153 0.302592</pose>
+          <velocity>-0.002542 -0.001126 0.003742 -0.093362 0.012501 0.094857</velocity>
+          <acceleration>0.830518 -7.76917 3.14877 2.76143 -0.749974 -1.12538</acceleration>
+          <wrench>0.429129 -4.01433 1.62697 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='adream'>
+        <pose frame=''>-0.644278 5.56642 -0.025927 2.1e-05 1.2e-05 -0.000132</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>-0.644277 5.56642 0.024073 2.1e-05 1.2e-05 -0.000132</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.014773 -0.371852 19.1384 3.00717 -0.587429 0.000428</acceleration>
+          <wrench>-0.014773 -0.371852 19.1384 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='calibration'>
+        <pose frame=''>1.2405 -0.310577 1.11499 1.57079 2.6e-05 -1.66088</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>1.2405 -0.310577 1.11499 1.57079 2.6e-05 -1.66088</pose>
+          <velocity>2.4e-05 -0.006177 -0.002941 -0.059197 -0.000786 -5.9e-05</velocity>
+          <acceleration>-0.16568 -1.32728 -2.88647 1.77396 -0.996829 -0.911914</acceleration>
+          <wrench>-0.085607 -0.685804 -1.49144 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cube1'>
+        <pose frame=''>1.77061 -0.445705 0.039999 -9e-06 -1.7e-05 2.50931</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>1.77061 -0.445705 0.039999 -9e-06 -1.7e-05 2.50931</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 -9.8 0 -0 0</acceleration>
+          <wrench>0 0 -5.06366 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cube1Big'>
+        <pose frame=''>1.2739 -0.033951 1.11499 -1.9e-05 -2e-06 -0.045568</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>1.2739 -0.033951 1.11499 -1.9e-05 -2e-06 -0.045568</pose>
+          <velocity>-0.000284 0.00698 -0.006055 -0.013114 -0.000776 -0.000639</velocity>
+          <acceleration>0 0 -9.8 0 -0 0</acceleration>
+          <wrench>0 0 -5.06366 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cube1_0'>
+        <pose frame=''>1.66842 0.707734 0.039992 2.3558 -1.57078 1.52331</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>1.66842 0.707734 0.039992 2.3558 -1.57078 1.52331</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 -9.8 0 -0 0</acceleration>
+          <wrench>0 0 -5.06366 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cube1_1'>
+        <pose frame=''>1.29593 0.145799 1.15495 -9.8e-05 0.000362 0.018144</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>1.29593 0.145799 1.15495 -9.8e-05 0.000362 0.018144</pose>
+          <velocity>0.002076 0.002783 -0.003191 -0.04154 0.001748 -8.2e-05</velocity>
+          <acceleration>-0.063541 -0.906939 -0.568569 -2.90726 1.00812 -0.132246</acceleration>
+          <wrench>-0.032831 -0.468616 -0.293779 0 -0 0</wrench>
+        </link>
+      </model>
       <model name='ground_plane'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -491,55 +498,514 @@
         </link>
       </model>
       <model name='table'>
-        <pose frame=''>1.55482 -0.353205 -1e-06 0 2e-06 -1.56079</pose>
+        <pose frame=''>1.50572 0.080708 -6e-06 0 1e-05 -1.57283</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>1.55482 -0.353205 -1e-06 0 2e-06 -1.56079</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0.004362 0.001167 0.241136 2.40088 0.142435 0.00248</acceleration>
-          <wrench>0.004362 0.001167 0.241136 0 -0 0</wrench>
+          <pose frame=''>1.50572 0.080708 -6e-06 0 1e-05 -1.57283</pose>
+          <velocity>-3.4e-05 0 -0.001181 0.011931 0.000154 -4.5e-05</velocity>
+          <acceleration>-0.03355 0.000229 -1.18108 -0.63535 0.153795 -0.044911</acceleration>
+          <wrench>-0.03355 0.000229 -1.18108 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='test5'>
+        <pose frame=''>1.30647 0.311046 1.115 -7e-06 1e-06 -0.443422</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>1.30647 0.311046 1.115 -7e-06 1e-06 -0.443422</pose>
+          <velocity>-0.000435 -0.010829 0.011758 -0.012335 -0.005656 -7.2e-05</velocity>
+          <acceleration>-1.96405 -9.76838 25.404 -0.951768 -1.04142 3.00337</acceleration>
+          <wrench>-1.01483 -5.04732 13.1263 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='test5_0'>
+        <pose frame=''>1.70008 -0.133363 1.11499 -3e-06 4e-05 0.591137</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>1.70008 -0.133363 1.11499 -3e-06 4e-05 0.591137</pose>
+          <velocity>0.003788 0.010602 -0.00424 -0.003687 0.040515 -0.004196</velocity>
+          <acceleration>0.36935 -0.574521 -8.84245 1.47198 -0.833028 -1.10041</acceleration>
+          <wrench>0.190843 -0.296855 -4.5689 0 -0 0</wrench>
         </link>
       </model>
       <model name='wood_cube_10cm'>
-        <pose frame=''>1.5923 -0.107227 1.01499 -1.9e-05 -0 -7.4e-05</pose>
+        <pose frame=''>1.28086 0.136765 1.01496 -0.000188 0.000316 -0.039556</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>1.5923 -0.107226 1.06499 -1.9e-05 -0 -7.4e-05</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0.088085 -5.01804 0.880521 -0.452768 -1.20787 0.016887</acceleration>
-          <wrench>0.045513 -2.59282 0.454965 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='wood_cube_10cm_0'>
-        <pose frame=''>1.65675 -0.555162 1.06499 1.5708 -1.9e-05 -1.55332</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>1.60676 -0.556036 1.06499 1.5708 -1.9e-05 -1.55332</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0.089024 -5.02115 -0.566726 -0.440054 -1.21294 0.001974</acceleration>
-          <wrench>0.045999 -2.59443 -0.292827 0 -0 0</wrench>
+          <pose frame=''>1.28088 0.136774 1.06496 -0.000188 0.000316 -0.039556</pose>
+          <velocity>0.001065 -0.00243 -0.003596 -0.07108 0.018807 -7.3e-05</velocity>
+          <acceleration>0.007991 -10.5969 0.141842 -3.05593 -1.00204 -0.103106</acceleration>
+          <wrench>0.004129 -5.47541 0.07329 0 -0 0</wrench>
         </link>
       </model>
       <model name='wood_cube_10cm_1'>
-        <pose frame=''>1.59681 -0.326942 1.01499 -1.9e-05 -0 6.9e-05</pose>
+        <pose frame=''>1.57452 -0.042017 -0.001013 0 -0 0.066069</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>1.59681 -0.326941 1.06499 -1.9e-05 -0 6.9e-05</pose>
+          <pose frame=''>1.57452 -0.042017 0.048987 0 -0 0.066069</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0.089279 -5.02121 0.172102 -0.43115 -1.21327 0.003398</acceleration>
-          <wrench>0.04613 -2.59446 0.088925 0 -0 0</wrench>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <light name='sun'>
         <pose frame=''>0 0 10 0 -0 0</pose>
       </light>
+      <light name='user_directional_light_0'>
+        <pose frame=''>-1.36214 0.110534 2.4241 0 -0.950678 0</pose>
+      </light>
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>-4.1369 -0.576296 2.75142 0 0.379644 -0.043808</pose>
+        <pose frame=''>-1.44325 0.106795 1.2433 0 0.221797 -0.144658</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
     </gui>
+    <model name='cube1'>
+      <link name='link_0'>
+        <inertial>
+          <mass>0.5167</mass>
+          <inertia>
+            <ixx>0.000861167</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000861167</iyy>
+            <iyz>0</iyz>
+            <izz>0.000861167</izz>
+          </inertia>
+        </inertial>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://cube1/meshes/cube1.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://cube1/meshes/cube1.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>1.01393 -0.294478 0 0 -0 0</pose>
+    </model>
+    <light name='user_directional_light_0' type='directional'>
+      <pose frame=''>-2.70975 -0.951327 1 0 -0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <direction>0.1 0.1 -0.9</direction>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>1</cast_shadows>
+    </light>
+    <model name='cube1_0'>
+      <link name='link_0'>
+        <inertial>
+          <mass>0.5167</mass>
+          <inertia>
+            <ixx>0.000861167</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000861167</iyy>
+            <iyz>0</iyz>
+            <izz>0.000861167</izz>
+          </inertia>
+        </inertial>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://cube1/meshes/cube1.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://cube1/meshes/cube1.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>1.50545 -0.51342 0 0 -0 0</pose>
+    </model>
+    <model name='adream'>
+      <link name='link_0'>
+        <pose frame=''>0 0 0.05 0 -0 0</pose>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://adream/meshes/adream_empty.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://adream/meshes/adream_empty.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <inertial>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-0.044274 5.46716 0 0 -0 0</pose>
+    </model>
+    <model name='0a5'>
+      <link name='link_0'>
+        <inertial>
+          <mass>0.5167</mass>
+          <inertia>
+            <ixx>0.000861167</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000861167</iyy>
+            <iyz>0</iyz>
+            <izz>0.000861167</izz>
+          </inertia>
+        </inertial>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://0a5/meshes/0a5.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://0a5/meshes/0a5.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>1.468 -0.302912 0 0 -0 0</pose>
+    </model>
+    <model name='test5'>
+      <link name='link_0'>
+        <inertial>
+          <mass>0.5167</mass>
+          <inertia>
+            <ixx>0.000861167</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000861167</iyy>
+            <iyz>0</iyz>
+            <izz>0.000861167</izz>
+          </inertia>
+        </inertial>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://test5/meshes/test5.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://test5/meshes/test5.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>1.73072 0.425201 0 0 -0 0</pose>
+    </model>
+    <model name='test5_0'>
+      <link name='link_0'>
+        <inertial>
+          <mass>0.5167</mass>
+          <inertia>
+            <ixx>0.000861167</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000861167</iyy>
+            <iyz>0</iyz>
+            <izz>0.000861167</izz>
+          </inertia>
+        </inertial>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://test5/meshes/test5.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://test5/meshes/test5.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>0.443774 -0.36243 0 0 -0 0</pose>
+    </model>
+    <model name='cube1_1'>
+      <link name='link_0'>
+        <inertial>
+          <mass>0.5167</mass>
+          <inertia>
+            <ixx>0.000861167</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000861167</iyy>
+            <iyz>0</iyz>
+            <izz>0.000861167</izz>
+          </inertia>
+        </inertial>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://cube1/meshes/cube1.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://cube1/meshes/cube1.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>1.54229 0.66215 0 0 -0 0</pose>
+    </model>
+    <model name='calibration'>
+      <link name='link_0'>
+        <inertial>
+          <mass>0.5167</mass>
+          <inertia>
+            <ixx>0.000861167</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000861167</iyy>
+            <iyz>0</iyz>
+            <izz>0.000861167</izz>
+          </inertia>
+        </inertial>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://calibration/meshes/calibration.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://calibration/meshes/calibration.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>0.693535 0.230818 0 0 -0 0</pose>
+    </model>
+    <model name='cube1Big'>
+      <link name='link_0'>
+        <inertial>
+          <mass>0.5167</mass>
+          <inertia>
+            <ixx>0.000861167</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000861167</iyy>
+            <iyz>0</iyz>
+            <izz>0.000861167</izz>
+          </inertia>
+        </inertial>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://cube1Big/meshes/cube1Big.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://cube1Big/meshes/cube1Big.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>1.271 0.119613 0 0 -0 0</pose>
+    </model>
   </world>
 </sdf>

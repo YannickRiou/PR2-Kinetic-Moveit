@@ -1,0 +1,13 @@
+<launch>
+  <!-- Launch the viewer -->
+  <node pkg="visp_tracker" type="visp_tracker_viewer" name="tracker_viewer" output="screen">
+    <param name="camera_prefix" value="/camera" />
+    <param name="frame_size" value="0.1" />
+    <param name="tracker_name" value="visp_auto_tracker" />
+    
+    <remap from="/camera/image_rect" to="/head_mount_kinect2/rgb/image_raw"/>
+    <remap from="/camera/camera_info" to="/head_mount_kinect2/rgb/camera_info"/>
+    <remap from="/object_position_covariance" to="/visp_auto_tracker/object_position_covariance"/>
+    <remap from="/object_position" to="/visp_auto_tracker/object_position"/>
+  </node>
+</launch>
