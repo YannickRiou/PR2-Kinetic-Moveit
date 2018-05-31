@@ -1,3 +1,0 @@
-[submodule "src/rviz_visual_tools"]
-	path = src/rviz_visual_tools
-	url = https://github.com/PickNikRobotics/rviz_visual_tools.git
