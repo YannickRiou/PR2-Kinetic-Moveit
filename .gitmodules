@@ -1,6 +1,3 @@
-[submodule "src/graph_msgs"]
-	path = src/graph_msgs
-	url = https://github.com/davetcoleman/graph_msgs.git
 [submodule "src/moveit_visual_tools"]
 	path = src/moveit_visual_tools
 	url = https://github.com/ros-planning/moveit_visual_tools
