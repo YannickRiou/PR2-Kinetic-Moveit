@@ -40,7 +40,9 @@ public:
 
 	void executeCB(const actioncontroller::TuckArmGoalConstPtr &goal){
 		ros::Rate r(1);
-		bool success;
+		bool success_r;
+		bool success_l;
+		bool success_h;
 		feedback_.sequence.clear();
 
 		ROS_INFO("Starting to compute path to arm tucked");
@@ -56,6 +58,10 @@ public:
 		moveit::planning_interface::MoveGroupInterface move_group_right(RIGHT_ARM);
 		const robot_state::JointModelGroup* joint_model_group_right = move_group_right.getCurrentState()->getJointModelGroup(RIGHT_ARM);
 
+		static const std::string HEAD = "head";
+		moveit::planning_interface::MoveGroupInterface move_group_head(HEAD);
+		const robot_state::JointModelGroup* joint_model_group_head = move_group_head.getCurrentState()->getJointModelGroup(HEAD);
+
 		ROS_INFO_NAMED("tuckArm", "Reference frame: %s for left arm", move_group_left.getPlanningFrame().c_str());
 		ROS_INFO_NAMED("tuckArm", "Reference frame: %s for right arm", move_group_right.getPlanningFrame().c_str());
 
@@ -66,35 +72,51 @@ public:
   		target_left.position.z = 0.5;
 		move_group_left.setPoseTarget(target_left);
 
+		//Execution du plan
+		moveit::planning_interface::MoveGroupInterface::Plan my_plan;
+		success_l = (move_group_left.plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
+		if(success_l){
+			move_group_left.move();
+		}else{
+			ROS_INFO_NAMED("TuckArm", "No path found for left arm");
+		}
+
 		geometry_msgs::Pose target_right;
 		target_right.orientation.w = 1.0;
   		target_right.position.x = 0.28;
   		target_right.position.y = -0.2;
   		target_right.position.z = 0.5;
 		move_group_right.setPoseTarget(target_right);
-
-		//Execution du plan
-		moveit::planning_interface::MoveGroupInterface::Plan my_plan;
-		success = (move_group_left.plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
-		if(success){
-			move_group_left.move();
-		}else{
-			ROS_INFO_NAMED("TuckArm", "No path found for left arm");
-		}
-
+		
 		my_plan = moveit::planning_interface::MoveGroupInterface::Plan();
-		success = (move_group_right.plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
+		success_r = (move_group_right.plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
 
-		if(success){
+		if(success_r){
 			move_group_right.move();
 		}else{
 			ROS_INFO_NAMED("TuckArm", "No path found for right_arm");
 		}
 		
-		//Deplacement de la base
+		geometry_msgs::Pose target_head;
+		target_right.orientation.w = 0;
+		target_right.orientation.x = 1;
+		target_right.orientation.y = 0;
+		target_right.orientation.z = 0;
+  		target_right.position.x = 0;
+  		target_right.position.y = 0;
+  		target_right.position.z = 0;
+		move_group_head.setPoseTarget(target_head);
+		my_plan = moveit::planning_interface::MoveGroupInterface::Plan();
+		success_h = (move_group_head.plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
 
+		if(success_h){
+			move_group_head.move();
+		}else{
+			ROS_INFO_NAMED("TuckArm", "No path found for head");
+		}
+		
 
-		if(success)
+		if(success_h && success_r && success_l)
 	    {
 		    result_.sequence = feedback_.sequence;
 	        ROS_INFO("%s: Succeeded", action_name_.c_str());
