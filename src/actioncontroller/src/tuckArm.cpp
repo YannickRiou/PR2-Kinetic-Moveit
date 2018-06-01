@@ -17,9 +17,19 @@
 class TuckArmAction
 {
 private:
-	void initMoveIt(){
-		
+	void toQuaternion(geometry_msgs::Pose *p ,double pitch, double roll, double yaw){
+        // Abbreviations for the various angular functions
+	double cy = cos(yaw * 0.5);
+	double sy = sin(yaw * 0.5);
+	double cr = cos(roll * 0.5);
+	double sr = sin(roll * 0.5);
+	double cp = cos(pitch * 0.5);
+	double sp = sin(pitch * 0.5);
 
+	p->orientation.w = cy * cr * cp + sy * sr * sp;
+	p->orientation.x = cy * sr * cp - sy * cr * sp;
+	p->orientation.y = cy * cr * sp + sy * sr * cp;
+	p->orientation.z = sy * cr * cp - cy * sr * sp;
 	}
 protected:
 	ros::NodeHandle nh_;
@@ -64,7 +74,7 @@ public:
 
 		ROS_INFO_NAMED("tuckArm", "Reference frame: %s for left arm", move_group_left.getPlanningFrame().c_str());
 		ROS_INFO_NAMED("tuckArm", "Reference frame: %s for right arm", move_group_right.getPlanningFrame().c_str());
-
+		ROS_INFO_NAMED("tuckArm", "Reference frame: %s for right arm", move_group_head.getPlanningFrame().c_str());
 		geometry_msgs::Pose target_left;
 		target_left.orientation.w = 1.0;
   		target_left.position.x = 0.28;
@@ -97,14 +107,23 @@ public:
 			ROS_INFO_NAMED("TuckArm", "No path found for right_arm");
 		}
 		
+
+		my_plan = moveit::planning_interface::MoveGroupInterface::Plan();
 		geometry_msgs::Pose target_head;
-		target_right.orientation.w = 0;
-		target_right.orientation.x = 1;
-		target_right.orientation.y = 0;
-		target_right.orientation.z = 0;
-  		target_right.position.x = 0;
-  		target_right.position.y = 0;
-  		target_right.position.z = 0;
+		//toQuaternion(&target_head, 10, 20, 30 );
+		target_head.position.x = move_group_head.getCurrentPose().pose.position.x;
+  		target_head.position.y = move_group_head.getCurrentPose().pose.position.y;
+  		target_head.position.z = move_group_head.getCurrentPose().pose.position.z;
+  		//target_head.orientation.x = -0.05;
+  		//target_head.orientation.y = 0.52821;
+  		//target_head.orientation.z = 0.0771891;
+  		target_head.orientation.w = 1;
+
+		std::stringstream ss;
+
+		ss << " x:" << move_group_head.getCurrentPose().pose.position.x << " y:" << move_group_head.getCurrentPose().pose.position.y << " z:" << move_group_head.getCurrentPose().pose.position.z
+		<< " ox:" << move_group_head.getCurrentPose().pose.orientation.x << " oy:" << move_group_head.getCurrentPose().pose.orientation.y << " oz:" << move_group_head.getCurrentPose().pose.orientation.z << " ow:" << move_group_head.getCurrentPose().pose.orientation.w;
+		ROS_INFO_NAMED("TuckArm, head", "End effector link: %s", ss.str().c_str());
 		move_group_head.setPoseTarget(target_head);
 		my_plan = moveit::planning_interface::MoveGroupInterface::Plan();
 		success_h = (move_group_head.plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
