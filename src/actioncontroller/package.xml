@@ -61,6 +61,7 @@
   <depend>interactive_markers</depend>
   <depend>geometric_shapes</depend>
   <depend>moveit_visual_tools</depend>
+  <depend>move_base_msgs</depend>
 
 
 

@@ -24,6 +24,7 @@ find_package(catkin REQUIRED
     moveit_ros_planning_interface
     pluginlib
 	geometric_shapes
+	move_base_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -125,6 +126,7 @@ catkin_package(
   INCLUDE_DIRS
     ${THIS_PACKAGE_INCLUDE_DIRS}
   CATKIN_DEPENDS
+	move_base_msgs
     moveit_core
     moveit_visual_tools
     moveit_ros_planning_interface
