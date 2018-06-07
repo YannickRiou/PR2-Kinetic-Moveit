@@ -12,27 +12,29 @@
 
 //MoveBase
 #include <move_base_msgs/MoveBaseAction.h>
+#include <pr2_controllers_msgs/PointHeadAction.h>
 
 
 class ActionController
 {
 private:
+
 	void toQuaternion(geometry_msgs::Pose *p ,double pitch, double roll, double yaw){
         // Abbreviations for the various angular functions
-	double cy = cos(yaw * 0.5);
-	double sy = sin(yaw * 0.5);
-	double cr = cos(roll * 0.5);
-	double sr = sin(roll * 0.5);
-	double cp = cos(pitch * 0.5);
-	double sp = sin(pitch * 0.5);
+		double cy = cos(yaw * 0.5);
+		double sy = sin(yaw * 0.5);
+		double cr = cos(roll * 0.5);
+		double sr = sin(roll * 0.5);
+		double cp = cos(pitch * 0.5);
+		double sp = sin(pitch * 0.5);
 
-	p->orientation.w = cy * cr * cp + sy * sr * sp;
-	p->orientation.x = cy * sr * cp - sy * cr * sp;
-	p->orientation.y = cy * cr * sp + sy * sr * cp;
-	p->orientation.z = sy * cr * cp - cy * sr * sp;
+		p->orientation.w = cy * cr * cp + sy * sr * sp;
+		p->orientation.x = cy * sr * cp - sy * cr * sp;
+		p->orientation.y = cy * cr * sp + sy * sr * cp;
+		p->orientation.z = sy * cr * cp - cy * sr * sp;
 	}
 
-	bool move_body(std::string group, geometry_msgs::Pose pose){
+	bool move_arms(std::string group, geometry_msgs::Pose pose){
 		moveit::planning_interface::MoveGroupInterface move_group(group);
 		move_group.setPoseTarget(pose);
 		moveit::planning_interface::MoveGroupInterface::Plan my_plan;
@@ -46,7 +48,7 @@ private:
 		return success;
 	}
 
-	bool move_base(std::string group, geometry_msgs::Pose pose){
+	bool move_base(geometry_msgs::Pose pose){
 
 		actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> ac_("move_base", true);
 		while(!ac_.waitForServer(ros::Duration(5.0))){
@@ -62,7 +64,7 @@ private:
 		ROS_INFO("Sending goal to move base");
 		ac_.sendGoal(goal);
 		ROS_INFO("wating for result");
-		ac_.waitForResult();
+
 		bool success = (ac_.getState() == actionlib::SimpleClientGoalState::SUCCEEDED);
 
 		if(success)
@@ -71,7 +73,39 @@ private:
 				(std::to_string(pose.position.y)).c_str(), 
 				(std::to_string(pose.position.z)).c_str()  );
 		else
-			ROS_INFO("The base failed to move forward 1 meter for some reason");
+			ROS_INFO("The base failed to move for some reason");
+		
+		return success;
+	}
+
+	bool move_head(geometry_msgs::Pose pose){
+
+		actionlib::SimpleActionClient<pr2_controllers_msgs::PointHeadAction> ac_("head_traj_controller/point_head_action", true);
+		while(!ac_.waitForServer(ros::Duration(5.0))){
+			ROS_INFO("Waiting for the move_base action server to come up");
+		}
+		ROS_INFO("moving the head to %s, %s, %s",  
+				(std::to_string(pose.position.x)).c_str(), 
+				(std::to_string(pose.position.y)).c_str(), 
+				(std::to_string(pose.position.z)).c_str()  );
+
+		pr2_controllers_msgs::PointHeadGoal msg;
+		//msg.header.stamp = ros::Time::now();
+		msg.target.header.frame_id = "odom_combined";
+		msg.target.point.x = pose.position.x;
+		msg.target.point.y = pose.position.y;
+		msg.target.point.z = pose.position.z;
+		ac_.sendGoal(msg);
+
+		bool success = (ac_.getState() == actionlib::SimpleClientGoalState::SUCCEEDED);
+
+		if(success)
+			ROS_INFO("Hooray, the base moved to x: %s, y:%s, z:%s", 
+				(std::to_string(pose.position.x)).c_str(), 
+				(std::to_string(pose.position.y)).c_str(), 
+				(std::to_string(pose.position.z)).c_str()  );
+		else
+			ROS_INFO("The base failed to move for some reason");
 		
 		return success;
 	}
@@ -100,9 +134,12 @@ public:
 	void executeCB(const actioncontroller::ActionControllerGoalConstPtr &goal){
 		ros::Rate r(1);
 		if(goal->goal.move_group_id == "base"){
-			feedback_.success = move_base((std::string)goal->goal.move_group_id, (geometry_msgs::Pose)goal->goal.pose.pose);
-		}else{
-			feedback_.success = move_body((std::string)goal->goal.move_group_id, (geometry_msgs::Pose)goal->goal.pose.pose);	
+			feedback_.success = move_base( (geometry_msgs::Pose)goal->goal.pose.pose );
+		}else if(goal->goal.move_group_id == "head"){
+			feedback_.success = move_head( (geometry_msgs::Pose)goal->goal.pose.pose);
+		}
+		else{
+			feedback_.success = move_arms((std::string)goal->goal.move_group_id, (geometry_msgs::Pose)goal->goal.pose.pose);	
 		}
 		result_.success = feedback_.success;
 		as_.setSucceeded(result_);
@@ -114,6 +151,7 @@ int main(int argc, char** argv)
 	ros::init(argc, argv, "ActionController"); 
 	ActionController _myController("ActionController");
 
-	ros::spin(); 
+	ros::spin();
+
 	return 0;
 }
