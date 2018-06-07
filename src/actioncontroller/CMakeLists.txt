@@ -155,8 +155,8 @@ target_link_libraries(tuckArm ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 install(TARGETS tuckArm DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
 
-add_dependencies(ActionController actioncontroller_gencpp)
 add_executable(ActionController src/ActionController.cpp)
+add_dependencies(ActionController actioncontroller_gencpp)
 target_link_libraries(ActionController ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 install(TARGETS ActionController DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
