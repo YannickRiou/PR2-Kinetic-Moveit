@@ -19,12 +19,14 @@ find_package(catkin REQUIRED
 	rospy 
 	roscpp
 	moveit_core
-    moveit_visual_tools
-    moveit_ros_planning
-    moveit_ros_planning_interface
-    pluginlib
+  moveit_visual_tools
+  moveit_ros_planning
+  moveit_ros_planning_interface
+  pluginlib
 	geometric_shapes
 	move_base_msgs
+  message_generation
+  std_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -61,11 +63,12 @@ find_package(Boost REQUIRED system filesystem date_time thread)
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
+ add_message_files(
+   FILES
+   actiongoal.msg
 #   Message1.msg
 #   Message2.msg
-# )
+ )
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -77,14 +80,16 @@ find_package(Boost REQUIRED system filesystem date_time thread)
 ## Generate actions in the 'action' folder
  add_action_files(
    DIRECTORY action
-   FILES TuckArm.action
+   FILES TuckArm.action ActionController.action
  )
 
 ## Generate added messages and services with any dependencies listed here
  generate_messages(
    DEPENDENCIES
    actionlib_msgs
-   std_msgs  # Or other packages containing msgs
+   std_msgs
+   geometry_msgs
+   # Or other packages containing msgs
  )
 
 ################################################
@@ -149,13 +154,19 @@ add_executable(tuckArm src/tuckArm.cpp)
 target_link_libraries(tuckArm ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 install(TARGETS tuckArm DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
+
+add_dependencies(ActionController actioncontroller_gencpp)
+add_executable(ActionController src/ActionController.cpp)
+target_link_libraries(ActionController ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+install(TARGETS ActionController DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
 #############
 ## Install ##
 #############
 
 # all install targets should use catkin DESTINATION variables
 # See http://ros.org/doc/api/catkin/html/adv_user_guide/variables.html
-
+ 
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
 # install(PROGRAMS
