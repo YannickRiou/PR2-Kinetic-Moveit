@@ -5,8 +5,8 @@
       <author>Blender User</author>
       <authoring_tool>Blender 2.79.0 commit date:2018-03-22, commit time:14:10, hash:f4dc9f9d68b</authoring_tool>
     </contributor>
-    <created>2018-06-07T17:31:18</created>
-    <modified>2018-06-07T17:31:18</modified>
+    <created>2018-06-08T09:12:21</created>
+    <modified>2018-06-08T09:12:21</modified>
     <unit name="centimeter" meter="0.01"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -104,27 +104,27 @@
     </light>
   </library_lights>
   <library_images>
-    <image id="QRcode_bordered_jpg" name="QRcode_bordered_jpg">
-      <init_from>QRcode_bordered.jpg</init_from>
+    <image id="static_qr_code_without_logo_jpg" name="static_qr_code_without_logo_jpg">
+      <init_from>static_qr_code_without_logo.jpg</init_from>
     </image>
   </library_images>
   <library_effects>
-    <effect id="QRcode_bordered_jpg-effect">
+    <effect id="static_qr_code_without_logo_jpg-effect">
       <profile_COMMON>
-        <newparam sid="QRcode_bordered_jpg-surface">
+        <newparam sid="static_qr_code_without_logo_jpg-surface">
           <surface type="2D">
-            <init_from>QRcode_bordered_jpg</init_from>
+            <init_from>static_qr_code_without_logo_jpg</init_from>
           </surface>
         </newparam>
-        <newparam sid="QRcode_bordered_jpg-sampler">
+        <newparam sid="static_qr_code_without_logo_jpg-sampler">
           <sampler2D>
-            <source>QRcode_bordered_jpg-surface</source>
+            <source>static_qr_code_without_logo_jpg-surface</source>
           </sampler2D>
         </newparam>
         <technique sid="common">
           <phong>
             <diffuse>
-              <texture texture="QRcode_bordered_jpg-sampler" texcoord="QRcode_bordered_jpg"/>
+              <texture texture="static_qr_code_without_logo_jpg-sampler" texcoord="static_qr_code_without_logo_jpg"/>
             </diffuse>
             <specular>
               <color sid="specular">0 0 0 1</color>
@@ -135,8 +135,8 @@
     </effect>
   </library_effects>
   <library_materials>
-    <material id="QRcode_bordered_jpg-material" name="QRcode_bordered_jpg">
-      <instance_effect url="#QRcode_bordered_jpg-effect"/>
+    <material id="static_qr_code_without_logo_jpg-material" name="static_qr_code_without_logo_jpg">
+      <instance_effect url="#static_qr_code_without_logo_jpg-effect"/>
     </material>
   </library_materials>
   <library_geometries>
@@ -174,7 +174,7 @@
         <vertices id="Cube-mesh-vertices">
           <input semantic="POSITION" source="#Cube-mesh-positions"/>
         </vertices>
-        <triangles material="QRcode_bordered_jpg-material" count="2">
+        <triangles material="static_qr_code_without_logo_jpg-material" count="2">
           <input semantic="VERTEX" source="#Cube-mesh-vertices" offset="0"/>
           <input semantic="NORMAL" source="#Cube-mesh-normals" offset="1"/>
           <input semantic="TEXCOORD" source="#Cube-mesh-map-0" offset="2" set="0"/>
@@ -205,7 +205,7 @@
         <instance_geometry url="#Cube-mesh" name="Cube">
           <bind_material>
             <technique_common>
-              <instance_material symbol="QRcode_bordered_jpg-material" target="#QRcode_bordered_jpg-material">
+              <instance_material symbol="static_qr_code_without_logo_jpg-material" target="#static_qr_code_without_logo_jpg-material">
                 <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
               </instance_material>
             </technique_common>
