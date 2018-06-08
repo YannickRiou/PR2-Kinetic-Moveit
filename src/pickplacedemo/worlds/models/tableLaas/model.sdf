@@ -1,0 +1,25 @@
+<?xml version='1.0'?>
+<sdf version='1.6'>
+  <model name='tableLaas'>
+    <link name='link_0'>
+      <inertial>
+        <mass>10</mass>
+      </inertial>
+      <visual name='visual'>
+        <geometry>
+          <mesh>
+            <uri>model://tableLaas/meshes/tableLaas.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        </visual>
+      <collision name='collision'>
+        <geometry>
+          <mesh>
+            <uri>model://tableLaas/meshes/tableLaas.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

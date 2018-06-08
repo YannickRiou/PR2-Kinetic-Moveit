@@ -80,255 +80,29 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
-    <model name='table'>
-      <static>0</static>
-      <link name='link'>
-        <collision name='surface'>
-          <pose frame=''>0 0 1 0 -0 0</pose>
-          <geometry>
-            <box>
-              <size>1.5 0.8 0.03</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode>
-                <mu>0.6</mu>
-                <mu2>0.6</mu2>
-              </ode>
-              <torsional>
-                <ode/>
-              </torsional>
-            </friction>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-          </surface>
-          <max_contacts>10</max_contacts>
-        </collision>
-        <visual name='visual1'>
-          <pose frame=''>0 0 1 0 -0 0</pose>
-          <geometry>
-            <box>
-              <size>1.4 0.8 0.04</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Wood</name>
-            </script>
-          </material>
-        </visual>
-        <collision name='front_left_leg'>
-          <pose frame=''>0.68 0.38 0.5 0 -0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.02</radius>
-              <length>1</length>
-            </cylinder>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='front_left_leg'>
-          <pose frame=''>0.68 0.38 0.5 0 -0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.02</radius>
-              <length>1</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
-            </script>
-          </material>
-        </visual>
-        <collision name='front_right_leg'>
-          <pose frame=''>0.68 -0.38 0.5 0 -0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.02</radius>
-              <length>1</length>
-            </cylinder>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='front_right_leg'>
-          <pose frame=''>0.68 -0.38 0.5 0 -0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.02</radius>
-              <length>1</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
-            </script>
-          </material>
-        </visual>
-        <collision name='back_right_leg'>
-          <pose frame=''>-0.68 -0.38 0.5 0 -0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.02</radius>
-              <length>1</length>
-            </cylinder>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='back_right_leg'>
-          <pose frame=''>-0.68 -0.38 0.5 0 -0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.02</radius>
-              <length>1</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
-            </script>
-          </material>
-        </visual>
-        <collision name='back_left_leg'>
-          <pose frame=''>-0.68 0.38 0.5 0 -0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.02</radius>
-              <length>1</length>
-            </cylinder>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='back_left_leg'>
-          <pose frame=''>-0.68 0.38 0.5 0 -0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.02</radius>
-              <length>1</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
-            </script>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <inertial>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-          <mass>1</mass>
-        </inertial>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-      <pose frame=''>0.41086 -0.385998 0 0 -0 0</pose>
-    </model>
     <state world_name='default'>
-      <sim_time>1850 190000000</sim_time>
-      <real_time>42 289997510</real_time>
-      <wall_time>1528441989 755207952</wall_time>
-      <iterations>41706</iterations>
+      <sim_time>2074 519000000</sim_time>
+      <real_time>227 465658097</real_time>
+      <wall_time>1528474734 721281108</wall_time>
+      <iterations>224329</iterations>
       <model name='adream'>
-        <pose frame=''>-0.644321 5.56623 -0.025927 2.1e-05 1.2e-05 -0.000181</pose>
+        <pose frame=''>-0.644376 5.56598 -0.025927 2.1e-05 1.2e-05 -0.000244</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>-0.64432 5.56623 0.024073 2.1e-05 1.2e-05 -0.000181</pose>
+          <pose frame=''>-0.644376 5.56598 0.024073 2.1e-05 1.2e-05 -0.000244</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-0.014792 -0.371851 19.1384 3.00714 -0.588197 0.000428</acceleration>
-          <wrench>-0.014792 -0.371851 19.1384 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='calibration'>
-        <pose frame=''>1.26184 -0.387666 1.11496 1.57074 7e-06 -1.59214</pose>
-        <scale>1 1 1</scale>
-        <link name='link_0'>
-          <pose frame=''>1.26184 -0.387666 1.11496 1.57074 7e-06 -1.59214</pose>
-          <velocity>0.005144 -0.001039 -0.020722 0.004548 0.053843 4.4e-05</velocity>
-          <acceleration>0 0 -9.8 0 -0 0</acceleration>
-          <wrench>0 0 -5.06366 0 -0 0</wrench>
+          <acceleration>-0.014815 -0.371849 19.1384 3.00711 -0.589182 0.000428</acceleration>
+          <wrench>-0.014815 -0.371849 19.1384 0 -0 0</wrench>
         </link>
       </model>
       <model name='cube0'>
-        <pose frame=''>1.15226 0.304344 1.05498 1.7e-05 2e-06 -3.13656</pose>
+        <pose frame=''>1.17012 -0.104896 0.939991 1e-06 0 2.9501</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>1.15226 0.304344 1.05498 1.7e-05 2e-06 -3.13656</pose>
-          <velocity>-6e-05 -0.006423 -0.017959 -0.009812 -0.000614 0.000505</velocity>
+          <pose frame=''>1.17012 -0.104896 0.939991 1e-06 0 2.9501</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -9.8 0 -0 0</acceleration>
           <wrench>0 0 -5.06366 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='cubeVisp'>
-        <pose frame=''>1.50967 0.099279 1.055 5e-06 1.1e-05 -3.01091</pose>
-        <scale>1 1 1</scale>
-        <link name='link_0'>
-          <pose frame=''>1.50967 0.099279 1.055 5e-06 1.1e-05 -3.01091</pose>
-          <velocity>-0.000499 0.000137 0.009984 -0.003425 -0.012482 -2e-06</velocity>
-          <acceleration>-0.212035 0.764718 19.5414 1.51946 0.767657 -0.043255</acceleration>
-          <wrench>-0.109559 0.39513 10.097 0 -0 0</wrench>
         </link>
       </model>
       <model name='ground_plane'>
@@ -341,14 +115,34 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='table'>
-        <pose frame=''>1.52184 0.088418 0 0 0 -1.57558</pose>
+      <model name='tableLaas'>
+        <pose frame=''>1.43945 -0.000523 0.85 -3.14159 -0 -1.55303</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>1.43945 -0.000523 0.85 -3.14159 -0 -1.55303</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.285232 0.610326 9.9367 -0.718031 0.335567 0</acceleration>
+          <wrench>2.85232 6.10326 99.367 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='wood_cube_10cm'>
+        <pose frame=''>1.46726 0.104752 0.899992 -3e-06 -2e-06 1.4e-05</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>1.52184 0.088418 0 0 0 -1.57558</pose>
-          <velocity>0 0 0.01 0 -0 0</velocity>
-          <acceleration>0 0 10 -5.8e-05 -5.3e-05 -0</acceleration>
-          <wrench>0 0 10 0 -0 0</wrench>
+          <pose frame=''>1.46726 0.104752 0.949992 -3e-06 -2e-06 1.4e-05</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-3.05498 -0.23042 0.964741 -2.28618 1.17101 -3.14083</acceleration>
+          <wrench>-1.57851 -0.119058 0.498482 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='wood_cube_10cm_0'>
+        <pose frame=''>1.50924 -0.450253 0.899991 8e-06 -2.1e-05 6.5e-05</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>1.50924 -0.450253 0.949991 8e-06 -2.1e-05 6.5e-05</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.326795 0.501127 2.61606 -2.72708 0.208488 1.8e-05</acceleration>
+          <wrench>0.168855 0.258932 1.35172 0 -0 0</wrench>
         </link>
       </model>
       <light name='sun'>
@@ -360,7 +154,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>-0.52724 0.529437 1.45697 0 0.053797 -0.144666</pose>
+        <pose frame=''>-1.52561 0.185157 1.59211 0 0.349797 -0.14867</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
@@ -427,54 +221,6 @@
       </link>
       <pose frame=''>-0.044274 5.46716 0 0 -0 0</pose>
     </model>
-    <model name='calibration'>
-      <link name='link_0'>
-        <inertial>
-          <mass>0.5167</mass>
-          <inertia>
-            <ixx>0.000861167</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>0.000861167</iyy>
-            <iyz>0</iyz>
-            <izz>0.000861167</izz>
-          </inertia>
-        </inertial>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://calibration/meshes/calibration.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </visual>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <uri>model://calibration/meshes/calibration.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <self_collide>0</self_collide>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-      <pose frame=''>0.693535 0.230818 0 0 -0 0</pose>
-    </model>
     <model name='cube0'>
       <link name='link_0'>
         <inertial>
@@ -523,23 +269,23 @@
       </link>
       <pose frame=''>1.14412 0.393491 0 0 -0 0</pose>
     </model>
-    <model name='cubeVisp'>
+    <model name='tableLaas'>
       <link name='link_0'>
         <inertial>
-          <mass>0.5167</mass>
+          <mass>10</mass>
           <inertia>
-            <ixx>0.000861167</ixx>
+            <ixx>1</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000861167</iyy>
+            <iyy>1</iyy>
             <iyz>0</iyz>
-            <izz>0.000861167</izz>
+            <izz>1</izz>
           </inertia>
         </inertial>
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>model://cubeVisp/meshes/cubeVisp.dae</uri>
+              <uri>model://tableLaas/meshes/tableLaas.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -547,7 +293,7 @@
         <collision name='collision'>
           <geometry>
             <mesh>
-              <uri>model://cubeVisp/meshes/cubeVisp.dae</uri>
+              <uri>model://tableLaas/meshes/tableLaas.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -569,7 +315,133 @@
         <kinematic>0</kinematic>
         <gravity>1</gravity>
       </link>
-      <pose frame=''>1.5305 0.107482 0 0 -0 0</pose>
+      <pose frame=''>1.60487 1.57535 0 0 -0 0</pose>
+    </model>
+    <model name='wood_cube_10cm'>
+      <link name='link'>
+        <pose frame=''>0 0 0.05 0 -0 0</pose>
+        <inertial>
+          <mass>0.5167</mass>
+          <inertia>
+            <ixx>0.000861167</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000861167</iyy>
+            <iyz>0</iyz>
+            <izz>0.000861167</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <poissons_ratio>0.347</poissons_ratio>
+              <elastic_modulus>8.8e+09</elastic_modulus>
+              <ode>
+                <kp>100000</kp>
+                <kd>100</kd>
+                <max_vel>100</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <torsional>
+                <coefficient>1</coefficient>
+                <use_patch_radius>0</use_patch_radius>
+                <surface_radius>0.01</surface_radius>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>1.46725 0.104563 0 0 -0 0</pose>
+    </model>
+    <model name='wood_cube_10cm_0'>
+      <link name='link'>
+        <pose frame=''>0 0 0.05 0 -0 0</pose>
+        <inertial>
+          <mass>0.5167</mass>
+          <inertia>
+            <ixx>0.000861167</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000861167</iyy>
+            <iyz>0</iyz>
+            <izz>0.000861167</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <poissons_ratio>0.347</poissons_ratio>
+              <elastic_modulus>8.8e+09</elastic_modulus>
+              <ode>
+                <kp>100000</kp>
+                <kd>100</kd>
+                <max_vel>100</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <torsional>
+                <coefficient>1</coefficient>
+                <use_patch_radius>0</use_patch_radius>
+                <surface_radius>0.01</surface_radius>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>1.50929 -0.45058 0 0 -0 0</pose>
     </model>
   </world>
 </sdf>
