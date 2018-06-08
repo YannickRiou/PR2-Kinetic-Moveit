@@ -64,7 +64,8 @@ private:
 		ROS_INFO("Sending goal to move base");
 		ac_.sendGoal(goal);
 		ROS_INFO("wating for result");
-
+		ac.waitForResult();
+		
 		bool success = (ac_.getState() == actionlib::SimpleClientGoalState::SUCCEEDED);
 
 		if(success)

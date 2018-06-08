@@ -6,7 +6,7 @@
 			<nb_mask>180</nb_mask>
 		</mask>
 		<range>
-			<tracking>20</tracking>
+			<tracking>100</tracking>
 		</range>
 		<contrast>
 			<edge_threshold>5000</edge_threshold>
