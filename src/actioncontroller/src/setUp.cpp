@@ -56,7 +56,7 @@ int main(int argc, char** argv)
 	callingActionController(part, goal);
 	
 	part = "head";
-	createActionControllerMessage(part, 1, 0, 0.5, 0, 0, 0, 0, goal);
+	createActionControllerMessage(part, 1, 0, 1.1, 0, 0, 0, 0, goal);
 	callingActionController(part, goal);
 
 

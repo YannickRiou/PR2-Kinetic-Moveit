@@ -13,6 +13,9 @@
 //MoveBase
 #include <move_base_msgs/MoveBaseAction.h>
 #include <pr2_controllers_msgs/PointHeadAction.h>
+#include <shape_tools/solid_primitive_dims.h>
+
+#include <boost/algorithm/string.hpp>
 
 
 class ActionController
@@ -64,8 +67,7 @@ private:
 		ROS_INFO("Sending goal to move base");
 		ac_.sendGoal(goal);
 		ROS_INFO("wating for result");
-		ac.waitForResult();
-		
+		ac_.waitForResult();
 		bool success = (ac_.getState() == actionlib::SimpleClientGoalState::SUCCEEDED);
 
 		if(success)
@@ -111,6 +113,47 @@ private:
 		return success;
 	}
 
+	bool pick(std::string group, geometry_msgs::Pose pose){
+		std::vector<std::string> tokens;
+		boost::split(tokens, group, [](char c){return c == '.';});
+		group =  tokens.at(1);
+		ROS_INFO(group.c_str());
+		moveit::planning_interface::MoveGroupInterface move_group(group);
+		//std::vector<manipulation_msgs::Grasp> grasps;
+		move_group.pick("cube");
+	}
+
+	bool place(std::string group, geometry_msgs::Pose pose){
+
+	}
+
+	void createObject(geometry_msgs::Pose pose){
+		ros::NodeHandle nh;
+		ros::Publisher pub_co = nh.advertise<moveit_msgs::CollisionObject>("collision_object", 10);
+		moveit_msgs::CollisionObject co;
+		co.header.frame_id = "odom_combined";
+		co.header.stamp = ros::Time::now();
+		//remove the object
+		co.id = "cube";
+		co.operation = moveit_msgs::CollisionObject::REMOVE;
+		pub_co.publish(co);
+		//Add the object
+		co.operation = moveit_msgs::CollisionObject::ADD;
+		co.primitives.resize(1);
+		co.primitives[0].type = shape_msgs::SolidPrimitive::BOX;
+		co.primitives[0].dimensions.resize(shape_tools::SolidPrimitiveDimCount<shape_msgs::SolidPrimitive::BOX>::value);
+		co.primitives[0].dimensions[shape_msgs::SolidPrimitive::BOX_X] = 0.08;
+		co.primitives[0].dimensions[shape_msgs::SolidPrimitive::BOX_Y] = 0.08;
+		co.primitives[0].dimensions[shape_msgs::SolidPrimitive::BOX_Z] = 0.08;
+		co.primitive_poses.resize(1);
+		co.primitive_poses[0].position.x = pose.position.x;
+		co.primitive_poses[0].position.y = pose.position.y;
+		co.primitive_poses[0].position.z = pose.position.z;
+		co.primitive_poses[0].orientation.w = pose.orientation.w;
+		pub_co.publish(co);
+
+	}
+
 protected:
 	//Action server
 	ros::NodeHandle nh_;
@@ -138,8 +181,11 @@ public:
 			feedback_.success = move_base( (geometry_msgs::Pose)goal->goal.pose.pose );
 		}else if(goal->goal.move_group_id == "head"){
 			feedback_.success = move_head( (geometry_msgs::Pose)goal->goal.pose.pose);
-		}
-		else{
+		}else if(goal->goal.move_group_id == "pick.left_arm" || goal->goal.move_group_id == "pick.right_arm" ){
+			feedback_.success = pick( (std::string)goal->goal.move_group_id, (geometry_msgs::Pose)goal->goal.pose.pose);
+		}else if(goal->goal.move_group_id == "place.left_arm" || goal->goal.move_group_id == "place.right_arm" ){
+			feedback_.success = place( (std::string)goal->goal.move_group_id, (geometry_msgs::Pose)goal->goal.pose.pose);
+		}else{
 			feedback_.success = move_arms((std::string)goal->goal.move_group_id, (geometry_msgs::Pose)goal->goal.pose.pose);	
 		}
 		result_.success = feedback_.success;

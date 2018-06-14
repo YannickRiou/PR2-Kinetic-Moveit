@@ -27,6 +27,8 @@ find_package(catkin REQUIRED
 	move_base_msgs
   message_generation
   std_msgs
+  ar_track_alvar_msgs
+  shape_tools
 )
 
 ## System dependencies are found with CMake's conventions
@@ -80,7 +82,7 @@ find_package(Boost REQUIRED system filesystem date_time thread)
 ## Generate actions in the 'action' folder
  add_action_files(
    DIRECTORY action
-   FILES TuckArm.action ActionController.action
+   FILES ActionController.action
  )
 
 ## Generate added messages and services with any dependencies listed here
@@ -89,6 +91,7 @@ find_package(Boost REQUIRED system filesystem date_time thread)
    actionlib_msgs
    std_msgs
    geometry_msgs
+   ar_track_alvar_msgs
    # Or other packages containing msgs
  )
 
@@ -137,6 +140,7 @@ catkin_package(
     moveit_ros_planning_interface
     interactive_markers
     actionlib_msgs
+    ar_track_alvar_msgs
   	DEPENDS
     EIGEN3
 )
@@ -150,9 +154,13 @@ include_directories(SYSTEM ${THIS_PACKAGE_INCLUDE_DIRS} ${Boost_INCLUDE_DIR} ${E
 include_directories(${catkin_INCLUDE_DIRS})
 link_directories(${catkin_LIBRARY_DIRS})
 
-add_executable(tuckArm src/tuckArm.cpp)
-target_link_libraries(tuckArm ${catkin_LIBRARIES} ${Boost_LIBRARIES})
-install(TARGETS tuckArm DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+add_executable(setUp src/setUp.cpp)
+target_link_libraries(setUp ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+install(TARGETS setUp DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
+add_executable(simplePick src/simplePick.cpp)
+target_link_libraries(simplePick ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+install(TARGETS setUp DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
 
 add_executable(ActionController src/ActionController.cpp)

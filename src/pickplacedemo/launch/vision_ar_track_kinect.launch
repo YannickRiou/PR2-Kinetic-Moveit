@@ -1,10 +1,12 @@
 <launch>
+
+	<param name="/use_sim_time" value="true" />
 	<arg name="marker_size" default="8" />
 	<arg name="max_new_marker_error" default="0.08" />
 	<arg name="max_track_error" default="0.2" />
 
-	<arg name="cam_image_topic" default="/head_mount_kinect2/depth_registered/points" />
-	<arg name="cam_info_topic" default="/head_mount_kinect2/depth_registered/camera_info" />
+	<arg name="cam_image_topic" default="/head_mount_kinect2/depth/points" />
+	<arg name="cam_info_topic" default="/head_mount_kinect2/depth/camera_info" />
 	<arg name="output_frame" default="/odom_combined" />
 
 	<node name="ar_track_alvar" pkg="ar_track_alvar" type="individualMarkers" respawn="false" output="screen">
