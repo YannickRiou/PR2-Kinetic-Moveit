@@ -133,7 +133,7 @@
 
   <!-- Kinect models -->
   <xacro:arg name="KINECT1" default="false" />
-  <xacro:arg name="KINECT2" default="false" />
+  <xacro:arg name="KINECT2" default="true" />
   <!-- Kinect2 xacro -->
   <xacro:if value="$(arg KINECT2)">
     <xacro:include filename="$(find pr2_description)/urdf/sensors/kinect2.urdf.xacro" />
