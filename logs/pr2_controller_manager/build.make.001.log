@@ -1,0 +1,6 @@
+[ 18%] Built target controller_test
+[ 45%] Built target pr2_controller_manager
+[ 45%] Built target pr2_controller_manager_xacro_generated_to_devel_space_
+[ 63%] Built target gtest
+[ 81%] Built target test_robot
+[100%] Built target test_controllers

@@ -1,0 +1,12 @@
+[35m[1mScanning dependencies of target pr2_mechanism_model[0m
+[ 10%] [32mBuilding CXX object CMakeFiles/pr2_mechanism_model.dir/src/joint.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/pr2_mechanism_model.dir/src/robot.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/pr2_mechanism_model.dir/src/chain.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/pr2_mechanism_model.dir/src/tree.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/pr2_mechanism_model.dir/src/simple_transmission.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/pr2_mechanism_model.dir/src/pr2_gripper_transmission.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/pr2_mechanism_model.dir/src/wrist_transmission.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/pr2_mechanism_model.dir/src/pr2_belt_transmission.cpp.o[0m
+[ 90%] [32mBuilding CXX object CMakeFiles/pr2_mechanism_model.dir/src/joint_calibration_simulator.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library /home/david/PR2-Kinetic-Xenial/devel/.private/pr2_mechanism_model/lib/libpr2_mechanism_model.so[0m
+[100%] Built target pr2_mechanism_model

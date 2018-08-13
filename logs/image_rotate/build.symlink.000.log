@@ -1,0 +1,12 @@
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/include/image_rotate/ImageRotateConfig.h
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/image_rotate/docs/ImageRotateConfig-usage.dox
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/image_rotate/docs/ImageRotateConfig.wikidoc
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/image_rotate/docs/ImageRotateConfig.dox
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/image_rotate/cmake/image_rotateConfig.cmake
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/image_rotate/cmake/image_rotateConfig-version.cmake
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/libimage_rotate.so
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/image_rotate/image_rotate
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pkgconfig/image_rotate.pc
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/image_rotate/__init__.py
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/image_rotate/cfg/ImageRotateConfig.py
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/image_rotate/cfg/__init__.py

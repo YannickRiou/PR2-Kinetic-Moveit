@@ -1,0 +1,18 @@
+[35m[1mScanning dependencies of target gtest[0m
+[ 10%] [32mBuilding CXX object gtest/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[ 20%] [32m[1mLinking CXX shared library libgtest.so[0m
+[ 20%] Built target gtest
+[35m[1mScanning dependencies of target controller_manager_tests[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/controller_manager_tests.dir/src/my_robot_hw.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/controller_manager_tests.dir/src/effort_test_controller.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/controller_manager_tests.dir/src/my_dummy_controller.cpp.o[0m
+[ 60%] [32m[1mLinking CXX shared library /home/david/PR2-Kinetic-Xenial/devel/.private/controller_manager_tests/lib/libcontroller_manager_tests.so[0m
+[ 60%] Built target controller_manager_tests
+[35m[1mScanning dependencies of target cm_test[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/cm_test.dir/test/cm_test.cpp.o[0m
+[ 80%] [32m[1mLinking CXX executable /home/david/PR2-Kinetic-Xenial/devel/.private/controller_manager_tests/lib/controller_manager_tests/cm_test[0m
+[ 80%] Built target cm_test
+[35m[1mScanning dependencies of target dummy_app[0m
+[ 90%] [32mBuilding CXX object CMakeFiles/dummy_app.dir/src/dummy_app.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/david/PR2-Kinetic-Xenial/devel/.private/controller_manager_tests/lib/controller_manager_tests/dummy_app[0m
+[100%] Built target dummy_app

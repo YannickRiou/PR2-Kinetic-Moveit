@@ -1,0 +1,6 @@
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/pr2_teleop/cmake/pr2_teleopConfig-version.cmake
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/pr2_teleop/cmake/pr2_teleopConfig.cmake
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pr2_teleop/teleop_gripper
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pr2_teleop/teleop_pr2_keyboard
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pr2_teleop/teleop_pr2
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pkgconfig/pr2_teleop.pc

@@ -1,0 +1,67 @@
+[35m[1mScanning dependencies of target robosherlock_generate_type_system[0m
+Searching for files...
+Checking for modification...
+Files modified. Updating type system...
+Reading typesystem...
+Reading file: cv_types.xml
+Reading file: scene_types.xml
+Reading file: pcl_types.xml
+Reading file: ros_types.xml
+Reading file: human_types.xml
+Reading file: core_types.xml
+Reading file: tf_types.xml
+Reading file: annotation_types.xml
+checking type system...
+Writing typesystem...
+Writing file: cv_types.h
+Writing file: core_types.h
+Writing file: all_types.h
+Writing file: tf_types.h
+Writing file: annotation_types.h
+Writing file: human_types.h
+Writing file: scene_types.h
+Writing file: type_definitions.h
+Writing file: pcl_types.h
+Writing file: ros_types.h
+writing all_types.xml
+updating core_types.xml
+updating pcl_types.xml
+updating scene_types.xml
+updating annotation_types.xml
+updating human_types.xml
+updating tf_types.xml
+updating ros_types.xml
+updating cv_types.xml
+[  0%] Built target robosherlock_generate_type_system
+[35m[1mScanning dependencies of target robosherlock_update_analysis_engines[0m
+searching for annotators...
+found 41 annotator...
+searching for analysis engines...
+found 6 analysis engines...
+checking for modification...
+Files modified. Updating annotators...
+extracting annotator names...
+found 41 annotators...
+creating xml for annotators...
+updating analysis engines...
+0 updated, 6 already up to date.
+update finished!
+[  0%] Built target robosherlock_update_analysis_engines
+[35m[1mScanning dependencies of target rs_core[0m
+[  1%] [32mBuilding CXX object src/core/CMakeFiles/rs_core.dir/src/DrawingAnnotator.cpp.o[0m
+[  2%] [32mBuilding CXX object src/core/CMakeFiles/rs_core.dir/src/scene_cas.cpp.o[0m
+In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/core/src/DrawingAnnotator.cpp:20:0[m[K:
+[01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/core/include/rs/DrawingAnnotator.h:28:24:[m[K [01;31m[Kfatal error: [m[Kuima/api.hpp: Aucun fichier ou dossier de ce type
+compilation terminated.
+src/core/CMakeFiles/rs_core.dir/build.make:62 : la recette pour la cible « src/core/CMakeFiles/rs_core.dir/src/DrawingAnnotator.cpp.o » a échouée
+make[2]: *** [src/core/CMakeFiles/rs_core.dir/src/DrawingAnnotator.cpp.o] Erreur 1
+make[2]: *** Attente des tâches non terminées....
+In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/core/src/scene_cas.cpp:27:0[m[K:
+[01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/core/include/rs/scene_cas.h:24:24:[m[K [01;31m[Kfatal error: [m[Kuima/api.hpp: Aucun fichier ou dossier de ce type
+compilation terminated.
+src/core/CMakeFiles/rs_core.dir/build.make:86 : la recette pour la cible « src/core/CMakeFiles/rs_core.dir/src/scene_cas.cpp.o » a échouée
+make[2]: *** [src/core/CMakeFiles/rs_core.dir/src/scene_cas.cpp.o] Erreur 1
+CMakeFiles/Makefile2:4163 : la recette pour la cible « src/core/CMakeFiles/rs_core.dir/all » a échouée
+Makefile:138 : la recette pour la cible « all » a échouée
+make[1]: *** [src/core/CMakeFiles/rs_core.dir/all] Erreur 2
+make: *** [all] Erreur 2

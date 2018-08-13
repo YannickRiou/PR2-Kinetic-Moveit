@@ -1,0 +1,4 @@
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/joy/cmake/joyConfig-version.cmake
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/joy/cmake/joyConfig.cmake
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/joy/joy_node
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pkgconfig/joy.pc

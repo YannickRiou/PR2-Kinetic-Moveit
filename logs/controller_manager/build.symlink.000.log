@@ -1,0 +1,5 @@
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/controller_manager/cmake/controller_managerConfig.cmake
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/controller_manager/cmake/controller_managerConfig-version.cmake
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/libcontroller_manager.so
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pkgconfig/controller_manager.pc
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/controller_manager/__init__.py

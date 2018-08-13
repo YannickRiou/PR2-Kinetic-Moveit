@@ -1,0 +1,8 @@
+Linked: (/home/david/PR2-Kinetic-Xenial/devel/.private/pr2_controller_manager/share/pr2_controller_manager/cmake/pr2_controller_managerConfig-version.cmake, /home/david/PR2-Kinetic-Xenial/devel/share/pr2_controller_manager/cmake/pr2_controller_managerConfig-version.cmake)
+Linked: (/home/david/PR2-Kinetic-Xenial/devel/.private/pr2_controller_manager/share/pr2_controller_manager/cmake/pr2_controller_managerConfig.cmake, /home/david/PR2-Kinetic-Xenial/devel/share/pr2_controller_manager/cmake/pr2_controller_managerConfig.cmake)
+Linked: (/home/david/PR2-Kinetic-Xenial/devel/.private/pr2_controller_manager/lib/libpr2_controller_manager.so, /home/david/PR2-Kinetic-Xenial/devel/lib/libpr2_controller_manager.so)
+Linked: (/home/david/PR2-Kinetic-Xenial/devel/.private/pr2_controller_manager/lib/libcontroller_test.so, /home/david/PR2-Kinetic-Xenial/devel/lib/libcontroller_test.so)
+Linked: (/home/david/PR2-Kinetic-Xenial/devel/.private/pr2_controller_manager/lib/pr2_controller_manager/test_controllers, /home/david/PR2-Kinetic-Xenial/devel/lib/pr2_controller_manager/test_controllers)
+Linked: (/home/david/PR2-Kinetic-Xenial/devel/.private/pr2_controller_manager/lib/pr2_controller_manager/test_robot, /home/david/PR2-Kinetic-Xenial/devel/lib/pr2_controller_manager/test_robot)
+Linked: (/home/david/PR2-Kinetic-Xenial/devel/.private/pr2_controller_manager/lib/pkgconfig/pr2_controller_manager.pc, /home/david/PR2-Kinetic-Xenial/devel/lib/pkgconfig/pr2_controller_manager.pc)
+Linked: (/home/david/PR2-Kinetic-Xenial/devel/.private/pr2_controller_manager/lib/python2.7/dist-packages/pr2_controller_manager/__init__.py, /home/david/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/pr2_controller_manager/__init__.py)

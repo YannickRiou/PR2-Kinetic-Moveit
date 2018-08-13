@@ -1,0 +1,33 @@
+[  0%] Built target _pr2_mechanism_msgs_generate_messages_check_deps_MechanismStatistics
+[  0%] Built target _pr2_mechanism_msgs_generate_messages_check_deps_ReloadControllerLibraries
+[  0%] Built target _pr2_mechanism_msgs_generate_messages_check_deps_SwitchControllerAction
+[  0%] Built target _pr2_mechanism_msgs_generate_messages_check_deps_SwitchController
+[  0%] Built target actionlib_msgs_generate_messages_py
+[  0%] Built target _pr2_mechanism_msgs_generate_messages_check_deps_JointStatistics
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target _pr2_mechanism_msgs_generate_messages_check_deps_ActuatorStatistics
+[  0%] Built target _pr2_mechanism_msgs_generate_messages_check_deps_SwitchControllerFeedback
+[  0%] Built target _pr2_mechanism_msgs_generate_messages_check_deps_ListControllers
+[  0%] Built target _pr2_mechanism_msgs_generate_messages_check_deps_ControllerStatistics
+[  0%] Built target _pr2_mechanism_msgs_generate_messages_check_deps_ListControllerTypes
+[  0%] Built target _pr2_mechanism_msgs_generate_messages_check_deps_UnloadController
+[  0%] Built target _pr2_mechanism_msgs_generate_messages_check_deps_LoadController
+[  0%] Built target _pr2_mechanism_msgs_generate_messages_check_deps_SwitchControllerResult
+[  0%] Built target _pr2_mechanism_msgs_generate_messages_check_deps_SwitchControllerActionFeedback
+[  0%] Built target _pr2_mechanism_msgs_generate_messages_check_deps_SwitchControllerActionResult
+[  0%] Built target _pr2_mechanism_msgs_generate_messages_check_deps_SwitchControllerActionGoal
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target actionlib_msgs_generate_messages_nodejs
+[  0%] Built target _pr2_mechanism_msgs_generate_messages_check_deps_SwitchControllerGoal
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target actionlib_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target actionlib_msgs_generate_messages_lisp
+[  0%] Built target actionlib_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_lisp
+[ 21%] Built target pr2_mechanism_msgs_generate_messages_py
+[ 40%] Built target pr2_mechanism_msgs_generate_messages_nodejs
+[ 61%] Built target pr2_mechanism_msgs_generate_messages_eus
+[ 80%] Built target pr2_mechanism_msgs_generate_messages_cpp
+[100%] Built target pr2_mechanism_msgs_generate_messages_lisp
+[100%] Built target pr2_mechanism_msgs_generate_messages

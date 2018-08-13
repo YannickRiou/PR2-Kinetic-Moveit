@@ -65,8 +65,8 @@ endif()
 #############################################################################
 ## RS PATHS                                                                ##
 #############################################################################
-set(RS_SCRIPT_PATH         /home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/scripts)
-set(RS_PROJECT_CONFIG      /home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/cmake/project_config.cmake.in)
+set(RS_SCRIPT_PATH         /home/david/PR2-Kinetic-Xenial/src/robosherlock/scripts)
+set(RS_PROJECT_CONFIG      /home/david/PR2-Kinetic-Xenial/src/robosherlock/cmake/project_config.cmake.in)
 
 #############################################################################
 ## Add library macro                                                       ##

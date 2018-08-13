@@ -1,0 +1,17 @@
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/include/image_view/ImageViewConfig.h
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/image_view/docs/ImageViewConfig.dox
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/image_view/docs/ImageViewConfig-usage.dox
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/image_view/docs/ImageViewConfig.wikidoc
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/image_view/cmake/image_viewConfig.cmake
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/image_view/cmake/image_viewConfig-version.cmake
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/libimage_view.so
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pkgconfig/image_view.pc
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/image_view/__init__.py
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/image_view/cfg/__init__.py
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/image_view/cfg/ImageViewConfig.py
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/image_view/video_recorder
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/image_view/stereo_view
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/image_view/image_saver
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/image_view/image_view
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/image_view/disparity_view
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/image_view/extract_images

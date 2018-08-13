@@ -183,6 +183,30 @@ public:
 };
 
 /*
+ *  Semantic differentiation between a cloud that has been filtered  		    using Region filter or any other Point cloud fitler       
+ */
+class FilteredPointCloud : public PointCloud
+{
+private:
+  void initFields()
+  {
+  }
+public:
+
+  FilteredPointCloud(const FilteredPointCloud &other) :
+      PointCloud(other)
+  {
+    initFields();
+  }
+
+  FilteredPointCloud(uima::FeatureStructure fs) :
+      PointCloud(fs)
+  {
+    initFields();
+  }
+};
+
+/*
  * No description given
  */
 class StandaloneClusterPoints : public ClusterPoints
@@ -266,30 +290,6 @@ public:
   }
 };
 
-/*
- * No description given
- */
-class RegionPointCloud : public PointCloud
-{
-private:
-  void initFields()
-  {
-  }
-public:
-
-  RegionPointCloud(const RegionPointCloud &other) :
-      PointCloud(other)
-  {
-    initFields();
-  }
-
-  RegionPointCloud(uima::FeatureStructure fs) :
-      PointCloud(fs)
-  {
-    initFields();
-  }
-};
-
 }
 
 TYPE_TRAIT(rs::PointIndices, RS_PCL_POINTINDICES)
@@ -297,9 +297,9 @@ TYPE_TRAIT(rs::PclFeature, RS_PCL_PCLFEATURE)
 TYPE_TRAIT(rs::BoundingBox3D, RS_PCL_BOUNDINGBOX3D)
 TYPE_TRAIT(rs::ClusterPoints, RS_PCL_CLUSTERPOINTS)
 TYPE_TRAIT(rs::PointCloud, RS_PCL_POINTCLOUD)
+TYPE_TRAIT(rs::FilteredPointCloud, RS_PCL_FILTEREDPOINTCLOUD)
 TYPE_TRAIT(rs::StandaloneClusterPoints, RS_PCL_STANDALONECLUSTERPOINTS)
 TYPE_TRAIT(rs::NormalsCloud, RS_PCL_NORMALSCLOUD)
 TYPE_TRAIT(rs::ReferenceClusterPoints, RS_PCL_REFERENCECLUSTERPOINTS)
-TYPE_TRAIT(rs::RegionPointCloud, RS_PCL_REGIONPOINTCLOUD)
 
 #endif /* __PCL_TYPES_H__ */

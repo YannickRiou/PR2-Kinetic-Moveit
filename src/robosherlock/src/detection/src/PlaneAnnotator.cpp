@@ -72,6 +72,8 @@ private:
   pcl::PointCloud<pcl::PointXYZRGBA>::Ptr display;
   std::vector<int> mapping_indices;
 
+  bool useNonNANCloud;
+
   // MPS
   std::vector<pcl::PlanarRegion<pcl::PointXYZRGBA>, Eigen::aligned_allocator<pcl::PlanarRegion<pcl::PointXYZRGBA>>> regions;
   std::vector<pcl::ModelCoefficients> modelCoefficients;
@@ -124,6 +126,10 @@ public:
         mode = FILE;
       }
     }
+    if(ctx.isParameterDefined("use_non_nan_cloud"))
+    {
+      ctx.extractValue("use_non_nan_cloud", useNonNANCloud);
+    }
     if(ctx.isParameterDefined("min_plane_inliers"))
     {
       ctx.extractValue("min_plane_inliers", min_plane_inliers);
@@ -169,7 +175,7 @@ private:
     rs::SceneCas cas(tcas);
     rs::Scene scene = cas.getScene();
 
-    cas.get(VIEW_COLOR_IMAGE_HD, image_);
+    cas.get(VIEW_COLOR_IMAGE, image_);
 
     foundPlane = false;
 
@@ -207,7 +213,7 @@ private:
     rs::SceneCas cas(tcas);
 
     sensor_msgs::CameraInfo camInfo;
-    cas.get(VIEW_CAMERA_INFO_HD, camInfo);
+    cas.get(VIEW_CAMERA_INFO, camInfo);
     readCameraInfo(camInfo);
 
     std::vector<rs::Board> boards;
@@ -370,8 +376,17 @@ private:
     cloud = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
     pcl::ModelCoefficients::Ptr plane_coefficients(new pcl::ModelCoefficients);
 
-    rs::ReferenceClusterPoints rcp = rs::create<rs::ReferenceClusterPoints>(tcas);
-    cas.get(VIEW_CLOUD, *cloud);
+    if(useNonNANCloud)
+    {
+      rs::ReferenceClusterPoints rcp = rs::create<rs::ReferenceClusterPoints>(tcas);
+      cas.get(VIEW_CLOUD_NON_NAN, rcp);
+      rs::conversion::from(rcp.cloud(), *cloud);
+    }
+    else
+    {
+      cas.get(VIEW_CLOUD, *cloud);
+    }
+
     if(cloud->size() == 0)
     {
       outError("No PointCloud present;");
@@ -585,7 +600,7 @@ private:
       disp = cv::Mat::zeros(image_.rows, image_.cols, CV_8UC3);
       return;
     }
-    else if(foundPlane && image_.size().area() !=cloud->size())
+    else if(foundPlane && image_.size().area() != cloud->size())
     {
       disp = cv::Mat::zeros(480, 640, CV_8UC3);
       return;

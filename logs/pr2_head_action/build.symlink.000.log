@@ -1,0 +1,4 @@
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/pr2_head_action/cmake/pr2_head_actionConfig-version.cmake
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/pr2_head_action/cmake/pr2_head_actionConfig.cmake
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pr2_head_action/pr2_head_action
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pkgconfig/pr2_head_action.pc

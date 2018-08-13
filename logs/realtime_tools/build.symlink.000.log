@@ -1,0 +1,4 @@
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/realtime_tools/cmake/realtime_toolsConfig-version.cmake
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/realtime_tools/cmake/realtime_toolsConfig.cmake
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/librealtime_tools.so
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pkgconfig/realtime_tools.pc

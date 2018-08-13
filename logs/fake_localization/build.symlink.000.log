@@ -1,0 +1,4 @@
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/fake_localization/cmake/fake_localizationConfig-version.cmake
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/fake_localization/cmake/fake_localizationConfig.cmake
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pkgconfig/fake_localization.pc
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/fake_localization/fake_localization

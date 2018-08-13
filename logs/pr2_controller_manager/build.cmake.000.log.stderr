@@ -1,0 +1,1 @@
+Install RPATH for controller_test is /home/david/PR2-Kinetic-Xenial/install/lib:/home/david/PR2-Kinetic-Xenial/devel/lib:/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu

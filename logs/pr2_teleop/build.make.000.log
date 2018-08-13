@@ -1,0 +1,12 @@
+[35m[1mScanning dependencies of target teleop_pr2_keyboard[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/teleop_pr2_keyboard.dir/src/teleop_pr2_keyboard.cpp.o[0m
+[ 33%] [32m[1mLinking CXX executable /home/david/PR2-Kinetic-Xenial/devel/.private/pr2_teleop/lib/pr2_teleop/teleop_pr2_keyboard[0m
+[ 33%] Built target teleop_pr2_keyboard
+[35m[1mScanning dependencies of target teleop_gripper[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/teleop_gripper.dir/src/teleop_gripper.cpp.o[0m
+[ 66%] [32m[1mLinking CXX executable /home/david/PR2-Kinetic-Xenial/devel/.private/pr2_teleop/lib/pr2_teleop/teleop_gripper[0m
+[ 66%] Built target teleop_gripper
+[35m[1mScanning dependencies of target teleop_pr2[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/teleop_pr2.dir/src/teleop_pr2.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/david/PR2-Kinetic-Xenial/devel/.private/pr2_teleop/lib/pr2_teleop/teleop_pr2[0m
+[100%] Built target teleop_pr2

@@ -1,0 +1,19 @@
+[35m[1mScanning dependencies of target pr2_moveit_arm_kinematics[0m
+[ 11%] [32mBuilding CXX object pr2_arm_kinematics/CMakeFiles/pr2_moveit_arm_kinematics.dir/src/pr2_arm_ik.cpp.o[0m
+[ 22%] [32mBuilding CXX object pr2_arm_kinematics/CMakeFiles/pr2_moveit_arm_kinematics.dir/src/pr2_arm_kinematics_utils.cpp.o[0m
+[ 33%] [32mBuilding CXX object pr2_arm_kinematics/CMakeFiles/pr2_moveit_arm_kinematics.dir/src/pr2_arm_ik_solver.cpp.o[0m
+[ 44%] [32mBuilding CXX object pr2_arm_kinematics/CMakeFiles/pr2_moveit_arm_kinematics.dir/src/pr2_arm_kinematics_plugin.cpp.o[0m
+[ 55%] [32m[1mLinking CXX shared library /home/david/PR2-Kinetic-Xenial/devel/.private/pr2_moveit_plugins/lib/libpr2_moveit_arm_kinematics.so[0m
+[ 55%] Built target pr2_moveit_arm_kinematics
+[35m[1mScanning dependencies of target pr2_mechanism_msgs_generate_messages_cpp[0m
+[ 55%] Built target pr2_mechanism_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target pr2_controllers_msgs_generate_messages_cpp[0m
+[ 55%] Built target pr2_controllers_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target pr2_moveit_controller_manager[0m
+[ 66%] [32mBuilding CXX object pr2_moveit_controller_manager/CMakeFiles/pr2_moveit_controller_manager.dir/src/pr2_moveit_controller_manager.cpp.o[0m
+[35m[1mScanning dependencies of target pr2_moveit_sensor_manager[0m
+[ 77%] [32mBuilding CXX object pr2_moveit_sensor_manager/CMakeFiles/pr2_moveit_sensor_manager.dir/src/pr2_moveit_sensor_manager.cpp.o[0m
+[ 88%] [32m[1mLinking CXX shared library /home/david/PR2-Kinetic-Xenial/devel/.private/pr2_moveit_plugins/lib/libpr2_moveit_sensor_manager.so[0m
+[ 88%] Built target pr2_moveit_sensor_manager
+[100%] [32m[1mLinking CXX shared library /home/david/PR2-Kinetic-Xenial/devel/.private/pr2_moveit_plugins/lib/libpr2_moveit_controller_manager.so[0m
+[100%] Built target pr2_moveit_controller_manager

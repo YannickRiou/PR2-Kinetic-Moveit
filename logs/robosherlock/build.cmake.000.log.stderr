@@ -1,0 +1,18 @@
+** WARNING ** io features related to pcap will be disabled
+** WARNING ** io features related to png will be disabled
+[33m[1mCMake Warning[0m at /opt/ros/kinetic/share/catkin/cmake/catkin_package.cmake:166 (message):
+  catkin_package() DEPENDS on 'APR' but neither 'APR_INCLUDE_DIRS' nor
+  'APR_LIBRARIES' is defined.
+[36mCall Stack (most recent call first):[0m
+  /opt/ros/kinetic/share/catkin/cmake/catkin_package.cmake:102 (_catkin_package)
+  CMakeLists.txt:146 (catkin_package)
+
+
+[33m[1mCMake Warning[0m at /opt/ros/kinetic/share/catkin/cmake/catkin_package.cmake:166 (message):
+  catkin_package() DEPENDS on 'UIMA' but neither 'UIMA_INCLUDE_DIRS' nor
+  'UIMA_LIBRARIES' is defined.
+[36mCall Stack (most recent call first):[0m
+  /opt/ros/kinetic/share/catkin/cmake/catkin_package.cmake:102 (_catkin_package)
+  CMakeLists.txt:146 (catkin_package)
+
+

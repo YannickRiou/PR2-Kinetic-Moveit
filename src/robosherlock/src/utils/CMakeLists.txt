@@ -3,6 +3,10 @@ project(rs_utils)
 add_library(rs_utils SHARED
   src/DepthImageProcessing.cpp
   src/BlurDetector.cpp
+  src/Graph.cpp
+  src/WeightedGraph.cpp
+  src/DirectedGraph.cpp
+  src/GraphPrimitives.cpp
 )
 target_link_libraries(rs_utils rs_core)
 
@@ -23,4 +27,3 @@ target_link_libraries(rs_Trigger rs_core rs_io)
 
 rs_add_executable(test_reconfig src/test_reconfig.cpp)
 target_link_libraries(test_reconfig rs_flowcontrol)
-

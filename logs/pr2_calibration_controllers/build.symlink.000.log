@@ -1,0 +1,4 @@
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/pr2_calibration_controllers/cmake/pr2_calibration_controllersConfig.cmake
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/pr2_calibration_controllers/cmake/pr2_calibration_controllersConfig-version.cmake
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/libpr2_calibration_controllers.so
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pkgconfig/pr2_calibration_controllers.pc

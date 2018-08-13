@@ -1,0 +1,97 @@
+[35m[1mScanning dependencies of target _robosherlock_msgs_generate_messages_check_deps_RSVisControl[0m
+[  0%] Built target _robosherlock_msgs_generate_messages_check_deps_RSVisControl
+[35m[1mScanning dependencies of target _robosherlock_msgs_generate_messages_check_deps_RSObjectDescriptions[0m
+[  0%] Built target _robosherlock_msgs_generate_messages_check_deps_RSObjectDescriptions
+[35m[1mScanning dependencies of target _robosherlock_msgs_generate_messages_check_deps_SetRSContext[0m
+[  0%] Built target _robosherlock_msgs_generate_messages_check_deps_SetRSContext
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_lisp[0m
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target _robosherlock_msgs_generate_messages_check_deps_RSQueryService[0m
+[  0%] Built target _robosherlock_msgs_generate_messages_check_deps_RSQueryService
+[35m[1mScanning dependencies of target shape_msgs_generate_messages_lisp[0m
+[  0%] Built target shape_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target _robosherlock_msgs_generate_messages_check_deps_UpdateObjects[0m
+[  0%] Built target _robosherlock_msgs_generate_messages_check_deps_UpdateObjects
+[35m[1mScanning dependencies of target _robosherlock_msgs_generate_messages_check_deps_RSActiveAnnotatorList[0m
+[  0%] Built target _robosherlock_msgs_generate_messages_check_deps_RSActiveAnnotatorList
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_lisp[0m
+[  0%] Built target sensor_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target visualization_msgs_generate_messages_lisp[0m
+[  0%] Built target visualization_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target visualization_msgs_generate_messages_py[0m
+[  0%] Built target visualization_msgs_generate_messages_py
+[35m[1mScanning dependencies of target shape_msgs_generate_messages_py[0m
+[  0%] Built target shape_msgs_generate_messages_py
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_py[0m
+[  0%] Built target geometry_msgs_generate_messages_py
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_py[0m
+[  0%] Built target sensor_msgs_generate_messages_py
+[35m[1mScanning dependencies of target visualization_msgs_generate_messages_nodejs[0m
+[  0%] Built target visualization_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_nodejs[0m
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target shape_msgs_generate_messages_nodejs[0m
+[  0%] Built target shape_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_nodejs[0m
+[  0%] Built target sensor_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_cpp[0m
+[  0%] Built target sensor_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target shape_msgs_generate_messages_cpp[0m
+[  0%] Built target shape_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_cpp[0m
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target visualization_msgs_generate_messages_cpp[0m
+[  0%] Built target visualization_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_eus[0m
+[  0%] Built target geometry_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_eus[0m
+[  0%] Built target sensor_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target shape_msgs_generate_messages_eus[0m
+[  0%] Built target shape_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target visualization_msgs_generate_messages_eus[0m
+[  0%] Built target visualization_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target robosherlock_msgs_generate_messages_lisp[0m
+[  3%] [34m[1mGenerating Lisp code from robosherlock_msgs/RSObjectDescriptions.msg[0m
+[  6%] [34m[1mGenerating Lisp code from robosherlock_msgs/RSActiveAnnotatorList.msg[0m
+[  9%] [34m[1mGenerating Lisp code from robosherlock_msgs/RSQueryService.srv[0m
+[ 12%] [34m[1mGenerating Lisp code from robosherlock_msgs/UpdateObjects.srv[0m
+[ 15%] [34m[1mGenerating Lisp code from robosherlock_msgs/SetRSContext.srv[0m
+[ 18%] [34m[1mGenerating Lisp code from robosherlock_msgs/RSVisControl.srv[0m
+[ 18%] Built target robosherlock_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target robosherlock_msgs_generate_messages_py[0m
+[ 21%] [34m[1mGenerating Python from MSG robosherlock_msgs/RSObjectDescriptions[0m
+[ 24%] [34m[1mGenerating Python from MSG robosherlock_msgs/RSActiveAnnotatorList[0m
+[ 27%] [34m[1mGenerating Python code from SRV robosherlock_msgs/RSQueryService[0m
+[ 30%] [34m[1mGenerating Python code from SRV robosherlock_msgs/UpdateObjects[0m
+[ 33%] [34m[1mGenerating Python code from SRV robosherlock_msgs/SetRSContext[0m
+[ 36%] [34m[1mGenerating Python code from SRV robosherlock_msgs/RSVisControl[0m
+[ 39%] [34m[1mGenerating Python msg __init__.py for robosherlock_msgs[0m
+[ 42%] [34m[1mGenerating Python srv __init__.py for robosherlock_msgs[0m
+[ 42%] Built target robosherlock_msgs_generate_messages_py
+[35m[1mScanning dependencies of target robosherlock_msgs_generate_messages_nodejs[0m
+[ 45%] [34m[1mGenerating Javascript code from robosherlock_msgs/RSObjectDescriptions.msg[0m
+[ 48%] [34m[1mGenerating Javascript code from robosherlock_msgs/RSActiveAnnotatorList.msg[0m
+[ 51%] [34m[1mGenerating Javascript code from robosherlock_msgs/RSQueryService.srv[0m
+[ 54%] [34m[1mGenerating Javascript code from robosherlock_msgs/UpdateObjects.srv[0m
+[ 57%] [34m[1mGenerating Javascript code from robosherlock_msgs/SetRSContext.srv[0m
+[ 60%] [34m[1mGenerating Javascript code from robosherlock_msgs/RSVisControl.srv[0m
+[ 60%] Built target robosherlock_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target robosherlock_msgs_generate_messages_cpp[0m
+[ 63%] [34m[1mGenerating C++ code from robosherlock_msgs/RSObjectDescriptions.msg[0m
+[ 66%] [34m[1mGenerating C++ code from robosherlock_msgs/RSActiveAnnotatorList.msg[0m
+[ 69%] [34m[1mGenerating C++ code from robosherlock_msgs/RSQueryService.srv[0m
+[ 72%] [34m[1mGenerating C++ code from robosherlock_msgs/UpdateObjects.srv[0m
+[ 75%] [34m[1mGenerating C++ code from robosherlock_msgs/SetRSContext.srv[0m
+[ 78%] [34m[1mGenerating C++ code from robosherlock_msgs/RSVisControl.srv[0m
+[ 78%] Built target robosherlock_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target robosherlock_msgs_generate_messages_eus[0m
+[ 81%] [34m[1mGenerating EusLisp code from robosherlock_msgs/RSObjectDescriptions.msg[0m
+[ 84%] [34m[1mGenerating EusLisp code from robosherlock_msgs/RSActiveAnnotatorList.msg[0m
+[ 87%] [34m[1mGenerating EusLisp code from robosherlock_msgs/RSQueryService.srv[0m
+[ 90%] [34m[1mGenerating EusLisp code from robosherlock_msgs/UpdateObjects.srv[0m
+[ 93%] [34m[1mGenerating EusLisp code from robosherlock_msgs/SetRSContext.srv[0m
+[ 96%] [34m[1mGenerating EusLisp code from robosherlock_msgs/RSVisControl.srv[0m
+[100%] [34m[1mGenerating EusLisp manifest code for robosherlock_msgs[0m
+[100%] Built target robosherlock_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target robosherlock_msgs_generate_messages[0m
+[100%] Built target robosherlock_msgs_generate_messages

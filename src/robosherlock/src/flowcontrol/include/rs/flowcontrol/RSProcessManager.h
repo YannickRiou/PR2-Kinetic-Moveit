@@ -1,5 +1,5 @@
-#ifndef RSCONTROLEDAEMANAGER_H
-#define RSCONTROLEDAEMANAGER_H
+#ifndef __RSPROCESS_MANAGER_H__
+#define __RSPROCESS_MANAGER_H__
 
 #include <rs/flowcontrol/RSAnalysisEngineManager.h>
 
@@ -53,6 +53,8 @@ public:
   bool pause_;
   bool inspectFromAR_;
 
+  bool parallel_;
+
 
   std::mutex processing_mutex_;
 
@@ -66,7 +68,7 @@ public:
 
   ~RSProcessManager();
 
-  void init(std::string &xmlFile, std::string configFile_, bool pervasive);
+  void init(std::string &xmlFile, std::string configFile_, bool pervasive, bool parallel);
 
   void run();
 
@@ -83,7 +85,7 @@ public:
   bool jsonQueryCallback(robosherlock_msgs::RSQueryService::Request &req,
                          robosherlock_msgs::RSQueryService::Response &res);
 
-  bool handleQuery(std::string& req, std::vector<std::string>& res);
+  bool virtual handleQuery(std::string& req, std::vector<std::string>& res);
 #endif
   //special case for offscreen rendering the beliefstate using Unreal Engine
   bool renderOffscreen(std::string object);
@@ -126,4 +128,4 @@ public:
 
 };
 
-#endif // RSCONTROLEDAEMANAGER_H
+#endif // __RSPROCESS_MANAGER_H__

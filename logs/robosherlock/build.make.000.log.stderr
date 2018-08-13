@@ -1,0 +1,11 @@
+In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/core/src/DrawingAnnotator.cpp:20:0[m[K:
+[01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/core/include/rs/DrawingAnnotator.h:28:24:[m[K [01;31m[Kfatal error: [m[Kuima/api.hpp: Aucun fichier ou dossier de ce type
+compilation terminated.
+make[2]: *** [src/core/CMakeFiles/rs_core.dir/src/DrawingAnnotator.cpp.o] Erreur 1
+make[2]: *** Attente des tâches non terminées....
+In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/core/src/scene_cas.cpp:27:0[m[K:
+[01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/core/include/rs/scene_cas.h:24:24:[m[K [01;31m[Kfatal error: [m[Kuima/api.hpp: Aucun fichier ou dossier de ce type
+compilation terminated.
+make[2]: *** [src/core/CMakeFiles/rs_core.dir/src/scene_cas.cpp.o] Erreur 1
+make[1]: *** [src/core/CMakeFiles/rs_core.dir/all] Erreur 2
+make: *** [all] Erreur 2

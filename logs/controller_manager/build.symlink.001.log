@@ -1,0 +1,5 @@
+Linked: (/home/david/PR2-Kinetic-Xenial/devel/.private/controller_manager/share/controller_manager/cmake/controller_managerConfig.cmake, /home/david/PR2-Kinetic-Xenial/devel/share/controller_manager/cmake/controller_managerConfig.cmake)
+Linked: (/home/david/PR2-Kinetic-Xenial/devel/.private/controller_manager/share/controller_manager/cmake/controller_managerConfig-version.cmake, /home/david/PR2-Kinetic-Xenial/devel/share/controller_manager/cmake/controller_managerConfig-version.cmake)
+Linked: (/home/david/PR2-Kinetic-Xenial/devel/.private/controller_manager/lib/libcontroller_manager.so, /home/david/PR2-Kinetic-Xenial/devel/lib/libcontroller_manager.so)
+Linked: (/home/david/PR2-Kinetic-Xenial/devel/.private/controller_manager/lib/pkgconfig/controller_manager.pc, /home/david/PR2-Kinetic-Xenial/devel/lib/pkgconfig/controller_manager.pc)
+Linked: (/home/david/PR2-Kinetic-Xenial/devel/.private/controller_manager/lib/python2.7/dist-packages/controller_manager/__init__.py, /home/david/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/controller_manager/__init__.py)

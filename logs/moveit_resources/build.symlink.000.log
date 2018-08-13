@@ -1,0 +1,5 @@
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/include/moveit_resources/config.h
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/include/moveit_resources/.config_install.h
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/moveit_resources/cmake/moveit_resourcesConfig-version.cmake
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/moveit_resources/cmake/moveit_resourcesConfig.cmake
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pkgconfig/moveit_resources.pc

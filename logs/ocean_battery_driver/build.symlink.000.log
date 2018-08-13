@@ -1,0 +1,5 @@
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/ocean_battery_driver/cmake/ocean_battery_driverConfig-version.cmake
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/ocean_battery_driver/cmake/ocean_battery_driverConfig.cmake
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pkgconfig/ocean_battery_driver.pc
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/ocean_battery_driver/ocean_server
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/ocean_battery_driver/battery_check

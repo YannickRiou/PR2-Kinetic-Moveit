@@ -1,0 +1,115 @@
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerFeedback
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionGoal
+[  0%] Built target _actioncontroller_generate_messages_check_deps_actiongoal
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionFeedback
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerAction
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerResult
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[  0%] Built target actionlib_msgs_generate_messages_cpp
+[  0%] Built target ar_track_alvar_msgs_generate_messages_cpp
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerGoal
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target ar_track_alvar_msgs_generate_messages_nodejs
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionResult
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target actionlib_msgs_generate_messages_nodejs
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[  0%] Built target ar_track_alvar_msgs_generate_messages_py
+[  0%] Built target geometry_msgs_generate_messages_py
+[  0%] Built target actionlib_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target ar_track_alvar_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target actionlib_msgs_generate_messages_lisp
+[  0%] Built target ar_track_alvar_msgs_generate_messages_eus
+[  0%] Built target actionlib_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target geometry_msgs_generate_messages_eus
+[  2%] [32mBuilding CXX object CMakeFiles/simplePick.dir/src/simplePick.cpp.o[0m
+[35m[1mScanning dependencies of target actioncontroller_generate_messages_cpp[0m
+[  4%] [34m[1mGenerating C++ code from actioncontroller/ActionControllerActionResult.msg[0m
+[  6%] [32mBuilding CXX object CMakeFiles/setUp.dir/src/setUp.cpp.o[0m
+[  8%] [34m[1mGenerating C++ code from actioncontroller/ActionControllerAction.msg[0m
+[ 10%] [34m[1mGenerating C++ code from actioncontroller/ActionControllerFeedback.msg[0m
+[ 12%] [34m[1mGenerating C++ code from actioncontroller/ActionControllerResult.msg[0m
+[ 14%] [34m[1mGenerating C++ code from actioncontroller/ActionControllerActionGoal.msg[0m
+[ 16%] [34m[1mGenerating C++ code from actioncontroller/ActionControllerActionFeedback.msg[0m
+[ 18%] [34m[1mGenerating C++ code from actioncontroller/ActionControllerGoal.msg[0m
+[ 20%] [34m[1mGenerating C++ code from actioncontroller/actiongoal.msg[0m
+[ 20%] Built target actioncontroller_generate_messages_cpp
+[35m[1mScanning dependencies of target actioncontroller_generate_messages_nodejs[0m
+[ 22%] [34m[1mGenerating Javascript code from actioncontroller/ActionControllerActionResult.msg[0m
+[ 25%] [34m[1mGenerating Javascript code from actioncontroller/ActionControllerAction.msg[0m
+[ 27%] [34m[1mGenerating Javascript code from actioncontroller/ActionControllerFeedback.msg[0m
+[ 29%] [34m[1mGenerating Javascript code from actioncontroller/ActionControllerResult.msg[0m
+[ 31%] [34m[1mGenerating Javascript code from actioncontroller/ActionControllerActionGoal.msg[0m
+[ 33%] [34m[1mGenerating Javascript code from actioncontroller/ActionControllerActionFeedback.msg[0m
+[ 35%] [34m[1mGenerating Javascript code from actioncontroller/ActionControllerGoal.msg[0m
+[ 37%] [34m[1mGenerating Javascript code from actioncontroller/actiongoal.msg[0m
+[ 37%] Built target actioncontroller_generate_messages_nodejs
+[35m[1mScanning dependencies of target actioncontroller_generate_messages_py[0m
+[ 39%] [34m[1mGenerating Python from MSG actioncontroller/ActionControllerActionResult[0m
+[ 41%] [34m[1mGenerating Python from MSG actioncontroller/ActionControllerAction[0m
+[ 43%] [34m[1mGenerating Python from MSG actioncontroller/ActionControllerFeedback[0m
+[ 45%] [34m[1mGenerating Python from MSG actioncontroller/ActionControllerResult[0m
+[ 47%] [34m[1mGenerating Python from MSG actioncontroller/ActionControllerActionGoal[0m
+[ 50%] [34m[1mGenerating Python from MSG actioncontroller/ActionControllerActionFeedback[0m
+[ 52%] [34m[1mGenerating Python from MSG actioncontroller/ActionControllerGoal[0m
+[ 54%] [34m[1mGenerating Python from MSG actioncontroller/actiongoal[0m
+[ 56%] [34m[1mGenerating Python msg __init__.py for actioncontroller[0m
+[ 56%] Built target actioncontroller_generate_messages_py
+[35m[1mScanning dependencies of target actioncontroller_generate_messages_lisp[0m
+[ 58%] [34m[1mGenerating Lisp code from actioncontroller/ActionControllerActionResult.msg[0m
+[ 60%] [34m[1mGenerating Lisp code from actioncontroller/ActionControllerAction.msg[0m
+[ 62%] [34m[1mGenerating Lisp code from actioncontroller/ActionControllerFeedback.msg[0m
+[ 64%] [34m[1mGenerating Lisp code from actioncontroller/ActionControllerResult.msg[0m
+[ 66%] [34m[1mGenerating Lisp code from actioncontroller/ActionControllerActionGoal.msg[0m
+[ 68%] [34m[1mGenerating Lisp code from actioncontroller/ActionControllerActionFeedback.msg[0m
+[ 70%] [34m[1mGenerating Lisp code from actioncontroller/ActionControllerGoal.msg[0m
+[ 72%] [34m[1mGenerating Lisp code from actioncontroller/actiongoal.msg[0m
+[ 72%] Built target actioncontroller_generate_messages_lisp
+[35m[1mScanning dependencies of target actioncontroller_generate_messages_eus[0m
+[ 75%] [34m[1mGenerating EusLisp code from actioncontroller/ActionControllerActionResult.msg[0m
+[ 77%] [34m[1mGenerating EusLisp code from actioncontroller/ActionControllerAction.msg[0m
+[ 79%] [34m[1mGenerating EusLisp code from actioncontroller/ActionControllerFeedback.msg[0m
+[ 81%] [34m[1mGenerating EusLisp code from actioncontroller/ActionControllerResult.msg[0m
+[ 83%] [34m[1mGenerating EusLisp code from actioncontroller/ActionControllerActionGoal.msg[0m
+[ 85%] [34m[1mGenerating EusLisp code from actioncontroller/ActionControllerActionFeedback.msg[0m
+[ 87%] [34m[1mGenerating EusLisp code from actioncontroller/ActionControllerGoal.msg[0m
+[ 89%] [34m[1mGenerating EusLisp code from actioncontroller/actiongoal.msg[0m
+[ 91%] [34m[1mGenerating EusLisp manifest code for actioncontroller[0m
+[ 93%] [32m[1mLinking CXX executable /home/david/PR2-Kinetic-Xenial/devel/.private/actioncontroller/lib/actioncontroller/setUp[0m
+[ 93%] Built target actioncontroller_generate_messages_eus
+[35m[1mScanning dependencies of target actioncontroller_gencpp[0m
+[ 93%] Built target actioncontroller_gencpp
+[35m[1mScanning dependencies of target actioncontroller_generate_messages[0m
+[ 93%] Built target actioncontroller_generate_messages
+[35m[1mScanning dependencies of target ActionController[0m
+[ 95%] [32mBuilding CXX object CMakeFiles/ActionController.dir/src/ActionController.cpp.o[0m
+[ 97%] [32m[1mLinking CXX executable /home/david/PR2-Kinetic-Xenial/devel/.private/actioncontroller/lib/actioncontroller/simplePick[0m
+[ 97%] Built target setUp
+[ 97%] Built target simplePick
+In file included from [01m[K/opt/ros/kinetic/include/ros/ros.h:40:0[m[K,
+                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:2[m[K:
+[01m[K/home/david/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:[m[K In member function ‘[01m[Kbool ActionController::pick(std::__cxx11::string, geometry_msgs::Pose)[m[K’:
+[01m[K/opt/ros/kinetic/include/ros/console.h:346:176:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [-Wformat-security]
+     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, __VA_ARGS__)
+[01;32m[K                                                                                                                                                                                ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:349:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+     ROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER(0, __VA_ARGS__)
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:379:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+       ROSCONSOLE_PRINT_AT_LOCATION(__VA_ARGS__); \
+[01;32m[K       ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:561:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+ #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
+[01;32m[K                                   ^[m[K
+[01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+ #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+[01;32m[K                       ^[m[K
+[01m[K/home/david/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:120:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+   ROS_INFO(group.c_str());
+[01;32m[K   ^[m[K
+[100%] [32m[1mLinking CXX executable /home/david/PR2-Kinetic-Xenial/devel/.private/actioncontroller/lib/actioncontroller/ActionController[0m
+[100%] Built target ActionController

@@ -1,0 +1,116 @@
+[  0%] Built target visualization_msgs_generate_messages_lisp
+[ 14%] Built target costmap_2d_gencfg
+[ 14%] Built target geometry_msgs_generate_messages_nodejs
+[ 14%] Built target map_msgs_generate_messages_nodejs
+[ 14%] Built target _costmap_2d_generate_messages_check_deps_VoxelGrid
+[ 14%] Built target std_msgs_generate_messages_nodejs
+[ 14%] Built target visualization_msgs_generate_messages_py
+[ 14%] Built target visualization_msgs_generate_messages_nodejs
+[ 14%] Built target actionlib_msgs_generate_messages_nodejs
+[ 14%] Built target topic_tools_generate_messages_py
+[ 14%] Built target tf2_msgs_generate_messages_py
+[ 14%] Built target actionlib_msgs_generate_messages_lisp
+[ 14%] Built target nav_msgs_generate_messages_py
+[ 14%] Built target nav_msgs_generate_messages_nodejs
+[ 14%] Built target nav_msgs_generate_messages_lisp
+[ 14%] Built target actionlib_msgs_generate_messages_cpp
+[ 14%] Built target sensor_msgs_generate_messages_eus
+[ 14%] Built target actionlib_generate_messages_nodejs
+[ 14%] Built target visualization_msgs_generate_messages_cpp
+[ 14%] Built target sensor_msgs_generate_messages_cpp
+[ 14%] Built target map_msgs_generate_messages_py
+[ 14%] Built target map_msgs_generate_messages_lisp
+[ 14%] Built target nodelet_generate_messages_cpp
+[ 14%] Built target tf_generate_messages_py
+[ 14%] Built target roscpp_generate_messages_py
+[ 14%] Built target map_msgs_generate_messages_eus
+[ 14%] Built target dynamic_reconfigure_generate_messages_nodejs
+[ 14%] Built target map_msgs_generate_messages_cpp
+[ 14%] Built target roscpp_generate_messages_eus
+[ 14%] Built target dynamic_reconfigure_generate_messages_cpp
+[ 14%] Built target bond_generate_messages_eus
+[ 14%] Built target sensor_msgs_generate_messages_py
+[ 14%] Built target roscpp_generate_messages_nodejs
+[ 14%] Built target pcl_msgs_generate_messages_nodejs
+[ 14%] Built target std_srvs_generate_messages_nodejs
+[ 14%] Built target actionlib_msgs_generate_messages_eus
+[ 14%] Built target actionlib_generate_messages_lisp
+[ 14%] Built target std_srvs_generate_messages_eus
+[ 14%] Built target tf_generate_messages_cpp
+[ 14%] Built target std_msgs_generate_messages_py
+[ 14%] Built target geometry_msgs_generate_messages_py
+[ 14%] Built target dynamic_reconfigure_gencfg
+[ 14%] Built target geometry_msgs_generate_messages_lisp
+[ 14%] Built target std_msgs_generate_messages_lisp
+[ 14%] Built target sensor_msgs_generate_messages_nodejs
+[ 14%] Built target geometry_msgs_generate_messages_cpp
+[ 14%] Built target std_msgs_generate_messages_cpp
+[ 14%] Built target roscpp_generate_messages_lisp
+[ 14%] Built target tf_generate_messages_nodejs
+[ 14%] Built target dynamic_reconfigure_generate_messages_lisp
+[ 14%] Built target std_srvs_generate_messages_py
+[ 14%] Built target tf2_msgs_generate_messages_eus
+[ 14%] Built target pcl_ros_gencfg
+[ 14%] Built target roscpp_generate_messages_cpp
+[ 14%] Built target nav_msgs_generate_messages_eus
+[ 14%] Built target nodelet_generate_messages_py
+[ 14%] Built target actionlib_msgs_generate_messages_py
+[ 14%] Built target std_srvs_generate_messages_lisp
+[ 14%] Built target bond_generate_messages_py
+[ 14%] Built target geometry_msgs_generate_messages_eus
+[ 14%] Built target rosgraph_msgs_generate_messages_cpp
+[ 14%] Built target pcl_msgs_generate_messages_eus
+[ 14%] Built target rosgraph_msgs_generate_messages_eus
+[ 14%] Built target rosgraph_msgs_generate_messages_lisp
+[ 14%] Built target rosgraph_msgs_generate_messages_nodejs
+[ 14%] Built target std_msgs_generate_messages_eus
+[ 14%] Built target actionlib_generate_messages_cpp
+[ 14%] Built target rosgraph_msgs_generate_messages_py
+[ 14%] Built target tf_generate_messages_lisp
+[ 14%] Built target pcl_msgs_generate_messages_lisp
+[ 14%] Built target dynamic_reconfigure_generate_messages_eus
+[ 14%] Built target visualization_msgs_generate_messages_eus
+[ 14%] Built target pcl_msgs_generate_messages_py
+[ 14%] Built target bond_generate_messages_nodejs
+[ 14%] Built target tf2_msgs_generate_messages_nodejs
+[ 14%] Built target nodelet_generate_messages_lisp
+[ 14%] Built target nodelet_generate_messages_nodejs
+[ 14%] Built target bond_generate_messages_cpp
+[ 14%] Built target bond_generate_messages_lisp
+[ 14%] Built target nodelet_generate_messages_eus
+[ 14%] Built target topic_tools_generate_messages_cpp
+[ 14%] Built target topic_tools_generate_messages_eus
+[ 14%] Built target nodelet_topic_tools_gencfg
+[ 14%] Built target pcl_msgs_generate_messages_cpp
+[ 14%] Built target std_srvs_generate_messages_cpp
+[ 14%] Built target topic_tools_generate_messages_lisp
+[ 17%] Built target costmap_2d_generate_messages_cpp
+[ 17%] Built target sensor_msgs_generate_messages_lisp
+[ 17%] Built target topic_tools_generate_messages_nodejs
+[ 17%] Built target tf_generate_messages_eus
+[ 17%] Built target actionlib_generate_messages_eus
+[ 17%] Built target dynamic_reconfigure_generate_messages_py
+[ 17%] Built target actionlib_generate_messages_py
+[ 17%] Built target tf2_msgs_generate_messages_cpp
+[ 17%] Built target nav_msgs_generate_messages_cpp
+[ 17%] Built target tf2_msgs_generate_messages_lisp
+[ 20%] Built target costmap_2d_generate_messages_nodejs
+[ 25%] Built target costmap_2d_generate_messages_py
+[ 34%] Built target costmap_2d_generate_messages_lisp
+[ 34%] Built target costmap_2d_generate_messages_eus
+[ 34%] Built target costmap_2d_generate_messages
+[ 65%] Built target costmap_2d
+[35m[1mScanning dependencies of target costmap_2d_markers[0m
+[ 68%] [32m[1mLinking CXX executable /home/david/PR2-Kinetic-Xenial/devel/.private/costmap_2d/lib/costmap_2d/costmap_2d_cloud[0m
+[ 71%] [32m[1mLinking CXX executable /home/david/PR2-Kinetic-Xenial/devel/.private/costmap_2d/lib/costmap_2d/costmap_2d_node[0m
+[ 74%] [32mBuilding CXX object CMakeFiles/costmap_2d_markers.dir/src/costmap_2d_markers.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/layers.dir/plugins/obstacle_layer.cpp.o[0m
+[ 80%] [32m[1mLinking CXX executable /home/david/PR2-Kinetic-Xenial/devel/.private/costmap_2d/lib/costmap_2d/costmap_2d_markers[0m
+[ 82%] Built target costmap_2d_node
+[ 85%] [32mBuilding CXX object CMakeFiles/layers.dir/plugins/static_layer.cpp.o[0m
+[ 88%] [32mBuilding CXX object CMakeFiles/layers.dir/plugins/voxel_layer.cpp.o[0m
+[ 91%] [32mBuilding CXX object CMakeFiles/layers.dir/src/observation_buffer.cpp.o[0m
+[ 94%] [32m[1mLinking CXX shared library /home/david/PR2-Kinetic-Xenial/devel/.private/costmap_2d/lib/liblayers.so[0m
+[ 97%] Built target layers
+[ 97%] Built target costmap_2d_markers
+[100%] Built target costmap_2d_cloud

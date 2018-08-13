@@ -1,0 +1,14 @@
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/include/moveit_ros_manipulation/PickPlaceDynamicReconfigureConfig.h
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/moveit_ros_manipulation/docs/PickPlaceDynamicReconfigureConfig.wikidoc
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/moveit_ros_manipulation/docs/PickPlaceDynamicReconfigureConfig.dox
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/moveit_ros_manipulation/docs/PickPlaceDynamicReconfigureConfig-usage.dox
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/moveit_ros_manipulation/cmake/moveit_ros_manipulationConfig-version.cmake
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/moveit_ros_manipulation/cmake/moveit_ros_manipulationConfig.cmake
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/libmoveit_move_group_pick_place_capability.so.0.9.7
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/libmoveit_pick_place_planner.so.0.9.7
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/libmoveit_move_group_pick_place_capability.so
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/libmoveit_pick_place_planner.so
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pkgconfig/moveit_ros_manipulation.pc
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/moveit_ros_manipulation/__init__.py
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/moveit_ros_manipulation/cfg/__init__.py
+Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/moveit_ros_manipulation/cfg/PickPlaceDynamicReconfigureConfig.py
