@@ -1,2 +1,0 @@
-string move_group_id
-geometry_msgs/PoseWithCovariance pose

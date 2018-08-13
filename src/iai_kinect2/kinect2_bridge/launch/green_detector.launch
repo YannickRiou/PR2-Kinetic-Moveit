@@ -1,0 +1,17 @@
+<launch>
+
+  <node name="hsv_color_filter"
+        pkg="opencv_apps" type="hsv_color_filter">
+    <remap from="image" to="/kinect2/hd/image_color" />
+    <rosparam>
+      use_camera_info: false
+      h_limit_max: 180
+      h_limit_min: 120
+      s_limit_max: 184
+      s_limit_min: 104
+      v_limit_max: 211
+      v_limit_min: 77
+    </rosparam>
+  </node>
+
+</launch>

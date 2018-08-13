@@ -8,11 +8,11 @@
 #include <rs/types/tf_types.h>
 #include <rs/types/ros_types.h>
 #include <rs/types/core_types.h>
-#include <rs/types/pcl_types.h>
 #include <rs/types/cv_types.h>
+#include <rs/types/human_types.h>
+#include <rs/types/pcl_types.h>
 #include <rs/types/scene_types.h>
 #include <rs/types/annotation_types.h>
-#include <rs/types/human_types.h>
 
 
 #endif /* __ROBOSHERLOCK_ALL_TYPES_H__ */
