@@ -1,0 +1,67 @@
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[  0%] Built target ar_track_alvar_msgs_generate_messages_cpp
+[  0%] Built target actionlib_msgs_generate_messages_cpp
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerFeedback
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerAction
+[  0%] Built target _actioncontroller_generate_messages_check_deps_actiongoal
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionGoal
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerResult
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionFeedback
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target actionlib_msgs_generate_messages_nodejs
+[  0%] Built target ar_track_alvar_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerGoal
+[  0%] Built target ar_track_alvar_msgs_generate_messages_py
+[  0%] Built target geometry_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target actionlib_msgs_generate_messages_py
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionResult
+[  0%] Built target ar_track_alvar_msgs_generate_messages_lisp
+[  0%] Built target actionlib_msgs_generate_messages_lisp
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target actionlib_msgs_generate_messages_java
+[  0%] Built target geometry_msgs_generate_messages_java
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target actionlib_msgs_generate_messages_eus
+[  0%] Built target ar_track_alvar_msgs_generate_messages_eus
+[  0%] Built target geometry_msgs_generate_messages_eus
+[  1%] [34m[1mGenerating Java gradle project from actioncontroller[0m
+[ 39%] [34m[1mGenerating Java gradle project from actioncontroller[0m
+[ 49%] Built target setUp
+[ 49%] Built target simplePick
+[ 62%] Built target actioncontroller_generate_messages_nodejs
+[ 66%] Built target actioncontroller_generate_messages_cpp
+[ 80%] Built target actioncontroller_generate_messages_lisp
+[ 84%] Built target actioncontroller_generate_messages_py
+[ 94%] Built target actioncontroller_generate_messages_eus
+[ 98%] Built target ActionController
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/share/genjava/cmake/../../../lib/genjava/genjava_gradle_project.py", line 14, in <module>
+    genjava.main(sys.argv)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genjava/genjava_main.py", line 82, in main
+    gradle_project.create(args.package, args.output_dir)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genjava/gradle_project.py", line 152, in create
+    raise IOError("could not find %s among message packages. Does the that package have a <build_depend> on message_generation in its package.xml?" % msg_pkg_name)
+IOError: could not find actioncontroller among message packages. Does the that package have a <build_depend> on message_generation in its package.xml?
+CMakeFiles/actioncontroller_generate_messages_java_gradle.dir/build.make:155: recipe for target 'java/actioncontroller/build.gradle' failed
+make[2]: *** [java/actioncontroller/build.gradle] Error 1
+CMakeFiles/Makefile2:818: recipe for target 'CMakeFiles/actioncontroller_generate_messages_java_gradle.dir/all' failed
+make[1]: *** [CMakeFiles/actioncontroller_generate_messages_java_gradle.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/share/genjava/cmake/../../../lib/genjava/genjava_gradle_project.py", line 14, in <module>
+    genjava.main(sys.argv)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genjava/genjava_main.py", line 82, in main
+    gradle_project.create(args.package, args.output_dir)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genjava/gradle_project.py", line 152, in create
+    raise IOError("could not find %s among message packages. Does the that package have a <build_depend> on message_generation in its package.xml?" % msg_pkg_name)
+IOError: could not find actioncontroller among message packages. Does the that package have a <build_depend> on message_generation in its package.xml?
+CMakeFiles/actioncontroller_generate_messages_java.dir/build.make:154: recipe for target 'java/actioncontroller/build.gradle' failed
+make[2]: *** [java/actioncontroller/build.gradle] Error 1
+CMakeFiles/Makefile2:295: recipe for target 'CMakeFiles/actioncontroller_generate_messages_java.dir/all' failed
+make[1]: *** [CMakeFiles/actioncontroller_generate_messages_java.dir/all] Error 2
+Makefile:138: recipe for target 'all' failed
+make: *** [all] Error 2

@@ -1,0 +1,36 @@
+[  0%] Built target _pr2_msgs_generate_messages_check_deps_AccessPoint
+[  0%] Built target _pr2_msgs_generate_messages_check_deps_BatteryState2
+[  0%] Built target _pr2_msgs_generate_messages_check_deps_LaserScannerSignal
+[  0%] Built target _pr2_msgs_generate_messages_check_deps_BatteryState
+[  0%] Built target _pr2_msgs_generate_messages_check_deps_PeriodicCmd
+[  0%] Built target _pr2_msgs_generate_messages_check_deps_LaserTrajCmd
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target _pr2_msgs_generate_messages_check_deps_GPUStatus
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[  0%] Built target _pr2_msgs_generate_messages_check_deps_DashboardState
+[  0%] Built target _pr2_msgs_generate_messages_check_deps_SetPeriodicCmd
+[  0%] Built target _pr2_msgs_generate_messages_check_deps_AccelerometerState
+[  0%] Built target _pr2_msgs_generate_messages_check_deps_PressureState
+[  0%] Built target _pr2_msgs_generate_messages_check_deps_PowerState
+[  0%] Built target _pr2_msgs_generate_messages_check_deps_BatteryServer
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[  0%] Built target geometry_msgs_generate_messages_py
+[  0%] Built target _pr2_msgs_generate_messages_check_deps_BatteryServer2
+[  0%] Built target _pr2_msgs_generate_messages_check_deps_SetLaserTrajCmd
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  1%] Built target geometry_msgs_generate_messages_eus
+[  1%] [34m[1mCompiling Java code for pr2_msgs[0m
+[  1%] Built target std_msgs_generate_messages_cpp
+[  1%] Built target std_msgs_generate_messages_lisp
+[  1%] Built target _pr2_msgs_generate_messages_check_deps_PowerBoardState
+[  1%] Built target std_msgs_generate_messages_eus
+[  3%] Built target geometry_msgs_generate_messages_java
+[ 36%] Built target pr2_msgs_generate_messages_java
+[ 60%] Built target pr2_msgs_generate_messages_cpp
+[ 68%] Built target pr2_msgs_generate_messages_nodejs
+[ 94%] Built target pr2_msgs_generate_messages_py
+[ 94%] Built target pr2_msgs_generate_messages_lisp
+[ 98%] Built target pr2_msgs_generate_messages_eus
+[100%] Built target pr2_msgs_generate_messages_java_gradle
+[100%] Built target pr2_msgs_generate_messages

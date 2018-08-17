@@ -1,0 +1,19 @@
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target _diagnostic_msgs_generate_messages_check_deps_KeyValue
+[  0%] Built target _diagnostic_msgs_generate_messages_check_deps_DiagnosticArray
+[  0%] Built target _diagnostic_msgs_generate_messages_check_deps_DiagnosticStatus
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target _diagnostic_msgs_generate_messages_check_deps_AddDiagnostics
+[  3%] [34m[1mCompiling Java code for diagnostic_msgs[0m
+[  3%] Built target std_msgs_generate_messages_cpp
+[  3%] Built target _diagnostic_msgs_generate_messages_check_deps_SelfTest
+[ 41%] Built target diagnostic_msgs_generate_messages_py
+[ 58%] Built target diagnostic_msgs_generate_messages_java
+[ 58%] Built target diagnostic_msgs_generate_messages_nodejs
+[ 64%] Built target diagnostic_msgs_generate_messages_lisp
+[ 96%] Built target diagnostic_msgs_generate_messages_eus
+[ 96%] Built target diagnostic_msgs_generate_messages_cpp
+[100%] Built target diagnostic_msgs_generate_messages_java_gradle
+[100%] Built target diagnostic_msgs_generate_messages

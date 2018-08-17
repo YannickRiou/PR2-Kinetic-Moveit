@@ -1,0 +1,4 @@
+[  5%] Built target openni_camera_gencfg
+[ 77%] Built target openni_driver
+[ 88%] Built target openni_node
+[100%] Built target openni_nodelet

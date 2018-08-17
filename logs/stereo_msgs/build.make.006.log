@@ -1,0 +1,21 @@
+[ 10%] [34m[1mCompiling Java code for stereo_msgs[0m
+[ 10%] Built target sensor_msgs_generate_messages_nodejs
+[ 10%] Built target std_msgs_generate_messages_nodejs
+[ 10%] Built target std_msgs_generate_messages_lisp
+[ 10%] Built target sensor_msgs_generate_messages_lisp
+[ 10%] Built target _stereo_msgs_generate_messages_check_deps_DisparityImage
+[ 10%] Built target sensor_msgs_generate_messages_java
+[ 20%] Built target stereo_msgs_generate_messages_java_gradle
+[ 20%] Built target std_msgs_generate_messages_eus
+[ 20%] Built target sensor_msgs_generate_messages_eus
+[ 20%] Built target std_msgs_generate_messages_cpp
+[ 20%] Built target std_msgs_generate_messages_py
+[ 20%] Built target sensor_msgs_generate_messages_cpp
+[ 20%] Built target sensor_msgs_generate_messages_py
+[ 30%] Built target stereo_msgs_generate_messages_nodejs
+[ 40%] Built target stereo_msgs_generate_messages_java
+[ 50%] Built target stereo_msgs_generate_messages_lisp
+[ 70%] Built target stereo_msgs_generate_messages_eus
+[ 80%] Built target stereo_msgs_generate_messages_cpp
+[100%] Built target stereo_msgs_generate_messages_py
+[100%] Built target stereo_msgs_generate_messages

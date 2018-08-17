@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/share/genjava/cmake/../../../lib/genjava/genjava_gradle_project.py", line 14, in <module>
+    genjava.main(sys.argv)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genjava/genjava_main.py", line 82, in main
+    gradle_project.create(args.package, args.output_dir)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genjava/gradle_project.py", line 152, in create
+    raise IOError("could not find %s among message packages. Does the that package have a <build_depend> on message_generation in its package.xml?" % msg_pkg_name)
+IOError: could not find actioncontroller among message packages. Does the that package have a <build_depend> on message_generation in its package.xml?
+make[2]: *** [java/actioncontroller/build.gradle] Error 1
+make[1]: *** [CMakeFiles/actioncontroller_generate_messages_java_gradle.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/share/genjava/cmake/../../../lib/genjava/genjava_gradle_project.py", line 14, in <module>
+    genjava.main(sys.argv)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genjava/genjava_main.py", line 82, in main
+    gradle_project.create(args.package, args.output_dir)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genjava/gradle_project.py", line 152, in create
+    raise IOError("could not find %s among message packages. Does the that package have a <build_depend> on message_generation in its package.xml?" % msg_pkg_name)
+IOError: could not find actioncontroller among message packages. Does the that package have a <build_depend> on message_generation in its package.xml?
+make[2]: *** [java/actioncontroller/build.gradle] Error 1
+make[1]: *** [CMakeFiles/actioncontroller_generate_messages_java.dir/all] Error 2
+make: *** [all] Error 2

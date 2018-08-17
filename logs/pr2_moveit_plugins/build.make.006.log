@@ -1,0 +1,5 @@
+[ 55%] Built target pr2_moveit_arm_kinematics
+[ 55%] Built target pr2_mechanism_msgs_generate_messages_cpp
+[ 55%] Built target pr2_controllers_msgs_generate_messages_cpp
+[ 77%] Built target pr2_moveit_controller_manager
+[100%] Built target pr2_moveit_sensor_manager
