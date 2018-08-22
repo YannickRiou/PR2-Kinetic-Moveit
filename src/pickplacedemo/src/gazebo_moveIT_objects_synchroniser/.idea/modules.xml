@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../gazebo_moveIT_objects_synchroniser/.idea/gazebo_plugin_fake_perception_to_moveit.iml" filepath="$PROJECT_DIR$/../gazebo_moveIT_objects_synchroniser/.idea/gazebo_plugin_fake_perception_to_moveit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/gazebo_moveIT_objects_synchroniser.iml" filepath="$PROJECT_DIR$/.idea/gazebo_moveIT_objects_synchroniser.iml" />
     </modules>
   </component>
 </project>

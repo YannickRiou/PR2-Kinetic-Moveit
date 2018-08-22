@@ -1,8 +1,8 @@
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/pr2_controller_manager/cmake/pr2_controller_managerConfig-version.cmake
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/pr2_controller_manager/cmake/pr2_controller_managerConfig.cmake
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/libpr2_controller_manager.so
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/libcontroller_test.so
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pr2_controller_manager/test_controllers
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pr2_controller_manager/test_robot
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pkgconfig/pr2_controller_manager.pc
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/pr2_controller_manager/__init__.py
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libcontroller_test.so
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libpr2_controller_manager.so
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/pr2_controller_manager.pc
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/pr2_controller_manager/__init__.py
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pr2_controller_manager/test_controllers
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pr2_controller_manager/test_robot
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/pr2_controller_manager/cmake/pr2_controller_managerConfig.cmake
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/pr2_controller_manager/cmake/pr2_controller_managerConfig-version.cmake

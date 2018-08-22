@@ -1,6 +1,0 @@
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libpr2_moveit_arm_kinematics.so
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libpr2_moveit_controller_manager.so
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libpr2_moveit_sensor_manager.so
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/pr2_moveit_plugins.pc
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/pr2_moveit_plugins/cmake/pr2_moveit_pluginsConfig.cmake
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/pr2_moveit_plugins/cmake/pr2_moveit_pluginsConfig-version.cmake

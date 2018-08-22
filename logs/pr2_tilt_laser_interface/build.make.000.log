@@ -1,5 +1,5 @@
-[35m[1mScanning dependencies of target _pr2_tilt_laser_interface_generate_messages_check_deps_GetSnapshotFeedback[0m
-[  0%] Built target _pr2_tilt_laser_interface_generate_messages_check_deps_GetSnapshotFeedback
+[35m[1mScanning dependencies of target _pr2_tilt_laser_interface_generate_messages_check_deps_GetSnapshotAction[0m
+[  0%] Built target _pr2_tilt_laser_interface_generate_messages_check_deps_GetSnapshotAction
 [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_cpp[0m
 [  0%] Built target actionlib_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target sensor_msgs_generate_messages_cpp[0m
@@ -10,12 +10,12 @@
 [  0%] Built target _pr2_tilt_laser_interface_generate_messages_check_deps_GetSnapshotActionResult
 [35m[1mScanning dependencies of target _pr2_tilt_laser_interface_generate_messages_check_deps_GetSnapshotActionGoal[0m
 [  0%] Built target _pr2_tilt_laser_interface_generate_messages_check_deps_GetSnapshotActionGoal
-[35m[1mScanning dependencies of target _pr2_tilt_laser_interface_generate_messages_check_deps_GetSnapshotGoal[0m
-[  0%] Built target _pr2_tilt_laser_interface_generate_messages_check_deps_GetSnapshotGoal
+[35m[1mScanning dependencies of target _pr2_tilt_laser_interface_generate_messages_check_deps_GetSnapshotFeedback[0m
+[  0%] Built target _pr2_tilt_laser_interface_generate_messages_check_deps_GetSnapshotFeedback
 [35m[1mScanning dependencies of target _pr2_tilt_laser_interface_generate_messages_check_deps_GetSnapshotActionFeedback[0m
 [  0%] Built target _pr2_tilt_laser_interface_generate_messages_check_deps_GetSnapshotActionFeedback
-[35m[1mScanning dependencies of target _pr2_tilt_laser_interface_generate_messages_check_deps_GetSnapshotAction[0m
-[  0%] Built target _pr2_tilt_laser_interface_generate_messages_check_deps_GetSnapshotAction
+[35m[1mScanning dependencies of target _pr2_tilt_laser_interface_generate_messages_check_deps_GetSnapshotGoal[0m
+[  0%] Built target _pr2_tilt_laser_interface_generate_messages_check_deps_GetSnapshotGoal
 [35m[1mScanning dependencies of target _pr2_tilt_laser_interface_generate_messages_check_deps_GetSnapshotResult[0m
 [  0%] Built target _pr2_tilt_laser_interface_generate_messages_check_deps_GetSnapshotResult
 [35m[1mScanning dependencies of target sensor_msgs_generate_messages_nodejs[0m
@@ -30,70 +30,111 @@
 [  0%] Built target sensor_msgs_generate_messages_py
 [35m[1mScanning dependencies of target pr2_msgs_generate_messages_py[0m
 [  0%] Built target pr2_msgs_generate_messages_py
-[35m[1mScanning dependencies of target sensor_msgs_generate_messages_eus[0m
-[  0%] Built target sensor_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target pr2_tilt_laser_interface_generate_messages_java_gradle[0m
+[  2%] [34m[1mGenerating Java gradle project from pr2_tilt_laser_interface[0m
+WARNING: Package name "gazebo_moveIT_objects_synchroniser" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+[  4%] [34m[1mCompiling Java code for pr2_tilt_laser_interface[0m
+[0m[35m[1mScanning dependencies of target sensor_msgs_generate_messages_eus[0m
+[  4%] Built target sensor_msgs_generate_messages_eus
 [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_eus[0m
-[  0%] Built target actionlib_msgs_generate_messages_eus
+[  4%] Built target actionlib_msgs_generate_messages_eus
 [35m[1mScanning dependencies of target pr2_msgs_generate_messages_eus[0m
-[  0%] Built target pr2_msgs_generate_messages_eus
+[  4%] Built target pr2_msgs_generate_messages_eus
 [35m[1mScanning dependencies of target pr2_msgs_generate_messages_lisp[0m
-[  0%] Built target pr2_msgs_generate_messages_lisp
+[  4%] Built target pr2_msgs_generate_messages_lisp
 [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_lisp[0m
-[  0%] Built target actionlib_msgs_generate_messages_lisp
+[  4%] Built target actionlib_msgs_generate_messages_lisp
 [35m[1mScanning dependencies of target sensor_msgs_generate_messages_lisp[0m
-[  0%] Built target sensor_msgs_generate_messages_lisp
+[  4%] Built target sensor_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target pr2_tilt_laser_interface_generate_messages_java[0m
+[  7%] Built target pr2_tilt_laser_interface_generate_messages_java
 [35m[1mScanning dependencies of target pr2_tilt_laser_interface_generate_messages_cpp[0m
-[  2%] [34m[1mGenerating C++ code from pr2_tilt_laser_interface/GetSnapshotGoal.msg[0m
-[  5%] [34m[1mGenerating C++ code from pr2_tilt_laser_interface/GetSnapshotActionFeedback.msg[0m
-[  7%] [34m[1mGenerating C++ code from pr2_tilt_laser_interface/GetSnapshotAction.msg[0m
-[ 10%] [34m[1mGenerating C++ code from pr2_tilt_laser_interface/GetSnapshotActionGoal.msg[0m
-[ 12%] [34m[1mGenerating C++ code from pr2_tilt_laser_interface/GetSnapshotResult.msg[0m
-[ 15%] [34m[1mGenerating C++ code from pr2_tilt_laser_interface/GetSnapshotActionResult.msg[0m
-[ 17%] [34m[1mGenerating C++ code from pr2_tilt_laser_interface/GetSnapshotFeedback.msg[0m
-[ 17%] Built target pr2_tilt_laser_interface_generate_messages_cpp
 [35m[1mScanning dependencies of target pr2_tilt_laser_interface_generate_messages_nodejs[0m
-[ 20%] [34m[1mGenerating Javascript code from pr2_tilt_laser_interface/GetSnapshotGoal.msg[0m
-[ 23%] [34m[1mGenerating Javascript code from pr2_tilt_laser_interface/GetSnapshotActionFeedback.msg[0m
-[ 25%] [34m[1mGenerating Javascript code from pr2_tilt_laser_interface/GetSnapshotAction.msg[0m
-[ 28%] [34m[1mGenerating Javascript code from pr2_tilt_laser_interface/GetSnapshotActionGoal.msg[0m
+[  9%] [34m[1mGenerating C++ code from pr2_tilt_laser_interface/GetSnapshotActionResult.msg[0m
+[ 11%] [34m[1mGenerating Javascript code from pr2_tilt_laser_interface/GetSnapshotActionResult.msg[0m
+[ 14%] [34m[1mGenerating Javascript code from pr2_tilt_laser_interface/GetSnapshotFeedback.msg[0m
+[ 19%] [34m[1mGenerating Javascript code from pr2_tilt_laser_interface/GetSnapshotActionFeedback.msg[0m
+[ 19%] [34m[1mGenerating C++ code from pr2_tilt_laser_interface/GetSnapshotFeedback.msg[0m
+[ 21%] [34m[1mGenerating Javascript code from pr2_tilt_laser_interface/GetSnapshotGoal.msg[0m
+[ 23%] [34m[1mGenerating Javascript code from pr2_tilt_laser_interface/GetSnapshotResult.msg[0m
+[ 26%] [34m[1mGenerating Javascript code from pr2_tilt_laser_interface/GetSnapshotActionGoal.msg[0m
+[ 28%] [34m[1mGenerating C++ code from pr2_tilt_laser_interface/GetSnapshotActionFeedback.msg[0m
+[ 30%] [34m[1mGenerating Javascript code from pr2_tilt_laser_interface/GetSnapshotAction.msg[0m
 [35m[1mScanning dependencies of target pr2_tilt_laser_interface_generate_messages_py[0m
-[ 30%] [34m[1mGenerating Javascript code from pr2_tilt_laser_interface/GetSnapshotResult.msg[0m
-[ 33%] [34m[1mGenerating Python from MSG pr2_tilt_laser_interface/GetSnapshotGoal[0m
-[ 35%] [34m[1mGenerating Javascript code from pr2_tilt_laser_interface/GetSnapshotActionResult.msg[0m
-[ 38%] [34m[1mGenerating Javascript code from pr2_tilt_laser_interface/GetSnapshotFeedback.msg[0m
-[ 41%] [34m[1mGenerating Python from MSG pr2_tilt_laser_interface/GetSnapshotActionFeedback[0m
-[ 41%] Built target pr2_tilt_laser_interface_generate_messages_nodejs
+[ 33%] [34m[1mGenerating Python from MSG pr2_tilt_laser_interface/GetSnapshotActionResult[0m
+[ 33%] Built target pr2_tilt_laser_interface_generate_messages_nodejs
+[ 38%] [34m[1mGenerating Python from MSG pr2_tilt_laser_interface/GetSnapshotFeedback[0m
+[ 38%] [34m[1mGenerating C++ code from pr2_tilt_laser_interface/GetSnapshotGoal.msg[0m
+[ 40%] [34m[1mGenerating C++ code from pr2_tilt_laser_interface/GetSnapshotResult.msg[0m
 [35m[1mScanning dependencies of target pr2_tilt_laser_interface_generate_messages_eus[0m
-[ 43%] [34m[1mGenerating EusLisp code from pr2_tilt_laser_interface/GetSnapshotGoal.msg[0m
-[ 46%] [34m[1mGenerating EusLisp code from pr2_tilt_laser_interface/GetSnapshotActionFeedback.msg[0m
-[ 48%] [34m[1mGenerating Python from MSG pr2_tilt_laser_interface/GetSnapshotAction[0m
-[ 51%] [34m[1mGenerating EusLisp code from pr2_tilt_laser_interface/GetSnapshotAction.msg[0m
-[ 53%] [34m[1mGenerating Python from MSG pr2_tilt_laser_interface/GetSnapshotActionGoal[0m
-[ 56%] [34m[1mGenerating EusLisp code from pr2_tilt_laser_interface/GetSnapshotActionGoal.msg[0m
-[ 58%] [34m[1mGenerating EusLisp code from pr2_tilt_laser_interface/GetSnapshotResult.msg[0m
-[ 61%] [34m[1mGenerating Python from MSG pr2_tilt_laser_interface/GetSnapshotResult[0m
-[ 64%] [34m[1mGenerating EusLisp code from pr2_tilt_laser_interface/GetSnapshotActionResult.msg[0m
-[ 66%] [34m[1mGenerating Python from MSG pr2_tilt_laser_interface/GetSnapshotActionResult[0m
-[ 69%] [34m[1mGenerating EusLisp code from pr2_tilt_laser_interface/GetSnapshotFeedback.msg[0m
-[ 71%] [34m[1mGenerating EusLisp manifest code for pr2_tilt_laser_interface[0m
-[ 74%] [34m[1mGenerating Python from MSG pr2_tilt_laser_interface/GetSnapshotFeedback[0m
-[ 76%] [34m[1mGenerating Python msg __init__.py for pr2_tilt_laser_interface[0m
-[ 76%] Built target pr2_tilt_laser_interface_generate_messages_py
+[ 45%] [34m[1mGenerating EusLisp code from pr2_tilt_laser_interface/GetSnapshotActionResult.msg[0m
+[ 45%] [34m[1mGenerating Python from MSG pr2_tilt_laser_interface/GetSnapshotActionFeedback[0m
+[ 47%] [34m[1mGenerating EusLisp code from pr2_tilt_laser_interface/GetSnapshotFeedback.msg[0m
+[ 50%] [34m[1mGenerating C++ code from pr2_tilt_laser_interface/GetSnapshotActionGoal.msg[0m
+[ 52%] [34m[1mGenerating C++ code from pr2_tilt_laser_interface/GetSnapshotAction.msg[0m
+[ 54%] [34m[1mGenerating EusLisp code from pr2_tilt_laser_interface/GetSnapshotActionFeedback.msg[0m
+[ 57%] [34m[1mGenerating Python from MSG pr2_tilt_laser_interface/GetSnapshotGoal[0m
+[ 61%] [34m[1mGenerating EusLisp code from pr2_tilt_laser_interface/GetSnapshotGoal.msg[0m
+[ 61%] [34m[1mGenerating EusLisp code from pr2_tilt_laser_interface/GetSnapshotResult.msg[0m
+[ 61%] Built target pr2_tilt_laser_interface_generate_messages_cpp
 [35m[1mScanning dependencies of target pr2_tilt_laser_interface_generate_messages_lisp[0m
-[ 79%] [34m[1mGenerating Lisp code from pr2_tilt_laser_interface/GetSnapshotGoal.msg[0m
-[ 82%] [34m[1mGenerating Lisp code from pr2_tilt_laser_interface/GetSnapshotActionFeedback.msg[0m
-[ 84%] [34m[1mGenerating Lisp code from pr2_tilt_laser_interface/GetSnapshotAction.msg[0m
-[ 87%] [34m[1mGenerating Lisp code from pr2_tilt_laser_interface/GetSnapshotActionGoal.msg[0m
-[ 89%] [34m[1mGenerating Lisp code from pr2_tilt_laser_interface/GetSnapshotResult.msg[0m
-[ 92%] [34m[1mGenerating Lisp code from pr2_tilt_laser_interface/GetSnapshotActionResult.msg[0m
-[ 94%] [34m[1mGenerating Lisp code from pr2_tilt_laser_interface/GetSnapshotFeedback.msg[0m
-[ 94%] Built target pr2_tilt_laser_interface_generate_messages_lisp
+[ 66%] [34m[1mGenerating Python from MSG pr2_tilt_laser_interface/GetSnapshotActionGoal[0m
+[ 66%] [34m[1mGenerating Python from MSG pr2_tilt_laser_interface/GetSnapshotResult[0m
+[ 69%] [34m[1mGenerating EusLisp code from pr2_tilt_laser_interface/GetSnapshotActionGoal.msg[0m
+[ 71%] [34m[1mGenerating Lisp code from pr2_tilt_laser_interface/GetSnapshotActionResult.msg[0m
+[ 76%] [34m[1mGenerating EusLisp code from pr2_tilt_laser_interface/GetSnapshotAction.msg[0m
+[ 76%] [34m[1mGenerating Lisp code from pr2_tilt_laser_interface/GetSnapshotFeedback.msg[0m
+[ 78%] [34m[1mGenerating Python from MSG pr2_tilt_laser_interface/GetSnapshotAction[0m
+[ 83%] [34m[1mGenerating Lisp code from pr2_tilt_laser_interface/GetSnapshotActionFeedback.msg[0m
+[ 83%] [34m[1mGenerating EusLisp manifest code for pr2_tilt_laser_interface[0m
 [35m[1mScanning dependencies of target pr2_tilt_laser_interface_gencpp[0m
-[ 94%] Built target pr2_tilt_laser_interface_gencpp
+[ 83%] Built target pr2_tilt_laser_interface_gencpp
+[ 85%] [34m[1mGenerating Lisp code from pr2_tilt_laser_interface/GetSnapshotGoal.msg[0m
+[ 88%] [34m[1mGenerating Python msg __init__.py for pr2_tilt_laser_interface[0m
+[ 90%] [34m[1mGenerating Lisp code from pr2_tilt_laser_interface/GetSnapshotResult.msg[0m
+[ 92%] [34m[1mGenerating Lisp code from pr2_tilt_laser_interface/GetSnapshotActionGoal.msg[0m
+[ 95%] [34m[1mGenerating Lisp code from pr2_tilt_laser_interface/GetSnapshotAction.msg[0m
+[ 95%] Built target pr2_tilt_laser_interface_generate_messages_py
 [35m[1mScanning dependencies of target grab_result[0m
+[ 95%] Built target pr2_tilt_laser_interface_generate_messages_lisp
 [ 97%] [32mBuilding CXX object CMakeFiles/grab_result.dir/src/grab_result.cpp.o[0m
+WARNING: Package name "gazebo_moveIT_objects_synchroniser" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+WARNING: Package name "gazebo_moveIT_objects_synchroniser" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
 [ 97%] Built target pr2_tilt_laser_interface_generate_messages_eus
-[35m[1mScanning dependencies of target pr2_tilt_laser_interface_generate_messages[0m
-[ 97%] Built target pr2_tilt_laser_interface_generate_messages
-[100%] [32m[1mLinking CXX executable /home/david/PR2-Kinetic-Xenial/devel/.private/pr2_tilt_laser_interface/lib/pr2_tilt_laser_interface/grab_result[0m
+[100%] [32m[1mLinking CXX executable /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/pr2_tilt_laser_interface/lib/pr2_tilt_laser_interface/grab_result[0m
 [100%] Built target grab_result
+
+[31mFAILURE: [39m[31mBuild failed with an exception.[39m
+
+* What went wrong:
+Could not resolve all dependencies for configuration ':runtime'.
+[33m> [39mCould not find org.ros.rosjava_messages:pcl_ros:1.4.4.
+  Searched in the following locations:
+      file:/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/pr2_tilt_laser_interface/share/maven/org/ros/rosjava_messages/pcl_ros/1.4.4/pcl_ros-1.4.4.pom
+      file:/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/pr2_tilt_laser_interface/share/maven/org/ros/rosjava_messages/pcl_ros/1.4.4/pcl_ros-1.4.4.jar
+      file:/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/catkin_tools_prebuild/share/maven/org/ros/rosjava_messages/pcl_ros/1.4.4/pcl_ros-1.4.4.pom
+      file:/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/catkin_tools_prebuild/share/maven/org/ros/rosjava_messages/pcl_ros/1.4.4/pcl_ros-1.4.4.jar
+      file:/home/dtrimoul/laas_perception/devel/share/maven/org/ros/rosjava_messages/pcl_ros/1.4.4/pcl_ros-1.4.4.pom
+      file:/home/dtrimoul/laas_perception/devel/share/maven/org/ros/rosjava_messages/pcl_ros/1.4.4/pcl_ros-1.4.4.jar
+      file:/opt/ros/kinetic/share/maven/org/ros/rosjava_messages/pcl_ros/1.4.4/pcl_ros-1.4.4.pom
+      file:/opt/ros/kinetic/share/maven/org/ros/rosjava_messages/pcl_ros/1.4.4/pcl_ros-1.4.4.jar
+      file:/home/dtrimoul/PR2-Kinetic-Xenial/devel/share/maven/org/ros/rosjava_messages/pcl_ros/1.4.4/pcl_ros-1.4.4.pom
+      file:/home/dtrimoul/PR2-Kinetic-Xenial/devel/share/maven/org/ros/rosjava_messages/pcl_ros/1.4.4/pcl_ros-1.4.4.jar
+      https://github.com/rosjava/rosjava_mvn_repo/raw/master/org/ros/rosjava_messages/pcl_ros/1.4.4/pcl_ros-1.4.4.pom
+      https://github.com/rosjava/rosjava_mvn_repo/raw/master/org/ros/rosjava_messages/pcl_ros/1.4.4/pcl_ros-1.4.4.jar
+      file:/home/dtrimoul/.m2/repository/org/ros/rosjava_messages/pcl_ros/1.4.4/pcl_ros-1.4.4.pom
+      file:/home/dtrimoul/.m2/repository/org/ros/rosjava_messages/pcl_ros/1.4.4/pcl_ros-1.4.4.jar
+      http://repository.springsource.com/maven/bundles/release/org/ros/rosjava_messages/pcl_ros/1.4.4/pcl_ros-1.4.4.pom
+      http://repository.springsource.com/maven/bundles/release/org/ros/rosjava_messages/pcl_ros/1.4.4/pcl_ros-1.4.4.jar
+      http://repository.springsource.com/maven/bundles/external/org/ros/rosjava_messages/pcl_ros/1.4.4/pcl_ros-1.4.4.pom
+      http://repository.springsource.com/maven/bundles/external/org/ros/rosjava_messages/pcl_ros/1.4.4/pcl_ros-1.4.4.jar
+      https://jcenter.bintray.com/org/ros/rosjava_messages/pcl_ros/1.4.4/pcl_ros-1.4.4.pom
+      https://jcenter.bintray.com/org/ros/rosjava_messages/pcl_ros/1.4.4/pcl_ros-1.4.4.jar
+  Required by:
+      org.ros.rosjava_messages:pr2_tilt_laser_interface:0.0.10
+
+* Try:
+Run with [1m--stacktrace[22m option to get the stack trace. Run with [1m--info[22m or [1m--debug[22m option to get more log output.
+[0m[100%] Built target pr2_tilt_laser_interface_generate_messages_java_gradle
+[35m[1mScanning dependencies of target pr2_tilt_laser_interface_generate_messages[0m
+[100%] Built target pr2_tilt_laser_interface_generate_messages

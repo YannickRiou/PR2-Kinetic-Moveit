@@ -1,0 +1,4 @@
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/point_cloud_from_laser_scan.pc
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/point_cloud_from_laser_scan/point_cloud_from_laser_scan
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/point_cloud_from_laser_scan/cmake/point_cloud_from_laser_scanConfig-version.cmake
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/point_cloud_from_laser_scan/cmake/point_cloud_from_laser_scanConfig.cmake

@@ -1,3 +1,3 @@
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/controller_interface/cmake/controller_interfaceConfig.cmake
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/controller_interface/cmake/controller_interfaceConfig-version.cmake
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pkgconfig/controller_interface.pc
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/controller_interface.pc
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/controller_interface/cmake/controller_interfaceConfig.cmake
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/controller_interface/cmake/controller_interfaceConfig-version.cmake

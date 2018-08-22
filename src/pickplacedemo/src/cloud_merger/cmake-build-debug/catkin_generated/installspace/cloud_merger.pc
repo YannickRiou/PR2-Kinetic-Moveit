@@ -1,8 +1,0 @@
-prefix=/usr/local
-
-Name: cloud_merger
-Description: Description of cloud_merger
-Version: 0.0.0
-Cflags: 
-Libs: -L/usr/local/lib 
-Requires: 

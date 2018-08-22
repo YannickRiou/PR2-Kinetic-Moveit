@@ -27,5 +27,5 @@ Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/navfn/lib/python2.7/di
 Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/navfn/lib/python2.7/dist-packages/navfn/srv/_SetCostmap.py, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/navfn/srv/_SetCostmap.py)
 Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/navfn/lib/python2.7/dist-packages/navfn/srv/__init__.py, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/navfn/srv/__init__.py)
 Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/navfn/lib/pkgconfig/navfn.pc, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/navfn.pc)
-Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/navfn/lib/navfn/navfn_node, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/navfn/navfn_node)
 Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/navfn/lib/navfn/navtest, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/navfn/navtest)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/navfn/lib/navfn/navfn_node, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/navfn/navfn_node)

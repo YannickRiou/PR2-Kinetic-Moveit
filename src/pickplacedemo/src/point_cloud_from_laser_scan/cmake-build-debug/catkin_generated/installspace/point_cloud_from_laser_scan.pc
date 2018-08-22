@@ -1,8 +1,0 @@
-prefix=/usr/local
-
-Name: point_cloud_from_laser_scan
-Description: Description of point_cloud_from_laser_scan
-Version: 0.0.0
-Cflags: 
-Libs: -L/usr/local/lib 
-Requires: 

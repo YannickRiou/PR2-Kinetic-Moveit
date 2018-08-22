@@ -1,8 +1,8 @@
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/./setup.zsh
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/./setup.sh
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/./setup.bash
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/./_setup_util.py
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/./env.sh
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig-version.cmake
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig.cmake
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pkgconfig/catkin_tools_prebuild.pc
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/./_setup_util.py
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/./env.sh
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/./setup.bash
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/./setup.sh
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/./setup.zsh
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/catkin_tools_prebuild.pc
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig.cmake
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig-version.cmake

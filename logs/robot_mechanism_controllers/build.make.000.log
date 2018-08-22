@@ -1,199 +1,215 @@
 [35m[1mScanning dependencies of target _robot_mechanism_controllers_generate_messages_check_deps_JTCartesianControllerState[0m
-[  0%] Built target _robot_mechanism_controllers_generate_messages_check_deps_JTCartesianControllerState
 [35m[1mScanning dependencies of target geometry_msgs_generate_messages_eus[0m
 [  0%] Built target geometry_msgs_generate_messages_eus
 [35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
+[  0%] Built target _robot_mechanism_controllers_generate_messages_check_deps_JTCartesianControllerState
 [  0%] Built target std_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_lisp[0m
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target geometry_msgs_generate_messages_lisp
 [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_lisp[0m
-[  0%] Built target actionlib_msgs_generate_messages_lisp
 [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_cpp[0m
+[  0%] Built target actionlib_msgs_generate_messages_lisp
 [  0%] Built target actionlib_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target actionlib_generate_messages_lisp[0m
-[  0%] Built target actionlib_generate_messages_lisp
 [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_eus[0m
+[  0%] Built target actionlib_generate_messages_lisp
 [  0%] Built target actionlib_msgs_generate_messages_eus
 [35m[1mScanning dependencies of target control_toolbox_generate_messages_nodejs[0m
-[  0%] Built target control_toolbox_generate_messages_nodejs
 [35m[1mScanning dependencies of target control_toolbox_generate_messages_py[0m
+[  0%] Built target control_toolbox_generate_messages_nodejs
 [  0%] Built target control_toolbox_generate_messages_py
 [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_nodejs[0m
-[  0%] Built target actionlib_msgs_generate_messages_nodejs
 [35m[1mScanning dependencies of target tf2_msgs_generate_messages_py[0m
+[  0%] Built target actionlib_msgs_generate_messages_nodejs
 [  0%] Built target tf2_msgs_generate_messages_py
 [35m[1mScanning dependencies of target pr2_controllers_msgs_generate_messages_lisp[0m
-[  0%] Built target pr2_controllers_msgs_generate_messages_lisp
 [35m[1mScanning dependencies of target sensor_msgs_generate_messages_lisp[0m
+[  0%] Built target pr2_controllers_msgs_generate_messages_lisp
 [  0%] Built target sensor_msgs_generate_messages_lisp
 [35m[1mScanning dependencies of target sensor_msgs_generate_messages_cpp[0m
-[  0%] Built target sensor_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
+[  0%] Built target sensor_msgs_generate_messages_cpp
 [  0%] Built target std_msgs_generate_messages_nodejs
 [35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
-[  0%] Built target std_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target sensor_msgs_generate_messages_nodejs[0m
+[  0%] Built target std_msgs_generate_messages_cpp
 [  0%] Built target sensor_msgs_generate_messages_nodejs
 [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_cpp[0m
-[  0%] Built target trajectory_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target tf_generate_messages_py[0m
+[  0%] Built target trajectory_msgs_generate_messages_cpp
 [  0%] Built target tf_generate_messages_py
+[35m[1mScanning dependencies of target roscpp_generate_messages_py[0m
 [35m[1mScanning dependencies of target tf_generate_messages_nodejs[0m
 [  0%] Built target tf_generate_messages_nodejs
-[35m[1mScanning dependencies of target roscpp_generate_messages_py[0m
 [  0%] Built target roscpp_generate_messages_py
 [35m[1mScanning dependencies of target tf_generate_messages_lisp[0m
-[  0%] Built target tf_generate_messages_lisp
 [35m[1mScanning dependencies of target actionlib_generate_messages_cpp[0m
 [  0%] Built target actionlib_generate_messages_cpp
+[  0%] Built target tf_generate_messages_lisp
 [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_py[0m
-[  0%] Built target rosgraph_msgs_generate_messages_py
 [35m[1mScanning dependencies of target diagnostic_msgs_generate_messages_py[0m
+[  0%] Built target rosgraph_msgs_generate_messages_py
 [  0%] Built target diagnostic_msgs_generate_messages_py
 [35m[1mScanning dependencies of target pr2_mechanism_msgs_generate_messages_py[0m
-[  0%] Built target pr2_mechanism_msgs_generate_messages_py
 [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_py[0m
+[  0%] Built target pr2_mechanism_msgs_generate_messages_py
 [  0%] Built target actionlib_msgs_generate_messages_py
 [35m[1mScanning dependencies of target geometry_msgs_generate_messages_nodejs[0m
-[  0%] Built target geometry_msgs_generate_messages_nodejs
 [35m[1mScanning dependencies of target roscpp_generate_messages_cpp[0m
+[  0%] Built target geometry_msgs_generate_messages_nodejs
 [  0%] Built target roscpp_generate_messages_cpp
 [35m[1mScanning dependencies of target roscpp_generate_messages_eus[0m
-[  0%] Built target roscpp_generate_messages_eus
 [35m[1mScanning dependencies of target diagnostic_msgs_generate_messages_lisp[0m
+[  0%] Built target roscpp_generate_messages_eus
 [  0%] Built target diagnostic_msgs_generate_messages_lisp
-[35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
-[  0%] Built target std_msgs_generate_messages_lisp
 [35m[1mScanning dependencies of target tf_generate_messages_cpp[0m
-[  0%] Built target tf_generate_messages_cpp
 [35m[1mScanning dependencies of target pr2_controllers_msgs_generate_messages_cpp[0m
-[  0%] Built target pr2_controllers_msgs_generate_messages_cpp
+[  0%] Built target tf_generate_messages_cpp
 [35m[1mScanning dependencies of target tf2_msgs_generate_messages_cpp[0m
-[  0%] Built target tf2_msgs_generate_messages_cpp
+[  0%] Built target pr2_controllers_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_cpp[0m
+[  0%] Built target tf2_msgs_generate_messages_cpp
 [  0%] Built target rosgraph_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target diagnostic_msgs_generate_messages_eus[0m
-[  0%] Built target diagnostic_msgs_generate_messages_eus
 [35m[1mScanning dependencies of target geometry_msgs_generate_messages_py[0m
-[  0%] Built target geometry_msgs_generate_messages_py
-[35m[1mScanning dependencies of target geometry_msgs_generate_messages_lisp[0m
-[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target diagnostic_msgs_generate_messages_eus
 [35m[1mScanning dependencies of target control_toolbox_generate_messages_cpp[0m
-[  0%] Built target control_toolbox_generate_messages_cpp
+[  0%] Built target geometry_msgs_generate_messages_py
 [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_nodejs[0m
+[  0%] Built target control_toolbox_generate_messages_cpp
 [  0%] Built target rosgraph_msgs_generate_messages_nodejs
 [35m[1mScanning dependencies of target tf_generate_messages_eus[0m
-[  0%] Built target tf_generate_messages_eus
 [35m[1mScanning dependencies of target pr2_controllers_msgs_generate_messages_eus[0m
+[  0%] Built target tf_generate_messages_eus
 [  0%] Built target pr2_controllers_msgs_generate_messages_eus
 [35m[1mScanning dependencies of target sensor_msgs_generate_messages_py[0m
-[  0%] Built target sensor_msgs_generate_messages_py
 [35m[1mScanning dependencies of target roscpp_generate_messages_nodejs[0m
+[  0%] Built target sensor_msgs_generate_messages_py
 [  0%] Built target roscpp_generate_messages_nodejs
 [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_lisp[0m
-[  0%] Built target rosgraph_msgs_generate_messages_lisp
 [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_eus[0m
+[  0%] Built target rosgraph_msgs_generate_messages_lisp
 [  0%] Built target rosgraph_msgs_generate_messages_eus
 [35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
-[  0%] Built target std_msgs_generate_messages_py
 [35m[1mScanning dependencies of target roscpp_generate_messages_lisp[0m
+[  0%] Built target std_msgs_generate_messages_py
 [  0%] Built target roscpp_generate_messages_lisp
 [35m[1mScanning dependencies of target actionlib_generate_messages_eus[0m
-[  0%] Built target actionlib_generate_messages_eus
 [35m[1mScanning dependencies of target tf2_msgs_generate_messages_eus[0m
+[  0%] Built target actionlib_generate_messages_eus
 [  0%] Built target tf2_msgs_generate_messages_eus
 [35m[1mScanning dependencies of target robot_mechanism_controllers_generate_messages_py[0m
-[  5%] [34m[1mGenerating Python from MSG robot_mechanism_controllers/JTCartesianControllerState[0m
-[ 11%] [34m[1mGenerating Python msg __init__.py for robot_mechanism_controllers[0m
-[ 11%] Built target robot_mechanism_controllers_generate_messages_py
 [35m[1mScanning dependencies of target tf2_msgs_generate_messages_lisp[0m
-[ 11%] Built target tf2_msgs_generate_messages_lisp
+[  5%] [34m[1mGenerating Python from MSG robot_mechanism_controllers/JTCartesianControllerState[0m
+[  5%] Built target tf2_msgs_generate_messages_lisp
 [35m[1mScanning dependencies of target tf2_msgs_generate_messages_nodejs[0m
-[ 11%] Built target tf2_msgs_generate_messages_nodejs
+[  5%] Built target tf2_msgs_generate_messages_nodejs
 [35m[1mScanning dependencies of target diagnostic_msgs_generate_messages_cpp[0m
-[ 11%] Built target diagnostic_msgs_generate_messages_cpp
+[ 10%] Built target diagnostic_msgs_generate_messages_cpp
+[ 10%] [34m[1mGenerating Python msg __init__.py for robot_mechanism_controllers[0m
 [35m[1mScanning dependencies of target diagnostic_msgs_generate_messages_nodejs[0m
-[ 11%] Built target diagnostic_msgs_generate_messages_nodejs
+[ 10%] Built target diagnostic_msgs_generate_messages_nodejs
 [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_eus[0m
-[ 11%] Built target trajectory_msgs_generate_messages_eus
+[ 10%] Built target trajectory_msgs_generate_messages_eus
+[ 10%] Built target robot_mechanism_controllers_generate_messages_py
 [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_lisp[0m
-[ 11%] Built target trajectory_msgs_generate_messages_lisp
 [35m[1mScanning dependencies of target geometry_msgs_generate_messages_cpp[0m
-[ 11%] Built target geometry_msgs_generate_messages_cpp
+[ 10%] Built target trajectory_msgs_generate_messages_lisp
+[ 10%] Built target geometry_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target control_msgs_generate_messages_lisp[0m
-[ 11%] Built target control_msgs_generate_messages_lisp
 [35m[1mScanning dependencies of target robot_mechanism_controllers_generate_messages_nodejs[0m
-[ 17%] [34m[1mGenerating Javascript code from robot_mechanism_controllers/JTCartesianControllerState.msg[0m
-[ 17%] Built target robot_mechanism_controllers_generate_messages_nodejs
+[ 10%] Built target control_msgs_generate_messages_lisp
+[ 15%] [34m[1mGenerating Javascript code from robot_mechanism_controllers/JTCartesianControllerState.msg[0m
 [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_nodejs[0m
-[ 17%] Built target trajectory_msgs_generate_messages_nodejs
+[ 15%] Built target trajectory_msgs_generate_messages_nodejs
 [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_py[0m
-[ 17%] Built target trajectory_msgs_generate_messages_py
+[ 15%] Built target trajectory_msgs_generate_messages_py
 [35m[1mScanning dependencies of target pr2_controllers_msgs_generate_messages_nodejs[0m
-[ 17%] Built target pr2_controllers_msgs_generate_messages_nodejs
+[ 15%] Built target robot_mechanism_controllers_generate_messages_nodejs
+[ 15%] Built target pr2_controllers_msgs_generate_messages_nodejs
 [35m[1mScanning dependencies of target pr2_controllers_msgs_generate_messages_py[0m
-[ 17%] Built target pr2_controllers_msgs_generate_messages_py
 [35m[1mScanning dependencies of target pr2_mechanism_msgs_generate_messages_cpp[0m
-[ 17%] Built target pr2_mechanism_msgs_generate_messages_cpp
+[ 15%] Built target pr2_controllers_msgs_generate_messages_py
+[ 15%] Built target pr2_mechanism_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target pr2_mechanism_msgs_generate_messages_lisp[0m
-[ 17%] Built target pr2_mechanism_msgs_generate_messages_lisp
 [35m[1mScanning dependencies of target pr2_mechanism_msgs_generate_messages_nodejs[0m
-[ 17%] Built target pr2_mechanism_msgs_generate_messages_nodejs
+[ 15%] Built target pr2_mechanism_msgs_generate_messages_lisp
+[ 15%] Built target pr2_mechanism_msgs_generate_messages_nodejs
 [35m[1mScanning dependencies of target control_toolbox_gencfg[0m
-[ 17%] Built target control_toolbox_gencfg
 [35m[1mScanning dependencies of target control_msgs_generate_messages_nodejs[0m
-[ 17%] Built target control_msgs_generate_messages_nodejs
-[35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_nodejs[0m
-[ 17%] Built target dynamic_reconfigure_generate_messages_nodejs
-[35m[1mScanning dependencies of target robot_mechanism_controllers_generate_messages_lisp[0m
-[ 23%] [34m[1mGenerating Lisp code from robot_mechanism_controllers/JTCartesianControllerState.msg[0m
-[ 23%] Built target robot_mechanism_controllers_generate_messages_lisp
+[ 15%] Built target control_msgs_generate_messages_nodejs
+[ 15%] Built target control_toolbox_gencfg
 [35m[1mScanning dependencies of target control_toolbox_generate_messages_lisp[0m
-[ 23%] Built target control_toolbox_generate_messages_lisp
+[35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_nodejs[0m
+[ 15%] Built target control_toolbox_generate_messages_lisp
+[ 15%] Built target dynamic_reconfigure_generate_messages_nodejs
 [35m[1mScanning dependencies of target control_msgs_generate_messages_cpp[0m
-[ 23%] Built target control_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target control_msgs_generate_messages_eus[0m
-[ 23%] Built target control_msgs_generate_messages_eus
+[ 15%] Built target control_msgs_generate_messages_cpp
+[ 15%] Built target control_msgs_generate_messages_eus
 [35m[1mScanning dependencies of target actionlib_generate_messages_nodejs[0m
-[ 23%] Built target actionlib_generate_messages_nodejs
 [35m[1mScanning dependencies of target control_msgs_generate_messages_py[0m
-[ 23%] Built target control_msgs_generate_messages_py
+[ 15%] Built target control_msgs_generate_messages_py
+[ 15%] Built target actionlib_generate_messages_nodejs
 [35m[1mScanning dependencies of target pr2_mechanism_msgs_generate_messages_eus[0m
-[ 23%] Built target pr2_mechanism_msgs_generate_messages_eus
 [35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_cpp[0m
-[ 23%] Built target dynamic_reconfigure_generate_messages_cpp
+[ 15%] Built target pr2_mechanism_msgs_generate_messages_eus
+[ 15%] Built target dynamic_reconfigure_generate_messages_cpp
 [35m[1mScanning dependencies of target robot_mechanism_controllers_generate_messages_cpp[0m
-[ 29%] [34m[1mGenerating C++ code from robot_mechanism_controllers/JTCartesianControllerState.msg[0m
-[ 29%] Built target robot_mechanism_controllers_generate_messages_cpp
 [35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_eus[0m
-[ 29%] Built target dynamic_reconfigure_generate_messages_eus
+[ 20%] [34m[1mGenerating C++ code from robot_mechanism_controllers/JTCartesianControllerState.msg[0m
+[ 20%] Built target dynamic_reconfigure_generate_messages_eus
 [35m[1mScanning dependencies of target control_toolbox_generate_messages_eus[0m
-[ 29%] Built target control_toolbox_generate_messages_eus
+[ 20%] Built target control_toolbox_generate_messages_eus
 [35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_lisp[0m
-[ 29%] Built target dynamic_reconfigure_generate_messages_lisp
+[ 20%] Built target dynamic_reconfigure_generate_messages_lisp
+[ 20%] Built target robot_mechanism_controllers_generate_messages_cpp
 [35m[1mScanning dependencies of target actionlib_generate_messages_py[0m
-[ 29%] Built target actionlib_generate_messages_py
 [35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_py[0m
-[ 29%] Built target dynamic_reconfigure_generate_messages_py
+[ 20%] Built target actionlib_generate_messages_py
+[ 20%] Built target dynamic_reconfigure_generate_messages_py
 [35m[1mScanning dependencies of target dynamic_reconfigure_gencfg[0m
-[ 29%] Built target dynamic_reconfigure_gencfg
 [35m[1mScanning dependencies of target sensor_msgs_generate_messages_eus[0m
-[ 29%] Built target sensor_msgs_generate_messages_eus
+[ 20%] Built target dynamic_reconfigure_gencfg
+[ 20%] Built target sensor_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target robot_mechanism_controllers_generate_messages_java[0m
 [35m[1mScanning dependencies of target robot_mechanism_controllers_xacro_generated_to_devel_space_[0m
-[ 29%] Built target robot_mechanism_controllers_xacro_generated_to_devel_space_
+[ 25%] [34m[1mGenerating Java gradle project from robot_mechanism_controllers[0m
+[ 25%] Built target robot_mechanism_controllers_xacro_generated_to_devel_space_
+[35m[1mScanning dependencies of target robot_mechanism_controllers_generate_messages_java_gradle[0m
+[ 30%] [34m[1mGenerating Java gradle project from robot_mechanism_controllers[0m
+WARNING: Package name "gazebo_moveIT_objects_synchroniser" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+WARNING: Package name "gazebo_moveIT_objects_synchroniser" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+[ 30%] Built target robot_mechanism_controllers_generate_messages_java
+[ 35%] [34m[1mCompiling Java code for robot_mechanism_controllers[0m
 [35m[1mScanning dependencies of target robot_mechanism_controllers_generate_messages_eus[0m
-[ 35%] [34m[1mGenerating EusLisp code from robot_mechanism_controllers/JTCartesianControllerState.msg[0m
-[ 41%] [34m[1mGenerating EusLisp manifest code for robot_mechanism_controllers[0m
-[ 41%] Built target robot_mechanism_controllers_generate_messages_eus
-[35m[1mScanning dependencies of target robot_mechanism_controllers[0m
-[ 47%] [32mBuilding CXX object CMakeFiles/robot_mechanism_controllers.dir/src/cartesian_pose_controller.cpp.o[0m
-[ 52%] [32mBuilding CXX object CMakeFiles/robot_mechanism_controllers.dir/src/cartesian_twist_controller.cpp.o[0m
-[ 58%] [32mBuilding CXX object CMakeFiles/robot_mechanism_controllers.dir/src/cartesian_wrench_controller.cpp.o[0m
-[ 64%] [32mBuilding CXX object CMakeFiles/robot_mechanism_controllers.dir/src/joint_effort_controller.cpp.o[0m
-[ 70%] [32mBuilding CXX object CMakeFiles/robot_mechanism_controllers.dir/src/joint_position_controller.cpp.o[0m
-[ 76%] [32mBuilding CXX object CMakeFiles/robot_mechanism_controllers.dir/src/joint_velocity_controller.cpp.o[0m
-[ 82%] [32mBuilding CXX object CMakeFiles/robot_mechanism_controllers.dir/src/joint_spline_trajectory_controller.cpp.o[0m
-[ 88%] [32mBuilding CXX object CMakeFiles/robot_mechanism_controllers.dir/src/joint_trajectory_action_controller.cpp.o[0m
-[ 94%] [32mBuilding CXX object CMakeFiles/robot_mechanism_controllers.dir/src/jt_cartesian_controller.cpp.o[0m
-[100%] [32m[1mLinking CXX shared library /home/david/PR2-Kinetic-Xenial/devel/.private/robot_mechanism_controllers/lib/librobot_mechanism_controllers.so[0m
-[100%] Built target robot_mechanism_controllers
+[ 40%] [34m[1mGenerating EusLisp code from robot_mechanism_controllers/JTCartesianControllerState.msg[0m
+[ 45%] [34m[1mGenerating EusLisp manifest code for robot_mechanism_controllers[0m
+[0m[35m[1mScanning dependencies of target robot_mechanism_controllers_generate_messages_lisp[0m
+[ 50%] [34m[1mGenerating Lisp code from robot_mechanism_controllers/JTCartesianControllerState.msg[0m
+[ 50%] Built target robot_mechanism_controllers_generate_messages_lisp
+warning: [options] bootstrap class path not set in conjunction with -source 1.7
+1 warning
+Uploading: org/ros/rosjava_messages/robot_mechanism_controllers/1.10.14/robot_mechanism_controllers-1.10.14.jar to repository remote at file:/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/robot_mechanism_controllers/share/maven
+Transferring 1K from remote
+Uploaded 1K
+[0m[ 50%] Built target robot_mechanism_controllers_generate_messages_java_gradle
+WARNING: Package name "gazebo_moveIT_objects_synchroniser" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+WARNING: Package name "gazebo_moveIT_objects_synchroniser" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+[ 50%] Built target robot_mechanism_controllers_generate_messages_eus
 [35m[1mScanning dependencies of target robot_mechanism_controllers_generate_messages[0m
-[100%] Built target robot_mechanism_controllers_generate_messages
+[35m[1mScanning dependencies of target robot_mechanism_controllers[0m
+[ 50%] Built target robot_mechanism_controllers_generate_messages
+[ 55%] [32mBuilding CXX object CMakeFiles/robot_mechanism_controllers.dir/src/cartesian_pose_controller.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/robot_mechanism_controllers.dir/src/cartesian_twist_controller.cpp.o[0m
+[ 65%] [32mBuilding CXX object CMakeFiles/robot_mechanism_controllers.dir/src/cartesian_wrench_controller.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/robot_mechanism_controllers.dir/src/joint_effort_controller.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/robot_mechanism_controllers.dir/src/joint_position_controller.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/robot_mechanism_controllers.dir/src/joint_velocity_controller.cpp.o[0m
+[ 85%] [32mBuilding CXX object CMakeFiles/robot_mechanism_controllers.dir/src/joint_spline_trajectory_controller.cpp.o[0m
+[ 90%] [32mBuilding CXX object CMakeFiles/robot_mechanism_controllers.dir/src/joint_trajectory_action_controller.cpp.o[0m
+[ 95%] [32mBuilding CXX object CMakeFiles/robot_mechanism_controllers.dir/src/jt_cartesian_controller.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/robot_mechanism_controllers/lib/librobot_mechanism_controllers.so[0m
+[100%] Built target robot_mechanism_controllers

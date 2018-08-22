@@ -1,617 +1,617 @@
-In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/timedatetools.cpp:26:0[m[K:
-/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/strconvert.hpp: In instantiation of ‘[01m[Kstd::__cxx11::basic_string<_CharT> uima::double2String(double, size_t, std::__cxx11::basic_string<_CharT>&) [with CharT = char; size_t = long unsigned int][m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/timedatetools.cpp:48:56:[m[K   required from here
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/strconvert.hpp:186:12:[m[K [01;35m[Kwarning: [m[Kfield precision specifier ‘[01m[K.*[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 3 has type ‘[01m[Ksize_t {aka long unsigned int}[m[K’ [-Wformat=]
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/annotator_mgr.cpp:39:0[m[K:
+/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/strconvert.hpp: In instantiation of ‘[01m[Kstd::__cxx11::basic_string<_CharT> uima::double2String(double, size_t, std::__cxx11::basic_string<_CharT>&) [with CharT = char; size_t = long unsigned int][m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/annotator_mgr.cpp:634:58:[m[K   required from here
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/strconvert.hpp:186:12:[m[K [01;35m[Kwarning: [m[Kfield precision specifier ‘[01m[K.*[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 3 has type ‘[01m[Ksize_t {aka long unsigned int}[m[K’ [-Wformat=]
      sprintf(buff, "%0#.*f", uiDigitsAfterPeriod, d); //lint !e567 !e557 unrecognized format
 [01;32m[K            ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/consoleui.cpp:[m[K In constructor ‘[01m[Kuima::util::ConsoleUI::ConsoleUI(int, char**, const char*, const char*)[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/consoleui.cpp:65:28:[m[K [01;35m[Kwarning: [m[KISO C++ forbids converting a string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+         iv_currentArg(99999) {
+[01;32m[K                            ^[m[K
 In file included from [01m[K/usr/include/c++/5/ext/hash_set:60:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/stltools.hpp:59[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:55[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/stltools.hpp:59[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:55[m[K:
 [01m[K/usr/include/c++/5/backward/backward_warning.h:32:2:[m[K [01;35m[Kwarning: [m[K#warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
  #warning \
 [01;32m[K  ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:[m[K In static member function ‘[01m[Kstatic uima::AnalysisEngine* uima::Framework::createAnalysisEngine(bool, const icu_55::UnicodeString&, uima::ErrorInfo&)[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:270:7:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:[m[K In static member function ‘[01m[Kstatic uima::AnalysisEngine* uima::Framework::createAnalysisEngine(bool, const icu_55::UnicodeString&, uima::ErrorInfo&)[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:270:7:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
        auto_ptr<AnalysisEngineDescription> apTAESpecifier( new AnalysisEngineDescription() );
 [01;32m[K       ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:39[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:39[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:303:7:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:303:7:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
        auto_ptr<AnnotatorContext> apANC( new AnnotatorContext(apTAESpecifier.get()) );
 [01;32m[K       ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:39[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:39[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:311:7:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:311:7:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
        auto_ptr<uima::internal::CASDefinition> apCASDef( uima::internal::CASDefinition::createCASDefinition(*apANC.get()) );
 [01;32m[K       ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:39[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:39[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:[m[K In static member function ‘[01m[Kstatic uima::AnalysisEngine* uima::Framework::createAnalysisEngine(uima::AnalysisEngineDescription&, uima::ErrorInfo&)[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:371:7:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:[m[K In static member function ‘[01m[Kstatic uima::AnalysisEngine* uima::Framework::createAnalysisEngine(uima::AnalysisEngineDescription&, uima::ErrorInfo&)[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:371:7:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
        auto_ptr<AnnotatorContext> apANC( new AnnotatorContext(& crTAESpec) );
 [01;32m[K       ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:39[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:39[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:379:7:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:379:7:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
        auto_ptr<uima::internal::CASDefinition> apCASDef( uima::internal::CASDefinition::createCASDefinition(*apANC.get()) );
 [01;32m[K       ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:39[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:39[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:[m[K In static member function ‘[01m[Kstatic uima::TypeSystem* uima::Framework::createTypeSystem(const char*, uima::ErrorInfo&)[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:464:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:[m[K In static member function ‘[01m[Kstatic uima::TypeSystem* uima::Framework::createTypeSystem(const char*, uima::ErrorInfo&)[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:464:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
      auto_ptr<AnalysisEngineMetaData> apSpecifier(pAe  );
 [01;32m[K     ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:39[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:39[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:[m[K In static member function ‘[01m[Kstatic uima::TypeSystem* uima::Framework::createTypeSystem(const UChar*, size_t, uima::ErrorInfo&)[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:489:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:[m[K In static member function ‘[01m[Kstatic uima::TypeSystem* uima::Framework::createTypeSystem(const UChar*, size_t, uima::ErrorInfo&)[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:489:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
      auto_ptr<AnalysisEngineMetaData> apSpecifier(pAe  );
 [01;32m[K     ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:39[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:39[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:[m[K In static member function ‘[01m[Kstatic uima::TypeSystem* uima::Framework::createTypeSystemFromXMLBuffer(const char*, uima::ErrorInfo&)[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:510:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:[m[K In static member function ‘[01m[Kstatic uima::TypeSystem* uima::Framework::createTypeSystemFromXMLBuffer(const char*, uima::ErrorInfo&)[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:510:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
      auto_ptr<AnalysisEngineMetaData> apSpecifier(pAe  );
 [01;32m[K     ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:39[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:39[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:[m[K In static member function ‘[01m[Kstatic uima::CAS* uima::Framework::createCAS(uima::TypeSystem&, uima::ErrorInfo&)[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:525:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:[m[K In static member function ‘[01m[Kstatic uima::CAS* uima::Framework::createCAS(uima::TypeSystem&, uima::ErrorInfo&)[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:525:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
      auto_ptr<uima::internal::CASDefinition> apCASDef( uima::internal::CASDefinition::createCASDefinition(typesystem) );
 [01;32m[K     ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:39[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:39[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:[m[K In static member function ‘[01m[Kstatic uima::CAS* uima::Framework::createCAS(uima::TypeSystem&, uima::AnalysisEngineMetaData&, uima::ErrorInfo&)[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:540:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:[m[K In static member function ‘[01m[Kstatic uima::CAS* uima::Framework::createCAS(uima::TypeSystem&, uima::AnalysisEngineMetaData&, uima::ErrorInfo&)[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:540:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
      auto_ptr<uima::internal::CASDefinition> apCASDef( uima::internal::CASDefinition::createCASDefinition(typesystem, aeDesc) );
 [01;32m[K     ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:39[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:39[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:[m[K In static member function ‘[01m[Kstatic uima::CAS* uima::Framework::createCAS(uima::TypeSystem&, uima::AnalysisEngineMetaData::TyVecpFSIndexDescriptions&, uima::AnalysisEngineMetaData::TyVecpTypePriorities&, uima::ErrorInfo&)[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:554:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:[m[K In static member function ‘[01m[Kstatic uima::CAS* uima::Framework::createCAS(uima::TypeSystem&, uima::AnalysisEngineMetaData::TyVecpFSIndexDescriptions&, uima::AnalysisEngineMetaData::TyVecpTypePriorities&, uima::ErrorInfo&)[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:554:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
      auto_ptr<uima::internal::CASDefinition>
 [01;32m[K     ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:39[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/engine.cpp:39[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/consoleui.cpp:[m[K In constructor ‘[01m[Kuima::util::ConsoleUI::ConsoleUI(int, char**, const char*, const char*)[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/consoleui.cpp:65:28:[m[K [01;35m[Kwarning: [m[KISO C++ forbids converting a string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
-         iv_currentArg(99999) {
-[01;32m[K                            ^[m[K
-In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_engine_base.cpp:45[m[K:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_engine_base.cpp:45[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
       std::auto_ptr<IndexIterator> apit( index->createIterator() );
 [01;32m[K           ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_engine_base.cpp:45[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_engine_base.cpp:45[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/engine.hpp:47:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/internal_engine_base.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_engine_base.cpp:40[m[K:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_engine_base.cpp:[m[K In member function ‘[01m[Kvirtual uima::TyErrorId uima::internal::EngineBase::process(uima::CAS&)[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/exceptions.hpp:694:49:[m[K [01;35m[Kwarning: [m[Kpassing NULL to non-pointer argument 1 of ‘[01m[Kuima::ErrorMessage::ErrorMessage(uima::TyMessageId)[m[K’ [-Wconversion-null]
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/engine.hpp:47:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/internal_engine_base.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_engine_base.cpp:40[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_engine_base.cpp:[m[K In member function ‘[01m[Kvirtual uima::TyErrorId uima::internal::EngineBase::process(uima::CAS&)[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/exceptions.hpp:694:49:[m[K [01;35m[Kwarning: [m[Kpassing NULL to non-pointer argument 1 of ‘[01m[Kuima::ErrorMessage::ErrorMessage(uima::TyMessageId)[m[K’ [-Wconversion-null]
     uima::ErrorContext((uima::ErrorMessage)(cntxt), 0, 0, 0)
 [01;32m[K                                                 ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/exceptions.hpp:746:33:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KUIMA_EXC_CONTEXT[m[K’
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/exceptions.hpp:746:33:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KUIMA_EXC_CONTEXT[m[K’
    exc.getErrorInfo().addContext(UIMA_EXC_CONTEXT(cntxt)),\
 [01;32m[K                                 ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_engine_base.cpp:363:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KUIMA_EXC_RETHROW[m[K’
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_engine_base.cpp:363:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KUIMA_EXC_RETHROW[m[K’
          UIMA_EXC_RETHROW(rclException,NULL);
 [01;32m[K         ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_engine_base.cpp:[m[K In member function ‘[01m[Kvirtual uima::TyErrorId uima::internal::EngineBase::process(uima::CAS&, const uima::ResultSpecification&)[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/exceptions.hpp:694:49:[m[K [01;35m[Kwarning: [m[Kpassing NULL to non-pointer argument 1 of ‘[01m[Kuima::ErrorMessage::ErrorMessage(uima::TyMessageId)[m[K’ [-Wconversion-null]
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_engine_base.cpp:[m[K In member function ‘[01m[Kvirtual uima::TyErrorId uima::internal::EngineBase::process(uima::CAS&, const uima::ResultSpecification&)[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/exceptions.hpp:694:49:[m[K [01;35m[Kwarning: [m[Kpassing NULL to non-pointer argument 1 of ‘[01m[Kuima::ErrorMessage::ErrorMessage(uima::TyMessageId)[m[K’ [-Wconversion-null]
     uima::ErrorContext((uima::ErrorMessage)(cntxt), 0, 0, 0)
 [01;32m[K                                                 ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/exceptions.hpp:746:33:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KUIMA_EXC_CONTEXT[m[K’
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/exceptions.hpp:746:33:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KUIMA_EXC_CONTEXT[m[K’
    exc.getErrorInfo().addContext(UIMA_EXC_CONTEXT(cntxt)),\
 [01;32m[K                                 ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_engine_base.cpp:386:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KUIMA_EXC_RETHROW[m[K’
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_engine_base.cpp:386:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KUIMA_EXC_RETHROW[m[K’
          UIMA_EXC_RETHROW(rclException,NULL);
 [01;32m[K         ^[m[K
 In file included from [01m[K/usr/include/c++/5/ext/hash_set:60:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/stltools.hpp:59[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_jedii_engine.cpp:42[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/stltools.hpp:59[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_jedii_engine.cpp:42[m[K:
 [01m[K/usr/include/c++/5/backward/backward_warning.h:32:2:[m[K [01;35m[Kwarning: [m[K#warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
  #warning \
 [01;32m[K  ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/typesystemdescription.cpp:[m[K In copy constructor ‘[01m[Kuima::TypeDescription::TypeDescription(const uima::TypeDescription&)[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/typesystemdescription.cpp:47:7:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
-       auto_ptr<FeatureDescription> desc ( new FeatureDescription(**ite) );
-[01;32m[K       ^[m[K
-In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/typesystemdescription.cpp:33[m[K:
-[01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
-   template<typename> class auto_ptr;
-[01;32m[K                            ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/typesystemdescription.cpp:58:7:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
-       auto_ptr<AllowedValue> allowedval ( new AllowedValue(**ite1) );
-[01;32m[K       ^[m[K
-In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/typesystemdescription.cpp:33[m[K:
-[01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
-   template<typename> class auto_ptr;
-[01;32m[K                            ^[m[K
-In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/internal_casserializer.hpp:43[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_jedii_engine.cpp:45[m[K:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/internal_casserializer.hpp:43[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_jedii_engine.cpp:45[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
       std::auto_ptr<IndexIterator> apit( index->createIterator() );
 [01;32m[K           ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/internal_casserializer.hpp:43[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_jedii_engine.cpp:45[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/internal_casserializer.hpp:43[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_jedii_engine.cpp:45[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_jedii_engine.cpp:[m[K In member function ‘[01m[Kvoid uima::internal::JEDIIEngine::initializeJavaVM()[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_jedii_engine.cpp:562:34:[m[K [01;35m[Kwarning: [m[KISO C++ forbids converting a string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_jedii_engine.cpp:[m[K In member function ‘[01m[Kvoid uima::internal::JEDIIEngine::initializeJavaVM()[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_jedii_engine.cpp:562:34:[m[K [01;35m[Kwarning: [m[KISO C++ forbids converting a string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
                                   };
 [01;32m[K                                  ^[m[K
-In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/engine.hpp:47:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/internal_primitive_engine.hpp:39[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_primitive_engine.cpp:37[m[K:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_primitive_engine.cpp:[m[K In member function ‘[01m[Kvirtual uima::TyErrorId uima::internal::PrimitiveEngine::processImpl(uima::CAS&, const uima::ResultSpecification&)[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/exceptions.hpp:694:49:[m[K [01;35m[Kwarning: [m[Kpassing NULL to non-pointer argument 1 of ‘[01m[Kuima::ErrorMessage::ErrorMessage(uima::TyMessageId)[m[K’ [-Wconversion-null]
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/engine.hpp:47:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/internal_primitive_engine.hpp:39[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_primitive_engine.cpp:37[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_primitive_engine.cpp:[m[K In member function ‘[01m[Kvirtual uima::TyErrorId uima::internal::PrimitiveEngine::processImpl(uima::CAS&, const uima::ResultSpecification&)[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/exceptions.hpp:694:49:[m[K [01;35m[Kwarning: [m[Kpassing NULL to non-pointer argument 1 of ‘[01m[Kuima::ErrorMessage::ErrorMessage(uima::TyMessageId)[m[K’ [-Wconversion-null]
     uima::ErrorContext((uima::ErrorMessage)(cntxt), 0, 0, 0)
 [01;32m[K                                                 ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/exceptions.hpp:746:33:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KUIMA_EXC_CONTEXT[m[K’
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/exceptions.hpp:746:33:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KUIMA_EXC_CONTEXT[m[K’
    exc.getErrorInfo().addContext(UIMA_EXC_CONTEXT(cntxt)),\
 [01;32m[K                                 ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_primitive_engine.cpp:208:11:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KUIMA_EXC_RETHROW[m[K’
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/internal_primitive_engine.cpp:208:11:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KUIMA_EXC_RETHROW[m[K’
            UIMA_EXC_RETHROW(e, NULL);
 [01;32m[K           ^[m[K
-In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/annotator_mgr.cpp:39:0[m[K:
-/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/strconvert.hpp: In instantiation of ‘[01m[Kstd::__cxx11::basic_string<_CharT> uima::double2String(double, size_t, std::__cxx11::basic_string<_CharT>&) [with CharT = char; size_t = long unsigned int][m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/annotator_mgr.cpp:634:58:[m[K   required from here
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/strconvert.hpp:186:12:[m[K [01;35m[Kwarning: [m[Kfield precision specifier ‘[01m[K.*[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 3 has type ‘[01m[Ksize_t {aka long unsigned int}[m[K’ [-Wformat=]
+In file included from [01m[K/usr/include/c++/5/ext/hash_set:60:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/stltools.hpp:59[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/resmgr.cpp:78[m[K:
+[01m[K/usr/include/c++/5/backward/backward_warning.h:32:2:[m[K [01;35m[Kwarning: [m[K#warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+ #warning \
+[01;32m[K  ^[m[K
+In file included from [01m[K/usr/include/c++/5/ext/hash_set:60:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/stltools.hpp:59[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/taespecifierbuilder.cpp:60[m[K:
+[01m[K/usr/include/c++/5/backward/backward_warning.h:32:2:[m[K [01;35m[Kwarning: [m[K#warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+ #warning \
+[01;32m[K  ^[m[K
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/timedatetools.cpp:26:0[m[K:
+/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/strconvert.hpp: In instantiation of ‘[01m[Kstd::__cxx11::basic_string<_CharT> uima::double2String(double, size_t, std::__cxx11::basic_string<_CharT>&) [with CharT = char; size_t = long unsigned int][m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/timedatetools.cpp:48:56:[m[K   required from here
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/strconvert.hpp:186:12:[m[K [01;35m[Kwarning: [m[Kfield precision specifier ‘[01m[K.*[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 3 has type ‘[01m[Ksize_t {aka long unsigned int}[m[K’ [-Wformat=]
      sprintf(buff, "%0#.*f", uiDigitsAfterPeriod, d); //lint !e567 !e557 unrecognized format
 [01;32m[K            ^[m[K
-In file included from [01m[K/usr/include/c++/5/ext/hash_set:60:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/stltools.hpp:59[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/resmgr.cpp:78[m[K:
-[01m[K/usr/include/c++/5/backward/backward_warning.h:32:2:[m[K [01;35m[Kwarning: [m[K#warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
- #warning \
-[01;32m[K  ^[m[K
-In file included from [01m[K/usr/include/c++/5/ext/hash_set:60:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/stltools.hpp:59[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/taespecifierbuilder.cpp:60[m[K:
-[01m[K/usr/include/c++/5/backward/backward_warning.h:32:2:[m[K [01;35m[Kwarning: [m[K#warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
- #warning \
-[01;32m[K  ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/taespecifierbuilder.cpp:[m[K In member function ‘[01m[Kvoid uima::XMLParser::buildTypeSystemDesc(uima::TypeSystemDescription&, xercesc_3_1::DOMElement*)[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/taespecifierbuilder.cpp:954:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/taespecifierbuilder.cpp:[m[K In member function ‘[01m[Kvoid uima::XMLParser::buildTypeSystemDesc(uima::TypeSystemDescription&, xercesc_3_1::DOMElement*)[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/taespecifierbuilder.cpp:954:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
              auto_ptr<TypeDescription> desc( buildTypeDesc((DOMElement *) typeDescs->item(i)) );
 [01;32m[K             ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/taespecifierbuilder.cpp:37[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/taespecifierbuilder.cpp:37[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/taespecifierbuilder.cpp:963:9:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/taespecifierbuilder.cpp:963:9:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
          auto_ptr<ImportDescription> desc( buildImportDesc((DOMElement *) children->item(j)) );
 [01;32m[K         ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/taespecifierbuilder.cpp:37[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/taespecifierbuilder.cpp:37[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/taespecifierbuilder.cpp:977:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/taespecifierbuilder.cpp:977:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
              auto_ptr<ImportDescription> desc( buildImportDesc((DOMElement *) importDescs->item(i)) );
 [01;32m[K             ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/taespecifierbuilder.cpp:37[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/taespecifierbuilder.cpp:37[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/taespecifierbuilder.cpp:[m[K In member function ‘[01m[Kuima::TypeDescription* uima::XMLParser::buildTypeDesc(xercesc_3_1::DOMElement*)[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/taespecifierbuilder.cpp:1046:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/taespecifierbuilder.cpp:[m[K In member function ‘[01m[Kuima::TypeDescription* uima::XMLParser::buildTypeDesc(xercesc_3_1::DOMElement*)[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/taespecifierbuilder.cpp:1046:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
              auto_ptr<FeatureDescription> desc( buildFeatureDesc((DOMElement *) features->item(j)) );
 [01;32m[K             ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/taespecifierbuilder.cpp:37[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/taespecifierbuilder.cpp:37[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/taespecifierbuilder.cpp:1062:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/taespecifierbuilder.cpp:1062:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
              auto_ptr<AllowedValue> desc( buildAllowedValue((DOMElement *) allowedVals->item(j)) );
 [01;32m[K             ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/taespecifierbuilder.cpp:37[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/taespecifierbuilder.cpp:37[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/fsindex.cpp:41[m[K:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
-      std::auto_ptr<IndexIterator> apit( index->createIterator() );
-[01;32m[K           ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/typesystemdescription.cpp:[m[K In copy constructor ‘[01m[Kuima::TypeDescription::TypeDescription(const uima::TypeDescription&)[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/typesystemdescription.cpp:47:7:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+       auto_ptr<FeatureDescription> desc ( new FeatureDescription(**ite) );
+[01;32m[K       ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/fsindex.cpp:41[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/typesystemdescription.cpp:33[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexfactory.hpp:41:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_indexdefinition.cpp:40[m[K:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
-      std::auto_ptr<IndexIterator> apit( index->createIterator() );
-[01;32m[K           ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/typesystemdescription.cpp:58:7:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+       auto_ptr<AllowedValue> allowedval ( new AllowedValue(**ite1) );
+[01;32m[K       ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexfactory.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_indexdefinition.cpp:40[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/typesystemdescription.cpp:33[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/cas.cpp:46[m[K:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/cas.cpp:46[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
       std::auto_ptr<IndexIterator> apit( index->createIterator() );
 [01;32m[K           ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/cas.cpp:46[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/cas.cpp:46[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xcasdeserializer_handler.cpp:46[m[K:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/fsindex.cpp:41[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
       std::auto_ptr<IndexIterator> apit( index->createIterator() );
 [01;32m[K           ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xcasdeserializer_handler.cpp:46[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/fsindex.cpp:41[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
 In file included from [01m[K/usr/include/c++/5/ext/hash_set:60:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/stltools.hpp:59[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/internal_casdeserializer.cpp:44[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/stltools.hpp:59[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/internal_casdeserializer.cpp:44[m[K:
 [01m[K/usr/include/c++/5/backward/backward_warning.h:32:2:[m[K [01;35m[Kwarning: [m[K#warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
  #warning \
 [01;32m[K  ^[m[K
-In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/internal_casdeserializer.cpp:49[m[K:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/fsindexrepository.cpp:38[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
       std::auto_ptr<IndexIterator> apit( index->createIterator() );
 [01;32m[K           ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/internal_casdeserializer.cpp:49[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/fsindexrepository.cpp:38[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_indexrepository.cpp:39[m[K:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/internal_casdeserializer.cpp:49[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
       std::auto_ptr<IndexIterator> apit( index->createIterator() );
 [01;32m[K           ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_indexrepository.cpp:39[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/internal_casdeserializer.cpp:49[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_indexrepository.cpp:[m[K In member function ‘[01m[Kvoid uima::lowlevel::IndexRepository::getIndexedFSs(std::vector<unsigned int>&)[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_indexrepository.cpp:190:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/internal_casserializer.hpp:43[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/internal_casserializer.cpp:40[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+      std::auto_ptr<IndexIterator> apit( index->createIterator() );
+[01;32m[K           ^[m[K
+In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/internal_casserializer.hpp:43[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/internal_casserializer.cpp:40[m[K:
+[01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
+   template<typename> class auto_ptr;
+[01;32m[K                            ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/internal_casserializer.cpp:[m[K In member function ‘[01m[Kvoid uima::internal::CASSerializer::serializeIndexedFSs(uima::CAS&, std::vector<unsigned int>&)[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/internal_casserializer.cpp:470:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
              auto_ptr<uima::lowlevel::IndexIterator> apIt(crSingleIndexes[j]->createIterator());
 [01;32m[K             ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_indexrepository.cpp:39[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/internal_casserializer.hpp:43[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/internal_casserializer.cpp:40[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xcasdeserializer.cpp:48[m[K:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_index.cpp:42[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
       std::auto_ptr<IndexIterator> apit( index->createIterator() );
 [01;32m[K           ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xcasdeserializer.cpp:36[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_index.cpp:42[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xmlwriter.cpp:39[m[K:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
-      std::auto_ptr<IndexIterator> apit( index->createIterator() );
-[01;32m[K           ^[m[K
-In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xmlwriter.cpp:39[m[K:
-[01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
-   template<typename> class auto_ptr;
-[01;32m[K                            ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xmlwriter.cpp:[m[K In member function ‘[01m[Kvirtual void uima::XMLDumpWriter::write(std::ostream&)[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xmlwriter.cpp:337:7:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
-       auto_ptr<uima::lowlevel::IndexIterator> pIterator(crIndex.createIterator());
-[01;32m[K       ^[m[K
-In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xmlwriter.cpp:39[m[K:
-[01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
-   template<typename> class auto_ptr;
-[01;32m[K                            ^[m[K
-In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xmideserializer.cpp:48[m[K:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
-      std::auto_ptr<IndexIterator> apit( index->createIterator() );
-[01;32m[K           ^[m[K
-In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xmideserializer.cpp:36[m[K:
-[01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
-   template<typename> class auto_ptr;
-[01;32m[K                            ^[m[K
-In file included from [01m[K/usr/include/c++/5/ext/hash_set:60:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/stltools.hpp:59[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_typesystem.cpp:48[m[K:
-[01m[K/usr/include/c++/5/backward/backward_warning.h:32:2:[m[K [01;35m[Kwarning: [m[K#warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
- #warning \
-[01;32m[K  ^[m[K
-In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xmiwriter.cpp:40[m[K:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
-      std::auto_ptr<IndexIterator> apit( index->createIterator() );
-[01;32m[K           ^[m[K
-In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xmiwriter.cpp:40[m[K:
-[01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
-   template<typename> class auto_ptr;
-[01;32m[K                            ^[m[K
-In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_index.cpp:42[m[K:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
-      std::auto_ptr<IndexIterator> apit( index->createIterator() );
-[01;32m[K           ^[m[K
-In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_index.cpp:42[m[K:
-[01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
-   template<typename> class auto_ptr;
-[01;32m[K                            ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_index.cpp:[m[K In member function ‘[01m[Kvirtual uima::lowlevel::TyFS uima::lowlevel::IndexABase::find(uima::lowlevel::TyFS) const[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_index.cpp:78:7:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_index.cpp:[m[K In member function ‘[01m[Kvirtual uima::lowlevel::TyFS uima::lowlevel::IndexABase::find(uima::lowlevel::TyFS) const[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_index.cpp:78:7:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
        auto_ptr<IndexIterator> it(createIterator());
 [01;32m[K       ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_index.cpp:42[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_index.cpp:42[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xmideserializer_handler.cpp:46[m[K:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexfactory.hpp:41:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_indexdefinition.cpp:40[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
       std::auto_ptr<IndexIterator> apit( index->createIterator() );
 [01;32m[K           ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xmideserializer_handler.cpp:46[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexfactory.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_indexdefinition.cpp:40[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_internal_indexes.cpp:39:0[m[K:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_indexrepository.cpp:39[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
       std::auto_ptr<IndexIterator> apit( index->createIterator() );
 [01;32m[K           ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_internal_indexes.cpp:39[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_indexrepository.cpp:39[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_internal_indexes.cpp:[m[K In member function ‘[01m[Kvirtual bool uima::lowlevel::internal::SingleIndex::contains(uima::lowlevel::TyFS) const[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_internal_indexes.cpp:570:9:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
-         auto_ptr<IndexIterator> it( createIterator() );
-[01;32m[K         ^[m[K
-In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_internal_indexes.cpp:39[m[K:
-[01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
-   template<typename> class auto_ptr;
-[01;32m[K                            ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_internal_indexes.cpp:[m[K In member function ‘[01m[Kvirtual uima::lowlevel::TyFS uima::lowlevel::internal::ComparatorSingleIndex::find(uima::lowlevel::TyFS) const[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_internal_indexes.cpp:592:9:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
-         auto_ptr<IndexIterator> it(createIterator());
-[01;32m[K         ^[m[K
-In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_internal_indexes.cpp:39[m[K:
-[01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
-   template<typename> class auto_ptr;
-[01;32m[K                            ^[m[K
-In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/internal_casserializer.hpp:43[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/internal_casserializer.cpp:40[m[K:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
-      std::auto_ptr<IndexIterator> apit( index->createIterator() );
-[01;32m[K           ^[m[K
-In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/internal_casserializer.hpp:43[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/internal_casserializer.cpp:40[m[K:
-[01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
-   template<typename> class auto_ptr;
-[01;32m[K                            ^[m[K
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/internal_casserializer.cpp:[m[K In member function ‘[01m[Kvoid uima::internal::CASSerializer::serializeIndexedFSs(uima::CAS&, std::vector<unsigned int>&)[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/internal_casserializer.cpp:470:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_indexrepository.cpp:[m[K In member function ‘[01m[Kvoid uima::lowlevel::IndexRepository::getIndexedFSs(std::vector<unsigned int>&)[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_indexrepository.cpp:190:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
              auto_ptr<uima::lowlevel::IndexIterator> apIt(crSingleIndexes[j]->createIterator());
 [01;32m[K             ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/internal_casserializer.hpp:43[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/internal_casserializer.cpp:40[m[K:
-[01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
-   template<typename> class auto_ptr;
-[01;32m[K                            ^[m[K
-In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/fsindexrepository.cpp:38[m[K:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
-      std::auto_ptr<IndexIterator> apit( index->createIterator() );
-[01;32m[K           ^[m[K
-In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/fsindexrepository.cpp:38[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_indexrepository.cpp:39[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
 In file included from [01m[K/usr/include/c++/5/ext/hash_set:60:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/stltools.hpp:59[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/config_tools.hpp:45[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/api.hpp:57[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/jni/jni.cpp:47[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/stltools.hpp:59[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_typesystem.cpp:48[m[K:
 [01m[K/usr/include/c++/5/backward/backward_warning.h:32:2:[m[K [01;35m[Kwarning: [m[K#warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
  #warning \
 [01;32m[K  ^[m[K
-In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/internal_casserializer.hpp:43[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../jni/include/uima/jni.hpp:37[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../jni/include/uima/jni_utils.hpp:39[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/jni/jni_utils.cpp:40[m[K:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_internal_indexes.cpp:39:0[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
       std::auto_ptr<IndexIterator> apit( index->createIterator() );
 [01;32m[K           ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/internal_casserializer.hpp:43[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../jni/include/uima/jni.hpp:37[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../jni/include/uima/jni_utils.hpp:39[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/jni/jni_utils.cpp:40[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_internal_indexes.cpp:39[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/api.hpp:49[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/jni/jni.cpp:47[m[K:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_internal_indexes.cpp:[m[K In member function ‘[01m[Kvirtual bool uima::lowlevel::internal::SingleIndex::contains(uima::lowlevel::TyFS) const[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_internal_indexes.cpp:570:9:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+         auto_ptr<IndexIterator> it( createIterator() );
+[01;32m[K         ^[m[K
+In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_internal_indexes.cpp:39[m[K:
+[01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
+   template<typename> class auto_ptr;
+[01;32m[K                            ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_internal_indexes.cpp:[m[K In member function ‘[01m[Kvirtual uima::lowlevel::TyFS uima::lowlevel::internal::ComparatorSingleIndex::find(uima::lowlevel::TyFS) const[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_internal_indexes.cpp:592:9:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+         auto_ptr<IndexIterator> it(createIterator());
+[01;32m[K         ^[m[K
+In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/lowlevel_internal_indexes.cpp:39[m[K:
+[01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
+   template<typename> class auto_ptr;
+[01;32m[K                            ^[m[K
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xcasdeserializer.cpp:48[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
       std::auto_ptr<IndexIterator> apit( index->createIterator() );
 [01;32m[K           ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/api.hpp:49[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/jni/jni.cpp:47[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xcasdeserializer.cpp:36[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/internal_casserializer.hpp:43[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../jni/include/uima/jni.hpp:37[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../jni/include/uima/jni_string.hpp:42[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/jni/jni_string.cpp:39[m[K:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xcasdeserializer_handler.cpp:46[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
       std::auto_ptr<IndexIterator> apit( index->createIterator() );
 [01;32m[K           ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/internal_casserializer.hpp:43[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../jni/include/uima/jni.hpp:37[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../jni/include/uima/jni_string.hpp:42[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/jni/jni_string.cpp:39[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xcasdeserializer_handler.cpp:46[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K
-CMakeFiles/uimacpp_ros.dir/engine.cpp.o : Dans la fonction « uima::Framework::createAnalysisEngine(bool, icu_55::UnicodeString const&, uima::ErrorInfo&) » :
-engine.cpp:(.text+0x4027): avertissement : the use of `tempnam' is dangerous, better use `mkstemp'
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xmideserializer.cpp:48[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+      std::auto_ptr<IndexIterator> apit( index->createIterator() );
+[01;32m[K           ^[m[K
+In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xmideserializer.cpp:36[m[K:
+[01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
+   template<typename> class auto_ptr;
+[01;32m[K                            ^[m[K
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xmideserializer_handler.cpp:46[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+      std::auto_ptr<IndexIterator> apit( index->createIterator() );
+[01;32m[K           ^[m[K
+In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xmideserializer_handler.cpp:46[m[K:
+[01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
+   template<typename> class auto_ptr;
+[01;32m[K                            ^[m[K
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xmiwriter.cpp:40[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+      std::auto_ptr<IndexIterator> apit( index->createIterator() );
+[01;32m[K           ^[m[K
+In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xmiwriter.cpp:40[m[K:
+[01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
+   template<typename> class auto_ptr;
+[01;32m[K                            ^[m[K
 In file included from [01m[K/usr/include/c++/5/ext/hash_set:60:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/utils/../framework/include/uima/stltools.hpp:59[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/utils/../framework/include/uima/config_tools.hpp:45[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/utils/../framework/include/uima/api.hpp:57[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/utils/runAECpp.cpp:43[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/stltools.hpp:59[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/config_tools.hpp:45[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/api.hpp:57[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/jni/jni.cpp:47[m[K:
 [01m[K/usr/include/c++/5/backward/backward_warning.h:32:2:[m[K [01;35m[Kwarning: [m[K#warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
  #warning \
 [01;32m[K  ^[m[K
-In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/utils/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/utils/../framework/include/uima/api.hpp:49[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/utils/runAECpp.cpp:43[m[K:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/utils/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
-[01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/utils/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xmlwriter.cpp:39[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
       std::auto_ptr<IndexIterator> apit( index->createIterator() );
 [01;32m[K           ^[m[K
 In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/utils/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/utils/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/utils/../framework/include/uima/api.hpp:49[m[K,
-                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/uimacpp_ros/src/utils/runAECpp.cpp:43[m[K:
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xmlwriter.cpp:39[m[K:
+[01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
+   template<typename> class auto_ptr;
+[01;32m[K                            ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xmlwriter.cpp:[m[K In member function ‘[01m[Kvirtual void uima::XMLDumpWriter::write(std::ostream&)[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xmlwriter.cpp:337:7:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+       auto_ptr<uima::lowlevel::IndexIterator> pIterator(crIndex.createIterator());
+[01;32m[K       ^[m[K
+In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/cas/xmlwriter.cpp:39[m[K:
+[01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
+   template<typename> class auto_ptr;
+[01;32m[K                            ^[m[K
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/internal_casserializer.hpp:43[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../jni/include/uima/jni.hpp:37[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../jni/include/uima/jni_utils.hpp:39[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/jni/jni_utils.cpp:40[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+      std::auto_ptr<IndexIterator> apit( index->createIterator() );
+[01;32m[K           ^[m[K
+In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/internal_casserializer.hpp:43[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../jni/include/uima/jni.hpp:37[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../jni/include/uima/jni_utils.hpp:39[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/jni/jni_utils.cpp:40[m[K:
+[01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
+   template<typename> class auto_ptr;
+[01;32m[K                            ^[m[K
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/internal_casserializer.hpp:43[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../jni/include/uima/jni.hpp:37[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../jni/include/uima/jni_string.hpp:42[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/jni/jni_string.cpp:39[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+      std::auto_ptr<IndexIterator> apit( index->createIterator() );
+[01;32m[K           ^[m[K
+In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/internal_casserializer.hpp:43[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../jni/include/uima/jni.hpp:37[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../jni/include/uima/jni_string.hpp:42[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/jni/jni_string.cpp:39[m[K:
+[01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
+   template<typename> class auto_ptr;
+[01;32m[K                            ^[m[K
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/api.hpp:49[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/jni/jni.cpp:47[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+      std::auto_ptr<IndexIterator> apit( index->createIterator() );
+[01;32m[K           ^[m[K
+In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/framework/include/uima/api.hpp:49[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/jni/jni.cpp:47[m[K:
+[01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
+   template<typename> class auto_ptr;
+[01;32m[K                            ^[m[K
+CMakeFiles/uimacpp_ros.dir/engine.cpp.o: In function `uima::Framework::createAnalysisEngine(bool, icu_55::UnicodeString const&, uima::ErrorInfo&)':
+engine.cpp:(.text+0x4027): warning: the use of `tempnam' is dangerous, better use `mkstemp'
+In file included from [01m[K/usr/include/c++/5/ext/hash_set:60:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/utils/../framework/include/uima/stltools.hpp:59[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/utils/../framework/include/uima/config_tools.hpp:45[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/utils/../framework/include/uima/api.hpp:57[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/utils/runAECpp.cpp:43[m[K:
+[01m[K/usr/include/c++/5/backward/backward_warning.h:32:2:[m[K [01;35m[Kwarning: [m[K#warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+ #warning \
+[01;32m[K  ^[m[K
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/utils/../cas/include/uima/lowlevel_indexrepository.hpp:45:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/utils/../framework/include/uima/api.hpp:49[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/utils/runAECpp.cpp:43[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/utils/../cas/include/uima/lowlevel_internal_indexes.hpp:[m[K In member function ‘[01m[Kvirtual void uima::lowlevel::internal::CachedCompositeIndex<T>::clearAndFillCache()[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/utils/../cas/include/uima/lowlevel_internal_indexes.hpp:349:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+      std::auto_ptr<IndexIterator> apit( index->createIterator() );
+[01;32m[K           ^[m[K
+In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/utils/../cas/include/uima/lowlevel_internal_indexes.hpp:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/utils/../cas/include/uima/lowlevel_indexrepository.hpp:45[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/utils/../framework/include/uima/api.hpp:49[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/uimacpp_ros/src/utils/runAECpp.cpp:43[m[K:
 [01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
    template<typename> class auto_ptr;
 [01;32m[K                            ^[m[K

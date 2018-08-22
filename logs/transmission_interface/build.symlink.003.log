@@ -1,6 +1,0 @@
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libtransmission_interface_parser.so
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libtransmission_interface_loader.so
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libtransmission_interface_loader_plugins.so
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/transmission_interface.pc
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/transmission_interface/cmake/transmission_interfaceConfig.cmake
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/transmission_interface/cmake/transmission_interfaceConfig-version.cmake

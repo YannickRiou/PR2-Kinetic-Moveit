@@ -1,10 +1,4 @@
-[  5%] [34m[1mGenerating dynamic reconfigure files from cfg/OpenNI.cfg: /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/include/openni_camera/OpenNIConfig.h /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/lib/python2.7/dist-packages/openni_camera/cfg/OpenNIConfig.py[0m
-Generating reconfiguration files for OpenNI in openni_camera
-Wrote header file in /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/include/openni_camera/OpenNIConfig.h
+[ 33%] Built target openni_camera_gencfg
 [ 77%] Built target openni_driver
-[ 77%] Built target openni_camera_gencfg
-[35m[1mScanning dependencies of target openni_nodelet[0m
-[ 88%] Built target openni_node
-[ 94%] [32mBuilding CXX object CMakeFiles/openni_nodelet.dir/src/nodelets/driver.cpp.o[0m
-[100%] [32m[1mLinking CXX shared library /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/lib/libopenni_nodelet.so[0m
-[100%] Built target openni_nodelet
+[ 88%] Built target openni_nodelet
+[100%] Built target openni_node

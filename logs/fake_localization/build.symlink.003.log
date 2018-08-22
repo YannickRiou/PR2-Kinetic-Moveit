@@ -1,4 +1,4 @@
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/fake_localization.pc
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/fake_localization/fake_localization
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/fake_localization/cmake/fake_localizationConfig.cmake
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/fake_localization/cmake/fake_localizationConfig-version.cmake
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/fake_localization/lib/pkgconfig/fake_localization.pc, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/fake_localization.pc)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/fake_localization/lib/fake_localization/fake_localization, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/fake_localization/fake_localization)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/fake_localization/share/fake_localization/cmake/fake_localizationConfig.cmake, /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/fake_localization/cmake/fake_localizationConfig.cmake)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/fake_localization/share/fake_localization/cmake/fake_localizationConfig-version.cmake, /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/fake_localization/cmake/fake_localizationConfig-version.cmake)

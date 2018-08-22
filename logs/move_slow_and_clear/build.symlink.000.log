@@ -1,4 +1,4 @@
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/move_slow_and_clear/cmake/move_slow_and_clearConfig-version.cmake
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/move_slow_and_clear/cmake/move_slow_and_clearConfig.cmake
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/libmove_slow_and_clear.so
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pkgconfig/move_slow_and_clear.pc
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libmove_slow_and_clear.so
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/move_slow_and_clear.pc
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/move_slow_and_clear/cmake/move_slow_and_clearConfig.cmake
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/move_slow_and_clear/cmake/move_slow_and_clearConfig-version.cmake

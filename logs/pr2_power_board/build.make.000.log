@@ -1,7 +1,7 @@
-[35m[1mScanning dependencies of target _pr2_power_board_generate_messages_check_deps_PowerBoardCommand2[0m
-[  0%] Built target _pr2_power_board_generate_messages_check_deps_PowerBoardCommand2
 [35m[1mScanning dependencies of target _pr2_power_board_generate_messages_check_deps_PowerBoardCommand[0m
 [  0%] Built target _pr2_power_board_generate_messages_check_deps_PowerBoardCommand
+[35m[1mScanning dependencies of target _pr2_power_board_generate_messages_check_deps_PowerBoardCommand2[0m
+[  0%] Built target _pr2_power_board_generate_messages_check_deps_PowerBoardCommand2
 [35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
 [  0%] Built target std_msgs_generate_messages_eus
 [35m[1mScanning dependencies of target roscpp_generate_messages_lisp[0m
@@ -16,81 +16,95 @@
 [  0%] Built target roscpp_generate_messages_nodejs
 [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_nodejs[0m
 [  0%] Built target rosgraph_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target pr2_power_board_generate_messages_java[0m
+[  5%] [34m[1mGenerating Java gradle project from pr2_power_board[0m
+WARNING: Package name "gazebo_moveIT_objects_synchroniser" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+[  5%] Built target pr2_power_board_generate_messages_java
 [35m[1mScanning dependencies of target diagnostic_msgs_generate_messages_eus[0m
-[  0%] Built target diagnostic_msgs_generate_messages_eus
+[  5%] Built target diagnostic_msgs_generate_messages_eus
 [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_cpp[0m
-[  0%] Built target rosgraph_msgs_generate_messages_cpp
+[  5%] Built target rosgraph_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
-[  0%] Built target std_msgs_generate_messages_lisp
-[35m[1mScanning dependencies of target geometry_msgs_generate_messages_lisp[0m
-[  0%] Built target geometry_msgs_generate_messages_lisp
-[35m[1mScanning dependencies of target geometry_msgs_generate_messages_eus[0m
-[  0%] Built target geometry_msgs_generate_messages_eus
-[35m[1mScanning dependencies of target geometry_msgs_generate_messages_nodejs[0m
-[  0%] Built target geometry_msgs_generate_messages_nodejs
-[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_eus[0m
-[  0%] Built target rosgraph_msgs_generate_messages_eus
-[35m[1mScanning dependencies of target roscpp_generate_messages_py[0m
-[  0%] Built target roscpp_generate_messages_py
-[35m[1mScanning dependencies of target diagnostic_msgs_generate_messages_nodejs[0m
-[  0%] Built target diagnostic_msgs_generate_messages_nodejs
+[  5%] Built target std_msgs_generate_messages_lisp
 [35m[1mScanning dependencies of target roscpp_generate_messages_cpp[0m
-[  0%] Built target roscpp_generate_messages_cpp
+[  5%] Built target roscpp_generate_messages_cpp
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_eus[0m
+[  5%] Built target geometry_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_nodejs[0m
+[  5%] Built target geometry_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_eus[0m
+[  5%] Built target rosgraph_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target roscpp_generate_messages_py[0m
+[  5%] Built target roscpp_generate_messages_py
+[35m[1mScanning dependencies of target diagnostic_msgs_generate_messages_nodejs[0m
+[  5%] Built target diagnostic_msgs_generate_messages_nodejs
 [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_py[0m
-[  0%] Built target rosgraph_msgs_generate_messages_py
+[  5%] Built target rosgraph_msgs_generate_messages_py
 [35m[1mScanning dependencies of target diagnostic_msgs_generate_messages_py[0m
-[  0%] Built target diagnostic_msgs_generate_messages_py
+[  5%] Built target diagnostic_msgs_generate_messages_py
 [35m[1mScanning dependencies of target pr2_msgs_generate_messages_cpp[0m
-[  0%] Built target pr2_msgs_generate_messages_cpp
+[  5%] Built target pr2_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target pr2_power_board_generate_messages_cpp[0m
-[  6%] [34m[1mGenerating C++ code from pr2_power_board/PowerBoardCommand.srv[0m
-[ 12%] [34m[1mGenerating C++ code from pr2_power_board/PowerBoardCommand2.srv[0m
-[ 12%] Built target pr2_power_board_generate_messages_cpp
+[ 10%] [34m[1mGenerating C++ code from pr2_power_board/PowerBoardCommand2.srv[0m
+[ 15%] [34m[1mGenerating C++ code from pr2_power_board/PowerBoardCommand.srv[0m
+[ 15%] Built target pr2_power_board_generate_messages_cpp
 [35m[1mScanning dependencies of target roscpp_generate_messages_eus[0m
+[ 15%] Built target roscpp_generate_messages_eus
 [35m[1mScanning dependencies of target diagnostic_msgs_generate_messages_lisp[0m
-[ 12%] Built target roscpp_generate_messages_eus
-[ 12%] Built target diagnostic_msgs_generate_messages_lisp
+[ 15%] Built target diagnostic_msgs_generate_messages_lisp
 [35m[1mScanning dependencies of target pr2_msgs_generate_messages_eus[0m
-[ 12%] Built target pr2_msgs_generate_messages_eus
+[ 15%] Built target pr2_msgs_generate_messages_eus
 [35m[1mScanning dependencies of target pr2_msgs_generate_messages_lisp[0m
-[ 12%] Built target pr2_msgs_generate_messages_lisp
+[ 15%] Built target pr2_msgs_generate_messages_lisp
 [35m[1mScanning dependencies of target diagnostic_msgs_generate_messages_cpp[0m
-[ 12%] Built target diagnostic_msgs_generate_messages_cpp
+[ 15%] Built target diagnostic_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target pr2_msgs_generate_messages_nodejs[0m
-[ 12%] Built target pr2_msgs_generate_messages_nodejs
+[ 15%] Built target pr2_msgs_generate_messages_nodejs
 [35m[1mScanning dependencies of target geometry_msgs_generate_messages_cpp[0m
-[ 12%] Built target geometry_msgs_generate_messages_cpp
+[ 15%] Built target geometry_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
-[ 12%] Built target std_msgs_generate_messages_nodejs
+[ 15%] Built target std_msgs_generate_messages_nodejs
 [35m[1mScanning dependencies of target geometry_msgs_generate_messages_py[0m
-[ 12%] Built target geometry_msgs_generate_messages_py
+[ 15%] Built target geometry_msgs_generate_messages_py
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_lisp[0m
+[ 15%] Built target geometry_msgs_generate_messages_lisp
 [35m[1mScanning dependencies of target pr2_power_board_generate_messages_eus[0m
-[35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
-[ 18%] [34m[1mGenerating EusLisp code from pr2_power_board/PowerBoardCommand.srv[0m
-[ 18%] Built target std_msgs_generate_messages_cpp
-[ 25%] [34m[1mGenerating EusLisp code from pr2_power_board/PowerBoardCommand2.srv[0m
+[ 21%] [34m[1mGenerating EusLisp code from pr2_power_board/PowerBoardCommand2.srv[0m
+[ 26%] [34m[1mGenerating EusLisp code from pr2_power_board/PowerBoardCommand.srv[0m
 [ 31%] [34m[1mGenerating EusLisp manifest code for pr2_power_board[0m
-[35m[1mScanning dependencies of target pr2_power_board_generate_messages_lisp[0m
-[ 37%] [34m[1mGenerating Lisp code from pr2_power_board/PowerBoardCommand.srv[0m
-[ 43%] [34m[1mGenerating Lisp code from pr2_power_board/PowerBoardCommand2.srv[0m
-[ 43%] Built target pr2_power_board_generate_messages_lisp
 [35m[1mScanning dependencies of target pr2_power_board_generate_messages_nodejs[0m
-[ 50%] [34m[1mGenerating Javascript code from pr2_power_board/PowerBoardCommand.srv[0m
-[ 56%] [34m[1mGenerating Javascript code from pr2_power_board/PowerBoardCommand2.srv[0m
-[ 56%] Built target pr2_power_board_generate_messages_nodejs
+[ 36%] [34m[1mGenerating Javascript code from pr2_power_board/PowerBoardCommand2.srv[0m
+[ 42%] [34m[1mGenerating Javascript code from pr2_power_board/PowerBoardCommand.srv[0m
+[ 42%] Built target pr2_power_board_generate_messages_nodejs
+WARNING: Package name "gazebo_moveIT_objects_synchroniser" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+WARNING: Package name "gazebo_moveIT_objects_synchroniser" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+[ 42%] Built target pr2_power_board_generate_messages_eus
+[35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
+[ 42%] Built target std_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target pr2_power_board_generate_messages_java_gradle[0m
+[ 47%] [34m[1mCompiling Java code for pr2_power_board[0m
+[35m[1mScanning dependencies of target pr2_power_board_generate_messages_lisp[0m
+[ 52%] [34m[1mGenerating Lisp code from pr2_power_board/PowerBoardCommand2.srv[0m
+[ 57%] [34m[1mGenerating Lisp code from pr2_power_board/PowerBoardCommand.srv[0m
+[ 57%] Built target pr2_power_board_generate_messages_lisp
 [35m[1mScanning dependencies of target pr2_power_board_generate_messages_py[0m
-[ 62%] [34m[1mGenerating Python code from SRV pr2_power_board/PowerBoardCommand[0m
-[ 68%] [34m[1mGenerating Python code from SRV pr2_power_board/PowerBoardCommand2[0m
-[ 75%] [34m[1mGenerating Python srv __init__.py for pr2_power_board[0m
-[ 75%] Built target pr2_power_board_generate_messages_py
-[ 75%] Built target pr2_power_board_generate_messages_eus
+[ 63%] [34m[1mGenerating Python code from SRV pr2_power_board/PowerBoardCommand2[0m
+[ 68%] [34m[1mGenerating Python code from SRV pr2_power_board/PowerBoardCommand[0m
+[ 73%] [34m[1mGenerating Python srv __init__.py for pr2_power_board[0m
+[0m[ 73%] Built target pr2_power_board_generate_messages_py
 [35m[1mScanning dependencies of target power_node2[0m
-[ 81%] [32mBuilding CXX object CMakeFiles/power_node2.dir/src/power_node/power_node2.cpp.o[0m
+[ 78%] [32mBuilding CXX object CMakeFiles/power_node2.dir/src/power_node/power_node2.cpp.o[0m
 [35m[1mScanning dependencies of target power_node[0m
-[ 87%] [32mBuilding CXX object CMakeFiles/power_node.dir/src/power_node/power_node.cpp.o[0m
-[ 93%] [32m[1mLinking CXX executable /home/david/PR2-Kinetic-Xenial/devel/.private/pr2_power_board/lib/pr2_power_board/power_node2[0m
+[ 84%] [32mBuilding CXX object CMakeFiles/power_node.dir/src/power_node/power_node.cpp.o[0m
+warning: [options] bootstrap class path not set in conjunction with -source 1.7
+1 warning
+Uploading: org/ros/rosjava_messages/pr2_power_board/1.1.2/pr2_power_board-1.1.2.jar to repository remote at file:/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/pr2_power_board/share/maven
+Transferring 4K from remote
+Uploaded 4K
+[0m[ 89%] Built target pr2_power_board_generate_messages_java_gradle
 [35m[1mScanning dependencies of target pr2_power_board_generate_messages[0m
-[ 93%] Built target pr2_power_board_generate_messages
-[ 93%] Built target power_node2
-[100%] [32m[1mLinking CXX executable /home/david/PR2-Kinetic-Xenial/devel/.private/pr2_power_board/lib/pr2_power_board/power_node[0m
+[ 89%] Built target pr2_power_board_generate_messages
+[ 94%] [32m[1mLinking CXX executable /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/pr2_power_board/lib/pr2_power_board/power_node2[0m
+[100%] [32m[1mLinking CXX executable /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/pr2_power_board/lib/pr2_power_board/power_node[0m
+[100%] Built target power_node2
 [100%] Built target power_node

@@ -1,5 +1,5 @@
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/pr2_tuck_arms_action/cmake/pr2_tuck_arms_actionConfig-version.cmake
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/pr2_tuck_arms_action/cmake/pr2_tuck_arms_actionConfig.cmake
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pkgconfig/pr2_tuck_arms_action.pc
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/pr2_tuck_arms_action/__init__.py
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/bin/tuck_arms.py
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/pr2_tuck_arms_action/__init__.py
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/pr2_tuck_arms_action.pc
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/bin/tuck_arms.py
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/pr2_tuck_arms_action/cmake/pr2_tuck_arms_actionConfig.cmake
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/pr2_tuck_arms_action/cmake/pr2_tuck_arms_actionConfig-version.cmake

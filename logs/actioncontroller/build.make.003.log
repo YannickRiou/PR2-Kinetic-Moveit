@@ -1,97 +1,40 @@
 [  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerFeedback
 [  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerResult
-[  0%] Built target _actioncontroller_generate_messages_check_deps_actiongoal
 [  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionFeedback
-[  0%] Built target ar_track_alvar_msgs_generate_messages_cpp
-[  0%] Built target geometry_msgs_generate_messages_cpp
+[  0%] Built target _actioncontroller_generate_messages_check_deps_actiongoal
 [  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionGoal
 [  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerAction
+[  0%] Built target geometry_msgs_generate_messages_cpp
 [  0%] Built target actionlib_msgs_generate_messages_cpp
-[  0%] Built target std_msgs_generate_messages_cpp
 [  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerGoal
-[  0%] Built target std_msgs_generate_messages_nodejs
-[  0%] Built target ar_track_alvar_msgs_generate_messages_nodejs
+[  0%] Built target ar_track_alvar_msgs_generate_messages_cpp
 [  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionResult
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target ar_track_alvar_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_nodejs
 [  0%] Built target actionlib_msgs_generate_messages_nodejs
 [  0%] Built target geometry_msgs_generate_messages_nodejs
 [  0%] Built target ar_track_alvar_msgs_generate_messages_py
-[  0%] Built target actionlib_msgs_generate_messages_py
 [  0%] Built target geometry_msgs_generate_messages_py
 [  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target actionlib_msgs_generate_messages_py
 [  0%] Built target ar_track_alvar_msgs_generate_messages_lisp
 [  0%] Built target geometry_msgs_generate_messages_lisp
-[  0%] Built target actionlib_msgs_generate_messages_lisp
 [  0%] Built target std_msgs_generate_messages_lisp
-[  0%] Built target actionlib_msgs_generate_messages_java
-[  0%] Built target geometry_msgs_generate_messages_java
-[  0%] Built target std_msgs_generate_messages_eus
-[  0%] Built target ar_track_alvar_msgs_generate_messages_eus
-[  0%] Built target actionlib_msgs_generate_messages_eus
+[  0%] Built target actionlib_msgs_generate_messages_lisp
+[  1%] Built target actioncontroller_generate_messages_java
+[  1%] Built target ar_track_alvar_msgs_generate_messages_eus
+[  1%] Built target actionlib_msgs_generate_messages_eus
 [  1%] Built target geometry_msgs_generate_messages_eus
-[  1%] [34m[1mGenerating Java gradle project from actioncontroller[0m
+[  1%] Built target std_msgs_generate_messages_eus
+[  3%] [34m[1mCompiling Java code for actioncontroller[0m
 [  7%] Built target simplePick
-[ 23%] Built target setUp
-[ 25%] Built target actioncontroller_generate_messages_cpp
-[ 41%] Built target actioncontroller_generate_messages_nodejs
-[ 60%] [34m[1mGenerating Java gradle project from actioncontroller[0m
-[ 74%] Built target actioncontroller_generate_messages_py
-[ 76%] Built target actioncontroller_generate_messages_lisp
-[35m[1mScanning dependencies of target actioncontroller_gencpp[0m
-[ 78%] Built target actioncontroller_gencpp
-[ 94%] Built target actioncontroller_generate_messages_eus
-[35m[1mScanning dependencies of target ActionController[0m
-Traceback (most recent call last):
-  File "/opt/ros/kinetic/share/genjava/cmake/../../../lib/genjava/genjava_gradle_project.py", line 14, in <module>
-    genjava.main(sys.argv)
-  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genjava/genjava_main.py", line 82, in main
-    gradle_project.create(args.package, args.output_dir)
-  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genjava/gradle_project.py", line 148, in create
-    shutil.rmtree(genjava_gradle_dir)
-  File "/usr/lib/python2.7/shutil.py", line 256, in rmtree
-    onerror(os.rmdir, path, sys.exc_info())
-  File "/usr/lib/python2.7/shutil.py", line 254, in rmtree
-    os.rmdir(path)
-OSError: [Errno 2] No such file or directory: '/home/dtrimoul/PR2-Kinetic-Xenial/build/actioncontroller/java/actioncontroller'
-CMakeFiles/actioncontroller_generate_messages_java_gradle.dir/build.make:155: recipe for target 'java/actioncontroller/build.gradle' failed
-make[2]: *** [java/actioncontroller/build.gradle] Error 1
-CMakeFiles/Makefile2:818: recipe for target 'CMakeFiles/actioncontroller_generate_messages_java_gradle.dir/all' failed
-make[1]: *** [CMakeFiles/actioncontroller_generate_messages_java_gradle.dir/all] Error 2
-make[1]: *** Waiting for unfinished jobs....
-[ 96%] [32mBuilding CXX object CMakeFiles/ActionController.dir/src/ActionController.cpp.o[0m
-Traceback (most recent call last):
-  File "/opt/ros/kinetic/share/genjava/cmake/../../../lib/genjava/genjava_gradle_project.py", line 14, in <module>
-    genjava.main(sys.argv)
-  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genjava/genjava_main.py", line 82, in main
-    gradle_project.create(args.package, args.output_dir)
-  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genjava/gradle_project.py", line 152, in create
-    raise IOError("could not find %s among message packages. Does the that package have a <build_depend> on message_generation in its package.xml?" % msg_pkg_name)
-IOError: could not find actioncontroller among message packages. Does the that package have a <build_depend> on message_generation in its package.xml?
-CMakeFiles/actioncontroller_generate_messages_java.dir/build.make:154: recipe for target 'java/actioncontroller/build.gradle' failed
-make[2]: *** [java/actioncontroller/build.gradle] Error 1
-make[1]: *** [CMakeFiles/actioncontroller_generate_messages_java.dir/all] Error 2
-CMakeFiles/Makefile2:295: recipe for target 'CMakeFiles/actioncontroller_generate_messages_java.dir/all' failed
-In file included from [01m[K/opt/ros/kinetic/include/ros/ros.h:40:0[m[K,
-                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:2[m[K:
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:[m[K In member function ‘[01m[Kbool ActionController::pick(std::__cxx11::string, geometry_msgs::Pose)[m[K’:
-[01m[K/opt/ros/kinetic/include/ros/console.h:346:176:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [-Wformat-security]
-     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, __VA_ARGS__)
-[01;32m[K                                                                                                                                                                                ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:349:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
-     ROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER(0, __VA_ARGS__)
-[01;32m[K     ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:379:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
-       ROSCONSOLE_PRINT_AT_LOCATION(__VA_ARGS__); \
-[01;32m[K       ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:561:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
- #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
-[01;32m[K                                   ^[m[K
-[01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
- #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
-[01;32m[K                       ^[m[K
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:120:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
-   ROS_INFO(group.c_str());
-[01;32m[K   ^[m[K
-[ 98%] [32m[1mLinking CXX executable /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/actioncontroller/lib/actioncontroller/ActionController[0m
-[ 98%] Built target ActionController
-Makefile:138: recipe for target 'all' failed
-make: *** [all] Error 2
+[ 11%] Built target setUp
+[ 27%] Built target actioncontroller_generate_messages_cpp
+[ 58%] Built target actioncontroller_generate_messages_java_gradle
+[ 62%] Built target actioncontroller_generate_messages_nodejs
+[ 62%] Built target actioncontroller_generate_messages_py
+[ 78%] Built target actioncontroller_generate_messages_lisp
+[ 96%] Built target actioncontroller_generate_messages_eus
+[ 96%] Built target actioncontroller_generate_messages
+[100%] Built target ActionController

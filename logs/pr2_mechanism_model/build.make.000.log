@@ -8,5 +8,5 @@
 [ 70%] [32mBuilding CXX object CMakeFiles/pr2_mechanism_model.dir/src/wrist_transmission.cpp.o[0m
 [ 80%] [32mBuilding CXX object CMakeFiles/pr2_mechanism_model.dir/src/pr2_belt_transmission.cpp.o[0m
 [ 90%] [32mBuilding CXX object CMakeFiles/pr2_mechanism_model.dir/src/joint_calibration_simulator.cpp.o[0m
-[100%] [32m[1mLinking CXX shared library /home/david/PR2-Kinetic-Xenial/devel/.private/pr2_mechanism_model/lib/libpr2_mechanism_model.so[0m
+[100%] [32m[1mLinking CXX shared library /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/pr2_mechanism_model/lib/libpr2_mechanism_model.so[0m
 [100%] Built target pr2_mechanism_model

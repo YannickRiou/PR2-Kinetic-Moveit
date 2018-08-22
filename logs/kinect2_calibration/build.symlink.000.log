@@ -1,4 +1,4 @@
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/kinect2_calibration/cmake/kinect2_calibrationConfig.cmake
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/kinect2_calibration/cmake/kinect2_calibrationConfig-version.cmake
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pkgconfig/kinect2_calibration.pc
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/kinect2_calibration/kinect2_calibration
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/kinect2_calibration.pc
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/kinect2_calibration/kinect2_calibration
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/kinect2_calibration/cmake/kinect2_calibrationConfig.cmake
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/kinect2_calibration/cmake/kinect2_calibrationConfig-version.cmake

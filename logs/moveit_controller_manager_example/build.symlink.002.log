@@ -1,5 +1,0 @@
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libmoveit_controller_manager_example.so.0.9.7
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libmoveit_controller_manager_example.so
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/moveit_controller_manager_example.pc
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/moveit_controller_manager_example/cmake/moveit_controller_manager_exampleConfig.cmake
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/moveit_controller_manager_example/cmake/moveit_controller_manager_exampleConfig-version.cmake

@@ -1,10 +1,7 @@
-[01m[K/home/david/PR2-Kinetic-Xenial/src/actioncontroller/src/simplePick.cpp:4:53:[m[K [01;31m[Kfatal error: [m[Kactioncontroller/ActionControllerAction.h: Aucun fichier ou dossier de ce type
+WARNING: Package name "gazebo_moveIT_objects_synchroniser" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/simplePick.cpp:4:53:[m[K [01;31m[Kfatal error: [m[Kactioncontroller/ActionControllerAction.h: No such file or directory
 compilation terminated.
-[01m[K/home/david/PR2-Kinetic-Xenial/src/actioncontroller/src/setUp.cpp:4:53:[m[K [01;31m[Kfatal error: [m[Kactioncontroller/ActionControllerAction.h: Aucun fichier ou dossier de ce type
-compilation terminated.
-make[2]: *** [CMakeFiles/simplePick.dir/src/simplePick.cpp.o] Erreur 1
-make[1]: *** [CMakeFiles/simplePick.dir/all] Erreur 2
-make[1]: *** Attente des tâches non terminées....
-make[2]: *** [CMakeFiles/setUp.dir/src/setUp.cpp.o] Erreur 1
-make[1]: *** [CMakeFiles/setUp.dir/all] Erreur 2
-make: *** [all] Erreur 2
+make[2]: *** [CMakeFiles/simplePick.dir/src/simplePick.cpp.o] Error 1
+make[1]: *** [CMakeFiles/simplePick.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

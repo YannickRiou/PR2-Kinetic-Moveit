@@ -1,6 +1,0 @@
-Linked: (/home/david/PR2-Kinetic-Xenial/devel/.private/transmission_interface/share/transmission_interface/cmake/transmission_interfaceConfig.cmake, /home/david/PR2-Kinetic-Xenial/devel/share/transmission_interface/cmake/transmission_interfaceConfig.cmake)
-Linked: (/home/david/PR2-Kinetic-Xenial/devel/.private/transmission_interface/share/transmission_interface/cmake/transmission_interfaceConfig-version.cmake, /home/david/PR2-Kinetic-Xenial/devel/share/transmission_interface/cmake/transmission_interfaceConfig-version.cmake)
-Linked: (/home/david/PR2-Kinetic-Xenial/devel/.private/transmission_interface/lib/libtransmission_interface_parser.so, /home/david/PR2-Kinetic-Xenial/devel/lib/libtransmission_interface_parser.so)
-Linked: (/home/david/PR2-Kinetic-Xenial/devel/.private/transmission_interface/lib/libtransmission_interface_loader.so, /home/david/PR2-Kinetic-Xenial/devel/lib/libtransmission_interface_loader.so)
-Linked: (/home/david/PR2-Kinetic-Xenial/devel/.private/transmission_interface/lib/libtransmission_interface_loader_plugins.so, /home/david/PR2-Kinetic-Xenial/devel/lib/libtransmission_interface_loader_plugins.so)
-Linked: (/home/david/PR2-Kinetic-Xenial/devel/.private/transmission_interface/lib/pkgconfig/transmission_interface.pc, /home/david/PR2-Kinetic-Xenial/devel/lib/pkgconfig/transmission_interface.pc)

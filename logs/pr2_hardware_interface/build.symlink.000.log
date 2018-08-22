@@ -1,4 +1,4 @@
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/pr2_hardware_interface/cmake/pr2_hardware_interfaceConfig.cmake
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/pr2_hardware_interface/cmake/pr2_hardware_interface-extras.cmake
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/pr2_hardware_interface/cmake/pr2_hardware_interfaceConfig-version.cmake
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pkgconfig/pr2_hardware_interface.pc
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/pr2_hardware_interface.pc
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/pr2_hardware_interface/cmake/pr2_hardware_interface-extras.cmake
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/pr2_hardware_interface/cmake/pr2_hardware_interfaceConfig.cmake
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/pr2_hardware_interface/cmake/pr2_hardware_interfaceConfig-version.cmake

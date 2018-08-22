@@ -1,9 +1,9 @@
 [35m[1mScanning dependencies of target tf_generate_messages_eus[0m
 [  0%] Built target tf_generate_messages_eus
 [35m[1mScanning dependencies of target dwa_local_planner_gencfg[0m
-[ 25%] [34m[1mGenerating dynamic reconfigure files from cfg/DWAPlanner.cfg: /home/david/PR2-Kinetic-Xenial/devel/.private/dwa_local_planner/include/dwa_local_planner/DWAPlannerConfig.h /home/david/PR2-Kinetic-Xenial/devel/.private/dwa_local_planner/lib/python2.7/dist-packages/dwa_local_planner/cfg/DWAPlannerConfig.py[0m
+[ 25%] [34m[1mGenerating dynamic reconfigure files from cfg/DWAPlanner.cfg: /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/dwa_local_planner/include/dwa_local_planner/DWAPlannerConfig.h /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/dwa_local_planner/lib/python2.7/dist-packages/dwa_local_planner/cfg/DWAPlannerConfig.py[0m
 Generating reconfiguration files for DWAPlanner in dwa_local_planner
-Wrote header file in /home/david/PR2-Kinetic-Xenial/devel/.private/dwa_local_planner/include/dwa_local_planner/DWAPlannerConfig.h
+Wrote header file in /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/dwa_local_planner/include/dwa_local_planner/DWAPlannerConfig.h
 [ 25%] Built target dwa_local_planner_gencfg
 [35m[1mScanning dependencies of target visualization_msgs_generate_messages_py[0m
 [ 25%] Built target visualization_msgs_generate_messages_py
@@ -218,5 +218,5 @@ Wrote header file in /home/david/PR2-Kinetic-Xenial/devel/.private/dwa_local_pla
 [35m[1mScanning dependencies of target dwa_local_planner[0m
 [ 50%] [32mBuilding CXX object CMakeFiles/dwa_local_planner.dir/src/dwa_planner.cpp.o[0m
 [ 75%] [32mBuilding CXX object CMakeFiles/dwa_local_planner.dir/src/dwa_planner_ros.cpp.o[0m
-[100%] [32m[1mLinking CXX shared library /home/david/PR2-Kinetic-Xenial/devel/.private/dwa_local_planner/lib/libdwa_local_planner.so[0m
+[100%] [32m[1mLinking CXX shared library /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/dwa_local_planner/lib/libdwa_local_planner.so[0m
 [100%] Built target dwa_local_planner

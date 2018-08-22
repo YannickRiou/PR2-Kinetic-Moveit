@@ -1,4 +1,3 @@
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/laas_sherlock/cmake/laas_sherlockConfig.cmake
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/laas_sherlock/cmake/laas_sherlockConfig-version.cmake
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/rs_BananaAnnotator.so
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pkgconfig/laas_sherlock.pc
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/laas_sherlock.pc
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/laas_sherlock/cmake/laas_sherlockConfig.cmake
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/laas_sherlock/cmake/laas_sherlockConfig-version.cmake

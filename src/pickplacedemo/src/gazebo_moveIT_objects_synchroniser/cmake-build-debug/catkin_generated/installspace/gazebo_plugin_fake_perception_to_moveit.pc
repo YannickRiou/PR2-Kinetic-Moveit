@@ -1,8 +1,0 @@
-prefix=/usr/local
-
-Name: gazebo_plugin_fake_perception_to_moveit
-Description: Description of gazebo_plugin_fake_perception_to_moveit
-Version: 0.0.0
-Cflags: 
-Libs: -L/usr/local/lib 
-Requires: 

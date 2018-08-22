@@ -8,11 +8,17 @@
 [  0%] Built target geometry_msgs_generate_messages_nodejs
 [  0%] Built target geometry_msgs_generate_messages_lisp
 [  0%] Built target std_msgs_generate_messages_lisp
-[  0%] Built target geometry_msgs_generate_messages_cpp
-[  0%] Built target std_msgs_generate_messages_cpp
-[ 25%] Built target graph_msgs_generate_messages_eus
-[ 50%] Built target graph_msgs_generate_messages_py
-[ 66%] Built target graph_msgs_generate_messages_nodejs
-[ 83%] Built target graph_msgs_generate_messages_lisp
-[100%] Built target graph_msgs_generate_messages_cpp
+[  6%] [34m[1mCompiling Java code for graph_msgs[0m
+[  6%] Built target geometry_msgs_generate_messages_cpp
+[  6%] Built target std_msgs_generate_messages_cpp
+[ 13%] Built target graph_msgs_generate_messages_java
+[ 33%] Built target graph_msgs_generate_messages_eus
+[ 53%] Built target graph_msgs_generate_messages_py
+[ 66%] Built target graph_msgs_generate_messages_lisp
+[ 86%] Built target graph_msgs_generate_messages_nodejs
+[ 93%] Built target graph_msgs_generate_messages_cpp
+[0mUploading: org/ros/rosjava_messages/graph_msgs/0.1.0/graph_msgs-0.1.0.jar to repository remote at file:/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/graph_msgs/share/maven/
+Transferring 2K from remote
+Uploaded 2K
+[0m[100%] Built target graph_msgs_generate_messages_java_gradle
 [100%] Built target graph_msgs_generate_messages

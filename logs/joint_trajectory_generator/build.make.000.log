@@ -1,8 +1,8 @@
 [35m[1mScanning dependencies of target joint_trajectory_generation[0m
 [ 25%] [32mBuilding CXX object CMakeFiles/joint_trajectory_generation.dir/src/trajectory_generation.cpp.o[0m
-[ 50%] [32m[1mLinking CXX shared library /home/david/PR2-Kinetic-Xenial/devel/.private/joint_trajectory_generator/lib/libjoint_trajectory_generation.so[0m
+[ 50%] [32m[1mLinking CXX shared library /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/joint_trajectory_generator/lib/libjoint_trajectory_generation.so[0m
 [ 50%] Built target joint_trajectory_generation
 [35m[1mScanning dependencies of target joint_trajectory_generator[0m
 [ 75%] [32mBuilding CXX object CMakeFiles/joint_trajectory_generator.dir/src/joint_trajectory_generator.cpp.o[0m
-[100%] [32m[1mLinking CXX executable /home/david/PR2-Kinetic-Xenial/devel/.private/joint_trajectory_generator/lib/joint_trajectory_generator/joint_trajectory_generator[0m
+[100%] [32m[1mLinking CXX executable /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/joint_trajectory_generator/lib/joint_trajectory_generator/joint_trajectory_generator[0m
 [100%] Built target joint_trajectory_generator

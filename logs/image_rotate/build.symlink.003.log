@@ -1,12 +1,12 @@
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libimage_rotate.so
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/image_rotate/__init__.py
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/image_rotate/cfg/__init__.py
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/image_rotate/cfg/ImageRotateConfig.py
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/image_rotate.pc
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/image_rotate/image_rotate
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/include/image_rotate/ImageRotateConfig.h
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/image_rotate/cmake/image_rotateConfig-version.cmake
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/image_rotate/cmake/image_rotateConfig.cmake
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/image_rotate/docs/ImageRotateConfig.dox
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/image_rotate/docs/ImageRotateConfig.wikidoc
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/image_rotate/docs/ImageRotateConfig-usage.dox
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/image_rotate/lib/libimage_rotate.so, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libimage_rotate.so)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/image_rotate/lib/python2.7/dist-packages/image_rotate/__init__.py, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/image_rotate/__init__.py)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/image_rotate/lib/python2.7/dist-packages/image_rotate/cfg/__init__.py, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/image_rotate/cfg/__init__.py)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/image_rotate/lib/python2.7/dist-packages/image_rotate/cfg/ImageRotateConfig.py, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/image_rotate/cfg/ImageRotateConfig.py)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/image_rotate/lib/pkgconfig/image_rotate.pc, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/image_rotate.pc)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/image_rotate/lib/image_rotate/image_rotate, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/image_rotate/image_rotate)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/image_rotate/include/image_rotate/ImageRotateConfig.h, /home/dtrimoul/PR2-Kinetic-Xenial/devel/include/image_rotate/ImageRotateConfig.h)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/image_rotate/share/image_rotate/cmake/image_rotateConfig-version.cmake, /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/image_rotate/cmake/image_rotateConfig-version.cmake)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/image_rotate/share/image_rotate/cmake/image_rotateConfig.cmake, /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/image_rotate/cmake/image_rotateConfig.cmake)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/image_rotate/share/image_rotate/docs/ImageRotateConfig.dox, /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/image_rotate/docs/ImageRotateConfig.dox)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/image_rotate/share/image_rotate/docs/ImageRotateConfig.wikidoc, /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/image_rotate/docs/ImageRotateConfig.wikidoc)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/image_rotate/share/image_rotate/docs/ImageRotateConfig-usage.dox, /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/image_rotate/docs/ImageRotateConfig-usage.dox)

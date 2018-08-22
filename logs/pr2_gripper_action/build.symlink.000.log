@@ -1,4 +1,4 @@
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/pr2_gripper_action/cmake/pr2_gripper_actionConfig.cmake
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/share/pr2_gripper_action/cmake/pr2_gripper_actionConfig-version.cmake
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pkgconfig/pr2_gripper_action.pc
-Symlinking /home/david/PR2-Kinetic-Xenial/devel/lib/pr2_gripper_action/pr2_gripper_action
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/pr2_gripper_action.pc
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pr2_gripper_action/pr2_gripper_action
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/pr2_gripper_action/cmake/pr2_gripper_actionConfig.cmake
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/pr2_gripper_action/cmake/pr2_gripper_actionConfig-version.cmake

@@ -10,16 +10,16 @@ Not searching for unused variables given on the command line.
 [36m--[0m Performing Test COMPILER_SUPPORTS_CXX11 - Success
 [36m--[0m Performing Test COMPILER_SUPPORTS_CXX0X
 [36m--[0m Performing Test COMPILER_SUPPORTS_CXX0X - Success
-[36m--[0m Using CATKIN_DEVEL_PREFIX: /home/david/PR2-Kinetic-Xenial/devel/.private/kinect2_registration
-[36m--[0m Using CMAKE_PREFIX_PATH: /home/david/PR2-Kinetic-Xenial/devel;/opt/ros/kinetic
-[36m--[0m This workspace overlays: /home/david/PR2-Kinetic-Xenial/devel;/opt/ros/kinetic
+[36m--[0m Using CATKIN_DEVEL_PREFIX: /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/kinect2_registration
+[36m--[0m Using CMAKE_PREFIX_PATH: /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/catkin_tools_prebuild;/home/dtrimoul/laas_perception/devel;/opt/ros/kinetic;/home/dtrimoul/PR2-Kinetic-Xenial/devel
+[36m--[0m This workspace overlays: /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/catkin_tools_prebuild;/home/dtrimoul/laas_perception/devel;/opt/ros/kinetic;/home/dtrimoul/PR2-Kinetic-Xenial/devel
 [36m--[0m Found PythonInterp: /usr/bin/python (found version "2.7.12")
 [36m--[0m Using PYTHON_EXECUTABLE: /usr/bin/python
 [36m--[0m Using Debian Python package layout
 [36m--[0m Using empy: /usr/bin/empy
 [36m--[0m Using CATKIN_ENABLE_TESTING: ON
 [36m--[0m Call enable_testing()
-[36m--[0m Using CATKIN_TEST_RESULTS_DIR: /home/david/PR2-Kinetic-Xenial/build/kinect2_registration/test_results
+[36m--[0m Using CATKIN_TEST_RESULTS_DIR: /home/dtrimoul/PR2-Kinetic-Xenial/build/kinect2_registration/test_results
 [36m--[0m Found gmock sources under '/usr/src/gmock': gmock will be built
 [36m--[0m The C compiler identification is GNU 5.4.0
 [36m--[0m Check for working C compiler: /usr/bin/cc
@@ -46,16 +46,19 @@ Not searching for unused variables given on the command line.
 [36m--[0m Performing Test OpenMP_FLAG_DETECTED - Success
 [36m--[0m Found OpenMP: -fopenmp
 [36m--[0m Looking for CL_VERSION_2_0
-[36m--[0m Looking for CL_VERSION_2_0 - not found
-[36m--[0m Looking for CL_VERSION_1_2
-[36m--[0m Looking for CL_VERSION_1_2 - not found
-[36m--[0m Looking for CL_VERSION_1_1
-[36m--[0m Looking for CL_VERSION_1_1 - not found
-[36m--[0m Looking for CL_VERSION_1_0
-[36m--[0m Looking for CL_VERSION_1_0 - not found
-[36m--[0m Could NOT find OpenCL (missing:  OpenCL_LIBRARY OpenCL_INCLUDE_DIR)
+[36m--[0m Looking for CL_VERSION_2_0 - found
+[36m--[0m Found OpenCL: /usr/lib/x86_64-linux-gnu/libOpenCL.so (found version "2.0")
 [36m--[0m CPU based depth registration enabled
-[36m--[0m OpenCL based depth registration disabled
+[36m--[0m OpenCL based depth registration enabled
+[36m--[0m Performing Test OpenCL_C_WORKS
+[36m--[0m Performing Test OpenCL_C_WORKS - Success
+[36m--[0m Performing Test OpenCL_CXX_WORKS
+[36m--[0m Performing Test OpenCL_CXX_WORKS - Failed
+[33m[1mCMake Warning[0m at /home/dtrimoul/PR2-Kinetic-Xenial/src/iai_kinect2/kinect2_registration/CMakeLists.txt:60 (message):
+  Your libOpenCL.so is incompatible with CL/cl.h.  Install ocl-icd-opencl-dev
+  to update libOpenCL.so?
+
+
 [36m--[0m Configuring done
 [36m--[0m Generating done
-[36m--[0m Build files have been written to: /home/david/PR2-Kinetic-Xenial/build/kinect2_registration
+[36m--[0m Build files have been written to: /home/dtrimoul/PR2-Kinetic-Xenial/build/kinect2_registration

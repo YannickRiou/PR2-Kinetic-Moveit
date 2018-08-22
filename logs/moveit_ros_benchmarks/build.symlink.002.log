@@ -1,6 +1,0 @@
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libmoveit_ros_benchmarks.so.0.9.7
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libmoveit_ros_benchmarks.so
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/moveit_ros_benchmarks.pc
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/moveit_ros_benchmarks/moveit_run_benchmark
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/moveit_ros_benchmarks/cmake/moveit_ros_benchmarksConfig.cmake
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/moveit_ros_benchmarks/cmake/moveit_ros_benchmarksConfig-version.cmake

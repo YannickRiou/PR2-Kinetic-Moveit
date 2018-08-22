@@ -15,8 +15,8 @@
 [35m[1mScanning dependencies of target nav_msgs_generate_messages_cpp[0m
 [  0%] Built target nav_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_cpp[0m
-[  0%] Built target rosgraph_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_cpp[0m
+[  0%] Built target rosgraph_msgs_generate_messages_cpp
 [  0%] Built target actionlib_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
 [  0%] Built target std_msgs_generate_messages_cpp
@@ -74,18 +74,18 @@
 [ 18%] Built target gtest
 [35m[1mScanning dependencies of target map_server-map_saver[0m
 [ 27%] [32mBuilding CXX object CMakeFiles/map_server-map_saver.dir/src/map_saver.cpp.o[0m
-[ 36%] [32m[1mLinking CXX executable /home/david/PR2-Kinetic-Xenial/devel/.private/map_server/lib/map_server/map_saver[0m
+[ 36%] [32m[1mLinking CXX executable /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/map_server/lib/map_server/map_saver[0m
 [35m[1mScanning dependencies of target map_server_image_loader[0m
-[ 45%] [32mBuilding CXX object CMakeFiles/map_server_image_loader.dir/src/image_loader.cpp.o[0m
-[ 45%] Built target map_server-map_saver
 [35m[1mScanning dependencies of target rtest[0m
+[ 54%] [32mBuilding CXX object CMakeFiles/map_server_image_loader.dir/src/image_loader.cpp.o[0m
 [ 54%] [32mBuilding CXX object CMakeFiles/rtest.dir/test/rtest.cpp.o[0m
-[ 63%] [32m[1mLinking CXX shared library /home/david/PR2-Kinetic-Xenial/devel/.private/map_server/lib/libmap_server_image_loader.so[0m
-[ 63%] Built target map_server_image_loader
+[ 54%] Built target map_server-map_saver
+[ 63%] [32mBuilding CXX object CMakeFiles/rtest.dir/test/test_constants.cpp.o[0m
+[ 72%] [32m[1mLinking CXX shared library /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/map_server/lib/libmap_server_image_loader.so[0m
+[ 72%] Built target map_server_image_loader
 [35m[1mScanning dependencies of target map_server[0m
-[ 72%] [32mBuilding CXX object CMakeFiles/map_server.dir/src/main.cpp.o[0m
-[ 81%] [32mBuilding CXX object CMakeFiles/rtest.dir/test/test_constants.cpp.o[0m
-[ 90%] [32m[1mLinking CXX executable /home/david/PR2-Kinetic-Xenial/devel/.private/map_server/lib/map_server/rtest[0m
+[ 81%] [32mBuilding CXX object CMakeFiles/map_server.dir/src/main.cpp.o[0m
+[ 90%] [32m[1mLinking CXX executable /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/map_server/lib/map_server/rtest[0m
 [ 90%] Built target rtest
-[100%] [32m[1mLinking CXX executable /home/david/PR2-Kinetic-Xenial/devel/.private/map_server/lib/map_server/map_server[0m
+[100%] [32m[1mLinking CXX executable /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/map_server/lib/map_server/map_server[0m
 [100%] Built target map_server

@@ -26,28 +26,28 @@ Not searching for unused variables given on the command line.
 [36m--[0m Found OpenMP: -fopenmp
 [36m--[0m OpenMP found.
 [36m--[0m Ouput level set to: 2
-[36m--[0m find path: /home/david/PR2-Kinetic-Xenial/src/robosherlock/
-[36m--[0m executed: find /home/david/PR2-Kinetic-Xenial/src/robosherlock  -name;include;-type;d
-[36m--[0m found include path: /home/david/PR2-Kinetic-Xenial/src/robosherlock/src/segmentation/include
-/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/core/include
-/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/recognition/include
-/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/io/include
-/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/queryanswering/include
-/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/flowcontrol/include
-/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/annotation/include
-/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/utils/include
+[36m--[0m find path: /home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/
+[36m--[0m executed: find /home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock  -name;include;-type;d
+[36m--[0m found include path: /home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/annotation/include
+/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/core/include
+/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/flowcontrol/include
+/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/io/include
+/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/queryanswering/include
+/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/recognition/include
+/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/segmentation/include
+/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/utils/include
 
 [36m--[0m RS_DEBUG_OUTPUT deactivated
-[36m--[0m Using CATKIN_DEVEL_PREFIX: /home/david/PR2-Kinetic-Xenial/devel/.private/robosherlock
-[36m--[0m Using CMAKE_PREFIX_PATH: /home/david/PR2-Kinetic-Xenial/devel;/opt/ros/kinetic
-[36m--[0m This workspace overlays: /home/david/PR2-Kinetic-Xenial/devel;/opt/ros/kinetic
+[36m--[0m Using CATKIN_DEVEL_PREFIX: /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/robosherlock
+[36m--[0m Using CMAKE_PREFIX_PATH: /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/catkin_tools_prebuild;/home/dtrimoul/laas_perception/devel;/opt/ros/kinetic;/home/dtrimoul/PR2-Kinetic-Xenial/devel
+[36m--[0m This workspace overlays: /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/catkin_tools_prebuild;/home/dtrimoul/laas_perception/devel;/opt/ros/kinetic;/home/dtrimoul/PR2-Kinetic-Xenial/devel
 [36m--[0m Found PythonInterp: /usr/bin/python (found version "2.7.12")
 [36m--[0m Using PYTHON_EXECUTABLE: /usr/bin/python
 [36m--[0m Using Debian Python package layout
 [36m--[0m Using empy: /usr/bin/empy
 [36m--[0m Using CATKIN_ENABLE_TESTING: ON
 [36m--[0m Call enable_testing()
-[36m--[0m Using CATKIN_TEST_RESULTS_DIR: /home/david/PR2-Kinetic-Xenial/build/robosherlock/test_results
+[36m--[0m Using CATKIN_TEST_RESULTS_DIR: /home/dtrimoul/PR2-Kinetic-Xenial/build/robosherlock/test_results
 [36m--[0m Found gmock sources under '/usr/src/gmock': gmock will be built
 [36m--[0m Looking for pthread.h
 [36m--[0m Looking for pthread.h - found
@@ -61,7 +61,7 @@ Not searching for unused variables given on the command line.
 [36m--[0m Found gtest sources under '/usr/src/gmock': gtests will be built
 [36m--[0m Using Python nosetests: /usr/bin/nosetests-2.7
 [36m--[0m catkin 0.7.11
-[36m--[0m Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+[36m--[0m Using these message generators: gencpp;geneus;genjava;genlisp;gennodejs;genpy
 [36m--[0m Found OpenCV: /opt/ros/kinetic (found version "3.3.1")
 [36m--[0m Checking for module 'eigen3'
 [36m--[0m   Found eigen3, version 3.2.92
@@ -163,7 +163,6 @@ but not all the files it references.
 [36m--[0m   atomic
 [36m--[0m Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1")
 [36m--[0m Found LibAPR1: /usr/lib/x86_64-linux-gnu/libapr-1.so
-[36m--[0m UIMA library not found!
 [36m--[0m Found ICUUC Library: /usr/lib/x86_64-linux-gnu/libicuuc.so
 [36m--[0m libpracmln NOT FOUND. Related annotators will not be build!
 [36m--[0m Found Protobuf.
@@ -177,14 +176,6 @@ but not all the files it references.
   CMakeLists.txt:146 (catkin_package)
 
 
-[33m[1mCMake Warning[0m at /opt/ros/kinetic/share/catkin/cmake/catkin_package.cmake:166 (message):
-  catkin_package() DEPENDS on 'UIMA' but neither 'UIMA_INCLUDE_DIRS' nor
-  'UIMA_LIBRARIES' is defined.
-[36mCall Stack (most recent call first):[0m
-  /opt/ros/kinetic/share/catkin/cmake/catkin_package.cmake:102 (_catkin_package)
-  CMakeLists.txt:146 (catkin_package)
-
-
 [36m--[0m Configuring done
 [36m--[0m Generating done
-[36m--[0m Build files have been written to: /home/david/PR2-Kinetic-Xenial/build/robosherlock
+[36m--[0m Build files have been written to: /home/dtrimoul/PR2-Kinetic-Xenial/build/robosherlock

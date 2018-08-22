@@ -1,11 +1,11 @@
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/power_monitor/__init__.py
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/power_monitor/cfg/__init__.py
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/power_monitor/cfg/PowerMonitorConfig.py
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/power_monitor.pc
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/power_monitor/power_monitor
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/include/power_monitor/PowerMonitorConfig.h
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/power_monitor/cmake/power_monitorConfig.cmake
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/power_monitor/cmake/power_monitorConfig-version.cmake
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/power_monitor/docs/PowerMonitorConfig.dox
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/power_monitor/docs/PowerMonitorConfig.wikidoc
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/power_monitor/docs/PowerMonitorConfig-usage.dox
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/power_monitor/lib/python2.7/dist-packages/power_monitor/__init__.py, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/power_monitor/__init__.py)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/power_monitor/lib/python2.7/dist-packages/power_monitor/cfg/__init__.py, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/power_monitor/cfg/__init__.py)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/power_monitor/lib/python2.7/dist-packages/power_monitor/cfg/PowerMonitorConfig.py, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/power_monitor/cfg/PowerMonitorConfig.py)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/power_monitor/lib/pkgconfig/power_monitor.pc, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/power_monitor.pc)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/power_monitor/lib/power_monitor/power_monitor, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/power_monitor/power_monitor)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/power_monitor/include/power_monitor/PowerMonitorConfig.h, /home/dtrimoul/PR2-Kinetic-Xenial/devel/include/power_monitor/PowerMonitorConfig.h)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/power_monitor/share/power_monitor/cmake/power_monitorConfig.cmake, /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/power_monitor/cmake/power_monitorConfig.cmake)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/power_monitor/share/power_monitor/cmake/power_monitorConfig-version.cmake, /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/power_monitor/cmake/power_monitorConfig-version.cmake)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/power_monitor/share/power_monitor/docs/PowerMonitorConfig.dox, /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/power_monitor/docs/PowerMonitorConfig.dox)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/power_monitor/share/power_monitor/docs/PowerMonitorConfig.wikidoc, /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/power_monitor/docs/PowerMonitorConfig.wikidoc)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/power_monitor/share/power_monitor/docs/PowerMonitorConfig-usage.dox, /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/power_monitor/docs/PowerMonitorConfig-usage.dox)

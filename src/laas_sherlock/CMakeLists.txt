@@ -37,8 +37,6 @@ include_directories(
         ${RS_INCLUDE_DIRS_LIST}
         ${catkin_INCLUDE_DIRS}
         )
-rs_add_library(rs_BananaAnnotator src/BananaAnnotator.cpp)
-target_link_libraries(rs_BananaAnnotator ${CATKIN_LIBRARIES})
 ################################################################################
 ## Update analysis engines, typesystem and include all relevant files         ##
 ################################################################################

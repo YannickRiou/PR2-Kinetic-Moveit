@@ -12,8 +12,8 @@
 [  0%] Built target topic_tools_generate_messages_py
 [  0%] Built target actionlib_msgs_generate_messages_lisp
 [  0%] Built target nav_msgs_generate_messages_nodejs
-[  0%] Built target actionlib_msgs_generate_messages_cpp
 [  0%] Built target sensor_msgs_generate_messages_eus
+[  0%] Built target actionlib_msgs_generate_messages_cpp
 [  0%] Built target actionlib_generate_messages_nodejs
 [  0%] Built target tf2_msgs_generate_messages_lisp
 [  0%] Built target nav_msgs_generate_messages_cpp
@@ -100,11 +100,15 @@
 [  0%] Built target actionlib_generate_messages_eus
 [  0%] Built target dynamic_reconfigure_generate_messages_py
 [  0%] Built target actionlib_generate_messages_py
-[ 11%] Built target navfn_generate_messages_lisp
-[ 29%] Built target navfn_generate_messages_py
-[ 47%] Built target navfn_generate_messages_eus
-[ 58%] Built target navfn_generate_messages_nodejs
-[ 70%] Built target navfn_generate_messages_cpp
-[ 70%] Built target navfn_generate_messages
-[ 88%] Built target navfn
-[100%] Built target navfn_node
+[  4%] [34m[1mCompiling Java code for navfn[0m
+[ 17%] Built target navfn_generate_messages_py
+[ 30%] Built target navfn_generate_messages_eus
+[ 39%] Built target navfn_generate_messages_nodejs
+[ 52%] Built target navfn_generate_messages_java_gradle
+[ 52%] Built target navfn_generate_messages_lisp
+[ 56%] Built target navfn_generate_messages_java
+[ 65%] Built target navfn_generate_messages_cpp
+[ 65%] Built target navfn_generate_messages
+[ 78%] Built target navfn
+[ 86%] Built target navfn_node
+[100%] Built target navtest

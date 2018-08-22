@@ -1,4 +1,4 @@
 [35m[1mScanning dependencies of target realtime_tools[0m
 [ 50%] [32mBuilding CXX object CMakeFiles/realtime_tools.dir/src/realtime_clock.cpp.o[0m
-[100%] [32m[1mLinking CXX shared library /home/david/PR2-Kinetic-Xenial/devel/.private/realtime_tools/lib/librealtime_tools.so[0m
+[100%] [32m[1mLinking CXX shared library /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/realtime_tools/lib/librealtime_tools.so[0m
 [100%] Built target realtime_tools

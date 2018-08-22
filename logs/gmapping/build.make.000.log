@@ -39,8 +39,8 @@
 [35m[1mScanning dependencies of target tf_generate_messages_lisp[0m
 [  0%] Built target tf_generate_messages_lisp
 [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_lisp[0m
-[  0%] Built target rosgraph_msgs_generate_messages_lisp
 [35m[1mScanning dependencies of target bond_generate_messages_cpp[0m
+[  0%] Built target rosgraph_msgs_generate_messages_lisp
 [  0%] Built target bond_generate_messages_cpp
 [35m[1mScanning dependencies of target sensor_msgs_generate_messages_lisp[0m
 [  0%] Built target sensor_msgs_generate_messages_lisp
@@ -115,23 +115,23 @@
 [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_eus[0m
 [  0%] Built target actionlib_msgs_generate_messages_eus
 [35m[1mScanning dependencies of target roscpp_generate_messages_nodejs[0m
-[35m[1mScanning dependencies of target sensor_msgs_generate_messages_py[0m
 [  0%] Built target roscpp_generate_messages_nodejs
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_py[0m
 [  0%] Built target sensor_msgs_generate_messages_py
 [35m[1mScanning dependencies of target tf_generate_messages_cpp[0m
-[35m[1mScanning dependencies of target slam_gmapping_nodelet[0m
 [  0%] Built target tf_generate_messages_cpp
-[35m[1mScanning dependencies of target slam_gmapping[0m
+[35m[1mScanning dependencies of target slam_gmapping_nodelet[0m
 [ 11%] [32mBuilding CXX object CMakeFiles/slam_gmapping_nodelet.dir/src/slam_gmapping.cpp.o[0m
-[ 22%] [32mBuilding CXX object CMakeFiles/slam_gmapping.dir/src/slam_gmapping.cpp.o[0m
-[ 33%] [32mBuilding CXX object CMakeFiles/slam_gmapping_nodelet.dir/src/nodelet.cpp.o[0m
-[ 44%] [32mBuilding CXX object CMakeFiles/slam_gmapping.dir/src/main.cpp.o[0m
-[ 55%] [32m[1mLinking CXX executable /home/david/PR2-Kinetic-Xenial/devel/.private/gmapping/lib/gmapping/slam_gmapping[0m
-[ 66%] [32m[1mLinking CXX shared library /home/david/PR2-Kinetic-Xenial/devel/.private/gmapping/lib/libslam_gmapping_nodelet.so[0m
-[ 66%] Built target slam_gmapping_nodelet
+[ 22%] [32mBuilding CXX object CMakeFiles/slam_gmapping_nodelet.dir/src/nodelet.cpp.o[0m
+[ 33%] [32m[1mLinking CXX shared library /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/gmapping/lib/libslam_gmapping_nodelet.so[0m
+[ 33%] Built target slam_gmapping_nodelet
 [35m[1mScanning dependencies of target slam_gmapping_replay[0m
-[ 77%] [32mBuilding CXX object CMakeFiles/slam_gmapping_replay.dir/src/slam_gmapping.cpp.o[0m
-[ 77%] Built target slam_gmapping
-[ 88%] [32mBuilding CXX object CMakeFiles/slam_gmapping_replay.dir/src/replay.cpp.o[0m
-[100%] [32m[1mLinking CXX executable /home/david/PR2-Kinetic-Xenial/devel/.private/gmapping/lib/gmapping/slam_gmapping_replay[0m
-[100%] Built target slam_gmapping_replay
+[ 44%] [32mBuilding CXX object CMakeFiles/slam_gmapping_replay.dir/src/slam_gmapping.cpp.o[0m
+[ 55%] [32mBuilding CXX object CMakeFiles/slam_gmapping_replay.dir/src/replay.cpp.o[0m
+[ 66%] [32m[1mLinking CXX executable /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/gmapping/lib/gmapping/slam_gmapping_replay[0m
+[ 66%] Built target slam_gmapping_replay
+[35m[1mScanning dependencies of target slam_gmapping[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/slam_gmapping.dir/src/slam_gmapping.cpp.o[0m
+[ 88%] [32mBuilding CXX object CMakeFiles/slam_gmapping.dir/src/main.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/gmapping/lib/gmapping/slam_gmapping[0m
+[100%] Built target slam_gmapping

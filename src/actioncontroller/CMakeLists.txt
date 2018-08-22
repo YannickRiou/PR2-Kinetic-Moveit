@@ -90,7 +90,7 @@ find_package(Boost REQUIRED system filesystem date_time thread)
    DEPENDENCIES
    actionlib_msgs
    std_msgs
-   geometry_msgs
+		 geometry_msgs
    ar_track_alvar_msgs
    # Or other packages containing msgs
  )
@@ -124,15 +124,12 @@ find_package(Boost REQUIRED system filesystem date_time thread)
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
-set(THIS_PACKAGE_INCLUDE_DIRS
-  include
-)
 
 catkin_package(
   LIBRARIES
     interactivity_utils
   INCLUDE_DIRS
-    ${THIS_PACKAGE_INCLUDE_DIRS}
+		include
   CATKIN_DEPENDS
 	move_base_msgs
     moveit_core

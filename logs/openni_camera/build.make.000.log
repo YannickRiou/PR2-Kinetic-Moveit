@@ -8,6 +8,7 @@ In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camer
 [01m[K/usr/include/ni/XnCppWrapper.h:9558:27:[m[K [01;35m[Kwarning: [m[Kcall to ‘[01m[KxnShutdown[m[K’ declared with attribute warning: This function is deprecated: Use xnContextRelease() instead
      xnShutdown(m_pContext);
 [01;32m[K                           ^[m[K
+[ 16%] [32mBuilding CXX object CMakeFiles/openni_driver.dir/src/openni_exception.cpp.o[0m
 [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camera/openni_camera/src/openni_driver.cpp:[m[K In destructor ‘[01m[Kopenni_wrapper::OpenNIDriver::~OpenNIDriver()[m[K’:
 [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camera/openni_camera/src/openni_driver.cpp:229:23:[m[K [01;35m[Kwarning: [m[Kcall to ‘[01m[Kxn::Context::Shutdown[m[K’ declared with attribute warning: This function is deprecated: You may use Release() instead, or count on dtor
    context_.Shutdown ();
@@ -16,7 +17,6 @@ In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camer
 [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camera/openni_camera/src/openni_driver.cpp:239:44:[m[K [01;35m[Kwarning: [m[Kcall to ‘[01m[Kxn::Context::CreateProductionTree[m[K’ declared with attribute warning: This function is deprecated: Please use other overload
          context_.CreateProductionTree(info);
 [01;32m[K                                            ^[m[K
-[ 16%] [32mBuilding CXX object CMakeFiles/openni_driver.dir/src/openni_exception.cpp.o[0m
 [ 22%] [32mBuilding CXX object CMakeFiles/openni_driver.dir/src/openni_device_primesense.cpp.o[0m
 [ 27%] [32mBuilding CXX object CMakeFiles/openni_driver.dir/src/openni_device_kinect.cpp.o[0m
 [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camera/openni_camera/src/openni_device.cpp:[m[K In constructor ‘[01m[Kopenni_wrapper::OpenNIDevice::OpenNIDevice(xn::Context&, const xn::NodeInfo&, const xn::NodeInfo&, const xn::NodeInfo&, const xn::NodeInfo&)[m[K’:
@@ -42,13 +42,13 @@ In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camer
 [01;32m[K                                                         ^[m[K
 [ 33%] [32mBuilding CXX object CMakeFiles/openni_driver.dir/src/openni_device_xtion.cpp.o[0m
 [ 38%] [32mBuilding CXX object CMakeFiles/openni_driver.dir/src/openni_device_oni.cpp.o[0m
-[ 44%] [32mBuilding CXX object CMakeFiles/openni_driver.dir/src/openni_image_yuv_422.cpp.o[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/openni_driver.dir/src/openni_image_bayer_grbg.cpp.o[0m
 [35m[1mScanning dependencies of target openni_camera_gencfg[0m
-[ 55%] [34m[1mGenerating dynamic reconfigure files from cfg/OpenNI.cfg: /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/include/openni_camera/OpenNIConfig.h /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/lib/python2.7/dist-packages/openni_camera/cfg/OpenNIConfig.py[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/openni_driver.dir/src/openni_image_yuv_422.cpp.o[0m
+[ 50%] [34m[1mGenerating dynamic reconfigure files from cfg/OpenNI.cfg: /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/include/openni_camera/OpenNIConfig.h /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/lib/python2.7/dist-packages/openni_camera/cfg/OpenNIConfig.py[0m
 Generating reconfiguration files for OpenNI in openni_camera
 Wrote header file in /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/include/openni_camera/OpenNIConfig.h
-[ 55%] Built target openni_camera_gencfg
+[ 50%] Built target openni_camera_gencfg
+[ 55%] [32mBuilding CXX object CMakeFiles/openni_driver.dir/src/openni_image_bayer_grbg.cpp.o[0m
 In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camera/openni_camera/include/openni_camera/openni_device.h:44:0[m[K,
                  from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camera/openni_camera/include/openni_camera/openni_device_oni.h:41[m[K,
                  from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camera/openni_camera/src/openni_device_oni.cpp:37[m[K:
@@ -56,11 +56,11 @@ In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camer
 [01m[K/usr/include/ni/XnCppWrapper.h:9548:61:[m[K [01;35m[Kwarning: [m[Kcall to ‘[01m[KxnContextOpenFileRecording[m[K’ declared with attribute warning: This function is deprecated: Please use xnContextOpenFileRecordingEx() instead
     return xnContextOpenFileRecording(m_pContext, strFileName);
 [01;32m[K                                                             ^[m[K
+[ 61%] [32mBuilding CXX object CMakeFiles/openni_driver.dir/src/openni_image_rgb24.cpp.o[0m
 [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camera/openni_camera/src/openni_device_oni.cpp:[m[K In constructor ‘[01m[Kopenni_wrapper::DeviceONI::DeviceONI(xn::Context&, const string&, bool, bool)[m[K’:
 [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camera/openni_camera/src/openni_device_oni.cpp:54:57:[m[K [01;35m[Kwarning: [m[Kcall to ‘[01m[Kxn::Context::OpenFileRecording[m[K’ declared with attribute warning: This function is deprecated: Use other overload!
    status = context_.OpenFileRecording(file_name.c_str());
 [01;32m[K                                                         ^[m[K
-[ 61%] [32mBuilding CXX object CMakeFiles/openni_driver.dir/src/openni_image_rgb24.cpp.o[0m
 [ 66%] [32mBuilding CXX object CMakeFiles/openni_driver.dir/src/openni_ir_image.cpp.o[0m
 [ 72%] [32mBuilding CXX object CMakeFiles/openni_driver.dir/src/openni_depth_image.cpp.o[0m
 [ 77%] [32m[1mLinking CXX shared library /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/lib/libopenni_driver.so[0m
@@ -69,7 +69,7 @@ In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camer
 [ 83%] [32mBuilding CXX object CMakeFiles/openni_nodelet.dir/src/nodelets/driver.cpp.o[0m
 [35m[1mScanning dependencies of target openni_node[0m
 [ 88%] [32mBuilding CXX object CMakeFiles/openni_node.dir/src/nodes/openni_node.cpp.o[0m
-[ 94%] [32m[1mLinking CXX shared library /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/lib/libopenni_nodelet.so[0m
-[ 94%] Built target openni_nodelet
-[100%] [32m[1mLinking CXX executable /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/lib/openni_camera/openni_node[0m
-[100%] Built target openni_node
+[ 94%] [32m[1mLinking CXX executable /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/lib/openni_camera/openni_node[0m
+[ 94%] Built target openni_node
+[100%] [32m[1mLinking CXX shared library /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/lib/libopenni_nodelet.so[0m
+[100%] Built target openni_nodelet

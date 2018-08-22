@@ -1,61 +1,21 @@
-[35m[1mScanning dependencies of target _graph_msgs_generate_messages_check_deps_GeometryGraph[0m
-[  0%] Built target _graph_msgs_generate_messages_check_deps_GeometryGraph
-[35m[1mScanning dependencies of target _graph_msgs_generate_messages_check_deps_Edges[0m
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target geometry_msgs_generate_messages_eus
 [  0%] Built target _graph_msgs_generate_messages_check_deps_Edges
-[35m[1mScanning dependencies of target geometry_msgs_generate_messages_cpp[0m
-[  0%] Built target geometry_msgs_generate_messages_cpp
-[35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
-[  0%] Built target std_msgs_generate_messages_cpp
-[35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
+[  0%] Built target _graph_msgs_generate_messages_check_deps_GeometryGraph
 [  0%] Built target std_msgs_generate_messages_py
-[35m[1mScanning dependencies of target geometry_msgs_generate_messages_py[0m
 [  0%] Built target geometry_msgs_generate_messages_py
-[35m[1mScanning dependencies of target geometry_msgs_generate_messages_nodejs[0m
-[  0%] Built target geometry_msgs_generate_messages_nodejs
-[35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
 [  0%] Built target std_msgs_generate_messages_nodejs
-[35m[1mScanning dependencies of target geometry_msgs_generate_messages_lisp[0m
+[  0%] Built target geometry_msgs_generate_messages_nodejs
 [  0%] Built target geometry_msgs_generate_messages_lisp
-[35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
 [  0%] Built target std_msgs_generate_messages_lisp
-[35m[1mScanning dependencies of target graph_msgs_generate_messages_java_gradle[0m
-[35m[1mScanning dependencies of target geometry_msgs_generate_messages_java[0m
-[  6%] [34m[1mGenerating Java gradle project from graph_msgs[0m
-[  6%] Built target geometry_msgs_generate_messages_java
-[35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
-[  6%] Built target std_msgs_generate_messages_eus
-[35m[1mScanning dependencies of target geometry_msgs_generate_messages_eus[0m
-[  6%] Built target geometry_msgs_generate_messages_eus
-[35m[1mScanning dependencies of target graph_msgs_generate_messages_cpp[0m
-[ 13%] [34m[1mGenerating C++ code from graph_msgs/GeometryGraph.msg[0m
-[ 20%] [34m[1mGenerating C++ code from graph_msgs/Edges.msg[0m
-[ 26%] [34m[1mCompiling Java code for graph_msgs[0m
-[35m[1mScanning dependencies of target graph_msgs_generate_messages_py[0m
-[ 33%] [34m[1mGenerating Python from MSG graph_msgs/GeometryGraph[0m
-[ 33%] Built target graph_msgs_generate_messages_cpp
-[ 40%] [34m[1mGenerating Python from MSG graph_msgs/Edges[0m
-[ 46%] [34m[1mGenerating Python msg __init__.py for graph_msgs[0m
-[ 46%] Built target graph_msgs_generate_messages_py
-[35m[1mScanning dependencies of target graph_msgs_generate_messages_nodejs[0m
-[ 53%] [34m[1mGenerating Javascript code from graph_msgs/GeometryGraph.msg[0m
-[ 60%] [34m[1mGenerating Javascript code from graph_msgs/Edges.msg[0m
-[ 60%] Built target graph_msgs_generate_messages_nodejs
-[0m[35m[1mScanning dependencies of target graph_msgs_generate_messages_lisp[0m
-[ 66%] [34m[1mGenerating Lisp code from graph_msgs/GeometryGraph.msg[0m
-[ 73%] [34m[1mGenerating Lisp code from graph_msgs/Edges.msg[0m
-[ 73%] Built target graph_msgs_generate_messages_lisp
-[35m[1mScanning dependencies of target graph_msgs_generate_messages_java[0m
-[ 80%] Built target graph_msgs_generate_messages_java
-[35m[1mScanning dependencies of target graph_msgs_generate_messages_eus[0m
-[ 86%] [34m[1mGenerating EusLisp code from graph_msgs/GeometryGraph.msg[0m
-[ 93%] [34m[1mGenerating EusLisp code from graph_msgs/Edges.msg[0m
-[100%] [34m[1mGenerating EusLisp manifest code for graph_msgs[0m
-warning: [options] bootstrap class path not set in conjunction with -source 1.7
-1 warning
-Uploading: org/ros/rosjava_messages/graph_msgs/0.1.0/graph_msgs-0.1.0.jar to repository remote at file:/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/graph_msgs/share/maven
-Transferring 2K from remote
-Uploaded 2K
-[0m[100%] Built target graph_msgs_generate_messages_java_gradle
-[100%] Built target graph_msgs_generate_messages_eus
-[35m[1mScanning dependencies of target graph_msgs_generate_messages[0m
+[  6%] [34m[1mCompiling Java code for graph_msgs[0m
+[  6%] Built target geometry_msgs_generate_messages_cpp
+[  6%] Built target std_msgs_generate_messages_cpp
+[ 13%] Built target graph_msgs_generate_messages_java
+[ 33%] Built target graph_msgs_generate_messages_eus
+[ 53%] Built target graph_msgs_generate_messages_py
+[ 66%] Built target graph_msgs_generate_messages_nodejs
+[ 86%] Built target graph_msgs_generate_messages_lisp
+[ 86%] Built target graph_msgs_generate_messages_java_gradle
+[100%] Built target graph_msgs_generate_messages_cpp
 [100%] Built target graph_msgs_generate_messages

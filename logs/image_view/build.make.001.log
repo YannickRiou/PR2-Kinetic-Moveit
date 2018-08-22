@@ -3,6 +3,6 @@
 [ 47%] Built target stereo_view
 [ 58%] Built target video_recorder
 [ 64%] Built target image_view_gencfg
-[ 76%] Built target image_saver
-[ 88%] Built target extract_images
+[ 82%] Built target extract_images
+[ 88%] Built target image_saver
 [100%] Built target image_view_exe

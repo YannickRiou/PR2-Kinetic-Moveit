@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libgtest.so -o libgtest.so CMakeFiles/gtest.dir/src/gtest-all.cc.o  -L/home/dtrimoul/PR2-Kinetic-Xenial/src/pickplacedemo/src/point_cloud_from_laser_scan/cmake-build-debug/gtest/gtest/src -Wl,-rpath,/home/dtrimoul/PR2-Kinetic-Xenial/src/pickplacedemo/src/point_cloud_from_laser_scan/cmake-build-debug/gtest/gtest/src -lpthread 

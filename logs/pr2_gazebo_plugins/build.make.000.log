@@ -16,91 +16,46 @@
 [  0%] Built target diagnostic_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target _pr2_gazebo_plugins_generate_messages_check_deps_PlugCommand[0m
 [  0%] Built target _pr2_gazebo_plugins_generate_messages_check_deps_PlugCommand
-[35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
-[  0%] Built target std_msgs_generate_messages_eus
-[35m[1mScanning dependencies of target sensor_msgs_generate_messages_eus[0m
-[  0%] Built target sensor_msgs_generate_messages_eus
-[35m[1mScanning dependencies of target diagnostic_msgs_generate_messages_eus[0m
-[  0%] Built target diagnostic_msgs_generate_messages_eus
-[35m[1mScanning dependencies of target geometry_msgs_generate_messages_eus[0m
-[  0%] Built target geometry_msgs_generate_messages_eus
-[35m[1mScanning dependencies of target pr2_msgs_generate_messages_eus[0m
-[  0%] Built target pr2_msgs_generate_messages_eus
-[35m[1mScanning dependencies of target nav_msgs_generate_messages_eus[0m
-[  0%] Built target nav_msgs_generate_messages_eus
-[35m[1mScanning dependencies of target nav_msgs_generate_messages_nodejs[0m
-[  0%] Built target nav_msgs_generate_messages_nodejs
-[35m[1mScanning dependencies of target pr2_msgs_generate_messages_nodejs[0m
-[  0%] Built target pr2_msgs_generate_messages_nodejs
-[35m[1mScanning dependencies of target diagnostic_msgs_generate_messages_nodejs[0m
-[  0%] Built target diagnostic_msgs_generate_messages_nodejs
-[35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
-[  0%] Built target std_msgs_generate_messages_nodejs
-[35m[1mScanning dependencies of target sensor_msgs_generate_messages_nodejs[0m
-[  0%] Built target sensor_msgs_generate_messages_nodejs
-[35m[1mScanning dependencies of target geometry_msgs_generate_messages_nodejs[0m
-[  0%] Built target geometry_msgs_generate_messages_nodejs
-[35m[1mScanning dependencies of target pr2_msgs_generate_messages_py[0m
-[  0%] Built target pr2_msgs_generate_messages_py
-[35m[1mScanning dependencies of target diagnostic_msgs_generate_messages_py[0m
-[  0%] Built target diagnostic_msgs_generate_messages_py
-[35m[1mScanning dependencies of target sensor_msgs_generate_messages_py[0m
-[  0%] Built target sensor_msgs_generate_messages_py
-[35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
-[  0%] Built target std_msgs_generate_messages_py
-[35m[1mScanning dependencies of target nav_msgs_generate_messages_py[0m
-[  0%] Built target nav_msgs_generate_messages_py
-[35m[1mScanning dependencies of target geometry_msgs_generate_messages_py[0m
-[  0%] Built target geometry_msgs_generate_messages_py
-[35m[1mScanning dependencies of target nav_msgs_generate_messages_lisp[0m
-[  0%] Built target nav_msgs_generate_messages_lisp
-[35m[1mScanning dependencies of target pr2_msgs_generate_messages_lisp[0m
-[  0%] Built target pr2_msgs_generate_messages_lisp
-[35m[1mScanning dependencies of target sensor_msgs_generate_messages_lisp[0m
-[  0%] Built target sensor_msgs_generate_messages_lisp
-[35m[1mScanning dependencies of target diagnostic_msgs_generate_messages_lisp[0m
-[  0%] Built target diagnostic_msgs_generate_messages_lisp
-[35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
-[  0%] Built target std_msgs_generate_messages_lisp
-[35m[1mScanning dependencies of target geometry_msgs_generate_messages_lisp[0m
-[  0%] Built target geometry_msgs_generate_messages_lisp
-[35m[1mScanning dependencies of target pr2_gazebo_plugins_xacro_generated_to_devel_space_[0m
-[  0%] Built target pr2_gazebo_plugins_xacro_generated_to_devel_space_
-[35m[1mScanning dependencies of target pr2_gazebo_plugins_generate_messages_cpp[0m
-[  4%] [34m[1mGenerating C++ code from pr2_gazebo_plugins/ModelJointsState.msg[0m
-[  9%] [34m[1mGenerating C++ code from pr2_gazebo_plugins/PlugCommand.msg[0m
-[ 13%] [34m[1mGenerating C++ code from pr2_gazebo_plugins/SetModelsJointsStates.srv[0m
-[ 13%] Built target pr2_gazebo_plugins_generate_messages_cpp
-[35m[1mScanning dependencies of target pr2_gazebo_plugins_generate_messages_eus[0m
-[ 18%] [34m[1mGenerating EusLisp code from pr2_gazebo_plugins/ModelJointsState.msg[0m
-[ 22%] [34m[1mGenerating EusLisp code from pr2_gazebo_plugins/PlugCommand.msg[0m
-[ 27%] [34m[1mGenerating EusLisp code from pr2_gazebo_plugins/SetModelsJointsStates.srv[0m
-[ 31%] [34m[1mGenerating EusLisp manifest code for pr2_gazebo_plugins[0m
-[ 31%] Built target pr2_gazebo_plugins_generate_messages_eus
-[35m[1mScanning dependencies of target pr2_gazebo_plugins_generate_messages_nodejs[0m
-[ 36%] [34m[1mGenerating Javascript code from pr2_gazebo_plugins/ModelJointsState.msg[0m
-[ 40%] [34m[1mGenerating Javascript code from pr2_gazebo_plugins/PlugCommand.msg[0m
-[ 45%] [34m[1mGenerating Javascript code from pr2_gazebo_plugins/SetModelsJointsStates.srv[0m
-[ 45%] Built target pr2_gazebo_plugins_generate_messages_nodejs
-[35m[1mScanning dependencies of target pr2_gazebo_plugins_generate_messages_py[0m
-[ 50%] [34m[1mGenerating Python from MSG pr2_gazebo_plugins/ModelJointsState[0m
-[ 54%] [34m[1mGenerating Python from MSG pr2_gazebo_plugins/PlugCommand[0m
-[ 59%] [34m[1mGenerating Python code from SRV pr2_gazebo_plugins/SetModelsJointsStates[0m
-[ 63%] [34m[1mGenerating Python msg __init__.py for pr2_gazebo_plugins[0m
-[ 68%] [34m[1mGenerating Python srv __init__.py for pr2_gazebo_plugins[0m
-[ 68%] Built target pr2_gazebo_plugins_generate_messages_py
-[35m[1mScanning dependencies of target pr2_gazebo_plugins_generate_messages_lisp[0m
-[ 72%] [34m[1mGenerating Lisp code from pr2_gazebo_plugins/ModelJointsState.msg[0m
-[ 77%] [34m[1mGenerating Lisp code from pr2_gazebo_plugins/PlugCommand.msg[0m
-[ 81%] [34m[1mGenerating Lisp code from pr2_gazebo_plugins/SetModelsJointsStates.srv[0m
-[ 81%] Built target pr2_gazebo_plugins_generate_messages_lisp
-[35m[1mScanning dependencies of target gazebo_ros_power_monitor[0m
-[ 86%] [32mBuilding CXX object CMakeFiles/gazebo_ros_power_monitor.dir/src/gazebo_ros_power_monitor.cpp.o[0m
-[ 90%] [32m[1mLinking CXX shared library /home/david/PR2-Kinetic-Xenial/devel/.private/pr2_gazebo_plugins/lib/libgazebo_ros_power_monitor.so[0m
-[ 90%] Built target gazebo_ros_power_monitor
-[35m[1mScanning dependencies of target gazebo_ros_controller_manager[0m
-[ 95%] [32mBuilding CXX object CMakeFiles/gazebo_ros_controller_manager.dir/src/gazebo_ros_controller_manager.cpp.o[0m
-[100%] [32m[1mLinking CXX shared library /home/david/PR2-Kinetic-Xenial/devel/.private/pr2_gazebo_plugins/lib/libgazebo_ros_controller_manager.so[0m
-[100%] Built target gazebo_ros_controller_manager
-[35m[1mScanning dependencies of target pr2_gazebo_plugins_generate_messages[0m
-[100%] Built target pr2_gazebo_plugins_generate_messages
+[35m[1mScanning dependencies of target pr2_gazebo_plugins_generate_messages_java_gradle[0m
+[  4%] [34m[1mGenerating Java gradle project from pr2_gazebo_plugins[0m
+WARNING: Package name "gazebo_moveIT_objects_synchroniser" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+[35m[1mScanning dependencies of target pr2_gazebo_plugins_generate_messages_java[0m
+[  8%] [34m[1mGenerating Java gradle project from pr2_gazebo_plugins[0m
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/share/genjava/cmake/../../../lib/genjava/genjava_gradle_project.py", line 14, in <module>
+    genjava.main(sys.argv)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genjava/genjava_main.py", line 82, in main
+    gradle_project.create(args.package, args.output_dir)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genjava/gradle_project.py", line 148, in create
+    shutil.rmtree(genjava_gradle_dir)
+  File "/usr/lib/python2.7/shutil.py", line 256, in rmtree
+    onerror(os.rmdir, path, sys.exc_info())
+  File "/usr/lib/python2.7/shutil.py", line 254, in rmtree
+    os.rmdir(path)
+OSError: [Errno 39] Directory not empty: '/home/dtrimoul/PR2-Kinetic-Xenial/build/pr2_gazebo_plugins/java/pr2_gazebo_plugins'
+CMakeFiles/pr2_gazebo_plugins_generate_messages_java.dir/build.make:80: recipe for target 'java/pr2_gazebo_plugins/build.gradle' failed
+make[2]: *** [java/pr2_gazebo_plugins/build.gradle] Error 1
+CMakeFiles/Makefile2:239: recipe for target 'CMakeFiles/pr2_gazebo_plugins_generate_messages_java.dir/all' failed
+make[1]: *** [CMakeFiles/pr2_gazebo_plugins_generate_messages_java.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[ 12%] [34m[1mCompiling Java code for pr2_gazebo_plugins[0m
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/share/genjava/cmake/../../../lib/genjava/genjava_gradle_project.py", line 14, in <module>
+    genjava.main(sys.argv)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genjava/genjava_main.py", line 84, in main
+    gradle_project.build(args.package, args.output_dir, args.verbosity)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genjava/gradle_project.py", line 175, in build
+    subprocess.call(cmd, stderr=subprocess.STDOUT,)
+  File "/usr/lib/python2.7/subprocess.py", line 523, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "/usr/lib/python2.7/subprocess.py", line 711, in __init__
+    errread, errwrite)
+  File "/usr/lib/python2.7/subprocess.py", line 1343, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory
+CMakeFiles/pr2_gazebo_plugins_generate_messages_java_gradle.dir/build.make:67: recipe for target 'CMakeFiles/pr2_gazebo_plugins_generate_messages_java_gradle' failed
+CMakeFiles/Makefile2:3719: recipe for target 'CMakeFiles/pr2_gazebo_plugins_generate_messages_java_gradle.dir/all' failed
+make[2]: *** [CMakeFiles/pr2_gazebo_plugins_generate_messages_java_gradle] Error 1
+make[1]: *** [CMakeFiles/pr2_gazebo_plugins_generate_messages_java_gradle.dir/all] Error 2
+Makefile:138: recipe for target 'all' failed
+make: *** [all] Error 2

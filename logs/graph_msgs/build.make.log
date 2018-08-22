@@ -1,22 +1,21 @@
-[  0%] Built target _graph_msgs_generate_messages_check_deps_GeometryGraph
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target geometry_msgs_generate_messages_eus
 [  0%] Built target _graph_msgs_generate_messages_check_deps_Edges
-[  0%] Built target geometry_msgs_generate_messages_cpp
-[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target _graph_msgs_generate_messages_check_deps_GeometryGraph
 [  0%] Built target std_msgs_generate_messages_py
 [  0%] Built target geometry_msgs_generate_messages_py
-[  0%] Built target geometry_msgs_generate_messages_nodejs
 [  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target geometry_msgs_generate_messages_nodejs
 [  0%] Built target geometry_msgs_generate_messages_lisp
 [  0%] Built target std_msgs_generate_messages_lisp
 [  6%] [34m[1mCompiling Java code for graph_msgs[0m
-[  6%] Built target geometry_msgs_generate_messages_java
-[  6%] Built target std_msgs_generate_messages_eus
-[ 13%] Built target graph_msgs_generate_messages_java_gradle
-[ 13%] Built target geometry_msgs_generate_messages_eus
-[ 26%] Built target graph_msgs_generate_messages_cpp
-[ 46%] Built target graph_msgs_generate_messages_py
-[ 60%] Built target graph_msgs_generate_messages_nodejs
-[ 73%] Built target graph_msgs_generate_messages_lisp
-[ 80%] Built target graph_msgs_generate_messages_java
-[100%] Built target graph_msgs_generate_messages_eus
+[  6%] Built target geometry_msgs_generate_messages_cpp
+[  6%] Built target std_msgs_generate_messages_cpp
+[ 13%] Built target graph_msgs_generate_messages_java
+[ 33%] Built target graph_msgs_generate_messages_eus
+[ 53%] Built target graph_msgs_generate_messages_py
+[ 66%] Built target graph_msgs_generate_messages_nodejs
+[ 86%] Built target graph_msgs_generate_messages_lisp
+[ 86%] Built target graph_msgs_generate_messages_java_gradle
+[100%] Built target graph_msgs_generate_messages_cpp
 [100%] Built target graph_msgs_generate_messages
