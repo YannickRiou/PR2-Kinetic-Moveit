@@ -109,7 +109,7 @@ find_package(Boost REQUIRED COMPONENTS system)
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES point_cloud_from_laser_scan
+#  LIBRARIES ${PROJECT_NAME}
 #  CATKIN_DEPENDS roscpp rospy rsomsgs
 #  DEPENDS system_lib
 )
@@ -129,13 +129,13 @@ include_directories(/opt/ros/kinetic/include)
 
 link_directories(${catkin_LIBRARY_DIRS})
 
-add_executable(point_cloud_from_laser_scan src/point_cloud_from_laser_scan.cpp)
-target_link_libraries(point_cloud_from_laser_scan ${catkin_LIBRARIES} ${Boost_LIBRARIES})
-install(TARGETS point_cloud_from_laser_scan DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+add_executable(${PROJECT_NAME} src/${PROJECT_NAME}.cpp)
+target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+install(TARGETS ${PROJECT_NAME} DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/point_cloud_from_laser_scan.cpp
+#   src/${PROJECT_NAME}/${PROJECT_NAME}.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -146,7 +146,7 @@ install(TARGETS point_cloud_from_laser_scan DESTINATION ${CATKIN_PACKAGE_BIN_DES
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/point_cloud_from_laser_scan_node.cpp)
+# add_executable(${PROJECT_NAME}_node src/${PROJECT_NAME}_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -203,7 +203,7 @@ install(TARGETS point_cloud_from_laser_scan DESTINATION ${CATKIN_PACKAGE_BIN_DES
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_point_cloud_from_laser_scan.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_${PROJECT_NAME}.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: gazebo_moveIT_objects_synchroniser
+Description: Description of gazebo_moveIT_objects_synchroniser
+Version: 0.0.0
+Cflags: 
+Libs: -L/usr/local/lib 
+Requires: 

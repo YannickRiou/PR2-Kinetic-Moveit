@@ -172,7 +172,7 @@ void concatenateFieldsCustom (pcl::PointCloud<PointIn1T> &cloud1_in,
     else
         cloud_out.is_dense = true;
     ROS_INFO("cloud out size = %i", cloud_out.points.size() );
-    
+
     // Iterate over each point
     for (size_t i = 0; i < cloud_out.points.size (); ++i)
     {
