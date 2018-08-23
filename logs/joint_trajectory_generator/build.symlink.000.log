@@ -1,5 +1,0 @@
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libjoint_trajectory_generation.so
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/joint_trajectory_generator.pc
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/joint_trajectory_generator/joint_trajectory_generator
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/joint_trajectory_generator/cmake/joint_trajectory_generatorConfig-version.cmake
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/joint_trajectory_generator/cmake/joint_trajectory_generatorConfig.cmake

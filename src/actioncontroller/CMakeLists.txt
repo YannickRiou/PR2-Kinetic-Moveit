@@ -29,6 +29,7 @@ find_package(catkin REQUIRED
   std_msgs
   ar_track_alvar_msgs
   shape_tools
+		gazebo_moveit_objects_synchroniser
 )
 
 ## System dependencies are found with CMake's conventions
@@ -138,6 +139,7 @@ catkin_package(
     interactive_markers
     actionlib_msgs
     ar_track_alvar_msgs
+        gazebo_moveit_objects_synchroniser
   	DEPENDS
     EIGEN3
 )
@@ -147,7 +149,13 @@ catkin_package(
 ###########
 
 
-include_directories(SYSTEM ${THIS_PACKAGE_INCLUDE_DIRS} ${Boost_INCLUDE_DIR} ${EIGEN3_INCLUDE_DIRS})
+include_directories(
+        SYSTEM
+        ${THIS_PACKAGE_INCLUDE_DIRS}
+        ${Boost_INCLUDE_DIR}
+        ${EIGEN3_INCLUDE_DIRS}
+        ${CATKIN_DEVEL_PREFIX}/include)
+
 include_directories(${catkin_INCLUDE_DIRS})
 link_directories(${catkin_LIBRARY_DIRS})
 
@@ -155,12 +163,10 @@ add_executable(setUp src/setUp.cpp)
 target_link_libraries(setUp ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 install(TARGETS setUp DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
-add_executable(simplePick src/simplePick.cpp)
-target_link_libraries(simplePick ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 install(TARGETS setUp DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
 
-add_executable(ActionController src/ActionController.cpp)
+add_executable(ActionController src/ActionController.cpp src/moveit_picker.cpp)
 add_dependencies(ActionController actioncontroller_generate_messages_cpp)
 target_link_libraries(ActionController ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 install(TARGETS ActionController DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})

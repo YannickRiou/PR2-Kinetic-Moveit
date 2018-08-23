@@ -1,58 +1,58 @@
+[  0%] Built target robosherlock_msgs_generate_messages_cpp
+[  1%] Built target rs_recognition
+searching for annotators...
 Searching for files...
 Checking for modification...
 Files not modified. Nothing to do.
-[  0%] Built target robosherlock_generate_type_system
-searching for annotators...
 found 41 annotator...
 searching for analysis engines...
 found 5 analysis engines...
 checking for modification...
 Files not modified. Nothing to do.
-[  0%] Built target robosherlock_update_analysis_engines
-[  9%] Built target rs_core
-[ 10%] Built target rs_recognition
-[ 11%] Built target rs_ClassifierDetection
-[ 12%] Built target rs_PointCloudClusterExtractor
-[ 17%] Built target rs_segmentation
-[ 18%] Built target rs_PointCloudColorSegmentation
-[ 20%] Built target rs_ImageSegmentationAnnotator
-[ 21%] Built target rs_rotationalSymmetryAnnotator
-[ 23%] Built target rs_rotationalSymmetrySegmentation
-[ 25%] Built target rs_bilateralSymmetrySegmentation
-[ 27%] Built target rs_overSegmentationAnnotator
-[ 29%] Built target rs_segmentationResultDisplayer
-[ 31%] Built target rs_ClusterMerger
-[ 31%] Built target robosherlock_msgs_generate_messages_cpp
-[ 35%] Built target rs_PointCloudDownsampler
-[ 37%] Built target rs_queryanswering
-[ 38%] Built target rs_ClusterTracker
-[ 39%] Built target rs_ObjectIdentityResolution
-[ 40%] Built target rs_FeatureAnnotator
-[ 42%] Built target rs_ClusterColorHistogramCalculator
-[ 43%] Built target rs_ClusterTFLocationAnnotator
-[ 45%] Built target rs_Cluster3DGeometryAnnotator
-[ 48%] Built target rs_NormalEstimator
-[ 48%] Built target rs_PCLVFHFeatureExtractor
-[ 50%] Built target rs_PrimitiveShapeAnnotator
-[ 51%] Built target rs_SacModelAnnotator
-[ 53%] Built target rs_SuperVoxelAnnotator
-[ 54%] Built target rs_BoardDetector
-[ 55%] Built target rs_pclDescriptorExtractor
-[ 57%] Built target rs_PlaneAnnotator
-[ 59%] Built target rs_PointCloudFilter
-[ 61%] Built target rs_RegionFilter
-[ 62%] Built target rs_ClusterFilter
-[ 68%] Built target rs_utils
-[ 70%] Built target rs_TFBroadcaster
-[ 70%] Built target rs_KNNClassifier
-[ 72%] Built target rs_LinemodAnnotator
-[ 72%] Built target rs_transparentSegmentationAnnotator
-[ 73%] Built target rs_bilateralSymmetryAnnotator
-[ 76%] Built target rs_BlurDetectorAnnotator
-[ 77%] Built target rs_ImagePreprocessor
-[ 86%] Built target rs_io
+[  1%] Built target robosherlock_generate_type_system
+[  1%] Built target robosherlock_update_analysis_engines
+[  4%] Built target rs_queryanswering
+[ 13%] Built target rs_core
+[ 14%] Built target rs_FeatureAnnotator
+[ 15%] Built target rs_SacModelAnnotator
+[ 17%] Built target rs_ClusterTFLocationAnnotator
+[ 20%] Built target rs_PCLVFHFeatureExtractor
+[ 23%] Built target rs_PrimitiveShapeAnnotator
+[ 23%] Built target rs_NormalEstimator
+[ 23%] Built target rs_ClusterColorHistogramCalculator
+[ 25%] Built target rs_Cluster3DGeometryAnnotator
+[ 27%] Built target rs_SuperVoxelAnnotator
+[ 28%] Built target rs_pclDescriptorExtractor
+[ 29%] Built target rs_BoardDetector
+[ 31%] Built target rs_PlaneAnnotator
+[ 38%] Built target rs_RegionFilter
+[ 38%] Built target rs_ClusterFilter
+[ 42%] Built target rs_utils
+[ 42%] Built target rs_PointCloudFilter
+[ 43%] Built target rs_TFBroadcaster
+[ 44%] Built target rs_KNNClassifier
+[ 45%] Built target rs_LinemodAnnotator
+[ 46%] Built target rs_ClassifierDetection
+[ 48%] Built target rs_segmentationResultDisplayer
+[ 50%] Built target rs_PointCloudColorSegmentation
+[ 52%] Built target rs_ClusterMerger
+[ 53%] Built target rs_PointCloudClusterExtractor
+[ 55%] Built target rs_BlurDetectorAnnotator
+[ 59%] Built target rs_ObjectIdentityResolution
+[ 63%] Built target rs_segmentation
+[ 63%] Built target rs_ClusterTracker
+[ 64%] Built target rs_PointCloudDownsampler
+[ 65%] Built target rs_bilateralSymmetryAnnotator
+[ 69%] Built target rs_ImageSegmentationAnnotator
+[ 69%] Built target rs_bilateralSymmetrySegmentation
+[ 70%] Built target rs_rotationalSymmetryAnnotator
+[ 75%] Built target rs_overSegmentationAnnotator
+[ 77%] Built target rs_transparentSegmentationAnnotator
+[ 85%] Built target rs_io
+[ 85%] Built target rs_rotationalSymmetrySegmentation
+[ 86%] Built target rs_ImagePreprocessor
+[ 87%] Built target rs_StorageWriter
 [ 89%] Built target rs_CollectionReader
-[ 89%] Built target rs_StorageWriter
 [ 92%] Built target rs_Trigger
 [ 96%] Built target rs_flowcontrol
 [ 98%] Built target test_reconfig

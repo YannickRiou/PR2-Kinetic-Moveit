@@ -1,5 +1,0 @@
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libkinect2_bridge_nodelet.so
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/kinect2_bridge.pc
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/kinect2_bridge/kinect2_bridge
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/kinect2_bridge/cmake/kinect2_bridgeConfig.cmake
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/kinect2_bridge/cmake/kinect2_bridgeConfig-version.cmake

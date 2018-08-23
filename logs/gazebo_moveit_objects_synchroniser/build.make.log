@@ -1,0 +1,21 @@
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target moveit_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target moveit_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target moveit_msgs_generate_messages_nodejs
+[  6%] [34m[1mCompiling Java code for gazebo_moveit_objects_synchroniser[0m
+[  6%] Built target std_msgs_generate_messages_eus
+[  6%] Built target std_msgs_generate_messages_cpp
+[  6%] Built target moveit_msgs_generate_messages_cpp
+[  6%] Built target _gazebo_moveit_objects_synchroniser_generate_messages_check_deps_CollisionObjectArray
+[  6%] Built target moveit_msgs_generate_messages_eus
+[ 13%] Built target gazebo_moveit_objects_synchroniser_generate_messages_lisp
+[ 26%] Built target gazebo_moveit_objects_synchroniser_generate_messages_cpp
+[ 53%] Built target gazebo_moveit_objects_synchroniser_generate_messages_py
+[ 53%] Built target gazebo_moveit_objects_synchroniser_generate_messages_eus
+[ 60%] Built target gazebo_moveit_objects_synchroniser_generate_messages_nodejs
+[ 60%] Built target gazebo_moveit_objects_synchroniser_generate_messages_java
+[ 93%] Built target gazebo_moveit_objects_synchroniser
+[100%] Built target gazebo_moveit_objects_synchroniser_generate_messages_java_gradle
+[100%] Built target gazebo_moveit_objects_synchroniser_generate_messages

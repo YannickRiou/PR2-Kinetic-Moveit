@@ -1,0 +1,96 @@
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/setUp.cpp:[m[K In function ‘[01m[Kvoid createActionControllerMessage(std::__cxx11::string, float, float, float, float, float, float, float, actioncontroller::ActionControllerGoal&)[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/setUp.cpp:11:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kactioncontroller::ActionControllerGoal_<std::allocator<void> >::_goal_type {aka struct actioncontroller::actiongoal_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kpose[m[K’
+  goal.goal.pose.pose.position.x = x;
+[01;32m[K            ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/setUp.cpp:12:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kactioncontroller::ActionControllerGoal_<std::allocator<void> >::_goal_type {aka struct actioncontroller::actiongoal_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kpose[m[K’
+  goal.goal.pose.pose.position.y = y;
+[01;32m[K            ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/setUp.cpp:13:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kactioncontroller::ActionControllerGoal_<std::allocator<void> >::_goal_type {aka struct actioncontroller::actiongoal_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kpose[m[K’
+  goal.goal.pose.pose.position.z = z;
+[01;32m[K            ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/setUp.cpp:14:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kactioncontroller::ActionControllerGoal_<std::allocator<void> >::_goal_type {aka struct actioncontroller::actiongoal_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kpose[m[K’
+  goal.goal.pose.pose.orientation.x = ox;
+[01;32m[K            ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/setUp.cpp:15:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kactioncontroller::ActionControllerGoal_<std::allocator<void> >::_goal_type {aka struct actioncontroller::actiongoal_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kpose[m[K’
+  goal.goal.pose.pose.orientation.y = oy;
+[01;32m[K            ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/setUp.cpp:16:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kactioncontroller::ActionControllerGoal_<std::allocator<void> >::_goal_type {aka struct actioncontroller::actiongoal_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kpose[m[K’
+  goal.goal.pose.pose.orientation.z = oz;
+[01;32m[K            ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/setUp.cpp:17:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kactioncontroller::ActionControllerGoal_<std::allocator<void> >::_goal_type {aka struct actioncontroller::actiongoal_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kpose[m[K’
+  goal.goal.pose.pose.orientation.w = w;
+[01;32m[K            ^[m[K
+make[2]: *** [CMakeFiles/setUp.dir/src/setUp.cpp.o] Error 1
+make[1]: *** [CMakeFiles/setUp.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+In file included from [01m[K/opt/ros/kinetic/include/ros/ros.h:40:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:2[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:[m[K In member function ‘[01m[Kbool ActionController::move_head(std_msgs::String)[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:92:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose[m[K’ was not declared in this scope
+     (std::to_string(pose.position.x)).c_str(), 
+[01;32m[K                     ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:346:165:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, __VA_ARGS__)
+[01;32m[K                                                                                                                                                                     ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:379:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+       ROSCONSOLE_PRINT_AT_LOCATION(__VA_ARGS__); \
+[01;32m[K       ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:561:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+ #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
+[01;32m[K                                   ^[m[K
+[01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+ #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+[01;32m[K                       ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:91:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+   ROS_INFO("moving the head to %s, %s, %s",  
+[01;32m[K   ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:99:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose[m[K’ was not declared in this scope
+   msg.target.point.x = pose.position.x;
+[01;32m[K                        ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/ros/ros.h:40:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:2[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:[m[K In member function ‘[01m[Kbool ActionController::pick(std::__cxx11::string, geometry_msgs::Pose)[m[K’:
+[01m[K/opt/ros/kinetic/include/ros/console.h:346:176:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [-Wformat-security]
+     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, __VA_ARGS__)
+[01;32m[K                                                                                                                                                                                ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:349:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+     ROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER(0, __VA_ARGS__)
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:379:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+       ROSCONSOLE_PRINT_AT_LOCATION(__VA_ARGS__); \
+[01;32m[K       ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:561:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+ #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
+[01;32m[K                                   ^[m[K
+[01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+ #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+[01;32m[K                       ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:121:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+   ROS_INFO(group.c_str());
+[01;32m[K   ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:[m[K In member function ‘[01m[Kvoid ActionController::executeCB(const ActionControllerGoalConstPtr&)[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:160:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst struct actioncontroller::ActionControllerGoal_<std::allocator<void> >[m[K’ has no member named ‘[01m[Kobject[m[K’
+    feedback_.success = move_head( goal->object );
+[01;32m[K                                         ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:162:101:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst _goal_type {aka const struct actioncontroller::actiongoal_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kpose[m[K’
+    feedback_.success = pick( (std::string)goal->goal.move_group_id, (geometry_msgs::Pose)goal->goal.pose.pose);
+[01;32m[K                                                                                                     ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:164:102:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst _goal_type {aka const struct actioncontroller::actiongoal_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kpose[m[K’
+    feedback_.success = place( (std::string)goal->goal.move_group_id, (geometry_msgs::Pose)goal->goal.pose.pose);
+[01;32m[K                                                                                                      ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:166:105:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst _goal_type {aka const struct actioncontroller::actiongoal_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kpose[m[K’
+    feedback_.success = move_arms((std::string)goal->goal.move_group_id, (geometry_msgs::Pose)goal->goal.pose.pose); 
+[01;32m[K                                                                                                         ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:[m[K At global scope:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:173:79:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kobjects_update[m[K’ declared void
+ void objects_update(gazebo_moveit_objects_synchroniser::CollisionObjectArray::Const_ptr &msg) {
+[01;32m[K                                                                               ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:173:21:[m[K [01;31m[Kerror: [m[K‘[01m[KConst_ptr[m[K’ is not a member of ‘[01m[Kgazebo_moveit_objects_synchroniser::CollisionObjectArray {aka gazebo_moveit_objects_synchroniser::CollisionObjectArray_<std::allocator<void> >}[m[K’
+ void objects_update(gazebo_moveit_objects_synchroniser::CollisionObjectArray::Const_ptr &msg) {
+[01;32m[K                     ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:173:90:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ was not declared in this scope
+ void objects_update(gazebo_moveit_objects_synchroniser::CollisionObjectArray::Const_ptr &msg) {
+[01;32m[K                                                                                          ^[m[K
+make[2]: *** [CMakeFiles/ActionController.dir/src/ActionController.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ActionController.dir/all] Error 2
+make: *** [all] Error 2

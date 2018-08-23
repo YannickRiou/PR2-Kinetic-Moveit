@@ -1,9 +1,0 @@
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libutils.so
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libsensor_base.so
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libsensor_range.so
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libsensor_odometry.so
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libscanmatcher.so
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libgridfastslam.so
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/openslam_gmapping.pc
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/openslam_gmapping/cmake/openslam_gmappingConfig.cmake
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/openslam_gmapping/cmake/openslam_gmappingConfig-version.cmake

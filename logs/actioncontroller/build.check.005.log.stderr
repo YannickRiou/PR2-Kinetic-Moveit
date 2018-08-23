@@ -1,0 +1,6 @@
+[31m[1mCMake Error[0m at /home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/CMakeLists.txt:158 (target_link_libraries):
+  Cannot specify link libraries for target "simplePick" which is not built by
+  this project.
+
+
+make: *** [cmake_check_build_system] Error 1

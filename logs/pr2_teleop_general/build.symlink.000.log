@@ -1,6 +1,0 @@
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libpr2_teleop_general_commander.so
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/pr2_teleop_general.pc
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pr2_teleop_general/pr2_teleop_general_keyboard
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pr2_teleop_general/pr2_teleop_general_joystick
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/pr2_teleop_general/cmake/pr2_teleop_generalConfig.cmake
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/pr2_teleop_general/cmake/pr2_teleop_generalConfig-version.cmake

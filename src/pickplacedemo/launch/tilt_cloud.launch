@@ -1,7 +1,7 @@
 <launch>
   <node pkg="pr2_mechanism_controllers" type="send_periodic_cmd_srv.py"
         name="laser_cmd"
-        args="laser_tilt_controller linear 4 1 0" />
+        args="laser_tilt_controller linear 1 1 0" />
 
   <node type="laser_scan_assembler" pkg="laser_assembler"
         name="tilt_scan_assembler">
@@ -15,6 +15,11 @@
     <remap from="scan" to="tilt_scan"/>
     <param name="max_scans" type="int" value="400" />
     <param name="fixed_frame" type="string" value="odom_combined" />
+  </node>
+
+  <node type="cloud_merger" pkg="cloud_merger" name="cloud_merger">
+    <remap from="input_cloud_A" to="/head_mount_kinect2/depth/points"/>
+    <remap from="input_cloud_B" to="assembled_point_cloud"/>
   </node>
 
 </launch>

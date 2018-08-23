@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/share/genjava/cmake/../../../lib/genjava/genjava_gradle_project.py", line 14, in <module>
+    genjava.main(sys.argv)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genjava/genjava_main.py", line 82, in main
+    gradle_project.create(args.package, args.output_dir)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genjava/gradle_project.py", line 148, in create
+    shutil.rmtree(genjava_gradle_dir)
+  File "/usr/lib/python2.7/shutil.py", line 247, in rmtree
+    rmtree(fullname, ignore_errors, onerror)
+  File "/usr/lib/python2.7/shutil.py", line 247, in rmtree
+    rmtree(fullname, ignore_errors, onerror)
+  File "/usr/lib/python2.7/shutil.py", line 252, in rmtree
+    onerror(os.remove, fullname, sys.exc_info())
+  File "/usr/lib/python2.7/shutil.py", line 250, in rmtree
+    os.remove(fullname)
+OSError: [Errno 2] No such file or directory: '/home/dtrimoul/PR2-Kinetic-Xenial/build/actioncontroller/java/actioncontroller/gradle/wrapper/gradle-wrapper.jar'
+make[2]: *** [java/actioncontroller/build.gradle] Error 1
+make[1]: *** [CMakeFiles/actioncontroller_generate_messages_java.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

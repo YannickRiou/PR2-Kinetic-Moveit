@@ -1,0 +1,12 @@
+[31m[1mCMake Error[0m at /home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/CMakeLists.txt:158 (add_executable):
+  Cannot find source file:
+
+    src/simplePick.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .m .M .mm .h .hh .h++ .hm .hpp
+  .hxx .in .txx
+
+
+CMake Error: CMake can not determine linker language for target: simplePick
+CMake Error: Cannot determine link language for target "simplePick".
+make: *** [cmake_check_build_system] Error 1

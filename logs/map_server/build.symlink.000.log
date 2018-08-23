@@ -1,7 +1,0 @@
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libmap_server_image_loader.so
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/map_server.pc
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/map_server/map_saver
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/map_server/rtest
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/map_server/map_server
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/map_server/cmake/map_serverConfig-version.cmake
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/map_server/cmake/map_serverConfig.cmake

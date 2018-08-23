@@ -19,7 +19,7 @@ class ActionControllerTools{
 		void callingActionController(std::string part, actioncontroller::ActionControllerGoal &goal){
 			actionlib::SimpleActionClient<actioncontroller::ActionControllerAction> ac_("ActionController", true);
 			while(!ac_.waitForServer(ros::Duration(5.0))){
-					ROS_INFO("Waiting for the move_base action server to come up");
+					ROS_INFO("Waiting for the action server to come up");
 				}
 
 			ROS_INFO("Sending goal to ActionController");

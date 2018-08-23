@@ -1,40 +1,87 @@
+[  0%] Built target actionlib_msgs_generate_messages_cpp
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[  0%] Built target ar_track_alvar_msgs_generate_messages_cpp
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerAction
 [  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerResult
 [  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerFeedback
-[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionFeedback
-[  0%] Built target geometry_msgs_generate_messages_cpp
-[  0%] Built target actionlib_msgs_generate_messages_cpp
 [  0%] Built target _actioncontroller_generate_messages_check_deps_actiongoal
-[  0%] Built target ar_track_alvar_msgs_generate_messages_cpp
-[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionGoal
-[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerAction
-[  0%] Built target std_msgs_generate_messages_cpp
 [  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerGoal
-[  0%] Built target std_msgs_generate_messages_nodejs
-[  0%] Built target ar_track_alvar_msgs_generate_messages_nodejs
-[  0%] Built target actionlib_msgs_generate_messages_nodejs
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionFeedback
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionGoal
 [  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionResult
-[  0%] Built target geometry_msgs_generate_messages_nodejs
+[  0%] Built target ar_track_alvar_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_cpp
 [  0%] Built target ar_track_alvar_msgs_generate_messages_py
-[  0%] Built target geometry_msgs_generate_messages_py
-[  0%] Built target ar_track_alvar_msgs_generate_messages_lisp
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[  0%] Built target actionlib_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_nodejs
 [  0%] Built target actionlib_msgs_generate_messages_py
+[  0%] Built target geometry_msgs_generate_messages_py
 [  0%] Built target std_msgs_generate_messages_py
 [  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target ar_track_alvar_msgs_generate_messages_lisp
 [  0%] Built target std_msgs_generate_messages_lisp
 [  0%] Built target actionlib_msgs_generate_messages_lisp
 [  0%] Built target ar_track_alvar_msgs_generate_messages_eus
-[  0%] Built target actionlib_msgs_generate_messages_eus
-[  1%] Built target actioncontroller_generate_messages_java
-[  1%] Built target geometry_msgs_generate_messages_eus
-[  1%] Built target std_msgs_generate_messages_eus
-[  3%] [34m[1mCompiling Java code for actioncontroller[0m
-[  7%] Built target simplePick
-[ 11%] Built target setUp
-[ 29%] Built target actioncontroller_generate_messages_cpp
-[ 54%] Built target actioncontroller_generate_messages_nodejs
-[ 88%] Built target actioncontroller_generate_messages_py
-[ 94%] Built target actioncontroller_generate_messages_lisp
-[ 98%] Built target actioncontroller_generate_messages_eus
-[ 98%] Built target ActionController
-[100%] Built target actioncontroller_generate_messages_java_gradle
-[100%] Built target actioncontroller_generate_messages
+[  2%] [34m[1mGenerating Java gradle project from actioncontroller[0m
+[  2%] Built target std_msgs_generate_messages_eus
+[  2%] Built target actionlib_msgs_generate_messages_eus
+[  4%] [34m[1mGenerating Java gradle project from actioncontroller[0m
+[  4%] Built target geometry_msgs_generate_messages_eus
+[  6%] [34m[1mGenerating Javascript code from actioncontroller/ActionControllerAction.msg[0m
+[  8%] [34m[1mGenerating C++ code from actioncontroller/ActionControllerAction.msg[0m
+[ 10%] [34m[1mGenerating Lisp code from actioncontroller/ActionControllerAction.msg[0m
+[ 14%] Built target setUp
+[ 16%] [34m[1mGenerating Python from MSG actioncontroller/ActionControllerAction[0m
+[ 20%] [34m[1mGenerating EusLisp code from actioncontroller/ActionControllerAction.msg[0m
+[ 20%] [34m[1mGenerating C++ code from actioncontroller/ActionControllerGoal.msg[0m
+[ 22%] [34m[1mGenerating Javascript code from actioncontroller/ActionControllerGoal.msg[0m
+[ 24%] [34m[1mGenerating Lisp code from actioncontroller/ActionControllerGoal.msg[0m
+[ 26%] [34m[1mGenerating Lisp code from actioncontroller/ActionControllerActionGoal.msg[0m
+[ 28%] [34m[1mGenerating Javascript code from actioncontroller/ActionControllerActionGoal.msg[0m
+[ 32%] [34m[1mGenerating Python from MSG actioncontroller/ActionControllerGoal[0m
+[ 32%] [34m[1mGenerating EusLisp code from actioncontroller/ActionControllerGoal.msg[0m
+[ 34%] [34m[1mGenerating C++ code from actioncontroller/actiongoal.msg[0m
+[ 36%] [34m[1mGenerating C++ code from actioncontroller/ActionControllerActionGoal.msg[0m
+[ 38%] [34m[1mGenerating Javascript code from actioncontroller/actiongoal.msg[0m
+[ 40%] [34m[1mGenerating Lisp code from actioncontroller/actiongoal.msg[0m
+[ 42%] [34m[1mGenerating Python from MSG actioncontroller/ActionControllerActionGoal[0m
+[ 44%] [34m[1mGenerating EusLisp code from actioncontroller/ActionControllerActionGoal.msg[0m
+[ 56%] [34m[1mGenerating EusLisp code from actioncontroller/actiongoal.msg[0m
+[ 56%] Built target actioncontroller_generate_messages_lisp
+[ 62%] Built target actioncontroller_generate_messages_nodejs
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/share/genjava/cmake/../../../lib/genjava/genjava_gradle_project.py", line 14, in <module>
+    genjava.main(sys.argv)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genjava/genjava_main.py", line 82, in main
+    gradle_project.create(args.package, args.output_dir)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genjava/gradle_project.py", line 148, in create
+[ 64%] [34m[1mGenerating Python from MSG actioncontroller/actiongoal[0m
+    shutil.rmtree(genjava_gradle_dir)
+  File "/usr/lib/python2.7/shutil.py", line 247, in rmtree
+    rmtree(fullname, ignore_errors, onerror)
+  File "/usr/lib/python2.7/shutil.py", line 247, in rmtree
+    rmtree(fullname, ignore_errors, onerror)
+  File "/usr/lib/python2.7/shutil.py", line 252, in rmtree
+    onerror(os.remove, fullname, sys.exc_info())
+  File "/usr/lib/python2.7/shutil.py", line 250, in rmtree
+    os.remove(fullname)
+OSError: [Errno 2] No such file or directory: '/home/dtrimoul/PR2-Kinetic-Xenial/build/actioncontroller/java/actioncontroller/gradle/wrapper/gradle-wrapper.jar'
+CMakeFiles/actioncontroller_generate_messages_java.dir/build.make:122: recipe for target 'java/actioncontroller/build.gradle' failed
+make[2]: *** [java/actioncontroller/build.gradle] Error 1
+CMakeFiles/Makefile2:325: recipe for target 'CMakeFiles/actioncontroller_generate_messages_java.dir/all' failed
+make[1]: *** [CMakeFiles/actioncontroller_generate_messages_java.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[ 74%] Built target actioncontroller_generate_messages_cpp
+[ 82%] Built target actioncontroller_generate_messages_eus
+[ 84%] [34m[1mGenerating Python msg __init__.py for actioncontroller[0m
+[ 92%] Built target actioncontroller_generate_messages_py
+[ 94%] [34m[1mCompiling Java code for actioncontroller[0m
+[0mwarning: [options] bootstrap class path not set in conjunction with -source 1.7
+1 warning
+Uploading: org/ros/rosjava_messages/actioncontroller/0.0.0/actioncontroller-0.0.0.jar to repository remote at file:/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/actioncontroller/share/maven/
+Transferring 5K from remote
+Uploaded 5K
+[0m[ 94%] Built target actioncontroller_generate_messages_java_gradle
+Makefile:138: recipe for target 'all' failed
+make: *** [all] Error 2
