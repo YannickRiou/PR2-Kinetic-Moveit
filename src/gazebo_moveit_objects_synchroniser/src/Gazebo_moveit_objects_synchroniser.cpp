@@ -54,7 +54,7 @@ int main(int argc, char **argv){
                     sceneObject.header.frame_id = "base_link";
                     sceneObject.header.seq = modelState.response.header.seq;
                 }
-
+                sceneObject.operation = sceneObject.ADD;
                 collidingObjects.push_back(sceneObject);
             }
 
@@ -63,7 +63,7 @@ int main(int argc, char **argv){
         for(int i=0; i < collidingObjects.size(); ++i){
             collidingObjectsMsg.data[i] = collidingObjects.at(i);
         }
-        ROS_INFO("if out");
+        //ROS_INFO("if out");
         //gmioc.convertToMoveITcollisionObjects( golm.getObjectList() );
 
         pub.publish( collidingObjectsMsg );

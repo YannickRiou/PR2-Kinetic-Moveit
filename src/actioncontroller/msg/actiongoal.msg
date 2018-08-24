@@ -1,2 +1,3 @@
-string move_group_id
+string action
+geometry_msgs/Pose pose
 string object

@@ -1,0 +1,137 @@
+[  0%] Built target actionlib_msgs_generate_messages_cpp
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[  0%] Built target ar_track_alvar_msgs_generate_messages_cpp
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerAction
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionFeedback
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerGoal
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionGoal
+[  0%] Built target _actioncontroller_generate_messages_check_deps_actiongoal
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerFeedback
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerResult
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target ar_track_alvar_msgs_generate_messages_py
+[  0%] Built target geometry_msgs_generate_messages_py
+[  0%] Built target ar_track_alvar_msgs_generate_messages_nodejs
+[  0%] Built target actionlib_msgs_generate_messages_nodejs
+[  0%] Built target actionlib_msgs_generate_messages_py
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionResult
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target ar_track_alvar_msgs_generate_messages_lisp
+[  0%] Built target ar_track_alvar_msgs_generate_messages_eus
+[  0%] Built target geometry_msgs_generate_messages_eus
+[  0%] Built target actionlib_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target actionlib_msgs_generate_messages_eus
+[  4%] [34m[1mCompiling Java code for actioncontroller[0m
+[ 18%] Built target actioncontroller_generate_messages_cpp
+[ 18%] Built target std_msgs_generate_messages_lisp
+[ 22%] Built target setUp
+[35m[1mScanning dependencies of target ActionController[0m
+[ 40%] Built target actioncontroller_generate_messages_py
+[ 60%] Built target actioncontroller_generate_messages_java
+[ 88%] Built target actioncontroller_generate_messages_nodejs
+[ 88%] Built target actioncontroller_generate_messages_lisp
+[ 92%] Built target actioncontroller_generate_messages_eus
+[ 94%] [32mBuilding CXX object CMakeFiles/ActionController.dir/src/ActionController.cpp.o[0m
+[ 96%] Built target actioncontroller_generate_messages_java_gradle
+[ 96%] Built target actioncontroller_generate_messages
+In file included from [01m[K/opt/ros/kinetic/include/ros/ros.h:40:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:2[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:[m[K In member function ‘[01m[Kbool ActionController::pick(std::__cxx11::string, std::__cxx11::string)[m[K’:
+[01m[K/opt/ros/kinetic/include/ros/console.h:346:176:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [-Wformat-security]
+     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, __VA_ARGS__)
+[01;32m[K                                                                                                                                                                                ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:349:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+     ROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER(0, __VA_ARGS__)
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:379:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+       ROSCONSOLE_PRINT_AT_LOCATION(__VA_ARGS__); \
+[01;32m[K       ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:561:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+ #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
+[01;32m[K                                   ^[m[K
+[01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+ #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+[01;32m[K                       ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:116:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+   ROS_INFO(group.c_str());
+[01;32m[K   ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:346:176:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%i[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 8 has type ‘[01m[Kstd::map<std::__cxx11::basic_string<char>, moveit_msgs::CollisionObject_<std::allocator<void> > >::size_type {aka long unsigned int}[m[K’ [-Wformat=]
+     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, __VA_ARGS__)
+[01;32m[K                                                                                                                                                                                ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:349:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+     ROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER(0, __VA_ARGS__)
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:379:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+       ROSCONSOLE_PRINT_AT_LOCATION(__VA_ARGS__); \
+[01;32m[K       ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:561:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+ #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
+[01;32m[K                                   ^[m[K
+[01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+ #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+[01;32m[K                       ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:120:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+         ROS_INFO("Nombre d'objets = %i dans la fonction pick", objects.size());
+[01;32m[K         ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:346:176:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [-Wformat-security]
+     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, __VA_ARGS__)
+[01;32m[K                                                                                                                                                                                ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:349:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+     ROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER(0, __VA_ARGS__)
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:379:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+       ROSCONSOLE_PRINT_AT_LOCATION(__VA_ARGS__); \
+[01;32m[K       ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:561:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+ #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
+[01;32m[K                                   ^[m[K
+[01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+ #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+[01;32m[K                       ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:131:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+         ROS_INFO(info2.str().c_str());
+[01;32m[K         ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:[m[K In member function ‘[01m[Kvoid ActionController::objects_update(const ConstPtr&)[m[K’:
+[01m[K/opt/ros/kinetic/include/ros/console.h:346:176:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%i[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 8 has type ‘[01m[Kstd::map<std::__cxx11::basic_string<char>, moveit_msgs::CollisionObject_<std::allocator<void> > >::size_type {aka long unsigned int}[m[K’ [-Wformat=]
+     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, __VA_ARGS__)
+[01;32m[K                                                                                                                                                                                ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:349:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+     ROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER(0, __VA_ARGS__)
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:379:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+       ROSCONSOLE_PRINT_AT_LOCATION(__VA_ARGS__); \
+[01;32m[K       ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:561:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+ #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
+[01;32m[K                                   ^[m[K
+[01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+ #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+[01;32m[K                       ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:161:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+         ROS_INFO("Nombre d'objets = %i", objects.size());
+[01;32m[K         ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:[m[K In member function ‘[01m[Kvoid ActionController::executeCB(const ActionControllerGoalConstPtr&)[m[K’:
+[01m[K/opt/ros/kinetic/include/ros/console.h:346:176:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%i[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 8 has type ‘[01m[Kstd::map<std::__cxx11::basic_string<char>, moveit_msgs::CollisionObject_<std::allocator<void> > >::size_type {aka long unsigned int}[m[K’ [-Wformat=]
+     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, __VA_ARGS__)
+[01;32m[K                                                                                                                                                                                ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:349:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+     ROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER(0, __VA_ARGS__)
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:379:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+       ROSCONSOLE_PRINT_AT_LOCATION(__VA_ARGS__); \
+[01;32m[K       ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:561:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+ #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
+[01;32m[K                                   ^[m[K
+[01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+ #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+[01;32m[K                       ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:179:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+         ROS_INFO("Nombre d'objets = %i dans l'action callback", objects.size());
+[01;32m[K         ^[m[K
+[ 98%] [32m[1mLinking CXX executable /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/actioncontroller/lib/actioncontroller/ActionController[0m
+[100%] Built target ActionController

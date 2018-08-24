@@ -18,25 +18,23 @@
 #include <boost/algorithm/string.hpp>
 #include <gazebo_moveit_objects_synchroniser/CollisionObjectArray.h>
 
+//Shared Memory map
+#include <mutex>
+#include <boost/interprocess/managed_shared_memory.hpp>
+#include <boost/interprocess/containers/map.hpp>
+#include <boost/interprocess/allocators/allocator.hpp>
+#include <functional>
+#include <utility>
 
 class ActionController
 {
 private:
 
-	void toQuaternion(geometry_msgs::Pose *p ,double pitch, double roll, double yaw){
-        // Abbreviations for the various angular functions
-		double cy = cos(yaw * 0.5);
-		double sy = sin(yaw * 0.5);
-		double cr = cos(roll * 0.5);
-		double sr = sin(roll * 0.5);
-		double cp = cos(pitch * 0.5);
-		double sp = sin(pitch * 0.5);
 
-		p->orientation.w = cy * cr * cp + sy * sr * sp;
-		p->orientation.x = cy * sr * cp - sy * cr * sp;
-		p->orientation.y = cy * cr * sp + sy * sr * cp;
-		p->orientation.z = sy * cr * cp - cy * sr * sp;
-	}
+
+    std::map<std::string, moveit_msgs::CollisionObject> objects;
+
+    std::mutex mutex;
 
 	bool move_arms(std::string group, geometry_msgs::Pose pose){
 		moveit::planning_interface::MoveGroupInterface move_group(group);
@@ -82,71 +80,94 @@ private:
 		return success;
 	}
 
-	bool move_head(std_msgs::String){
+	bool move_head(std::string object){
 
 		actionlib::SimpleActionClient<pr2_controllers_msgs::PointHeadAction> ac_("head_traj_controller/point_head_action", true);
 		while(!ac_.waitForServer(ros::Duration(5.0))){
 			ROS_INFO("Waiting for the move_base action server to come up");
 		}
-		ROS_INFO("moving the head to %s, %s, %s",  
-				(std::to_string(pose.position.x)).c_str(), 
-				(std::to_string(pose.position.y)).c_str(), 
-				(std::to_string(pose.position.z)).c_str()  );
-
+		//Get the pose of the object and convert it to a head msg
 		pr2_controllers_msgs::PointHeadGoal msg;
 		//msg.header.stamp = ros::Time::now();
 		msg.target.header.frame_id = "odom_combined";
-		msg.target.point.x = pose.position.x;
-		msg.target.point.y = pose.position.y;
-		msg.target.point.z = pose.position.z;
+		msg.target.point.x = 0;
+		msg.target.point.y = 0;
+		msg.target.point.z = 0;
 		ac_.sendGoal(msg);
 
 		bool success = (ac_.getState() == actionlib::SimpleClientGoalState::SUCCEEDED);
 
 		if(success)
-			ROS_INFO("Hooray, the base moved to x: %s, y:%s, z:%s", 
-				(std::to_string(pose.position.x)).c_str(), 
-				(std::to_string(pose.position.y)).c_str(), 
-				(std::to_string(pose.position.z)).c_str()  );
+            ROS_INFO("Success");
 		else
-			ROS_INFO("The base failed to move for some reason");
+            ROS_INFO("FAIL");
 		
 		return success;
 	}
 
-	bool pick(std::string group, geometry_msgs::Pose pose){
+    bool move_head(geometry_msgs::Pose pose){
+	    return true;
+	}
+
+	bool pick(std::string group, std::string object){
 		std::vector<std::string> tokens;
 		boost::split(tokens, group, [](char c){return c == '.';});
 		group =  tokens.at(1);
 		ROS_INFO(group.c_str());
 		moveit::planning_interface::MoveGroupInterface move_group(group);
+        moveit::planning_interface::PlanningSceneInterface current_scene;
+        std::vector<moveit_msgs::CollisionObject> vec;
+        //ROS_INFO("Nombre d'objets = %i dans la fonction pick", objects.size());
+        {
+            std::lock_guard<std::mutex> lock(mutex);
+            for(const auto& element : objects){
+                vec.push_back(element.second);
+                ROS_INFO( element.second.id.c_str() );
+            }
+        }
 		//std::vector<manipulation_msgs::Grasp> grasps;
-		move_group.pick("cube");
+        current_scene.applyCollisionObjects(vec);
+        std::stringstream info2;
+        info2 << "Trying to pick " << object << " in " <<  std::string( objects[ object ].id ) << " reference frame";
+        ROS_INFO(info2.str().c_str());
+		move_group.pick(object);
 	}
 
-	bool place(std::string group, geometry_msgs::Pose pose){
+	bool place(std::string group, std::string object){
 
 	}
 
 
 protected:
 	//Action server
-
+    ros::NodeHandle nh_;
 	actionlib::SimpleActionServer<actioncontroller::ActionControllerAction> as_;
 	actioncontroller::ActionControllerFeedback feedback_;
 	actioncontroller::ActionControllerResult result_;
 	std::string action_name_;
+	ros::Subscriber sub;
 
 	//Move base client
 
+    void objects_update(const gazebo_moveit_objects_synchroniser::CollisionObjectArray::ConstPtr &msg) {
+        //ROS_INFO("message received");
+        for(int i=0; i<msg->data.size(); i++){
+            std::lock_guard<std::mutex> lock(mutex);
+            if(!objects.insert( std::pair<std::string, moveit_msgs::CollisionObject>( (std::string)msg->data[i].id , msg->data[i])).second){
+                //std::string info = "object " + msg->data[i].id +  " frame id is " + msg->data[i].header.frame_id;
+                //ROS_INFO(info.c_str());
+                objects[ msg->data[i].id ] = msg->data[i];
+            }
+        }
+        //ROS_INFO("Nombre d'objets = %i", objects.size());
+    }
+
 
 public:
-    ros::NodeHandle nh_;
-
-
 
     ActionController(std::string name) :
 	as_(nh_, name, boost::bind(&ActionController::executeCB, this, _1), false), action_name_(name){
+        sub = nh_.subscribe("moveit_objects", 1000, &ActionController::objects_update, this );
 		as_.start();
 	}
 
@@ -155,32 +176,34 @@ public:
 	}
 
 	void executeCB(const actioncontroller::ActionControllerGoalConstPtr &msg){
-		ros::Rate r(1);
-		if(msg->goal.move_group_id == "head"){
-			feedback_.success = move_head( msg->object );
-		}else if(msg->goal.move_group_id == "pick.left_arm" || msg->goal.move_group_id == "pick.right_arm" ){
-			feedback_.success = pick( (std::string)msg->goal.move_group_id, (std::string)msg->goal.object);
-		}else if(msg->goal.move_group_id == "place.left_arm" || msg->goal.move_group_id == "place.right_arm" ){
-			feedback_.success = place( (std::string)msg->goal.move_group_id, (std::string)msg->goal.object);
-		}else{
-			feedback_.success = move_arms((std::string)msg->goal.move_group_id, (std::string)msg->goal.object);	
+
+        //ROS_INFO("Nombre d'objets = %i dans l'action callback", objects.size());
+
+		if(msg->goal.action == "stareAt"){
+			feedback_.success = move_head( msg->goal.pose );
+		}else if(msg->goal.action == "stareAtObject"){
+            feedback_.success = move_head( (std::string)msg->goal.object );
+		}else if(msg->goal.action == "pick.left_arm" || msg->goal.action == "pick.right_arm" ){
+			feedback_.success = pick( (std::string)msg->goal.action, (std::string)msg->goal.object);
+		}else if(msg->goal.action == "place.left_arm" || msg->goal.action == "place.right_arm" ){
+			feedback_.success = place( (std::string)msg->goal.action, (std::string)msg->goal.object);
+		}else if(msg->goal.action == "base" ){
+            feedback_.success = move_base( msg->goal.pose );
+        }else{
+			feedback_.success = move_arms((std::string)msg->goal.action, msg->goal.pose);
 		}
 		result_.success = feedback_.success;
 		as_.setSucceeded(result_);
 	}
 };
 
-void objects_update(const gazebo_moveit_objects_synchroniser::CollisionObjectArray::ConstPtr &msg) {
-    ROS_INFO_ONCE("msg received in the action controller");
-}
-
-ActionController _myController("ActionController");
 
 int main(int argc, char** argv)
 {
-	ros::init(argc, argv, "ActionController"); 
+	ros::init(argc, argv, "ActionController");
+    ActionController _myController("ActionController");
 
-	_myController.nh_.subscribe("moveit_objects", 1000, objects_update );
+
 
 	ros::spin();
 

@@ -1,0 +1,97 @@
+In file included from [01m[K/opt/ros/kinetic/include/ros/ros.h:40:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:2[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:[m[K In member function ‘[01m[Kbool ActionController::pick(std::__cxx11::string, std::__cxx11::string)[m[K’:
+[01m[K/opt/ros/kinetic/include/ros/console.h:346:176:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [-Wformat-security]
+     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, __VA_ARGS__)
+[01;32m[K                                                                                                                                                                                ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:349:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+     ROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER(0, __VA_ARGS__)
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:379:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+       ROSCONSOLE_PRINT_AT_LOCATION(__VA_ARGS__); \
+[01;32m[K       ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:561:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+ #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
+[01;32m[K                                   ^[m[K
+[01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+ #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+[01;32m[K                       ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:104:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+   ROS_INFO(group.c_str());
+[01;32m[K   ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:[m[K In member function ‘[01m[Kvoid ActionController::executeCB(const ActionControllerGoalConstPtr&)[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:153:88:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kstd::__cxx11::basic_string<char>::basic_string(const _pose_type&)[m[K’
+    feedback_.success = move_arms((std::string)msg->goal.action, (std::string)msg->goal.pose);
+[01;32m[K                                                                                        ^[m[K
+In file included from [01m[K/usr/include/c++/5/string:52:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/platform.h:55[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:53[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:2[m[K:
+[01m[K/usr/include/c++/5/bits/basic_string.h:534:9:[m[K [01;36m[Knote: [m[Kcandidate: template<class _InputIterator, class> std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(_InputIterator, _InputIterator, const _Alloc&)
+         basic_string(_InputIterator __beg, _InputIterator __end,
+[01;32m[K         ^[m[K
+[01m[K/usr/include/c++/5/bits/basic_string.h:534:9:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:153:88:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
+    feedback_.success = move_arms((std::string)msg->goal.action, (std::string)msg->goal.pose);
+[01;32m[K                                                                                        ^[m[K
+In file included from [01m[K/usr/include/c++/5/string:52:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/platform.h:55[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:53[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:2[m[K:
+[01m[K/usr/include/c++/5/bits/basic_string.h:511:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(basic_string&& __str, const _Alloc& __a)
+[01;32m[K       ^[m[K
+[01m[K/usr/include/c++/5/bits/basic_string.h:511:7:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[01m[K/usr/include/c++/5/bits/basic_string.h:507:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const basic_string& __str, const _Alloc& __a)
+[01;32m[K       ^[m[K
+[01m[K/usr/include/c++/5/bits/basic_string.h:507:7:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[01m[K/usr/include/c++/5/bits/basic_string.h:503:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::initializer_list<_Tp>, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(initializer_list<_CharT> __l, const _Alloc& __a = _Alloc())
+[01;32m[K       ^[m[K
+[01m[K/usr/include/c++/5/bits/basic_string.h:503:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst _pose_type {aka const geometry_msgs::Pose_<std::allocator<void> >}[m[K’ to ‘[01m[Kstd::initializer_list<char>[m[K’
+[01m[K/usr/include/c++/5/bits/basic_string.h:476:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(basic_string&& __str) noexcept
+[01;32m[K       ^[m[K
+[01m[K/usr/include/c++/5/bits/basic_string.h:476:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst _pose_type {aka const geometry_msgs::Pose_<std::allocator<void> >}[m[K’ to ‘[01m[Kstd::__cxx11::basic_string<char>&&[m[K’
+[01m[K/usr/include/c++/5/bits/basic_string.h:464:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, _CharT, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(size_type __n, _CharT __c, const _Alloc& __a = _Alloc())
+[01;32m[K       ^[m[K
+[01m[K/usr/include/c++/5/bits/basic_string.h:464:7:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
+[01m[K/usr/include/c++/5/bits/basic_string.h:454:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc())
+[01;32m[K       ^[m[K
+[01m[K/usr/include/c++/5/bits/basic_string.h:454:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst _pose_type {aka const geometry_msgs::Pose_<std::allocator<void> >}[m[K’ to ‘[01m[Kconst char*[m[K’
+[01m[K/usr/include/c++/5/bits/basic_string.h:444:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const _CharT* __s, size_type __n,
+[01;32m[K       ^[m[K
+[01m[K/usr/include/c++/5/bits/basic_string.h:444:7:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
+[01m[K/usr/include/c++/5/bits/basic_string.h:426:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const basic_string& __str, size_type __pos,
+[01;32m[K       ^[m[K
+[01m[K/usr/include/c++/5/bits/basic_string.h:426:7:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 1 provided
+[01m[K/usr/include/c++/5/bits/basic_string.h:410:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+       basic_string(const basic_string& __str, size_type __pos,
+[01;32m[K       ^[m[K
+[01m[K/usr/include/c++/5/bits/basic_string.h:410:7:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
+[01m[K/usr/include/c++/5/bits/basic_string.h:398:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const basic_string& __str)
+[01;32m[K       ^[m[K
+[01m[K/usr/include/c++/5/bits/basic_string.h:398:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst _pose_type {aka const geometry_msgs::Pose_<std::allocator<void> >}[m[K’ to ‘[01m[Kconst std::__cxx11::basic_string<char>&[m[K’
+[01m[K/usr/include/c++/5/bits/basic_string.h:390:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string(const _Alloc& __a)
+[01;32m[K       ^[m[K
+[01m[K/usr/include/c++/5/bits/basic_string.h:390:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst _pose_type {aka const geometry_msgs::Pose_<std::allocator<void> >}[m[K’ to ‘[01m[Kconst std::allocator<char>&[m[K’
+[01m[K/usr/include/c++/5/bits/basic_string.h:379:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string()
+[01;32m[K       ^[m[K
+[01m[K/usr/include/c++/5/bits/basic_string.h:379:7:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:[m[K In function ‘[01m[Kvoid objects_update(const ConstPtr&)[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:164:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kobjects[m[K’ was not declared in this scope
+         if(objects.insert(msg->data[i].id), msg->data[i]){
+[01;32m[K            ^[m[K
+make[2]: *** [CMakeFiles/ActionController.dir/src/ActionController.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ActionController.dir/all] Error 2
+make: *** [all] Error 2
