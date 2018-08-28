@@ -5,7 +5,6 @@
   <param name="KINECT2" value="true" />
   <!-- start up empty world -->
   <arg name="paused" default="true"/>
-  <arg name="tf_prefix" value="pr2_" />
   <!-- TODO: throttled not implemented in gazebo_ros/pickplacesimu.launch
   <arg name="throttled" default="false"/>
   -->
@@ -17,4 +16,5 @@
   <include file="$(find pr2_gazebo)/launch/pr2.launch">
     <env name="KINECT2" value="true"/>
   </include>
+
 </launch>

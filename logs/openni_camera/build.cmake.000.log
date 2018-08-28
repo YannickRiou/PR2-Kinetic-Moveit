@@ -35,7 +35,7 @@ Not searching for unused variables given on the command line.
 [36m--[0m Found Threads: TRUE
 [36m--[0m Found gtest sources under '/usr/src/gmock': gtests will be built
 [36m--[0m Using Python nosetests: /usr/bin/nosetests-2.7
-[36m--[0m catkin 0.7.11
+[36m--[0m catkin 0.7.14
 [36m--[0m Boost version: 1.58.0
 [36m--[0m Found the following Boost libraries:
 [36m--[0m   system

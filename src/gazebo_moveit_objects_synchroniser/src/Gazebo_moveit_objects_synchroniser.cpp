@@ -51,7 +51,7 @@ int main(int argc, char **argv){
                 if(clientObjectProperties.call(modelState)){
                     sceneObject.mesh_poses[0] = modelState.response.pose;
                     sceneObject.header.stamp = modelState.response.header.stamp;
-                    sceneObject.header.frame_id = "base_link";
+                    sceneObject.header.frame_id = "/map";
                     sceneObject.header.seq = modelState.response.header.seq;
                 }
                 sceneObject.operation = sceneObject.ADD;

@@ -28,14 +28,14 @@ Not searching for unused variables given on the command line.
 [36m--[0m Ouput level set to: 2
 [36m--[0m find path: /home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/
 [36m--[0m executed: find /home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock  -name;include;-type;d
-[36m--[0m found include path: /home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/annotation/include
-/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/core/include
+[36m--[0m found include path: /home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/utils/include
 /home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/flowcontrol/include
-/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/io/include
+/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/core/include
 /home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/queryanswering/include
 /home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/recognition/include
+/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/io/include
 /home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/segmentation/include
-/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/utils/include
+/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/annotation/include
 
 [36m--[0m RS_DEBUG_OUTPUT deactivated
 [36m--[0m Using CATKIN_DEVEL_PREFIX: /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/robosherlock
@@ -60,7 +60,7 @@ Not searching for unused variables given on the command line.
 [36m--[0m Found Threads: TRUE
 [36m--[0m Found gtest sources under '/usr/src/gmock': gtests will be built
 [36m--[0m Using Python nosetests: /usr/bin/nosetests-2.7
-[36m--[0m catkin 0.7.11
+[36m--[0m catkin 0.7.14
 [36m--[0m Using these message generators: gencpp;geneus;genjava;genlisp;gennodejs;genpy
 [36m--[0m Found OpenCV: /opt/ros/kinetic (found version "3.3.1")
 [36m--[0m Checking for module 'eigen3'

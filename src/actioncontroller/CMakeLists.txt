@@ -166,7 +166,7 @@ install(TARGETS setUp DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 install(TARGETS setUp DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
 
-add_executable(ActionController src/ActionController.cpp src/moveit_picker.cpp)
+add_executable(ActionController src/ActionController.cpp)
 add_dependencies(ActionController actioncontroller_generate_messages_cpp)
 target_link_libraries(ActionController ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 install(TARGETS ActionController DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})

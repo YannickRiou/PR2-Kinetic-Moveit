@@ -5,6 +5,7 @@
 #include "std_msgs/String.h"
 //action client
 #include <actionlib/client/simple_action_client.h>
+#include <pr2_controllers_msgs/SingleJointPositionAction.h>
 
 //Moveit 
 #include <moveit/move_group_interface/move_group_interface.h>
@@ -35,6 +36,46 @@ private:
     std::map<std::string, moveit_msgs::CollisionObject> objects;
 
     std::mutex mutex;
+
+	void openGripper(trajectory_msgs::JointTrajectory& posture){
+		posture.joint_names.resize(6);
+		posture.joint_names[0] = "r_gripper_joint";
+		posture.joint_names[1] = "r_gripper_motor_screw_joint";
+		posture.joint_names[2] = "r_gripper_l_finger_joint";
+		posture.joint_names[3] = "r_gripper_r_finger_joint";
+		posture.joint_names[4] = "r_gripper_r_finger_tip_joint";
+		posture.joint_names[5] = "r_gripper_l_finger_tip_joint";
+
+		posture.points.resize(1);
+		posture.points[0].positions.resize(6);
+		posture.points[0].positions[0] = 1;
+		posture.points[0].positions[1] = 1.0;
+		posture.points[0].positions[2] = 0.477;
+		posture.points[0].positions[3] = 0.477;
+		posture.points[0].positions[4] = 0.477;
+		posture.points[0].positions[5] = 0.477;
+		posture.points[0].time_from_start = ros::Duration(5);
+	}
+
+	void closedGripper(trajectory_msgs::JointTrajectory& posture){
+		posture.joint_names.resize(6);
+		posture.joint_names[0] = "r_gripper_joint";
+		posture.joint_names[1] = "r_gripper_motor_screw_joint";
+		posture.joint_names[2] = "r_gripper_l_finger_joint";
+		posture.joint_names[3] = "r_gripper_r_finger_joint";
+		posture.joint_names[4] = "r_gripper_r_finger_tip_joint";
+		posture.joint_names[5] = "r_gripper_l_finger_tip_joint";
+
+		posture.points.resize(1);
+		posture.points[0].positions.resize(6);
+		posture.points[0].positions[0] = 0;
+		posture.points[0].positions[1] = 0;
+		posture.points[0].positions[2] = 0.002;
+		posture.points[0].positions[3] = 0.002;
+		posture.points[0].positions[4] = 0.002;
+		posture.points[0].positions[5] = 0.002;
+		posture.points[0].time_from_start = ros::Duration(5);
+	}
 
 	bool move_arms(std::string group, geometry_msgs::Pose pose){
 		moveit::planning_interface::MoveGroupInterface move_group(group);
@@ -81,35 +122,81 @@ private:
 	}
 
 	bool move_head(std::string object){
+		return move_head( objects[ object ].mesh_poses[0]);
+	}
 
-		actionlib::SimpleActionClient<pr2_controllers_msgs::PointHeadAction> ac_("head_traj_controller/point_head_action", true);
+    bool move_body(std::string group, geometry_msgs::Pose pose){
+
+		actionlib::SimpleActionClient<pr2_controllers_msgs::SingleJointPositionAction> ac_("torso_controller/position_joint_action", true);
 		while(!ac_.waitForServer(ros::Duration(5.0))){
-			ROS_INFO("Waiting for the move_base action server to come up");
+			ROS_INFO("Waiting for the torso action server to come up");
 		}
 		//Get the pose of the object and convert it to a head msg
-		pr2_controllers_msgs::PointHeadGoal msg;
+		pr2_controllers_msgs::SingleJointPositionGoal msg;
 		//msg.header.stamp = ros::Time::now();
-		msg.target.header.frame_id = "odom_combined";
-		msg.target.point.x = 0;
-		msg.target.point.y = 0;
-		msg.target.point.z = 0;
+		msg.position = pose.position.z;
+		msg.max_velocity = 1;
+		msg.min_duration = ros::Duration(2.0);
+
 		ac_.sendGoal(msg);
 
 		bool success = (ac_.getState() == actionlib::SimpleClientGoalState::SUCCEEDED);
 
 		if(success)
-            ROS_INFO("Success");
+			ROS_INFO("Success");
 		else
-            ROS_INFO("FAIL");
-		
+			ROS_INFO("FAIL");
+
+		return success;
+    }
+
+    bool move_head(geometry_msgs::Pose pose){
+
+		actionlib::SimpleActionClient<pr2_controllers_msgs::PointHeadAction> ac_("head_traj_controller/point_head_action", true);
+		while(!ac_.waitForServer(ros::Duration(5.0))){
+			ROS_INFO("Waiting for the head_traj_controller action server to come up");
+		}
+		//Get the pose of the object and convert it to a head msg
+		pr2_controllers_msgs::PointHeadGoal msg;
+		//msg.header.stamp = ros::Time::now();
+		msg.target.header.frame_id = "odom_combined";
+		msg.target.point.x = pose.position.x;
+		msg.target.point.y = pose.position.y;
+		msg.target.point.z = pose.position.z;
+		;
+		ac_.sendGoal(msg);
+
+		bool success = (ac_.getState() == actionlib::SimpleClientGoalState::SUCCEEDED);
+
+		if(success)
+			ROS_INFO("Success");
+		else
+			ROS_INFO("FAIL");
+
 		return success;
 	}
 
-    bool move_head(geometry_msgs::Pose pose){
-	    return true;
-	}
-
 	bool pick(std::string group, std::string object){
+
+		std::vector<moveit_msgs::Grasp> grasps;
+		moveit_msgs::Grasp g;
+		g.pre_grasp_approach.direction.vector.z = 1.0;
+		g.pre_grasp_approach.direction.header.frame_id = "base_footprint";
+		g.pre_grasp_approach.min_distance = 0.2;
+		g.pre_grasp_approach.desired_distance = 0.4;
+
+		g.post_grasp_retreat.direction.header.frame_id = "base_footprint";
+		g.post_grasp_retreat.direction.vector.z = 1.0;
+		g.post_grasp_retreat.min_distance = 0.1;
+		g.post_grasp_retreat.desired_distance = 0.25;
+
+		openGripper(g.pre_grasp_posture);
+
+		closedGripper(g.grasp_posture);
+
+		grasps.push_back(g);
+
+
 		std::vector<std::string> tokens;
 		boost::split(tokens, group, [](char c){return c == '.';});
 		group =  tokens.at(1);
@@ -125,12 +212,22 @@ private:
                 ROS_INFO( element.second.id.c_str() );
             }
         }
+        std::stringstream ss;
+		ss << "Object to pick pose is :\n x: " << objects[ object ].mesh_poses[0].position.x <<
+		"\n y: " << objects[ object ].mesh_poses[0].position.y <<
+		"\n z: " << objects[ object ].mesh_poses[0].position.z << std::endl;
+
+		ROS_INFO(ss.str().c_str());
+
 		//std::vector<manipulation_msgs::Grasp> grasps;
         current_scene.applyCollisionObjects(vec);
         std::stringstream info2;
         info2 << "Trying to pick " << object << " in " <<  std::string( objects[ object ].id ) << " reference frame";
         ROS_INFO(info2.str().c_str());
-		move_group.pick(object);
+
+        move_group.setSupportSurfaceName("tableLaas");
+		//move_group.pick(object);
+		move_group.pick(object, grasps);
 	}
 
 	bool place(std::string group, std::string object){
@@ -189,7 +286,9 @@ public:
 			feedback_.success = place( (std::string)msg->goal.action, (std::string)msg->goal.object);
 		}else if(msg->goal.action == "base" ){
             feedback_.success = move_base( msg->goal.pose );
-        }else{
+        }else if(msg->goal.action == "torso" ){
+			feedback_.success = move_body( (std::string)msg->goal.action, msg->goal.pose );
+		}else{
 			feedback_.success = move_arms((std::string)msg->goal.action, msg->goal.pose);
 		}
 		result_.success = feedback_.success;

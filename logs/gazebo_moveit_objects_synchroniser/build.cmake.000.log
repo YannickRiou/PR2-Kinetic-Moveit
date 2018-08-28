@@ -35,7 +35,7 @@ Not searching for unused variables given on the command line.
 [36m--[0m Found Threads: TRUE
 [36m--[0m Found gtest sources under '/usr/src/gmock': gtests will be built
 [36m--[0m Using Python nosetests: /usr/bin/nosetests-2.7
-[36m--[0m catkin 0.7.11
+[36m--[0m catkin 0.7.14
 [36m--[0m Using these message generators: gencpp;geneus;genjava;genlisp;gennodejs;genpy
 [36m--[0m gazebo_moveit_objects_synchroniser: 1 messages, 0 services
 [36m--[0m Configuring done

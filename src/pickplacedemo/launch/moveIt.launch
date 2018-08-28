@@ -4,6 +4,7 @@
   <param name="/use_sim_time" value="true" />
   <include file="$(find pr2_moveit_config)/launch/move_group.launch">
     <arg name="publish_monitored_planning_scene" value="true" />
+    <rosparam name="kinematics_solver" command="load" file="$(find pickplacedemo)/cfg/kinematics.yaml"/>
    </include>
  # The visualization component of MoveIt!
   <include file="$(find pr2_moveit_config)/launch/moveit_rviz.launch"/>
