@@ -14,6 +14,7 @@
 //MoveBase
 #include <move_base_msgs/MoveBaseAction.h>
 #include <pr2_controllers_msgs/PointHeadAction.h>
+#include "pr2_controllers_msgs/Pr2GripperCommandAction.h"
 #include <shape_tools/solid_primitive_dims.h>
 
 #include <boost/algorithm/string.hpp>
@@ -36,51 +37,97 @@ private:
     std::map<std::string, moveit_msgs::CollisionObject> objects;
 
     std::mutex mutex;
+    void openGripper(trajectory_msgs::JointTrajectory& posture){
+        posture.joint_names.resize(6);
+        posture.joint_names[0] = "r_gripper_joint";
+        posture.joint_names[1] = "r_gripper_motor_screw_joint";
+        posture.joint_names[2] = "r_gripper_l_finger_joint";
+        posture.joint_names[3] = "r_gripper_r_finger_joint";
+        posture.joint_names[4] = "r_gripper_r_finger_tip_joint";
+        posture.joint_names[5] = "r_gripper_l_finger_tip_joint";
 
-	void openGripper(trajectory_msgs::JointTrajectory& posture){
-		posture.joint_names.resize(6);
-		posture.joint_names[0] = "r_gripper_joint";
-		posture.joint_names[1] = "r_gripper_motor_screw_joint";
-		posture.joint_names[2] = "r_gripper_l_finger_joint";
-		posture.joint_names[3] = "r_gripper_r_finger_joint";
-		posture.joint_names[4] = "r_gripper_r_finger_tip_joint";
-		posture.joint_names[5] = "r_gripper_l_finger_tip_joint";
+        posture.points.resize(1);
+        posture.points[0].positions.resize(6);
+        posture.points[0].positions[0] = 1;
+        posture.points[0].positions[1] = 1;
+        posture.points[0].positions[2] = 0.477;
+        posture.points[0].positions[3] = 0.477;
+        posture.points[0].positions[4] = 0.477;
+        posture.points[0].positions[5] = 0.477;
+        posture.points[0].time_from_start = ros::Duration(45);
+    }
 
-		posture.points.resize(1);
-		posture.points[0].positions.resize(6);
-		posture.points[0].positions[0] = 1;
-		posture.points[0].positions[1] = 1.0;
-		posture.points[0].positions[2] = 0.477;
-		posture.points[0].positions[3] = 0.477;
-		posture.points[0].positions[4] = 0.477;
-		posture.points[0].positions[5] = 0.477;
-		posture.points[0].time_from_start = ros::Duration(5);
+    void closedGripper(trajectory_msgs::JointTrajectory& posture){
+        posture.joint_names.resize(6);
+        posture.joint_names[0] = "r_gripper_joint";
+        posture.joint_names[1] = "r_gripper_motor_screw_joint";
+        posture.joint_names[2] = "r_gripper_l_finger_joint";
+        posture.joint_names[3] = "r_gripper_r_finger_joint";
+        posture.joint_names[4] = "r_gripper_r_finger_tip_joint";
+        posture.joint_names[5] = "r_gripper_l_finger_tip_joint";
+
+        posture.points.resize(1);
+        posture.points[0].positions.resize(6);
+        posture.points[0].positions[0] = 0;
+        posture.points[0].positions[1] = 0;
+        posture.points[0].positions[2] = 0.002;
+        posture.points[0].positions[3] = 0.002;
+        posture.points[0].positions[4] = 0.002;
+        posture.points[0].positions[5] = 0.002;
+        posture.points[0].time_from_start = ros::Duration(45);
+    }
+
+	bool openGripper(){
+		actionlib::SimpleActionClient<pr2_controllers_msgs::Pr2GripperCommandAction> ac_("/r_gripper_controller/gripper_action", true);
+		while(!ac_.waitForServer(ros::Duration(5.0))){
+			ROS_INFO("Waiting for the head_traj_controller action server to come up");
+		}
+
+		pr2_controllers_msgs::Pr2GripperCommandGoal msg;
+		msg.command.position = 0.9;
+		msg.command.max_effort = 100;
+
+		ac_.sendGoal(msg);
+
+		ac_.waitForResult();
+		bool success = (ac_.getState() == actionlib::SimpleClientGoalState::SUCCEEDED);
+
+		if(success)
+			ROS_INFO("Success");
+		else
+			ROS_INFO("FAIL");
+
+		return success;
 	}
 
-	void closedGripper(trajectory_msgs::JointTrajectory& posture){
-		posture.joint_names.resize(6);
-		posture.joint_names[0] = "r_gripper_joint";
-		posture.joint_names[1] = "r_gripper_motor_screw_joint";
-		posture.joint_names[2] = "r_gripper_l_finger_joint";
-		posture.joint_names[3] = "r_gripper_r_finger_joint";
-		posture.joint_names[4] = "r_gripper_r_finger_tip_joint";
-		posture.joint_names[5] = "r_gripper_l_finger_tip_joint";
+	bool closedGripper(){
+		actionlib::SimpleActionClient<pr2_controllers_msgs::Pr2GripperCommandAction> ac_("/r_gripper_controller/gripper_action", true);
+		while(!ac_.waitForServer(ros::Duration(5.0))){
+			ROS_INFO("Waiting for the head_traj_controller action server to come up");
+		}
 
-		posture.points.resize(1);
-		posture.points[0].positions.resize(6);
-		posture.points[0].positions[0] = 0;
-		posture.points[0].positions[1] = 0;
-		posture.points[0].positions[2] = 0.002;
-		posture.points[0].positions[3] = 0.002;
-		posture.points[0].positions[4] = 0.002;
-		posture.points[0].positions[5] = 0.002;
-		posture.points[0].time_from_start = ros::Duration(5);
+		pr2_controllers_msgs::Pr2GripperCommandGoal msg;
+		msg.command.position = 0.2;
+		msg.command.max_effort = 100;
+
+
+		ac_.sendGoal(msg);
+		ac_.waitForResult();
+		bool success = (ac_.getState() == actionlib::SimpleClientGoalState::SUCCEEDED);
+
+		if(success)
+			ROS_INFO("Success");
+		else
+			ROS_INFO("FAIL");
+
+		return success;
 	}
 
 	bool move_arms(std::string group, geometry_msgs::Pose pose){
 		moveit::planning_interface::MoveGroupInterface move_group(group);
 		move_group.setPoseTarget(pose);
 		moveit::planning_interface::MoveGroupInterface::Plan my_plan;
+
 		bool success = (move_group.plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
 
 		if(success){
@@ -107,6 +154,7 @@ private:
 		ROS_INFO("Sending goal to move base");
 		ac_.sendGoal(goal);
 		ROS_INFO("wating for result");
+
 		ac_.waitForResult();
 		bool success = (ac_.getState() == actionlib::SimpleClientGoalState::SUCCEEDED);
 
@@ -176,33 +224,18 @@ private:
 		return success;
 	}
 
-	bool pick(std::string group, std::string object){
+/*	bool pick(std::string group, std::string object){
 
-		std::vector<moveit_msgs::Grasp> grasps;
-		moveit_msgs::Grasp g;
-		g.pre_grasp_approach.direction.vector.z = 1.0;
-		g.pre_grasp_approach.direction.header.frame_id = "base_footprint";
-		g.pre_grasp_approach.min_distance = 0.2;
-		g.pre_grasp_approach.desired_distance = 0.4;
-
-		g.post_grasp_retreat.direction.header.frame_id = "base_footprint";
-		g.post_grasp_retreat.direction.vector.z = 1.0;
-		g.post_grasp_retreat.min_distance = 0.1;
-		g.post_grasp_retreat.desired_distance = 0.25;
-
-		openGripper(g.pre_grasp_posture);
-
-		closedGripper(g.grasp_posture);
-
-		grasps.push_back(g);
 
 
 		std::vector<std::string> tokens;
 		boost::split(tokens, group, [](char c){return c == '.';});
 		group =  tokens.at(1);
 		ROS_INFO(group.c_str());
+
 		moveit::planning_interface::MoveGroupInterface move_group(group);
         moveit::planning_interface::PlanningSceneInterface current_scene;
+
         std::vector<moveit_msgs::CollisionObject> vec;
         //ROS_INFO("Nombre d'objets = %i dans la fonction pick", objects.size());
         {
@@ -212,6 +245,7 @@ private:
                 ROS_INFO( element.second.id.c_str() );
             }
         }
+
         std::stringstream ss;
 		ss << "Object to pick pose is :\n x: " << objects[ object ].mesh_poses[0].position.x <<
 		"\n y: " << objects[ object ].mesh_poses[0].position.y <<
@@ -225,10 +259,83 @@ private:
         info2 << "Trying to pick " << object << " in " <<  std::string( objects[ object ].id ) << " reference frame";
         ROS_INFO(info2.str().c_str());
 
-        move_group.setSupportSurfaceName("tableLaas");
-		//move_group.pick(object);
-		move_group.pick(object, grasps);
+
+		openGripper();
+
+		move_arms(group, objects[ object ].mesh_poses[0] );
+
+		closedGripper();
+
+
 	}
+*/
+    bool pick(std::string group, std::string object){
+
+        std::vector<std::string> tokens;
+        boost::split(tokens, group, [](char c){return c == '.';});
+        group =  tokens.at(1);
+        ROS_INFO(group.c_str());
+
+        moveit::planning_interface::MoveGroupInterface move_group(group);
+        moveit::planning_interface::PlanningSceneInterface current_scene;
+
+        std::vector<moveit_msgs::CollisionObject> vec;
+        //ROS_INFO("Nombre d'objets = %i dans la fonction pick", objects.size());
+        {
+            std::lock_guard<std::mutex> lock(mutex);
+            for(const auto& element : objects){
+                vec.push_back(element.second);
+                ROS_INFO( element.second.id.c_str() );
+            }
+        }
+
+        std::stringstream ss;
+        ss << "Object to pick pose is :\n x: " << objects[ object ].mesh_poses[0].position.x <<
+           "\n y: " << objects[ object ].mesh_poses[0].position.y <<
+           "\n z: " << objects[ object ].mesh_poses[0].position.z << std::endl;
+
+        ROS_INFO(ss.str().c_str());
+
+        //std::vector<manipulation_msgs::Grasp> grasps;
+        current_scene.applyCollisionObjects(vec);
+        std::stringstream info2;
+        info2 << "Trying to pick " << object << " in " <<  std::string( objects[ object ].id ) << " reference frame";
+        ROS_INFO(info2.str().c_str());
+
+        std::vector<moveit_msgs::Grasp> grasps;
+
+        geometry_msgs::PoseStamped p;
+        p.header.frame_id = "/map";
+        p.pose.position.x = objects[object].mesh_poses[0].position.x - 0.15;
+        p.pose.position.y = objects[object].mesh_poses[0].position.y;
+        p.pose.position.z = objects[object].mesh_poses[0].position.z ;
+        p.pose.orientation.x = 0;
+        p.pose.orientation.y = 0;
+        p.pose.orientation.z = 0;
+        p.pose.orientation.w = 1;
+        moveit_msgs::Grasp g;
+        g.grasp_pose = p;
+
+        g.pre_grasp_approach.direction.vector.x = 1.0;
+        g.pre_grasp_approach.direction.header.frame_id = "r_wrist_roll_link";
+        g.pre_grasp_approach.min_distance = 0.001;
+        g.pre_grasp_approach.desired_distance = 0.05;
+
+        g.post_grasp_retreat.direction.header.frame_id = "base_footprint";
+        g.post_grasp_retreat.direction.vector.z = 1.0;
+        g.post_grasp_retreat.min_distance = 0.001;
+        g.post_grasp_retreat.desired_distance = 0.05;
+
+        openGripper(g.pre_grasp_posture);
+
+        closedGripper(g.grasp_posture);
+        move_group.allowReplanning(true);
+        grasps.push_back(g);
+        move_group.setSupportSurfaceName("tableLaas");
+        move_group.pick(object, grasps);
+
+
+    }
 
 	bool place(std::string group, std::string object){
 
