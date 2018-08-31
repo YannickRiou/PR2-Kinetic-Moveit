@@ -77,52 +77,6 @@ private:
         posture.points[0].time_from_start = ros::Duration(45);
     }
 
-	bool openGripper(){
-		actionlib::SimpleActionClient<pr2_controllers_msgs::Pr2GripperCommandAction> ac_("/r_gripper_controller/gripper_action", true);
-		while(!ac_.waitForServer(ros::Duration(5.0))){
-			ROS_INFO("Waiting for the head_traj_controller action server to come up");
-		}
-
-		pr2_controllers_msgs::Pr2GripperCommandGoal msg;
-		msg.command.position = 0.9;
-		msg.command.max_effort = 100;
-
-		ac_.sendGoal(msg);
-
-		ac_.waitForResult();
-		bool success = (ac_.getState() == actionlib::SimpleClientGoalState::SUCCEEDED);
-
-		if(success)
-			ROS_INFO("Success");
-		else
-			ROS_INFO("FAIL");
-
-		return success;
-	}
-
-	bool closedGripper(){
-		actionlib::SimpleActionClient<pr2_controllers_msgs::Pr2GripperCommandAction> ac_("/r_gripper_controller/gripper_action", true);
-		while(!ac_.waitForServer(ros::Duration(5.0))){
-			ROS_INFO("Waiting for the head_traj_controller action server to come up");
-		}
-
-		pr2_controllers_msgs::Pr2GripperCommandGoal msg;
-		msg.command.position = 0.2;
-		msg.command.max_effort = 100;
-
-
-		ac_.sendGoal(msg);
-		ac_.waitForResult();
-		bool success = (ac_.getState() == actionlib::SimpleClientGoalState::SUCCEEDED);
-
-		if(success)
-			ROS_INFO("Success");
-		else
-			ROS_INFO("FAIL");
-
-		return success;
-	}
-
 	bool move_arms(std::string group, geometry_msgs::Pose pose){
 		moveit::planning_interface::MoveGroupInterface move_group(group);
 		move_group.setPoseTarget(pose);

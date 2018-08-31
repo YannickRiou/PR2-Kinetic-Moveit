@@ -1,0 +1,7 @@
+ <launch>
+
+  <include file="$(find pr2_gazebo)/launch/pr2.launch">
+    <env name="KINECT2" value="true"/>
+  </include>
+
+</launch>
