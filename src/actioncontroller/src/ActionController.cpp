@@ -231,6 +231,7 @@ private:
         ROS_INFO(group.c_str());
 
         moveit::planning_interface::MoveGroupInterface move_group(group);
+        move_group.detachObject(object);
         moveit::planning_interface::PlanningSceneInterface current_scene;
 
         std::vector<moveit_msgs::CollisionObject> vec;
@@ -242,8 +243,10 @@ private:
                 ROS_INFO( element.second.id.c_str() );
             }
         }
+        current_scene.applyCollisionObjects(vec);
 
         std::stringstream ss;
+        /*
         ss << "Object to pick pose is :\n x: " << objects[ object ].mesh_poses[0].position.x <<
            "\n y: " << objects[ object ].mesh_poses[0].position.y <<
            "\n z: " << objects[ object ].mesh_poses[0].position.z << std::endl;
@@ -255,14 +258,15 @@ private:
         std::stringstream info2;
         info2 << "Trying to pick " << object << " in " <<  std::string( objects[ object ].id ) << " reference frame";
         ROS_INFO(info2.str().c_str());
+        */
 
         std::vector<moveit_msgs::Grasp> grasps;
 
         geometry_msgs::PoseStamped p;
         p.header.frame_id = "/map";
-        p.pose.position.x = objects[object].mesh_poses[0].position.x - 0.15;
-        p.pose.position.y = objects[object].mesh_poses[0].position.y;
-        p.pose.position.z = objects[object].mesh_poses[0].position.z ;
+        p.pose.position.x = objects[object].mesh_poses[0].position.x ;
+        p.pose.position.y = objects[object].mesh_poses[0].position.y ;
+        p.pose.position.z = objects[object].mesh_poses[0].position.z - 0.05;
         p.pose.orientation.x = 0;
         p.pose.orientation.y = 0;
         p.pose.orientation.z = 0;
@@ -273,12 +277,12 @@ private:
         g.pre_grasp_approach.direction.vector.x = 1.0;
         g.pre_grasp_approach.direction.header.frame_id = "r_wrist_roll_link";
         g.pre_grasp_approach.min_distance = 0.001;
-        g.pre_grasp_approach.desired_distance = 0.05;
+        g.pre_grasp_approach.desired_distance = 0.10;
 
         g.post_grasp_retreat.direction.header.frame_id = "base_footprint";
         g.post_grasp_retreat.direction.vector.z = 1.0;
         g.post_grasp_retreat.min_distance = 0.001;
-        g.post_grasp_retreat.desired_distance = 0.05;
+        g.post_grasp_retreat.desired_distance = 0.10;
 
         openGripper(g.pre_grasp_posture);
 
@@ -292,6 +296,50 @@ private:
     }
 
 	bool place(std::string group, std::string object){
+        moveit::planning_interface::MoveGroupInterface move_group(group);
+        moveit::planning_interface::PlanningSceneInterface current_scene;
+
+        std::vector<moveit_msgs::PlaceLocation> place_location;
+        place_location.resize(1);
+
+        // Setting place location pose
+        // +++++++++++++++++++++++++++
+        place_location[0].place_pose.header.frame_id = "panda_link0";
+        place_location[0].place_pose.pose.orientation = tf::createQuaternionMsgFromRollPitchYaw(0, 0, M_PI / 2);
+
+        /* While placing it is the exact location of the center of the object. */
+        place_location[0].place_pose.pose.position.x = 0;
+        place_location[0].place_pose.pose.position.y = 0.5;
+        place_location[0].place_pose.pose.position.z = 0.5;
+
+        // Setting pre-place approach
+        // ++++++++++++++++++++++++++
+        /* Defined with respect to frame_id */
+        place_location[0].pre_place_approach.direction.header.frame_id = "panda_link0";
+        /* Direction is set as negative z axis */
+        place_location[0].pre_place_approach.direction.vector.z = -1.0;
+        place_location[0].pre_place_approach.min_distance = 0.001;
+        place_location[0].pre_place_approach.desired_distance = 0.05;
+
+        // Setting post-grasp retreat
+        // ++++++++++++++++++++++++++
+        /* Defined with respect to frame_id */
+        place_location[0].post_place_retreat.direction.header.frame_id = "panda_link0";
+        /* Direction is set as negative y axis */
+        place_location[0].post_place_retreat.direction.vector.y = -1.0;
+        place_location[0].post_place_retreat.min_distance = 0.05;
+        place_location[0].post_place_retreat.desired_distance = 0.25;
+
+        // Setting posture of eef after placing object
+        // +++++++++++++++++++++++++++++++++++++++++++
+        /* Similar to the pick case */
+        openGripper(place_location[0].post_place_posture);
+
+        // Set support surface as table2.
+        move_group.setSupportSurfaceName("tableLaas");
+        // Call place to place the object using the place locations given.
+        move_group.place(object, place_location);
+
 
 	}
 

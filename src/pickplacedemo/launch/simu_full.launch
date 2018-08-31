@@ -4,6 +4,4 @@
 	<include file="$(find pickplacedemo)/launch/moveIt.launch" />
 	<include file="$(find pickplacedemo)/launch/openni.launch"/>
 	<include file="$(find pickplacedemo)/launch/tilt_cloud.launch"/>
- 
-	<node pkg="actioncontroller" name="ActionController" type="ActionController" />
 </launch>
