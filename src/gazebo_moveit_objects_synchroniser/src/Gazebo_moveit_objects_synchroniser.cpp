@@ -39,23 +39,24 @@ int main(int argc, char **argv){
                 shape_msgs::Mesh m;
                 try {
                     m = gazeboMeshManager.getMesh(worldProperties.response.model_names[i]);
-
+                    sceneObject.meshes.resize(1);
+                    sceneObject.meshes[0] = m;
+                    sceneObject.mesh_poses.resize(1);
+                    gazebo_msgs::GetModelState modelState;
+                    modelState.request.model_name = worldProperties.response.model_names[i];
+                    if(clientObjectProperties.call(modelState)){
+                        sceneObject.mesh_poses[0] = modelState.response.pose;
+                        sceneObject.mesh_poses[0].position.z = sceneObject.mesh_poses[0].position.z - 0.05;
+                        sceneObject.header.stamp = modelState.response.header.stamp;
+                        sceneObject.header.frame_id = "/map";
+                        sceneObject.header.seq = modelState.response.header.seq;
+                    }
+                    sceneObject.operation = sceneObject.ADD;
+                    collidingObjects.push_back(sceneObject);
                 }catch(std::string exc){
                     ROS_INFO(exc.c_str());
+
                 }
-                sceneObject.meshes.resize(1);
-                sceneObject.meshes[0] = m;
-                sceneObject.mesh_poses.resize(1);
-                gazebo_msgs::GetModelState modelState;
-                modelState.request.model_name = worldProperties.response.model_names[i];
-                if(clientObjectProperties.call(modelState)){
-                    sceneObject.mesh_poses[0] = modelState.response.pose;
-                    sceneObject.header.stamp = modelState.response.header.stamp;
-                    sceneObject.header.frame_id = "/map";
-                    sceneObject.header.seq = modelState.response.header.seq;
-                }
-                sceneObject.operation = sceneObject.ADD;
-                collidingObjects.push_back(sceneObject);
             }
 
         }

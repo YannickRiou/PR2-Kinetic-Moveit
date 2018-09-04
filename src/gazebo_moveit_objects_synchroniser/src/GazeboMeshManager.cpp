@@ -16,9 +16,10 @@ shape_msgs::Mesh GazeboMeshManager::getMesh(std::string model_name) {
     if(boost::filesystem::exists(full_path)){
         shapes::Mesh *m = shapes::createMeshFromResource("file://" + full_path );
         shape_msgs::Mesh mesh;
-        shapes::ShapeMsg mesh_msg;
+        shapes::ShapeMsg mesh_msg = mesh;
         shapes::constructMsgFromShape(m, mesh_msg);
         mesh = boost::get<shape_msgs::Mesh>(mesh_msg);
+        ROS_INFO("Build suceed");
         return mesh;
     }else{
         throw "Unable to locate the file for " + model_name + " model";

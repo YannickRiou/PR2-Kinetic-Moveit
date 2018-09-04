@@ -10,6 +10,7 @@
 //Moveit 
 #include <moveit/move_group_interface/move_group_interface.h>
 #include <moveit/planning_scene_interface/planning_scene_interface.h>
+#include <moveit_msgs/ApplyPlanningScene.h>
 
 //MoveBase
 #include <move_base_msgs/MoveBaseAction.h>
@@ -225,6 +226,7 @@ private:
 */
     bool pick(std::string group, std::string object){
 
+
         std::vector<std::string> tokens;
         boost::split(tokens, group, [](char c){return c == '.';});
         group =  tokens.at(1);
@@ -233,6 +235,8 @@ private:
         moveit::planning_interface::MoveGroupInterface move_group(group);
         move_group.detachObject(object);
         moveit::planning_interface::PlanningSceneInterface current_scene;
+        //Create the planning scene
+        moveit_msgs::PlanningScene planning_scene;
 
         std::vector<moveit_msgs::CollisionObject> vec;
         //ROS_INFO("Nombre d'objets = %i dans la fonction pick", objects.size());
@@ -244,9 +248,19 @@ private:
             }
         }
         current_scene.applyCollisionObjects(vec);
+        //Seems to not work, maybe issue with delay in publishing topic
+        /*
+        planning_scene.world.collision_objects.insert(planning_scene.world.collision_objects.end(), vec.begin(), vec.end());
+        planning_scene.is_diff = true;
+        ros::ServiceClient planning_scene_diff_client = nh_.serviceClient<moveit_msgs::ApplyPlanningScene>("apply_planning_scene");
+        planning_scene_diff_client.waitForExistence();
+        moveit_msgs::ApplyPlanningScene srv;
+        srv.request.scene = planning_scene;
+        planning_scene_diff_client.call(srv);
+        */
 
         std::stringstream ss;
-        /*
+
         ss << "Object to pick pose is :\n x: " << objects[ object ].mesh_poses[0].position.x <<
            "\n y: " << objects[ object ].mesh_poses[0].position.y <<
            "\n z: " << objects[ object ].mesh_poses[0].position.z << std::endl;
@@ -258,15 +272,15 @@ private:
         std::stringstream info2;
         info2 << "Trying to pick " << object << " in " <<  std::string( objects[ object ].id ) << " reference frame";
         ROS_INFO(info2.str().c_str());
-        */
+
 
         std::vector<moveit_msgs::Grasp> grasps;
 
         geometry_msgs::PoseStamped p;
         p.header.frame_id = "/map";
-        p.pose.position.x = objects[object].mesh_poses[0].position.x ;
+        p.pose.position.x = objects[object].mesh_poses[0].position.x - 0.18   ;
         p.pose.position.y = objects[object].mesh_poses[0].position.y ;
-        p.pose.position.z = objects[object].mesh_poses[0].position.z - 0.05;
+        p.pose.position.z = objects[object].mesh_poses[0].position.z + 0.02 ;
         p.pose.orientation.x = 0;
         p.pose.orientation.y = 0;
         p.pose.orientation.z = 0;
@@ -274,14 +288,15 @@ private:
         moveit_msgs::Grasp g;
         g.grasp_pose = p;
 
-        g.pre_grasp_approach.direction.vector.x = 1.0;
-        g.pre_grasp_approach.direction.header.frame_id = "r_wrist_roll_link";
-        g.pre_grasp_approach.min_distance = 0.001;
-        g.pre_grasp_approach.desired_distance = 0.10;
+
+        g.pre_grasp_approach.direction.header.frame_id = "base_footprint";
+        g.pre_grasp_approach.direction.vector.z = -1.0;
+        g.pre_grasp_approach.min_distance = 0.1;
+        g.pre_grasp_approach.desired_distance = 0.20;
 
         g.post_grasp_retreat.direction.header.frame_id = "base_footprint";
         g.post_grasp_retreat.direction.vector.z = 1.0;
-        g.post_grasp_retreat.min_distance = 0.001;
+        g.post_grasp_retreat.min_distance = 0.05;
         g.post_grasp_retreat.desired_distance = 0.10;
 
         openGripper(g.pre_grasp_posture);
@@ -291,6 +306,8 @@ private:
         grasps.push_back(g);
         move_group.setSupportSurfaceName("tableLaas");
         move_group.pick(object, grasps);
+        //move_group.pick(object);
+
 
 
     }
@@ -351,7 +368,8 @@ protected:
 	actioncontroller::ActionControllerFeedback feedback_;
 	actioncontroller::ActionControllerResult result_;
 	std::string action_name_;
-	ros::Subscriber sub;
+	ros::Subscriber sub_moveit_objects;
+    ros::Publisher planning_scene_diff_publisher;
 
 	//Move base client
 
@@ -373,7 +391,8 @@ public:
 
     ActionController(std::string name) :
 	as_(nh_, name, boost::bind(&ActionController::executeCB, this, _1), false), action_name_(name){
-        sub = nh_.subscribe("moveit_objects", 1000, &ActionController::objects_update, this );
+        sub_moveit_objects = nh_.subscribe("moveit_objects", 1000, &ActionController::objects_update, this );
+        planning_scene_diff_publisher = nh_.advertise<moveit_msgs::PlanningScene>("planning_scene", 1);
 		as_.start();
 	}
 
