@@ -300,9 +300,10 @@ private:
         place_location[0].place_pose.header.frame_id = "/map";
 
         /* While placing it is the exact location of the center of the object. */
-        place_location[0].place_pose.pose.position.x = pose.position.x - 0.175   ;
+        place_location[0].place_pose.pose.position.x = pose.position.x ;
         place_location[0].place_pose.pose.position.y = pose.position.y ;
         place_location[0].place_pose.pose.position.z = pose.position.z ;
+        place_location[0].place_pose.pose.orientation = tf::createQuaternionMsgFromRollPitchYaw(0, 0, M_PI / 2);
 
         // Setting pre-place approach
         // ++++++++++++++++++++++++++

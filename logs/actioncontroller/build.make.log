@@ -1,42 +1,42 @@
-[  0%] Built target actionlib_msgs_generate_messages_cpp
-[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerResult
-[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerFeedback
 [  0%] Built target geometry_msgs_generate_messages_cpp
-[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionGoal
-[  0%] Built target _actioncontroller_generate_messages_check_deps_actiongoal
-[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerGoal
-[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target actionlib_msgs_generate_messages_cpp
 [  0%] Built target ar_track_alvar_msgs_generate_messages_cpp
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerResult
 [  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionFeedback
-[  0%] Built target ar_track_alvar_msgs_generate_messages_nodejs
-[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target _actioncontroller_generate_messages_check_deps_actiongoal
 [  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerAction
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerFeedback
+[  0%] Built target ar_track_alvar_msgs_generate_messages_nodejs
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerGoal
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionGoal
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_nodejs
 [  0%] Built target geometry_msgs_generate_messages_nodejs
-[  0%] Built target actionlib_msgs_generate_messages_py
 [  0%] Built target actionlib_msgs_generate_messages_nodejs
-[  0%] Built target ar_track_alvar_msgs_generate_messages_py
-[  0%] Built target ar_track_alvar_msgs_generate_messages_lisp
+[  0%] Built target actionlib_msgs_generate_messages_py
 [  0%] Built target geometry_msgs_generate_messages_py
+[  0%] Built target ar_track_alvar_msgs_generate_messages_py
 [  0%] Built target std_msgs_generate_messages_py
 [  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionResult
+[  0%] Built target ar_track_alvar_msgs_generate_messages_lisp
 [  0%] Built target std_msgs_generate_messages_lisp
 [  0%] Built target geometry_msgs_generate_messages_lisp
-[  0%] Built target actionlib_msgs_generate_messages_lisp
 [  0%] Built target ar_track_alvar_msgs_generate_messages_eus
 [  0%] Built target actionlib_msgs_generate_messages_eus
 [  0%] Built target geometry_msgs_generate_messages_eus
+[  0%] Built target actionlib_msgs_generate_messages_lisp
 [  0%] Built target std_msgs_generate_messages_eus
-[ 10%] [34m[1mCompiling Java code for actioncontroller[0m
-[ 20%] Built target actioncontroller_generate_messages_cpp
-[ 40%] Built target setUp
-[ 42%] Built target actioncontroller_generate_messages_py
-[ 42%] Built target actioncontroller_generate_messages_java
-[ 59%] Built target actioncontroller_generate_messages_lisp
-[ 93%] Built target actioncontroller_generate_messages_nodejs
+[  2%] [34m[1mCompiling Java code for actioncontroller[0m
+[ 28%] Built target actioncontroller_generate_messages_java
+[ 38%] Built target actioncontroller_generate_messages_cpp
+[ 48%] Built target setUp
+[ 77%] Built target actioncontroller_generate_messages_nodejs
+[ 93%] Built target actioncontroller_generate_messages_lisp
+[ 93%] Built target actioncontroller_generate_messages_py
 [ 93%] Built target actioncontroller_generate_messages_eus
 [35m[1mScanning dependencies of target ActionController[0m
-[ 95%] [32mBuilding CXX object CMakeFiles/ActionController.dir/src/ActionController.cpp.o[0m
-[ 97%] Built target actioncontroller_generate_messages_java_gradle
+[ 95%] Built target actioncontroller_generate_messages_java_gradle
+[ 97%] [32mBuilding CXX object CMakeFiles/ActionController.dir/src/ActionController.cpp.o[0m
 [ 97%] Built target actioncontroller_generate_messages
 In file included from [01m[K/opt/ros/kinetic/include/ros/ros.h:40:0[m[K,
                  from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:2[m[K:
