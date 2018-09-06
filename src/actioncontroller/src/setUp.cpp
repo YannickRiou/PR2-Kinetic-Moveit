@@ -52,7 +52,7 @@ int main(int argc, char** argv)
 	callingActionController(part, goal);
 
     part = "torso";
-    createActionControllerMessage(part, 0, 0, 0.4, 0, 0, 0, 0, goal);
+    createActionControllerMessage(part, 0, 0, 0.3, 0, 0, 0, 0, goal);
     callingActionController(part, goal);
 
 	part = "base";

@@ -55,7 +55,7 @@ private:
         posture.points[0].positions[3] = 0.477;
         posture.points[0].positions[4] = 0.477;
         posture.points[0].positions[5] = 0.477;
-        posture.points[0].time_from_start = ros::Duration(45);
+        posture.points[0].time_from_start = ros::Duration(5);
     }
 
     void closedGripper(trajectory_msgs::JointTrajectory& posture){
@@ -71,22 +71,22 @@ private:
         posture.points[0].positions.resize(6);
         posture.points[0].positions[0] = 0;
         posture.points[0].positions[1] = 0;
-        posture.points[0].positions[2] = 0.002;
-        posture.points[0].positions[3] = 0.002;
-        posture.points[0].positions[4] = 0.002;
-        posture.points[0].positions[5] = 0.002;
-        posture.points[0].time_from_start = ros::Duration(45);
+        posture.points[0].positions[2] = 0.2;
+        posture.points[0].positions[3] = 0.2;
+        posture.points[0].positions[4] = 0.2;
+        posture.points[0].positions[5] = 0.2;
+        posture.points[0].time_from_start = ros::Duration(5);
     }
 
 	bool move_arms(std::string group, geometry_msgs::Pose pose){
-		moveit::planning_interface::MoveGroupInterface move_group(group);
-		move_group.setPoseTarget(pose);
+		moveit::planning_interface::MoveGroupInterface local_move_group(group);
+        local_move_group.setPoseTarget(pose);
 		moveit::planning_interface::MoveGroupInterface::Plan my_plan;
 
-		bool success = (move_group.plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
+		bool success = (local_move_group.plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
 
 		if(success){
-			move_group.move();
+            local_move_group.move();
 		}else{
 			ROS_INFO_NAMED("ActionController", "No path found for %s", group.c_str() );
 		}
@@ -227,16 +227,8 @@ private:
     bool pick(std::string group, std::string object){
 
 
-        std::vector<std::string> tokens;
-        boost::split(tokens, group, [](char c){return c == '.';});
-        group =  tokens.at(1);
-        ROS_INFO(group.c_str());
-
-        moveit::planning_interface::MoveGroupInterface move_group(group);
         move_group.detachObject(object);
-        moveit::planning_interface::PlanningSceneInterface current_scene;
         //Create the planning scene
-        moveit_msgs::PlanningScene planning_scene;
 
         std::vector<moveit_msgs::CollisionObject> vec;
         //ROS_INFO("Nombre d'objets = %i dans la fonction pick", objects.size());
@@ -248,17 +240,6 @@ private:
             }
         }
         current_scene.applyCollisionObjects(vec);
-        //Seems to not work, maybe issue with delay in publishing topic
-        /*
-        planning_scene.world.collision_objects.insert(planning_scene.world.collision_objects.end(), vec.begin(), vec.end());
-        planning_scene.is_diff = true;
-        ros::ServiceClient planning_scene_diff_client = nh_.serviceClient<moveit_msgs::ApplyPlanningScene>("apply_planning_scene");
-        planning_scene_diff_client.waitForExistence();
-        moveit_msgs::ApplyPlanningScene srv;
-        srv.request.scene = planning_scene;
-        planning_scene_diff_client.call(srv);
-        */
-
         std::stringstream ss;
 
         ss << "Object to pick pose is :\n x: " << objects[ object ].mesh_poses[0].position.x <<
@@ -267,8 +248,6 @@ private:
 
         ROS_INFO(ss.str().c_str());
 
-        //std::vector<manipulation_msgs::Grasp> grasps;
-        current_scene.applyCollisionObjects(vec);
         std::stringstream info2;
         info2 << "Trying to pick " << object << " in " <<  std::string( objects[ object ].id ) << " reference frame";
         ROS_INFO(info2.str().c_str());
@@ -278,7 +257,7 @@ private:
 
         geometry_msgs::PoseStamped p;
         p.header.frame_id = "/map";
-        p.pose.position.x = objects[object].mesh_poses[0].position.x - 0.18   ;
+        p.pose.position.x = objects[object].mesh_poses[0].position.x - 0.175   ;
         p.pose.position.y = objects[object].mesh_poses[0].position.y ;
         p.pose.position.z = objects[object].mesh_poses[0].position.z + 0.02 ;
         p.pose.orientation.x = 0;
@@ -297,63 +276,57 @@ private:
         g.post_grasp_retreat.direction.header.frame_id = "base_footprint";
         g.post_grasp_retreat.direction.vector.z = 1.0;
         g.post_grasp_retreat.min_distance = 0.05;
-        g.post_grasp_retreat.desired_distance = 0.10;
+        g.post_grasp_retreat.desired_distance = 0.20;
 
         openGripper(g.pre_grasp_posture);
 
         closedGripper(g.grasp_posture);
+
         move_group.allowReplanning(true);
+
         grasps.push_back(g);
         move_group.setSupportSurfaceName("tableLaas");
         move_group.pick(object, grasps);
-        //move_group.pick(object);
-
-
 
     }
 
-	bool place(std::string group, std::string object){
-        moveit::planning_interface::MoveGroupInterface move_group(group);
-        moveit::planning_interface::PlanningSceneInterface current_scene;
+	bool place(std::string group, std::string object, geometry_msgs::Pose pose){
 
         std::vector<moveit_msgs::PlaceLocation> place_location;
         place_location.resize(1);
 
         // Setting place location pose
         // +++++++++++++++++++++++++++
-        place_location[0].place_pose.header.frame_id = "panda_link0";
-        place_location[0].place_pose.pose.orientation = tf::createQuaternionMsgFromRollPitchYaw(0, 0, M_PI / 2);
+        place_location[0].place_pose.header.frame_id = "/map";
 
         /* While placing it is the exact location of the center of the object. */
-        place_location[0].place_pose.pose.position.x = 0;
-        place_location[0].place_pose.pose.position.y = 0.5;
-        place_location[0].place_pose.pose.position.z = 0.5;
+        place_location[0].place_pose.pose.position.x = pose.position.x - 0.175   ;
+        place_location[0].place_pose.pose.position.y = pose.position.y ;
+        place_location[0].place_pose.pose.position.z = pose.position.z ;
 
         // Setting pre-place approach
         // ++++++++++++++++++++++++++
         /* Defined with respect to frame_id */
-        place_location[0].pre_place_approach.direction.header.frame_id = "panda_link0";
+        place_location[0].pre_place_approach.direction.header.frame_id = "base_footprint";
         /* Direction is set as negative z axis */
         place_location[0].pre_place_approach.direction.vector.z = -1.0;
-        place_location[0].pre_place_approach.min_distance = 0.001;
-        place_location[0].pre_place_approach.desired_distance = 0.05;
+        place_location[0].pre_place_approach.min_distance = 0.0001;
+        place_location[0].pre_place_approach.desired_distance = 0.20;
 
         // Setting post-grasp retreat
         // ++++++++++++++++++++++++++
         /* Defined with respect to frame_id */
-        place_location[0].post_place_retreat.direction.header.frame_id = "panda_link0";
+        place_location[0].post_place_retreat.direction.header.frame_id = "base_footprint";
         /* Direction is set as negative y axis */
-        place_location[0].post_place_retreat.direction.vector.y = -1.0;
-        place_location[0].post_place_retreat.min_distance = 0.05;
-        place_location[0].post_place_retreat.desired_distance = 0.25;
+        place_location[0].post_place_retreat.direction.vector.z = 1.0;
+        place_location[0].post_place_retreat.min_distance = 0.0001;
+        place_location[0].post_place_retreat.desired_distance = 0.30;
 
         // Setting posture of eef after placing object
         // +++++++++++++++++++++++++++++++++++++++++++
         /* Similar to the pick case */
         openGripper(place_location[0].post_place_posture);
 
-        // Set support surface as table2.
-        move_group.setSupportSurfaceName("tableLaas");
         // Call place to place the object using the place locations given.
         move_group.place(object, place_location);
 
@@ -370,6 +343,10 @@ protected:
 	std::string action_name_;
 	ros::Subscriber sub_moveit_objects;
     ros::Publisher planning_scene_diff_publisher;
+
+    //Moveit
+    moveit::planning_interface::MoveGroupInterface move_group;
+    moveit::planning_interface::PlanningSceneInterface current_scene;
 
 	//Move base client
 
@@ -390,7 +367,10 @@ protected:
 public:
 
     ActionController(std::string name) :
-	as_(nh_, name, boost::bind(&ActionController::executeCB, this, _1), false), action_name_(name){
+	    as_(nh_, name, boost::bind(&ActionController::executeCB, this, _1), false),
+	    action_name_(name),
+        move_group("right_arm")
+	{
         sub_moveit_objects = nh_.subscribe("moveit_objects", 1000, &ActionController::objects_update, this );
         planning_scene_diff_publisher = nh_.advertise<moveit_msgs::PlanningScene>("planning_scene", 1);
 		as_.start();
@@ -411,7 +391,7 @@ public:
 		}else if(msg->goal.action == "pick.left_arm" || msg->goal.action == "pick.right_arm" ){
 			feedback_.success = pick( (std::string)msg->goal.action, (std::string)msg->goal.object);
 		}else if(msg->goal.action == "place.left_arm" || msg->goal.action == "place.right_arm" ){
-			feedback_.success = place( (std::string)msg->goal.action, (std::string)msg->goal.object);
+			feedback_.success = place( (std::string)msg->goal.action, (std::string)msg->goal.object, msg->goal.pose);
 		}else if(msg->goal.action == "base" ){
             feedback_.success = move_base( msg->goal.pose );
         }else if(msg->goal.action == "torso" ){

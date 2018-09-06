@@ -1,44 +1,43 @@
-[  0%] Built target geometry_msgs_generate_messages_cpp
-[  0%] Built target ar_track_alvar_msgs_generate_messages_cpp
-[  0%] Built target _actioncontroller_generate_messages_check_deps_actiongoal
-[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionFeedback
-[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerResult
-[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerAction
-[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerFeedback
 [  0%] Built target actionlib_msgs_generate_messages_cpp
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerResult
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerFeedback
+[  0%] Built target geometry_msgs_generate_messages_cpp
 [  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionGoal
+[  0%] Built target _actioncontroller_generate_messages_check_deps_actiongoal
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerGoal
 [  0%] Built target std_msgs_generate_messages_cpp
-[  2%] [34m[1mCompiling Java code for actioncontroller[0m
-[  2%] Built target ar_track_alvar_msgs_generate_messages_py
-[  2%] Built target actionlib_msgs_generate_messages_py
-[  2%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionResult
-[  2%] Built target std_msgs_generate_messages_py
-[  2%] Built target geometry_msgs_generate_messages_py
-[  2%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerGoal
-[  2%] Built target actionlib_msgs_generate_messages_lisp
-[  2%] Built target ar_track_alvar_msgs_generate_messages_lisp
-[  2%] Built target std_msgs_generate_messages_lisp
-[  2%] Built target geometry_msgs_generate_messages_lisp
-[  2%] Built target actionlib_msgs_generate_messages_eus
-[  2%] Built target geometry_msgs_generate_messages_java
-[  2%] Built target geometry_msgs_generate_messages_eus
-[  2%] Built target ar_track_alvar_msgs_generate_messages_eus
-[  2%] Built target std_msgs_generate_messages_eus
-[  2%] Built target ar_track_alvar_msgs_generate_messages_nodejs
-[  2%] Built target actionlib_msgs_generate_messages_nodejs
-[  2%] Built target std_msgs_generate_messages_nodejs
-[  2%] Built target geometry_msgs_generate_messages_nodejs
-[ 16%] Built target setUp
-[ 38%] Built target actioncontroller_generate_messages_java_gradle
-[ 40%] Built target actioncontroller_generate_messages_cpp
-[ 48%] Built target actioncontroller_generate_messages_java
-[ 61%] Built target actioncontroller_generate_messages_lisp
-[ 63%] Built target actioncontroller_generate_messages_py
-[ 89%] Built target actioncontroller_generate_messages_nodejs
-[ 95%] Built target actioncontroller_generate_messages_eus
+[  0%] Built target ar_track_alvar_msgs_generate_messages_cpp
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionFeedback
+[  0%] Built target ar_track_alvar_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerAction
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[  0%] Built target actionlib_msgs_generate_messages_py
+[  0%] Built target actionlib_msgs_generate_messages_nodejs
+[  0%] Built target ar_track_alvar_msgs_generate_messages_py
+[  0%] Built target ar_track_alvar_msgs_generate_messages_lisp
+[  0%] Built target geometry_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionResult
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target actionlib_msgs_generate_messages_lisp
+[  0%] Built target ar_track_alvar_msgs_generate_messages_eus
+[  0%] Built target actionlib_msgs_generate_messages_eus
+[  0%] Built target geometry_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_eus
+[ 10%] [34m[1mCompiling Java code for actioncontroller[0m
+[ 20%] Built target actioncontroller_generate_messages_cpp
+[ 40%] Built target setUp
+[ 42%] Built target actioncontroller_generate_messages_py
+[ 42%] Built target actioncontroller_generate_messages_java
+[ 59%] Built target actioncontroller_generate_messages_lisp
+[ 93%] Built target actioncontroller_generate_messages_nodejs
+[ 93%] Built target actioncontroller_generate_messages_eus
 [35m[1mScanning dependencies of target ActionController[0m
-[ 95%] Built target actioncontroller_generate_messages
-[ 97%] [32mBuilding CXX object CMakeFiles/ActionController.dir/src/ActionController.cpp.o[0m
+[ 95%] [32mBuilding CXX object CMakeFiles/ActionController.dir/src/ActionController.cpp.o[0m
+[ 97%] Built target actioncontroller_generate_messages_java_gradle
+[ 97%] Built target actioncontroller_generate_messages
 In file included from [01m[K/opt/ros/kinetic/include/ros/ros.h:40:0[m[K,
                  from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:2[m[K:
 [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:[m[K In member function ‘[01m[Kbool ActionController::pick(std::__cxx11::string, std::__cxx11::string)[m[K’:
@@ -57,25 +56,7 @@ In file included from [01m[K/opt/ros/kinetic/include/ros/ros.h:40:0[m[K,
 [01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
  #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
 [01;32m[K                       ^[m[K
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:233:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
-         ROS_INFO(group.c_str());
-[01;32m[K         ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:346:176:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [-Wformat-security]
-     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, __VA_ARGS__)
-[01;32m[K                                                                                                                                                                                ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:349:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
-     ROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER(0, __VA_ARGS__)
-[01;32m[K     ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:379:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
-       ROSCONSOLE_PRINT_AT_LOCATION(__VA_ARGS__); \
-[01;32m[K       ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:561:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
- #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
-[01;32m[K                                   ^[m[K
-[01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
- #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
-[01;32m[K                       ^[m[K
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:247:17:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:239:17:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
                  ROS_INFO( element.second.id.c_str() );
 [01;32m[K                 ^[m[K
 [01m[K/opt/ros/kinetic/include/ros/console.h:346:176:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [-Wformat-security]
@@ -93,7 +74,7 @@ In file included from [01m[K/opt/ros/kinetic/include/ros/ros.h:40:0[m[K,
 [01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
  #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
 [01;32m[K                       ^[m[K
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:268:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:249:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
          ROS_INFO(ss.str().c_str());
 [01;32m[K         ^[m[K
 [01m[K/opt/ros/kinetic/include/ros/console.h:346:176:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [-Wformat-security]
@@ -111,7 +92,7 @@ In file included from [01m[K/opt/ros/kinetic/include/ros/ros.h:40:0[m[K,
 [01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
  #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
 [01;32m[K                       ^[m[K
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:274:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:253:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
          ROS_INFO(info2.str().c_str());
 [01;32m[K         ^[m[K
 [100%] [32m[1mLinking CXX executable /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/actioncontroller/lib/actioncontroller/ActionController[0m
