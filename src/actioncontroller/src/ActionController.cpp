@@ -259,7 +259,7 @@ private:
         p.header.frame_id = "/map";
         p.pose.position.x = objects[object].mesh_poses[0].position.x - 0.175   ;
         p.pose.position.y = objects[object].mesh_poses[0].position.y ;
-        p.pose.position.z = objects[object].mesh_poses[0].position.z + 0.02 ;
+        p.pose.position.z = objects[object].mesh_poses[0].position.z + 0.01 ;
         p.pose.orientation.x = 0;
         p.pose.orientation.y = 0;
         p.pose.orientation.z = 0;
@@ -303,14 +303,14 @@ private:
         place_location[0].place_pose.pose.position.x = pose.position.x ;
         place_location[0].place_pose.pose.position.y = pose.position.y ;
         place_location[0].place_pose.pose.position.z = pose.position.z ;
-        place_location[0].place_pose.pose.orientation = tf::createQuaternionMsgFromRollPitchYaw(0, 0, M_PI / 2);
+        place_location[0].place_pose.pose.orientation = tf::createQuaternionMsgFromRollPitchYaw(M_PI / 2, 0, M_PI / 2);
 
         // Setting pre-place approach
         // ++++++++++++++++++++++++++
         /* Defined with respect to frame_id */
         place_location[0].pre_place_approach.direction.header.frame_id = "base_footprint";
         /* Direction is set as negative z axis */
-        place_location[0].pre_place_approach.direction.vector.z = -1.0;
+        place_location[0].pre_place_approach.direction.vector.x = 1.0;
         place_location[0].pre_place_approach.min_distance = 0.0001;
         place_location[0].pre_place_approach.desired_distance = 0.20;
 

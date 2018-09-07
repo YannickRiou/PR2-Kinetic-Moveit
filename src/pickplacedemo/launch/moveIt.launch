@@ -2,6 +2,8 @@
 <!-- Run moveIt -->
 
   <param name="/use_sim_time" value="true" />
+  
+
   <include file="$(find pr2_moveit_config)/launch/move_group.launch">
   	#Comment the remap to work on real PR2
   	<remap from="/joint_states" to="/robot/joint_states"/>
@@ -16,5 +18,8 @@
 
   <node type="gazebo_moveit_objects_synchroniser" pkg="gazebo_moveit_objects_synchroniser" name="gazebo_moveit_objects_synchroniser">
   </node>
+
+  <param name="/trajectory_execution/allowed_execution_duration_scaling" value="3.0"/>
+  <param name="/move_group/trajectory_execution/allowed_execution_duration_scaling" value="3.0"/>
 
 </launch>

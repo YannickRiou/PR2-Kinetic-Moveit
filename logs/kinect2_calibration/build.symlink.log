@@ -1,4 +1,4 @@
-Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/kinect2_calibration/lib/pkgconfig/kinect2_calibration.pc, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/kinect2_calibration.pc)
-Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/kinect2_calibration/lib/kinect2_calibration/kinect2_calibration, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/kinect2_calibration/kinect2_calibration)
-Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/kinect2_calibration/share/kinect2_calibration/cmake/kinect2_calibrationConfig.cmake, /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/kinect2_calibration/cmake/kinect2_calibrationConfig.cmake)
-Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/kinect2_calibration/share/kinect2_calibration/cmake/kinect2_calibrationConfig-version.cmake, /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/kinect2_calibration/cmake/kinect2_calibrationConfig-version.cmake)
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/kinect2_calibration.pc
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/kinect2_calibration/kinect2_calibration
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/kinect2_calibration/cmake/kinect2_calibrationConfig.cmake
+Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/kinect2_calibration/cmake/kinect2_calibrationConfig-version.cmake
