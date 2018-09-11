@@ -1,20 +1,26 @@
 <launch>
 
-  <arg name="gui" default="true"/>
+  
   <param name="/use_sim_time" value="true" />
   <param name="KINECT2" value="true" />
   <!-- start up empty world -->
-  <arg name="paused" default="true"/>
-  <!-- TODO: throttled not implemented in gazebo_ros/pickplacesimu.launch
-  <arg name="throttled" default="false"/>
-  -->
+
+ 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="gui" default="true"/>
     <arg name="world_name" value="$(find pickplacedemo)/worlds/pickplace.world"/>
     <!-- more default parameters can be changed here -->
+      <arg name="paused" default="true"/>
+     <!-- TODO: throttled not implemented in gazebo_ros/pickplacesimu.launch  -->
   </include>
 
-  <include file="$(find pr2_gazebo)/launch/pr2.launch">
-    <env name="KINECT2" value="true"/>
-  </include>
+  <arg name="KINECT1" default="$(optenv KINECT1 false)" />
+  <arg name="KINECT2" default="$(optenv KINECT2 false)" />
+  
+  <!-- Startup PR2 without any mechanism controllers -->
+  <include file="$(find pr2_gazebo)/launch/pr2_no_controllers.launch" pass_all_args="true"/>
+
+  <!-- Load and Start Default Controllers -->
+  <include file="$(find pickplacedemo)/launch/pr2_default_controllers.launch" />
 
 </launch>

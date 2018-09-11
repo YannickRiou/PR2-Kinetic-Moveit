@@ -42,6 +42,10 @@ int main(int argc, char** argv)
 	std::string part;
 	actioncontroller::ActionControllerGoal goal;
 
+	part = "torso";
+	createActionControllerMessage(part, 0, 0, 0.3, 0, 0, 0, 0, goal);
+	callingActionController(part, goal);
+
 	part = "left_arm";
 	createActionControllerMessage(part, -0.1, 0.7, 1, 1.0, 0, 0, 0, goal);
 	callingActionController(part, goal);
@@ -51,9 +55,7 @@ int main(int argc, char** argv)
 	createActionControllerMessage(part, -0.1, -0.7, 1, 1.0, 0, 0, 0, goal);
 	callingActionController(part, goal);
 
-    part = "torso";
-    createActionControllerMessage(part, 0, 0, 0.3, 0, 0, 0, 0, goal);
-    callingActionController(part, goal);
+
 
 	part = "base";
 	createActionControllerMessage(part, 1, 0, 0, 1.0, 0, 0, 0, goal);
