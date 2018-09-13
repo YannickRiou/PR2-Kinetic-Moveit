@@ -81,48 +81,48 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
     <state world_name='default'>
-      <sim_time>3688 589000000</sim_time>
-      <real_time>317 107581106</real_time>
-      <wall_time>1536681099 755983526</wall_time>
-      <iterations>316672</iterations>
+      <sim_time>3857 344000000</sim_time>
+      <real_time>126 683070310</real_time>
+      <wall_time>1536853495 385324418</wall_time>
+      <iterations>126514</iterations>
       <model name='adream'>
-        <pose frame=''>-0.644698 5.56455 -0.025927 2.1e-05 1.2e-05 -0.000611</pose>
+        <pose frame=''>-0.644731 5.56441 -0.025929 8e-06 -5e-06 -0.000649</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>-0.644697 5.56455 0.024073 2.1e-05 1.2e-05 -0.000611</pose>
+          <pose frame=''>-0.644731 5.56441 0.024071 8e-06 -5e-06 -0.000649</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-0.014954 -0.37184 19.1384 3.00689 -0.594897 0.000429</acceleration>
-          <wrench>-0.014954 -0.37184 19.1384 0 -0 0</wrench>
+          <acceleration>-0.370788 -0.197082 2.43379 -0.675105 -0.042595 -3.14016</acceleration>
+          <wrench>-0.370788 -0.197082 2.43379 0 -0 0</wrench>
         </link>
       </model>
       <model name='cube0'>
-        <pose frame=''>1.51634 -0.658699 0.829996 -1.6e-05 -1.9e-05 0.163652</pose>
+        <pose frame=''>1.29945 -0.470656 0.829992 0.000127 1.9e-05 -0.003489</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>1.51634 -0.658699 0.829996 -1.6e-05 -1.9e-05 0.163652</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 -9.8 0 -0 0</acceleration>
-          <wrench>0 0 -0.098 0 -0 0</wrench>
+          <pose frame=''>1.29945 -0.470656 0.829992 0.000127 1.9e-05 -0.003489</pose>
+          <velocity>-0.000633 -0.004386 -0.001326 0.292195 0.050312 0.000318</velocity>
+          <acceleration>-2.5498 -1.51076 -1.40256 -1.52431 -1.16034 0.366487</acceleration>
+          <wrench>-0.25498 -0.151076 -0.140256 0 -0 0</wrench>
         </link>
       </model>
       <model name='cube0_0'>
-        <pose frame=''>1.70477 -0.550295 0.829995 -2e-05 -1.6e-05 0.20819</pose>
+        <pose frame=''>1.28075 -0.659588 0.829991 0.000163 9e-06 -0.006384</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>1.70477 -0.550295 0.829995 -2e-05 -1.6e-05 0.20819</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 -9.8 0 -0 0</acceleration>
-          <wrench>0 0 -0.098 0 -0 0</wrench>
+          <pose frame=''>1.28075 -0.659588 0.829991 0.000163 9e-06 -0.006384</pose>
+          <velocity>1e-06 -0.004048 -0.00294 0.280935 0.071479 0.00029</velocity>
+          <acceleration>-2.22434 -1.81278 -0.897938 -0.784758 -1.03184 -2.74541</acceleration>
+          <wrench>-0.222434 -0.181278 -0.089794 0 -0 0</wrench>
         </link>
       </model>
       <model name='cube0_1'>
-        <pose frame=''>1.4411 -0.420889 0.82999 0 -0 0.08023</pose>
+        <pose frame=''>1.43615 -0.578885 0.829991 0.000132 2.1e-05 -0.001605</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>1.4411 -0.420889 0.82999 0 -0 0.08023</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 -9.8 0 -0 0</acceleration>
-          <wrench>0 0 -0.098 0 -0 0</wrench>
+          <pose frame=''>1.43615 -0.578885 0.829991 0.000132 2.1e-05 -0.001605</pose>
+          <velocity>-0.000571 -0.004643 -0.001367 0.30075 0.052399 0.000307</velocity>
+          <acceleration>-2.59866 -1.92661 -0.723097 2.32464 -0.795136 -2.76233</acceleration>
+          <wrench>-0.259866 -0.192661 -0.07231 0 -0 0</wrench>
         </link>
       </model>
       <model name='ground_plane'>
@@ -136,13 +136,13 @@
         </link>
       </model>
       <model name='tableLaas'>
-        <pose frame=''>1.60905 -0.061776 0.749996 3.14159 5e-06 1.55296</pose>
+        <pose frame=''>1.56678 -0.077045 0.75 -3.14159 -0 1.54793</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>1.60905 -0.061776 0.749996 3.14159 5e-06 1.55296</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-2.04859 4.00518 -4.46938 -2.22317 -0.344302 3.11161</acceleration>
-          <wrench>-20.4859 40.0519 -44.6937 0 -0 0</wrench>
+          <pose frame=''>1.56678 -0.077045 0.75 -3.14159 -0 1.54793</pose>
+          <velocity>-0.002021 0.004108 0.004556 -0.005478 -0.002694 0</velocity>
+          <acceleration>-2.02065 4.10844 4.55621 -2.33631 -0.447424 -3.14146</acceleration>
+          <wrench>-20.2065 41.0844 45.5621 0 -0 0</wrench>
         </link>
       </model>
       <light name='sun'>
@@ -154,7 +154,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>1.10958 0.72303 4.0644 0 1.33071 -0.087321</pose>
+        <pose frame=''>0.605262 -0.517874 2.39074 0 0.98271 0.008678</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
@@ -306,16 +306,16 @@
       <link name='link_0'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <inertial>
-          <mass>0.01</mass>
+          <mass>0.1</mass>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <inertia>
-            <ixx>6e-06</ixx>
+            <ixx>6e-05</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>6e-06</iyy>
+            <iyy>6e-05</iyy>
             <iyz>0</iyz>
-            <izz>6e-06</izz>
+            <izz>6e-05</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
@@ -349,8 +349,8 @@
           <surface>
             <friction>
               <ode>
-                <mu>15</mu>
-                <mu2>15</mu2>
+                <mu>1.5</mu>
+                <mu2>1.5</mu2>
                 <fdir1>0 0 0</fdir1>
                 <slip1>0</slip1>
                 <slip2>0</slip2>
@@ -376,7 +376,7 @@
               <ode>
                 <soft_cfm>0</soft_cfm>
                 <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>100000</kp>
                 <kd>1</kd>
                 <max_vel>0.01</max_vel>
                 <min_depth>0</min_depth>
@@ -386,7 +386,7 @@
                 <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
                 <soft_cfm>0</soft_cfm>
                 <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>100000</kp>
                 <kd>1</kd>
               </bullet>
             </contact>
@@ -395,22 +395,22 @@
       </link>
       <static>0</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>1.43045 -0.366692 0 0 -0 0</pose>
+      <pose frame=''>1.35693 -0.402218 0 0 -0 0</pose>
     </model>
     <model name='cube0_0'>
       <link name='link_0'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <inertial>
-          <mass>0.01</mass>
+          <mass>0.1</mass>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <inertia>
-            <ixx>6e-06</ixx>
+            <ixx>6e-05</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>6e-06</iyy>
+            <iyy>6e-05</iyy>
             <iyz>0</iyz>
-            <izz>6e-06</izz>
+            <izz>6e-05</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
@@ -444,8 +444,8 @@
           <surface>
             <friction>
               <ode>
-                <mu>15</mu>
-                <mu2>15</mu2>
+                <mu>1.5</mu>
+                <mu2>1.5</mu2>
                 <fdir1>0 0 0</fdir1>
                 <slip1>0</slip1>
                 <slip2>0</slip2>
@@ -471,7 +471,7 @@
               <ode>
                 <soft_cfm>0</soft_cfm>
                 <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>100000</kp>
                 <kd>1</kd>
                 <max_vel>0.01</max_vel>
                 <min_depth>0</min_depth>
@@ -481,7 +481,7 @@
                 <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
                 <soft_cfm>0</soft_cfm>
                 <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>100000</kp>
                 <kd>1</kd>
               </bullet>
             </contact>
@@ -490,22 +490,22 @@
       </link>
       <static>0</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>1.67121 -0.220132 0 0 -0 0</pose>
+      <pose frame=''>1.34756 -0.572479 0 0 -0 0</pose>
     </model>
     <model name='cube0_1'>
       <link name='link_0'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <inertial>
-          <mass>0.01</mass>
+          <mass>0.1</mass>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <inertia>
-            <ixx>6e-06</ixx>
+            <ixx>6e-05</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>6e-06</iyy>
+            <iyy>6e-05</iyy>
             <iyz>0</iyz>
-            <izz>6e-06</izz>
+            <izz>6e-05</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
@@ -539,8 +539,8 @@
           <surface>
             <friction>
               <ode>
-                <mu>15</mu>
-                <mu2>15</mu2>
+                <mu>1.5</mu>
+                <mu2>1.5</mu2>
                 <fdir1>0 0 0</fdir1>
                 <slip1>0</slip1>
                 <slip2>0</slip2>
@@ -566,7 +566,7 @@
               <ode>
                 <soft_cfm>0</soft_cfm>
                 <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>100000</kp>
                 <kd>1</kd>
                 <max_vel>0.01</max_vel>
                 <min_depth>0</min_depth>
@@ -576,7 +576,7 @@
                 <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
                 <soft_cfm>0</soft_cfm>
                 <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>100000</kp>
                 <kd>1</kd>
               </bullet>
             </contact>
@@ -585,7 +585,7 @@
       </link>
       <static>0</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>1.46885 -0.113713 0 0 -0 0</pose>
+      <pose frame=''>1.50798 -0.601012 0 0 -0 0</pose>
     </model>
   </world>
 </sdf>

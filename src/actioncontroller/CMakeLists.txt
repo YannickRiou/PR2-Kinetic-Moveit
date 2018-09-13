@@ -151,6 +151,7 @@ catkin_package(
 
 include_directories(
         SYSTEM
+		include
         ${THIS_PACKAGE_INCLUDE_DIRS}
         ${Boost_INCLUDE_DIR}
         ${EIGEN3_INCLUDE_DIRS}
@@ -159,17 +160,21 @@ include_directories(
 include_directories(${catkin_INCLUDE_DIRS})
 link_directories(${catkin_LIBRARY_DIRS})
 
-add_executable(setUp src/setUp.cpp)
-target_link_libraries(setUp ${catkin_LIBRARIES} ${Boost_LIBRARIES})
-install(TARGETS setUp DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+add_executable(setup src/setUp.cpp src/actionControllerTools.cpp)
+target_link_libraries(setup ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+install(TARGETS setup DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
-install(TARGETS setUp DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+install(TARGETS setup DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
+add_executable(make_a_pile src/MakeAPile.cpp src/actionControllerTools.cpp)
+target_link_libraries(make_a_pile ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+install(TARGETS make_a_pile DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
-add_executable(ActionController src/ActionController.cpp)
-add_dependencies(ActionController actioncontroller_generate_messages_cpp)
-target_link_libraries(ActionController ${catkin_LIBRARIES} ${Boost_LIBRARIES})
-install(TARGETS ActionController DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+install(TARGETS setup DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+add_executable(action_controller src/ActionController.cpp)
+add_dependencies(action_controller actioncontroller_generate_messages_cpp)
+target_link_libraries(action_controller ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+install(TARGETS action_controller DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
 #############
 ## Install ##

@@ -13,7 +13,7 @@
  # The visualization component of MoveIt!
   <include file="$(find pr2_moveit_config)/launch/moveit_rviz.launch"/>
 
-  <node type="ActionController" pkg="actioncontroller" name="action_controller">
+  <node type="action_controller" pkg="actioncontroller" name="action_controller">
   </node>
 
   <node type="gazebo_moveit_objects_synchroniser" pkg="gazebo_moveit_objects_synchroniser" name="gazebo_moveit_objects_synchroniser">
