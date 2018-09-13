@@ -69,12 +69,12 @@ private:
 
         posture.points.resize(1);
         posture.points[0].positions.resize(6);
-        posture.points[0].positions[0] = 0;
-        posture.points[0].positions[1] = 0;
-        posture.points[0].positions[2] = 0.2;
-        posture.points[0].positions[3] = 0.2;
-        posture.points[0].positions[4] = 0.2;
-        posture.points[0].positions[5] = 0.2;
+        posture.points[0].positions[0] = 0.0;
+        posture.points[0].positions[1] = 0.0;
+        posture.points[0].positions[2] = 0.40;
+        posture.points[0].positions[3] = 0.40;
+        posture.points[0].positions[4] = 0.40;
+        posture.points[0].positions[5] = 0.40;
         posture.points[0].time_from_start = ros::Duration(5);
     }
 
