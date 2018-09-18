@@ -373,8 +373,10 @@ namespace actioncontroller{
                 feedback_.success = move_base( msg->goal.pose );
             }else if(msg->goal.action == "torso" ){
                 feedback_.success = move_body( (std::string)msg->goal.action, msg->goal.pose );
-            }else{
+            }else if(msg->goal.action == "left_arm" || msg->goal.action == "right_arm" ){
                 feedback_.success = move_arms((std::string)msg->goal.action, msg->goal.pose);
+            }else{
+                ROS_INFO(std::string("The required order do not exist").c_str());
             }
             result_.success = feedback_.success;
             as_.setSucceeded(result_);
