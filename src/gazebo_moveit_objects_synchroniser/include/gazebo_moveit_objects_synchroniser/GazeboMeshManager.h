@@ -10,17 +10,31 @@
 #include "ros/ros.h"
 #include <regex>
 
-class GazeboMeshManager {
-private:
-    std::string pathToGazeboModels;
-public:
-    GazeboMeshManager();
+namespace GazeboMeshManager{
 
-    shape_msgs::Mesh getMesh(std::string basic_string);
+    class IoException : public std::exception{
+        private:
+            std::string file_name;
+
+        public:
+            explicit IoException(std::string file);
+            const char * what () const noexcept;
+
+    };
+
+    class GazeboMeshManager {
+    private:
+        std::string pathToGazeboModels;
+    public:
+        GazeboMeshManager();
+
+        shape_msgs::Mesh getMesh(std::string basic_string);
+
+        std::string cleanModelName(std::string basic_string);
+    };
+}
 
 
-    std::string cleanModelName(std::string basic_string);
-};
 
 
 #endif //GAZEBO_MOVEIT_OBJECTS_SYNCHRONISER_GAZEBOMESHMANAGER_H

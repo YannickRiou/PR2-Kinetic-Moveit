@@ -5,8 +5,6 @@
 #include "gazebo/gazebo.hh"
 #include "ros/ros.h"
 #include "moveit_msgs/CollisionObject.h"
-#include "gazebo_moveit_objects_synchroniser/GazeboObjectListMaker.h"
-#include "gazebo_moveit_objects_synchroniser/GazeboMoveITObjectConverter.h"
 #include "gazebo_moveit_objects_synchroniser/GazeboMeshManager.h"
 #include "gazebo_msgs/GetWorldProperties.h"
 #include "gazebo_msgs/GetModelState.h"
@@ -17,8 +15,6 @@ int main(int argc, char **argv){
 
     ros::init(argc, argv, "Gazebo_moveIT_Object_Synchroniser");
     ros::NodeHandle n;
-    GazeboObjectListMaker golm;
-    GazeboMoveITObjectConverter gmioc;
     ros::Publisher pub = n.advertise<gazebo_moveit_objects_synchroniser::CollisionObjectArray>("moveit_objects", 1000);
     ros::ServiceClient clientWorldProperties = n.serviceClient<gazebo_msgs::GetWorldProperties>("/gazebo/get_world_properties");
     ros::ServiceClient clientObjectProperties = n.serviceClient<gazebo_msgs::GetModelState>("/gazebo/get_model_state");
@@ -35,7 +31,7 @@ int main(int argc, char **argv){
             for(int i=0; i < worldProperties.response.model_names.size(); ++i){
                 moveit_msgs::CollisionObject sceneObject;
                 sceneObject.id = worldProperties.response.model_names[i] ;
-                GazeboMeshManager gazeboMeshManager;
+                GazeboMeshManager::GazeboMeshManager gazeboMeshManager;
                 shape_msgs::Mesh m;
                 try {
                     m = gazeboMeshManager.getMesh(worldProperties.response.model_names[i]);
@@ -55,9 +51,8 @@ int main(int argc, char **argv){
                     }
                     sceneObject.operation = sceneObject.ADD;
                     collidingObjects.push_back(sceneObject);
-                }catch(std::string exc){
-                    ROS_INFO(exc.c_str());
-
+                }catch(GazeboMeshManager::IoException exc){
+                    ROS_INFO(exc.what());
                 }
             }
 

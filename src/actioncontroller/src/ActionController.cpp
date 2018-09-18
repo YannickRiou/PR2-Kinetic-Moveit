@@ -30,6 +30,7 @@
 #include <utility>
 
 namespace actioncontroller{
+
     class ActionController
     {
     private:
@@ -126,7 +127,13 @@ namespace actioncontroller{
         }
 
         bool move_head(std::string object){
-            return move_head( objects[ object ].mesh_poses[0]);
+
+            if( objects.find(object) == objects.end() ){
+                ROS_INFO(std::string("Object do not exist").c_str());
+                return false;
+            }
+
+            return move_head( objects[ object ].mesh_poses[0] );
         }
 
         bool move_body(std::string group, geometry_msgs::Pose pose){
@@ -167,7 +174,7 @@ namespace actioncontroller{
             msg.target.point.x = pose.position.x;
             msg.target.point.y = pose.position.y;
             msg.target.point.z = pose.position.z;
-            ;
+
             ac_.sendGoal(msg);
 
             bool success = (ac_.getState() == actionlib::SimpleClientGoalState::SUCCEEDED);

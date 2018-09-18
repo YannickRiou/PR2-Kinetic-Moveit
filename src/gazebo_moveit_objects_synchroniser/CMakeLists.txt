@@ -151,7 +151,7 @@ include_directories(
 
 link_directories(${catkin_LIBRARY_DIRS})
 
-add_executable(${PROJECT_NAME} src/Gazebo_moveit_objects_synchroniser.cpp src/GazeboObjectListMaker.cpp include/gazebo_moveit_objects_synchroniser/GazeboObjectListMaker.h src/GazeboMoveITObjectConverter.cpp include/gazebo_moveit_objects_synchroniser/GazeboMoveITObjectConverter.h src/GazeboMeshManager.cpp include/gazebo_moveit_objects_synchroniser/GazeboMeshManager.h)
+add_executable(${PROJECT_NAME} src/Gazebo_moveit_objects_synchroniser.cpp src/GazeboMeshManager.cpp include/gazebo_moveit_objects_synchroniser/GazeboMeshManager.h)
 add_dependencies(${PROJECT_NAME} ${PROJECT_NAME}_generate_messages_cpp)
 target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 install(TARGETS ${PROJECT_NAME} DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})

@@ -1,21 +1,25 @@
-[  0%] Built target moveit_msgs_generate_messages_py
-[  0%] Built target moveit_msgs_generate_messages_lisp
-[  0%] Built target std_msgs_generate_messages_py
 [  0%] Built target std_msgs_generate_messages_nodejs
-[  6%] Built target std_msgs_generate_messages_lisp
-[  6%] [34m[1mCompiling Java code for gazebo_moveit_objects_synchroniser[0m
-[  6%] Built target moveit_msgs_generate_messages_nodejs
-[  6%] Built target std_msgs_generate_messages_eus
-[  6%] Built target moveit_msgs_generate_messages_cpp
-[  6%] Built target moveit_msgs_generate_messages_eus
-[  6%] Built target std_msgs_generate_messages_cpp
-[  6%] Built target _gazebo_moveit_objects_synchroniser_generate_messages_check_deps_CollisionObjectArray
-[ 40%] Built target gazebo_moveit_objects_synchroniser_generate_messages_lisp
-[ 53%] Built target gazebo_moveit_objects_synchroniser_generate_messages_nodejs
-[ 53%] Built target gazebo_moveit_objects_synchroniser_generate_messages_cpp
-[ 60%] Built target gazebo_moveit_objects_synchroniser_generate_messages_eus
-[ 60%] Built target gazebo_moveit_objects_synchroniser_generate_messages_java
-[ 60%] Built target gazebo_moveit_objects_synchroniser_generate_messages_py
-[ 86%] Built target gazebo_moveit_objects_synchroniser_generate_messages_java_gradle
+[  0%] Built target std_msgs_generate_messages_lisp
+[  7%] Built target moveit_msgs_generate_messages_nodejs
+[  7%] Built target moveit_msgs_generate_messages_lisp
+[  7%] Built target std_msgs_generate_messages_py
+[  7%] [34m[1mCompiling Java code for gazebo_moveit_objects_synchroniser[0m
+[  7%] Built target moveit_msgs_generate_messages_py
+[  7%] Built target std_msgs_generate_messages_eus
+[  7%] Built target moveit_msgs_generate_messages_java
+[  7%] Built target std_msgs_generate_messages_cpp
+[  7%] Built target moveit_msgs_generate_messages_cpp
+[  7%] Built target moveit_msgs_generate_messages_eus
+[  7%] Built target _gazebo_moveit_objects_synchroniser_generate_messages_check_deps_CollisionObjectArray
+[ 23%] Built target gazebo_moveit_objects_synchroniser_generate_messages_py
+[ 30%] Built target gazebo_moveit_objects_synchroniser_generate_messages_nodejs
+[ 46%] Built target gazebo_moveit_objects_synchroniser_generate_messages_cpp
+[ 46%] Built target gazebo_moveit_objects_synchroniser_generate_messages_java
+[ 53%] Built target gazebo_moveit_objects_synchroniser_generate_messages_lisp
+[ 69%] Built target gazebo_moveit_objects_synchroniser_generate_messages_eus
+[35m[1mScanning dependencies of target gazebo_moveit_objects_synchroniser[0m
+[ 76%] Built target gazebo_moveit_objects_synchroniser_generate_messages_java_gradle
+[ 76%] Built target gazebo_moveit_objects_synchroniser_generate_messages
+[ 84%] [32mBuilding CXX object CMakeFiles/gazebo_moveit_objects_synchroniser.dir/src/GazeboMeshManager.cpp.o[0m
+[ 92%] [32m[1mLinking CXX executable /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/gazebo_moveit_objects_synchroniser/lib/gazebo_moveit_objects_synchroniser/gazebo_moveit_objects_synchroniser[0m
 [100%] Built target gazebo_moveit_objects_synchroniser
-[100%] Built target gazebo_moveit_objects_synchroniser_generate_messages

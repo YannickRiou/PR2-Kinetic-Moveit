@@ -1,4 +1,4 @@
-#include "actionControllerTools.h"
+#include "ActionControllerTools.h"
 
 namespace actioncontroller{
 
@@ -29,7 +29,6 @@ namespace actioncontroller{
                 goal.goal.pose.orientation.w = w;
                 goal.goal.object = object;
             }
-
 
             void ActionControllerTools::callingActionController(std::string part, actioncontroller::ActionControllerGoal &goal){
                 actionlib::SimpleActionClient<actioncontroller::ActionControllerAction> ac_("action_controller", true);

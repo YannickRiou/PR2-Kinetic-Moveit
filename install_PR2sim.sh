@@ -27,6 +27,8 @@ sudo apt -y install ros-kinetic-geometry
 sudo apt -y install ros-kinetic-tf2-geometry-msgs
 sudo apt -y install ros-kinetic-roslint
 sudo apt -y install ros-kinetic-filters
+sudo apt -y install flex ros-kinetic-mongodb-store ros-kinetic-tf2-bullet freeglut3-dev python-catkin-tools
+
 
 #gestion des contrler pour teleop
 sudo apt -y install libusb-dev

@@ -1,13 +1,13 @@
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libopenni_driver.so
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libopenni_nodelet.so
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/openni_camera/__init__.py
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/openni_camera/cfg/__init__.py
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/openni_camera/cfg/OpenNIConfig.py
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/openni_camera.pc
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/openni_camera/openni_node
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/include/openni_camera/OpenNIConfig.h
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/openni_camera/cmake/openni_cameraConfig.cmake
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/openni_camera/cmake/openni_cameraConfig-version.cmake
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/openni_camera/docs/OpenNIConfig.dox
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/openni_camera/docs/OpenNIConfig.wikidoc
-Symlinking /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/openni_camera/docs/OpenNIConfig-usage.dox
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/lib/libopenni_driver.so, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libopenni_driver.so)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/lib/libopenni_nodelet.so, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/libopenni_nodelet.so)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/lib/python2.7/dist-packages/openni_camera/__init__.py, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/openni_camera/__init__.py)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/lib/python2.7/dist-packages/openni_camera/cfg/__init__.py, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/openni_camera/cfg/__init__.py)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/lib/python2.7/dist-packages/openni_camera/cfg/OpenNIConfig.py, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/python2.7/dist-packages/openni_camera/cfg/OpenNIConfig.py)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/lib/pkgconfig/openni_camera.pc, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/pkgconfig/openni_camera.pc)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/lib/openni_camera/openni_node, /home/dtrimoul/PR2-Kinetic-Xenial/devel/lib/openni_camera/openni_node)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/include/openni_camera/OpenNIConfig.h, /home/dtrimoul/PR2-Kinetic-Xenial/devel/include/openni_camera/OpenNIConfig.h)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/share/openni_camera/cmake/openni_cameraConfig.cmake, /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/openni_camera/cmake/openni_cameraConfig.cmake)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/share/openni_camera/cmake/openni_cameraConfig-version.cmake, /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/openni_camera/cmake/openni_cameraConfig-version.cmake)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/share/openni_camera/docs/OpenNIConfig.dox, /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/openni_camera/docs/OpenNIConfig.dox)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/share/openni_camera/docs/OpenNIConfig.wikidoc, /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/openni_camera/docs/OpenNIConfig.wikidoc)
+Linked: (/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/openni_camera/share/openni_camera/docs/OpenNIConfig-usage.dox, /home/dtrimoul/PR2-Kinetic-Xenial/devel/share/openni_camera/docs/OpenNIConfig-usage.dox)
