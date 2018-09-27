@@ -23,6 +23,35 @@
 
 )
 
+(:durative-action pick
+	
+
+)
+
+(:durative-action place
+	
+
+)
+
+(:durative-action check_landing
+	
+
+)
+
+(:durative-action check_picking
+	
+
+)
+
+(:durative-action check_location
+	
+
+)
+
+(:durative-action remove_obstacles
+	
+
+)
 
 
 )
