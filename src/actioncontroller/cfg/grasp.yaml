@@ -1,0 +1,61 @@
+open :
+  joint_size : 6
+  joint :
+    - name : "r_gripper_joint"
+    - name : "r_gripper_motor_screw_joint"
+    - name : "r_gripper_l_finger_joint"
+    - name : "r_gripper_r_finger_joint"
+    - name : "r_gripper_r_finger_tip_joint"
+    - name : "r_gripper_l_finger_tip_joint"
+  position :
+    - value : 1
+    - value : 1
+    - value : 0.477
+    - value : 0.477
+    - value : 0.477
+    - value : 0.477
+  time_from_start : 5
+
+close :
+  joint_size : 6
+  joint :
+    - name : "r_gripper_joint"
+    - name : "r_gripper_motor_screw_joint"
+    - name : "r_gripper_l_finger_joint"
+    - name : "r_gripper_r_finger_joint"
+    - name : "r_gripper_r_finger_tip_joint"
+    - name : "r_gripper_l_finger_tip_joint"
+  position :
+    - value : 0.0
+    - value : 0.0
+    - value : 0.40
+    - value : 0.40
+    - value : 0.40
+    - value : 0.40
+  time_from_start : 5
+
+grasp:
+  - pre :
+      direction :
+        header_frame_id : "base_footprint"
+        vector_z : -1.0
+        min_distance : 0.1
+        desired_distance : 0.20
+    post :
+      direction :
+        header_frame_id : "base_footprint"
+        vector_z : 1.0
+        min_distance : 0.05
+        desired_distance : 0.20
+  - pre :
+      direction :
+        header_frame_id : "base_footprint"
+        vector_x : -1.0
+        min_distance : 0.1
+        desired_distance : 0.20
+    post :
+      direction :
+        header_frame_id : "base_footprint"
+        vector_x : 1.0
+        min_distance : 0.05
+        desired_distance : 0.20

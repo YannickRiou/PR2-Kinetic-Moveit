@@ -29,6 +29,9 @@
 #include <functional>
 #include <utility>
 
+//Grasp generator
+#include "GraspGenerator.h"
+
 namespace actioncontroller{
 
     class ActionController
@@ -219,8 +222,20 @@ namespace actioncontroller{
             ROS_INFO(info2.str().c_str());
 
 
-            std::vector<moveit_msgs::Grasp> grasps;
+            geometry_msgs::PoseStamped p;
+            p.header.frame_id = "/map";
+            p.pose.position.x = objects[object].mesh_poses[0].position.x - 0.175   ;
+            p.pose.position.y = objects[object].mesh_poses[0].position.y ;
+            p.pose.position.z = objects[object].mesh_poses[0].position.z + 0.01 ;
+            p.pose.orientation.x = 0;
+            p.pose.orientation.y = 0;
+            p.pose.orientation.z = 0;
+            p.pose.orientation.w = 1;
 
+            std::vector<moveit_msgs::Grasp> grasps;
+            GraspGenerator gg("/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/cfg/grasp.yaml",p );
+            grasps = gg.generateGrasp();
+            /*
             geometry_msgs::PoseStamped p;
             p.header.frame_id = "/map";
             p.pose.position.x = objects[object].mesh_poses[0].position.x - 0.175   ;
@@ -247,10 +262,11 @@ namespace actioncontroller{
             openGripper(g.pre_grasp_posture);
 
             closedGripper(g.grasp_posture);
+             grasps.push_back(g);
+            */
+
 
             move_group.allowReplanning(true);
-
-            grasps.push_back(g);
             move_group.setSupportSurfaceName("tableLaas");
             moveit::planning_interface::MoveItErrorCode sucess = move_group.pick(object, grasps);
             if(moveit::planning_interface::MoveItErrorCode::SUCCESS == sucess.val){
