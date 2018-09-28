@@ -183,9 +183,9 @@ namespace actioncontroller{
             bool success = (ac_.getState() == actionlib::SimpleClientGoalState::SUCCEEDED);
 
             if(success)
-                ROS_INFO("Success");
+                ROS_INFO(std::string("Success").c_str());
             else
-                ROS_INFO("FAIL");
+                ROS_INFO(std::string("FAIL").c_str());
 
             return success;
         }
@@ -227,13 +227,9 @@ namespace actioncontroller{
             p.pose.position.x = objects[object].mesh_poses[0].position.x - 0.175   ;
             p.pose.position.y = objects[object].mesh_poses[0].position.y ;
             p.pose.position.z = objects[object].mesh_poses[0].position.z + 0.01 ;
-            p.pose.orientation.x = 0;
-            p.pose.orientation.y = 0;
-            p.pose.orientation.z = 0;
-            p.pose.orientation.w = 1;
 
             std::vector<moveit_msgs::Grasp> grasps;
-            GraspGenerator gg("/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/cfg/grasp.yaml",p );
+            GraspGenerator gg("/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/cfg/grasp.yaml", p );
             grasps = gg.generateGrasp();
             /*
             geometry_msgs::PoseStamped p;
@@ -264,8 +260,9 @@ namespace actioncontroller{
             closedGripper(g.grasp_posture);
              grasps.push_back(g);
             */
-
-
+            std::stringstream grasp_info;
+            grasp_info << "number of grasps: " << grasps.size();
+            ROS_INFO(grasp_info.str().c_str());
             move_group.allowReplanning(true);
             move_group.setSupportSurfaceName("tableLaas");
             moveit::planning_interface::MoveItErrorCode sucess = move_group.pick(object, grasps);
