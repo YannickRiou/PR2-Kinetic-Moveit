@@ -24,14 +24,15 @@ namespace actioncontroller {
             trajectory_msgs::JointTrajectory _openGripper;
             trajectory_msgs::JointTrajectory _closeGripper;
             geometry_msgs::PoseStamped _target;
-            std::vector< std::vector<double> > orientations = {{0,0,0},
-                                                             {0,0, M_PI / 2},
-                                                             {0,M_PI / 2, 0},
-                                                             {0,M_PI / 2 , M_PI / 2},
-                                                             {M_PI / 2,0,0},
-                                                             {M_PI / 2,0,M_PI / 2},
-                                                             {M_PI / 2,M_PI / 2,0},
-                                                             {M_PI / 2,M_PI / 2,M_PI / 2} };
+            //for each vector orientation x,y,z and pose compensation for obejct center x,y,z
+            std::vector< std::vector<double> > orientations = {{0,0,0, -0.175, 0, 0.01},
+                                                             {0,0, M_PI / 2, 0, -0.175, +0.01 },
+                                                             {0,M_PI / 2, 0 , 0, 0, 0.175},
+                                                             {0,M_PI / 2 , M_PI / 2, 0, 0, 0.175},
+                                                               {M_PI / 2,0,0, -0.175, 0, 0},
+                                                             {M_PI / 2,0,M_PI / 2, 0, 0, 0.175 },
+                                                             {M_PI / 2,M_PI / 2,0 ,0, 0.175, 0  },
+                                                             {M_PI / 2,M_PI / 2,M_PI / 2, 0, 0, 0.175} };
 
         public:
             GraspGenerator();

@@ -92,10 +92,15 @@ namespace actioncontroller {
     }
 
     std::vector<geometry_msgs::PoseStamped> GraspGenerator::generatePoseOrientation(){
+
         std::vector<geometry_msgs::PoseStamped> targetOrientations;
+
         for(int i=0; i < orientations.size(); ++i){
             geometry_msgs::PoseStamped p;
-            p.pose.position = _target.pose.position;
+            p.header.frame_id = _target.header.frame_id;
+            p.pose.position.x = _target.pose.position.x + orientations[i][3];
+            p.pose.position.y = _target.pose.position.y + orientations[i][4];
+            p.pose.position.z = _target.pose.position.z + orientations[i][5];
             p.pose.orientation = tf::createQuaternionMsgFromRollPitchYaw( orientations[i][0], orientations[i][1], orientations[i][2]);
             displayPoseStampedMsg(p);
             targetOrientations.push_back(p);

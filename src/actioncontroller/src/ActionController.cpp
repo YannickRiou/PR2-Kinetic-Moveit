@@ -223,10 +223,10 @@ namespace actioncontroller{
 
 
             geometry_msgs::PoseStamped p;
-            p.header.frame_id = "/map";
-            p.pose.position.x = objects[object].mesh_poses[0].position.x - 0.175   ;
+            p.header.frame_id = objects[object].header.frame_id;
+            p.pose.position.x = objects[object].mesh_poses[0].position.x ; //- 0.175   ;
             p.pose.position.y = objects[object].mesh_poses[0].position.y ;
-            p.pose.position.z = objects[object].mesh_poses[0].position.z + 0.01 ;
+            p.pose.position.z = objects[object].mesh_poses[0].position.z ; //+ 0.01 ;
 
             std::vector<moveit_msgs::Grasp> grasps;
             GraspGenerator gg("/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/cfg/grasp.yaml", p );
@@ -263,6 +263,7 @@ namespace actioncontroller{
             std::stringstream grasp_info;
             grasp_info << "number of grasps: " << grasps.size();
             ROS_INFO(grasp_info.str().c_str());
+            ROS_INFO(move_group.getEndEffectorLink().c_str());
             move_group.allowReplanning(true);
             move_group.setSupportSurfaceName("tableLaas");
             moveit::planning_interface::MoveItErrorCode sucess = move_group.pick(object, grasps);
