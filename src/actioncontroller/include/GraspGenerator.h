@@ -14,6 +14,12 @@
 #include "yaml-cpp/yaml.h"
 #include "ros/ros.h"
 #include "tf/transform_datatypes.h"
+#include "tf/transform_listener.h"
+#include "math.h"
+#include "time.h"
+#include "Eigen/Core"
+#include "Eigen/Geometry"
+
 
 namespace actioncontroller {
 
@@ -24,15 +30,17 @@ namespace actioncontroller {
             trajectory_msgs::JointTrajectory _openGripper;
             trajectory_msgs::JointTrajectory _closeGripper;
             geometry_msgs::PoseStamped _target;
-            //for each vector orientation x,y,z and pose compensation for obejct center x,y,z
-            std::vector< std::vector<double> > orientations = {{0,0,0, -0.175, 0, 0.01},
-                                                             {0,0, M_PI / 2, 0, -0.175, +0.01 },
-                                                             {0,M_PI / 2, 0 , 0, 0, 0.175},
-                                                             {0,M_PI / 2 , M_PI / 2, 0, 0, 0.175},
-                                                               {M_PI / 2,0,0, -0.175, 0, 0},
-                                                             {M_PI / 2,0,M_PI / 2, 0, 0, 0.175 },
-                                                             {M_PI / 2,M_PI / 2,0 ,0, 0.175, 0  },
-                                                             {M_PI / 2,M_PI / 2,M_PI / 2, 0, 0, 0.175} };
+
+            std::vector< std::vector<double> > orientations =   {
+                                                                    {0,0,0, -0.175, 0, 0.01},
+                                                                    {0,0, M_PI / 2, 0, -0.175, +0.01 },
+                                                                    {0,M_PI / 2, 0 , 0, 0, 0.175},
+                                                                    {0,M_PI / 2 , M_PI / 2, 0, 0, 0.175},
+                                                                    {M_PI / 2,0,0, -0.175, 0, 0},
+                                                                    {M_PI / 2,0,M_PI / 2, 0, 0, 0.175 },
+                                                                    {M_PI / 2,M_PI / 2,0 ,0, 0.175, 0  },
+                                                                    {M_PI / 2,M_PI / 2,M_PI / 2, 0, 0, 0.175}
+                                                                };
 
         public:
             GraspGenerator();
@@ -43,6 +51,11 @@ namespace actioncontroller {
             void setClosedGripper();
             moveit_msgs::GripperTranslation generateGraspMove(int graspNumber, std::string moveType);
             void displayPoseStampedMsg(geometry_msgs::PoseStamped p);
+
+            //posegeneration
+            void CubePoseGenerator(std::vector<geometry_msgs::PoseStamped> &poses, geometry_msgs::PoseStamped target  , geometry_msgs::PoseStamped endEffetor, geometry_msgs::PoseStamped wrist, double fingerLength, double cubeSize, int samples);
+            void PoseMsgToMatrix4d(geometry_msgs::PoseStamped p, Eigen::Matrix4d m);
+            void Matrix4dToPoseMsg(Eigen::Matrix4d m, geometry_msgs::PoseStamped p);
     };
 }
 
