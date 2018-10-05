@@ -121,10 +121,11 @@ namespace actioncontroller {
         ROS_INFO(ss.str().c_str());
     }
 
-    void GraspGenerator::CubePoseGenerator(std::vector<geometry_msgs::PoseStamped> &poses, geometry_msgs::PoseStamped target  , geometry_msgs::PoseStamped endEffetor, geometry_msgs::PoseStamped wrist, double fingerLength, double cubeSize, int samples ){
-        double endEffectorLength = sqrt( pow(endEffetor.pose.position.x - wrist.pose.position.x, 2 ) + pow(endEffetor.pose.position.y - wrist.pose.position.y, 2 ) + pow(endEffetor.pose.position.z - wrist.pose.position.z , 2 ) );
-        double desiredDistBetweenWristAndTarget = (cubeSize / 2) - fingerLength + endEffectorLength;
-
+    void GraspGenerator::CubePoseGenerator(std::vector<geometry_msgs::PoseStamped> &poses, geometry_msgs::PoseStamped target ,double distFingerWrist, double cubeSize, int samples ){
+        //double endEffectorLength = sqrt( pow(endEffetor.pose.position.x - wrist.pose.position.x, 2 ) + pow(endEffetor.pose.position.y - wrist.pose.position.y, 2 ) + pow(endEffetor.pose.position.z - wrist.pose.position.z , 2 ) );
+        //double desiredDistBetweenWristAndTarget = (cubeSize / 2) - fingerLength + endEffectorLength;
+        ROS_INFO(std::string("Starting the cube grasp generation").c_str());
+        double desiredDistBetweenWristAndTarget = distFingerWrist;
         std::uniform_real_distribution<double> unif(0,2);
         std::default_random_engine randomDouble;
 
@@ -173,6 +174,7 @@ namespace actioncontroller {
             //store the pose
             Matrix4dToPoseMsg(new_point, p);
             poses.push_back(p);
+            displayPoseStampedMsg(p);
         }
             //compute the pose for the yz plan
 
@@ -180,7 +182,7 @@ namespace actioncontroller {
 
     }
 
-    void GraspGenerator::PoseMsgToMatrix4d(geometry_msgs::PoseStamped p, Eigen::Matrix4d m){
+    void GraspGenerator::PoseMsgToMatrix4d(geometry_msgs::PoseStamped p, Eigen::Matrix4d &m){
         Eigen::Quaterniond q(p.pose.orientation.x, p.pose.orientation.y, p.pose.orientation.z, p.pose.orientation.w);
         Eigen::Matrix3d rot = q.normalized().toRotationMatrix();
         m <<    rot(0), rot(1), rot(2) , p.pose.position.x,
@@ -190,18 +192,18 @@ namespace actioncontroller {
 
     }
 
-    void GraspGenerator::Matrix4dToPoseMsg(Eigen::Matrix4d m, geometry_msgs::PoseStamped p){
+    void GraspGenerator::Matrix4dToPoseMsg(Eigen::Matrix4d m, geometry_msgs::PoseStamped &p){
         p.header.frame_id = "map";
-        p.pose.position.x = m(3);
-        p.pose.position.y = m(7);
-        p.pose.position.z = m(11);
+        p.pose.position.x = (float)m(3);
+        p.pose.position.y = (float)m(7);
+        p.pose.position.z = (float)m(11);
         Eigen::Matrix3d rot;
         rot << m(0) , m(1), m(2), m(4), m(5) , m(6), m(8), m(9), m(10) ;
         Eigen::Quaterniond q(rot);
-        p.pose.orientation.x = q.x();
-        p.pose.orientation.y = q.y();
-        p.pose.orientation.z = q.z();
-        p.pose.orientation.w = q.w();
+        p.pose.orientation.x = (float)q.x();
+        p.pose.orientation.y = (float)q.y();
+        p.pose.orientation.z = (float)q.z();
+        p.pose.orientation.w = (float)q.w();
     }
 
 }

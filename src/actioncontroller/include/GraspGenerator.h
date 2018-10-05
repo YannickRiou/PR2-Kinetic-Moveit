@@ -53,9 +53,9 @@ namespace actioncontroller {
             void displayPoseStampedMsg(geometry_msgs::PoseStamped p);
 
             //posegeneration
-            void CubePoseGenerator(std::vector<geometry_msgs::PoseStamped> &poses, geometry_msgs::PoseStamped target  , geometry_msgs::PoseStamped endEffetor, geometry_msgs::PoseStamped wrist, double fingerLength, double cubeSize, int samples);
-            void PoseMsgToMatrix4d(geometry_msgs::PoseStamped p, Eigen::Matrix4d m);
-            void Matrix4dToPoseMsg(Eigen::Matrix4d m, geometry_msgs::PoseStamped p);
+            void CubePoseGenerator(std::vector<geometry_msgs::PoseStamped> &poses, geometry_msgs::PoseStamped target ,double distFingerWrist, double cubeSize, int samples );
+            void PoseMsgToMatrix4d(geometry_msgs::PoseStamped p, Eigen::Matrix4d &m);
+            void Matrix4dToPoseMsg(Eigen::Matrix4d m, geometry_msgs::PoseStamped &p);
     };
 }
 

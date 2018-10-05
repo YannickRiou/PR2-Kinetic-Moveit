@@ -230,7 +230,10 @@ namespace actioncontroller{
 
             std::vector<moveit_msgs::Grasp> grasps;
             GraspGenerator gg("/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/cfg/grasp.yaml", p );
-            grasps = gg.generateGrasp();
+            std::vector<geometry_msgs::PoseStamped> pose;
+            gg.CubePoseGenerator(pose, p, 17.5, 6, 100);
+
+            //grasps = gg.generateGrasp();
             /*
             geometry_msgs::PoseStamped p;
             p.header.frame_id = "/map";
