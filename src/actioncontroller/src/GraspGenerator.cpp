@@ -7,10 +7,12 @@
 
 namespace actioncontroller {
 
-    GraspGenerator::GraspGenerator(std::string path, geometry_msgs::PoseStamped target) {
+    GraspGenerator::GraspGenerator(std::string path, geometry_msgs::PoseStamped target, int orientations) {
+        visual_tools_.reset(new moveit_visual_tools::MoveItVisualTools("/odom_combined","/moveit_visual_markers"));
         _pathToFile = path;
         _target = target;
         _providedGrasps = YAML::LoadFile(_pathToFile);
+        _orientations = orientations;
         setOpenGripper();
         setClosedGripper();
     }
@@ -94,8 +96,9 @@ namespace actioncontroller {
     std::vector<geometry_msgs::PoseStamped> GraspGenerator::generatePoseOrientation(){
 
         std::vector<geometry_msgs::PoseStamped> targetOrientations;
-
+        /*
         for(int i=0; i < orientations.size(); ++i){
+
             geometry_msgs::PoseStamped p;
             p.header.frame_id = _target.header.frame_id;
             p.pose.position.x = _target.pose.position.x + orientations[i][3];
@@ -104,7 +107,10 @@ namespace actioncontroller {
             p.pose.orientation = tf::createQuaternionMsgFromRollPitchYaw( orientations[i][0], orientations[i][1], orientations[i][2]);
             displayPoseStampedMsg(p);
             targetOrientations.push_back(p);
-        }
+
+
+        } */
+        cubePoseGenerator(targetOrientations, _target, 0.175, 0.06, _orientations);
         return targetOrientations;
     }
 
@@ -118,10 +124,12 @@ namespace actioncontroller {
         << "\norientation_Y : " << p.pose.orientation.y
         << "\norientation_Z : " << p.pose.orientation.z
         << "\norientation_W : " << p.pose.orientation.w;
+        visual_tools_.get()->publishCuboid(p.pose, 0.01, 0.01, 0.01, rviz_visual_tools::colors::BLUE );
+        visual_tools_.get()->trigger();
         ROS_INFO(ss.str().c_str());
     }
 
-    void GraspGenerator::CubePoseGenerator(std::vector<geometry_msgs::PoseStamped> &poses, geometry_msgs::PoseStamped target ,double distFingerWrist, double cubeSize, int samples ){
+    void GraspGenerator::cubePoseGenerator(std::vector<geometry_msgs::PoseStamped> &poses, geometry_msgs::PoseStamped target ,double distFingerWrist, double cubeSize, int samples ){
         //double endEffectorLength = sqrt( pow(endEffetor.pose.position.x - wrist.pose.position.x, 2 ) + pow(endEffetor.pose.position.y - wrist.pose.position.y, 2 ) + pow(endEffetor.pose.position.z - wrist.pose.position.z , 2 ) );
         //double desiredDistBetweenWristAndTarget = (cubeSize / 2) - fingerLength + endEffectorLength;
         ROS_INFO(std::string("Starting the cube grasp generation").c_str());
@@ -129,17 +137,24 @@ namespace actioncontroller {
         std::uniform_real_distribution<double> unif(0,2);
         std::default_random_engine randomDouble;
 
-        Eigen::Matrix4d origin;
-        PoseMsgToMatrix4d(target, origin);
+        Eigen::Affine3d origin;
+        poseMsgToAffine3d(target, origin);
+        ROS_INFO(std::string("origin").c_str());
+        displayAffine3d(origin);
 
         //create the to transformation matrix
         Eigen::Affine3d originToReferenceFrame;
         originToReferenceFrame = origin.inverse();
+        ROS_INFO(std::string("originToReferenceFrame").c_str());
+        displayAffine3d(originToReferenceFrame);
 
         Eigen::Affine3d x_orientationFrameRotation;
         x_orientationFrameRotation = Eigen::AngleAxisd(1*M_PI, Eigen::Vector3d::UnitX())
                                     * Eigen::AngleAxisd(1*M_PI,  Eigen::Vector3d::UnitY())
                                     * Eigen::AngleAxisd(0, Eigen::Vector3d::UnitZ());
+
+        ROS_INFO(std::string("x_orientationFrameRotation").c_str());
+        displayAffine3d(x_orientationFrameRotation);
 
         Eigen::Affine3d y_orientationFrameRotation;
         y_orientationFrameRotation = Eigen::AngleAxisd(0.5*M_PI, Eigen::Vector3d::UnitX())
@@ -148,10 +163,13 @@ namespace actioncontroller {
 
         Eigen::Affine3d z_orientationFrameRotation ;
         z_orientationFrameRotation = Eigen::AngleAxisd(1*M_PI, Eigen::Vector3d::UnitX())
-                                                                                * Eigen::AngleAxisd(0,  Eigen::Vector3d::UnitY())
-                                                                                * Eigen::AngleAxisd(0, Eigen::Vector3d::UnitZ());
+                                    * Eigen::AngleAxisd(0,  Eigen::Vector3d::UnitY())
+                                    * Eigen::AngleAxisd(0, Eigen::Vector3d::UnitZ());
 
         Eigen::Affine3d x_frameTranslation(Eigen::Translation3d(Eigen::Vector3d(desiredDistBetweenWristAndTarget, 0,0)));
+        ROS_INFO(std::string("x_frameTranslation").c_str());
+        displayAffine3d(x_frameTranslation);
+
         Eigen::Affine3d y_frameTranslation(Eigen::Translation3d(Eigen::Vector3d(0, desiredDistBetweenWristAndTarget,0)));
         Eigen::Affine3d z_frameTranslation(Eigen::Translation3d(Eigen::Vector3d(desiredDistBetweenWristAndTarget, 0,0)));
 
@@ -162,17 +180,29 @@ namespace actioncontroller {
 
 
             Eigen::Affine3d x_sampleRotation;
-            x_sampleRotation = Eigen::AngleAxisd(unif(randomDouble)*M_PI, Eigen::Vector3d::UnitX())
-                               * Eigen::AngleAxisd(0,  Eigen::Vector3d::UnitY())
+            x_sampleRotation = Eigen::AngleAxisd(0, Eigen::Vector3d::UnitX())
+                               * Eigen::AngleAxisd(unif(randomDouble)*M_PI,  Eigen::Vector3d::UnitY())
                                * Eigen::AngleAxisd(0, Eigen::Vector3d::UnitZ());
 
-            Eigen::Matrix4d new_point = (x_frameTranslation * x_sampleRotation).matrix();
+            ROS_INFO(std::string("x_sampleRotation").c_str());
+            displayAffine3d(x_sampleRotation);
+
+            Eigen::Affine3d new_point = x_sampleRotation * x_frameTranslation ;
+            ROS_INFO(std::string("new_point").c_str());
+            displayAffine3d(new_point);
+
             //change orientation to face toward the target
-            new_point *= x_orientationFrameRotation.matrix() ;
+            new_point =  new_point * x_orientationFrameRotation  ;
+            ROS_INFO(std::string("Rotated new_point").c_str());
+            displayAffine3d(new_point);
+
             //Transform the createdPose to map frame
-            new_point *= originToReferenceFrame.matrix() ;
+            new_point =  origin * new_point  ;
+            ROS_INFO(std::string("new_point in map frame").c_str());
+            displayAffine3d(new_point);
+
             //store the pose
-            Matrix4dToPoseMsg(new_point, p);
+            affine3dToPoseMsg(new_point, p);
             poses.push_back(p);
             displayPoseStampedMsg(p);
         }
@@ -182,28 +212,40 @@ namespace actioncontroller {
 
     }
 
-    void GraspGenerator::PoseMsgToMatrix4d(geometry_msgs::PoseStamped p, Eigen::Matrix4d &m){
-        Eigen::Quaterniond q(p.pose.orientation.x, p.pose.orientation.y, p.pose.orientation.z, p.pose.orientation.w);
-        Eigen::Matrix3d rot = q.normalized().toRotationMatrix();
-        m <<    rot(0), rot(1), rot(2) , p.pose.position.x,
-                rot(3), rot(4), rot(5) , p.pose.position.y,
-                rot(6), rot(7), rot(8) , p.pose.position.z,
-                0,      0,      0,      1;
-
+    void GraspGenerator::poseMsgToAffine3d(geometry_msgs::PoseStamped &p, Eigen::Affine3d &m){
+        /* m = Eigen::Affine3d::fromPositionOrientationScale(Eigen::Vector3d(p.pose.position.x, p.pose.position.y, p.pose.position.z),
+                Eigen::Quaterniond(p.pose.orientation.x, p.pose.orientation.y, p.pose.orientation.z, p.pose.orientation.w) ,
+                Eigen::Ma );
+        */
+        auto &o = p.pose.orientation;
+        Eigen::Quaterniond q(o.w, o.x, o.y, o.z);
+        auto &pose = p.pose.position;
+        Eigen::Translation3d t(pose.x, pose.y, pose.z);
+        m = t * q;
     }
 
-    void GraspGenerator::Matrix4dToPoseMsg(Eigen::Matrix4d m, geometry_msgs::PoseStamped &p){
+    void GraspGenerator::affine3dToPoseMsg(Eigen::Affine3d m, geometry_msgs::PoseStamped &p){
         p.header.frame_id = "map";
-        p.pose.position.x = (float)m(3);
-        p.pose.position.y = (float)m(7);
-        p.pose.position.z = (float)m(11);
-        Eigen::Matrix3d rot;
-        rot << m(0) , m(1), m(2), m(4), m(5) , m(6), m(8), m(9), m(10) ;
+        Eigen::Vector3d v = m.translation();
+        p.pose.position.x = (float)v(0);
+        p.pose.position.y = (float)v(1);
+        p.pose.position.z = (float)v(2);
+        Eigen::Matrix3d rot = m.rotation() ;
         Eigen::Quaterniond q(rot);
         p.pose.orientation.x = (float)q.x();
         p.pose.orientation.y = (float)q.y();
         p.pose.orientation.z = (float)q.z();
         p.pose.orientation.w = (float)q.w();
+    }
+
+    void GraspGenerator::displayAffine3d(Eigen::Affine3d affine){
+        std::stringstream ss;
+        Eigen::Matrix4d m = affine.matrix();
+        ss << "\n"  << m(0,0) << "," << m(0,1) << "," << m(0,2) << "," << m(0,3) << ",\n"
+                << m(1,0) << "," << m(1,1) << "," << m(1,2) << "," << m(1,3) << ",\n"
+                << m(2,0) << "," << m(2,1) << "," << m(2,2) << "," << m(2,3) << ",\n"
+                << m(3,0) << "," << m(3,1) << "," << m(3,2) << "," << m(3,3) << ";\n" ;
+        ROS_INFO(ss.str().c_str());
     }
 
 }

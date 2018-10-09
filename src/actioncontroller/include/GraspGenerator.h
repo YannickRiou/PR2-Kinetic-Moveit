@@ -11,6 +11,8 @@
 #include "trajectory_msgs/JointTrajectory.h"
 #include "geometry_msgs/PoseStamped.h"
 #include "moveit_msgs/Grasp.h"
+#include <moveit_visual_tools/moveit_visual_tools.h>
+#include "rviz_visual_tools/rviz_visual_tools.h"
 #include "yaml-cpp/yaml.h"
 #include "ros/ros.h"
 #include "tf/transform_datatypes.h"
@@ -25,13 +27,15 @@ namespace actioncontroller {
 
     class GraspGenerator {
         private:
+            moveit_visual_tools::MoveItVisualToolsPtr visual_tools_;
+
             std::string _pathToFile;
             YAML::Node _providedGrasps;
             trajectory_msgs::JointTrajectory _openGripper;
             trajectory_msgs::JointTrajectory _closeGripper;
             geometry_msgs::PoseStamped _target;
-
-            std::vector< std::vector<double> > orientations =   {
+            int _orientations;
+            /*std::vector< std::vector<double> > orientations =   {
                                                                     {0,0,0, -0.175, 0, 0.01},
                                                                     {0,0, M_PI / 2, 0, -0.175, +0.01 },
                                                                     {0,M_PI / 2, 0 , 0, 0, 0.175},
@@ -41,10 +45,11 @@ namespace actioncontroller {
                                                                     {M_PI / 2,M_PI / 2,0 ,0, 0.175, 0  },
                                                                     {M_PI / 2,M_PI / 2,M_PI / 2, 0, 0, 0.175}
                                                                 };
+            */
 
         public:
             GraspGenerator();
-            GraspGenerator(std::string pathToyaml, geometry_msgs::PoseStamped target);
+            GraspGenerator(std::string pathToyaml, geometry_msgs::PoseStamped target, int orientations);
             std::vector<geometry_msgs::PoseStamped> generatePoseOrientation();
             std::vector<moveit_msgs::Grasp> generateGrasp();
             void setOpenGripper();
@@ -53,9 +58,10 @@ namespace actioncontroller {
             void displayPoseStampedMsg(geometry_msgs::PoseStamped p);
 
             //posegeneration
-            void CubePoseGenerator(std::vector<geometry_msgs::PoseStamped> &poses, geometry_msgs::PoseStamped target ,double distFingerWrist, double cubeSize, int samples );
-            void PoseMsgToMatrix4d(geometry_msgs::PoseStamped p, Eigen::Matrix4d &m);
-            void Matrix4dToPoseMsg(Eigen::Matrix4d m, geometry_msgs::PoseStamped &p);
+            void cubePoseGenerator(std::vector<geometry_msgs::PoseStamped> &poses, geometry_msgs::PoseStamped target ,double distFingerWrist, double cubeSize, int samples );
+            void poseMsgToAffine3d(geometry_msgs::PoseStamped &p, Eigen::Affine3d &m);
+            void affine3dToPoseMsg(Eigen::Affine3d m, geometry_msgs::PoseStamped &p);
+            void displayAffine3d(Eigen::Affine3d m);
     };
 }
 
