@@ -148,68 +148,75 @@ namespace actioncontroller {
         ROS_INFO(std::string("originToReferenceFrame").c_str());
         displayAffine3d(originToReferenceFrame);
 
-        Eigen::Affine3d x_orientationFrameRotation;
-        x_orientationFrameRotation = Eigen::AngleAxisd(1*M_PI, Eigen::Vector3d::UnitX())
-                                    * Eigen::AngleAxisd(1*M_PI,  Eigen::Vector3d::UnitY())
-                                    * Eigen::AngleAxisd(0, Eigen::Vector3d::UnitZ());
-
-        ROS_INFO(std::string("x_orientationFrameRotation").c_str());
-        displayAffine3d(x_orientationFrameRotation);
-
-        Eigen::Affine3d y_orientationFrameRotation;
-        y_orientationFrameRotation = Eigen::AngleAxisd(0.5*M_PI, Eigen::Vector3d::UnitX())
-                                     * Eigen::AngleAxisd(0,  Eigen::Vector3d::UnitY())
-                                     * Eigen::AngleAxisd(0, Eigen::Vector3d::UnitZ());
-
-        Eigen::Affine3d z_orientationFrameRotation ;
-        z_orientationFrameRotation = Eigen::AngleAxisd(1*M_PI, Eigen::Vector3d::UnitX())
-                                    * Eigen::AngleAxisd(0,  Eigen::Vector3d::UnitY())
-                                    * Eigen::AngleAxisd(0, Eigen::Vector3d::UnitZ());
-
+        // A factoriser
         Eigen::Affine3d x_frameTranslation(Eigen::Translation3d(Eigen::Vector3d(desiredDistBetweenWristAndTarget, 0,0)));
-        ROS_INFO(std::string("x_frameTranslation").c_str());
-        displayAffine3d(x_frameTranslation);
-
         Eigen::Affine3d y_frameTranslation(Eigen::Translation3d(Eigen::Vector3d(0, desiredDistBetweenWristAndTarget,0)));
         Eigen::Affine3d z_frameTranslation(Eigen::Translation3d(Eigen::Vector3d(desiredDistBetweenWristAndTarget, 0,0)));
 
         for (int i = 0; i < samples; ++i) {
             //compute the pose for the xy plan
             //create a pose desiredDistBetweenWristAndTarget away from the target center.
-            geometry_msgs::PoseStamped p;
+            poses.push_back( generatePose(randomDouble,
+                                            origin,
+                                            affine3dFromAngleAxis(0, unif(randomDouble) * M_PI, 0),
+                                            affine3dFromAngleAxis(1 * M_PI, 1 * M_PI, 0) ,
+                                            x_frameTranslation) );
 
-
-            Eigen::Affine3d x_sampleRotation;
-            x_sampleRotation = Eigen::AngleAxisd(0, Eigen::Vector3d::UnitX())
-                               * Eigen::AngleAxisd(unif(randomDouble)*M_PI,  Eigen::Vector3d::UnitY())
-                               * Eigen::AngleAxisd(0, Eigen::Vector3d::UnitZ());
-
-            ROS_INFO(std::string("x_sampleRotation").c_str());
-            displayAffine3d(x_sampleRotation);
-
-            Eigen::Affine3d new_point = x_sampleRotation * x_frameTranslation ;
-            ROS_INFO(std::string("new_point").c_str());
-            displayAffine3d(new_point);
-
-            //change orientation to face toward the target
-            new_point =  new_point * x_orientationFrameRotation  ;
-            ROS_INFO(std::string("Rotated new_point").c_str());
-            displayAffine3d(new_point);
-
-            //Transform the createdPose to map frame
-            new_point =  origin * new_point  ;
-            ROS_INFO(std::string("new_point in map frame").c_str());
-            displayAffine3d(new_point);
-
-            //store the pose
-            affine3dToPoseMsg(new_point, p);
-            poses.push_back(p);
-            displayPoseStampedMsg(p);
-        }
             //compute the pose for the yz plan
+            poses.push_back( generatePose(randomDouble,
+                                          origin,
+                                          affine3dFromAngleAxis(unif(randomDouble) * M_PI, 0, 0),
+                                          affine3dFromAngleAxis(0.5*M_PI, 0, 0) ,
+                                          y_frameTranslation) );
 
             //compute the pose for the xz plan
+            poses.push_back( generatePose(randomDouble,
+                                          origin,
+                                          affine3dFromAngleAxis(0, 0, unif(randomDouble) * M_PI),
+                                          affine3dFromAngleAxis(1 * M_PI, 0, 0) ,
+                                          z_frameTranslation) );
+        }
 
+
+
+
+    }
+
+    Eigen::Affine3d GraspGenerator::affine3dFromAngleAxis(double radianX, double radianY, double radianZ) const {
+        Eigen::Affine3d orientationFrameRotation;
+        orientationFrameRotation = Eigen::AngleAxisd(radianX, Eigen::Vector3d::UnitX())
+                                     * Eigen::AngleAxisd(radianY, Eigen::Vector3d::UnitY())
+                                     * Eigen::AngleAxisd(radianZ, Eigen::Vector3d::UnitZ());
+        return orientationFrameRotation;
+    }
+
+    geometry_msgs::PoseStamped GraspGenerator::generatePose(const std::default_random_engine &randomDouble, const Eigen::Affine3d &origin,
+                                        const Eigen::Affine3d &sampleRotation,
+                                        const Eigen::Affine3d &orientationFrameRotation,
+                                        const Eigen::Affine3d &frameTranslation) {
+        geometry_msgs::PoseStamped p;
+
+        ROS_INFO(std::string("sampleRotation").c_str());
+        displayAffine3d(sampleRotation);
+
+        Eigen::Affine3d new_point = sampleRotation * frameTranslation ;
+        ROS_INFO(std::string("new_point").c_str());
+        displayAffine3d(new_point);
+
+        //change orientation to face toward the target
+        new_point =  new_point * orientationFrameRotation  ;
+        ROS_INFO(std::string("Rotated new_point").c_str());
+        displayAffine3d(new_point);
+
+        //Transform the createdPose to map frame
+        new_point =  origin * new_point  ;
+        ROS_INFO(std::string("new_point in map frame").c_str());
+        displayAffine3d(new_point);
+
+        //store the pose
+        affine3dToPoseMsg(new_point, p);
+        displayPoseStampedMsg(p);
+        return p;
     }
 
     void GraspGenerator::poseMsgToAffine3d(geometry_msgs::PoseStamped &p, Eigen::Affine3d &m){

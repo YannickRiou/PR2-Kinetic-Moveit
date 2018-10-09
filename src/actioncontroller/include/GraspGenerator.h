@@ -62,6 +62,13 @@ namespace actioncontroller {
             void poseMsgToAffine3d(geometry_msgs::PoseStamped &p, Eigen::Affine3d &m);
             void affine3dToPoseMsg(Eigen::Affine3d m, geometry_msgs::PoseStamped &p);
             void displayAffine3d(Eigen::Affine3d m);
+
+            geometry_msgs::PoseStamped generatePose(const std::default_random_engine &randomDouble, const Eigen::Affine3d &origin,
+                                                    const Eigen::Affine3d &sampleRotation,
+                                                    const Eigen::Affine3d &orientationFrameRotation,
+                                                    const Eigen::Affine3d &frameTranslation);
+
+        Eigen::Affine3d affine3dFromAngleAxis(double radianX, double radianY, double radianZ) const;
     };
 }
 
