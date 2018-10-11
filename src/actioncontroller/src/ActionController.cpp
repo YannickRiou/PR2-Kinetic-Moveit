@@ -28,6 +28,7 @@
 #include <boost/interprocess/allocators/allocator.hpp>
 #include <functional>
 #include <utility>
+#include <PlaceGenerator.h>
 
 //Grasp generator
 #include "GraspGenerator.h"
@@ -229,7 +230,7 @@ namespace actioncontroller{
             p.pose.position.z = objects[object].mesh_poses[0].position.z ; //+ 0.01 ;
 
             std::vector<moveit_msgs::Grasp> grasps;
-            GraspGenerator gg("/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/cfg/grasp.yaml", p, 20 );
+            GraspGenerator gg("/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/cfg/grasp.yaml", p, 100 );
             std::vector<geometry_msgs::PoseStamped> pose;
 
             grasps = gg.generateGrasp();
@@ -323,6 +324,22 @@ namespace actioncontroller{
                 return false;
             }
 
+        }
+
+        bool placeAOnB(std::string group, std::string objectA, std::string objectB ){
+
+            /*
+            PlaceGenerator::PlaceGenerator placeGenerator(objects[objectB]);
+
+            samplePossiblePlaceLocation(100);
+
+            moveit::planning_interface::MoveItErrorCode sucess = move_group.place(object, place_location);
+            if(moveit::planning_interface::MoveItErrorCode::SUCCESS == sucess.val){
+                return true;
+            }else{
+                return false;
+            }
+            */
         }
 
 

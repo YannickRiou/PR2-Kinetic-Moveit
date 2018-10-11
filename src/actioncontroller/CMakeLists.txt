@@ -161,7 +161,7 @@ include_directories(
 include_directories(${catkin_INCLUDE_DIRS})
 link_directories(${catkin_LIBRARY_DIRS})
 
-add_executable(action_controller src/ActionController.cpp src/GraspGenerator.cpp include/GraspGenerator.h)
+add_executable(action_controller src/ActionController.cpp src/GraspGenerator.cpp include/GraspGenerator.h src/PlaceGenerator.cpp include/PlaceGenerator.h)
 add_dependencies(action_controller actioncontroller_generate_messages_cpp)
 target_link_libraries(action_controller ${catkin_LIBRARIES} ${Boost_LIBRARIES} yaml-cpp)
 install(TARGETS action_controller DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
