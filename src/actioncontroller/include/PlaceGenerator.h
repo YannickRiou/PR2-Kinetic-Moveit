@@ -9,6 +9,7 @@
 #include "geometry_msgs/PoseStamped.h"
 #include "geometry_msgs/Point.h"
 #include "moveit_msgs/CollisionObject.h"
+#include "moveit_visual_tools/moveit_visual_tools.h"
 
 
 namespace actioncontroller{
@@ -20,14 +21,16 @@ namespace actioncontroller{
             geometry_msgs::Point _topVertice;
             std::vector<geometry_msgs::Point> _topVertices;
             std::vector<geometry_msgs::PoseStamped> _possibleLocations;
-    public:
+            moveit_visual_tools::MoveItVisualToolsPtr visual_tools_;
+        public:
             std::vector<geometry_msgs::PoseStamped> get_possibleLocations(int samples);
-            PlaceGenerator(moveit_msgs::CollisionObject obj);
+            PlaceGenerator( moveit_msgs::CollisionObject obj );
             std::vector<geometry_msgs::Point> getTopVertices();
             void generateTopConvexHull();
             std::vector<geometry_msgs::PoseStamped> samplePossiblePlaceLocation(int samples);
             void setTopVertice();
             double crossProductXY(geometry_msgs::Point A, geometry_msgs::Point B, geometry_msgs::Point C );
+            void displayPoint(const geometry_msgs::Point &p);
     };
 
 

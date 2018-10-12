@@ -3,6 +3,7 @@
 //
 
 #include <PlaceGenerator.h>
+#include <rviz_visual_tools/rviz_visual_tools.h>
 
 #include "PlaceGenerator.h"
 
@@ -10,6 +11,7 @@ namespace actioncontroller{
 
     PlaceGenerator::PlaceGenerator(moveit_msgs::CollisionObject obj) {
         _object = obj;
+        visual_tools_.reset(new moveit_visual_tools::MoveItVisualTools("/odom_combined","/moveit_visual_markers"));
     }
 
     std::vector<geometry_msgs::PoseStamped> PlaceGenerator::samplePossiblePlaceLocation(int samples) {
@@ -32,6 +34,9 @@ namespace actioncontroller{
         //s'il n'y a pas assez de vertices pour faire une surface
         if(_topVertices.size() < 3){
             throw NoflatSurfaceExeption(std::string(_object.id));
+        }
+        for (int k = 0; k < _topVertices.size() ; ++k) {
+            displayPoint( _topVertices[k] );
         }
     }
 
@@ -60,7 +65,6 @@ namespace actioncontroller{
         return (A.x - O.x) * (B.y - O.y) - (A.y - O.y) * (B.x - O.x);
     }
 
-
     void PlaceGenerator::generateTopConvexHull() {
         std::sort(_topVertices.begin(), _topVertices.end(), [](const geometry_msgs::Point& p1, const geometry_msgs::Point& p2){
             return (p1.x < p2.x || ( p1.x == p2.x && p1.y < p2.y));
@@ -78,22 +82,36 @@ namespace actioncontroller{
             while (k >= t && crossProductXY(_topConvexHull[k-2], _topConvexHull[k-1], _topVertices[i-1]) <= 0) k--;
             _topConvexHull[k++] = _topVertices[i-1];
         }
-
         _topConvexHull.resize(k-1);
+        ROS_INFO("Convex Hull");
+        for (int j = 0; j < _topConvexHull.size() ; ++j) {
+            displayPoint(_topConvexHull[j]);
+        }
     }
-
-
-
 
     NoflatSurfaceExeption::NoflatSurfaceExeption(std::string object_name) {
         _object_name = object_name;
     }
 
-    const char * NoflatSurfaceExeption::what () const noexcept
-    {
+    const char * NoflatSurfaceExeption::what () const noexcept{
         std::stringstream ss;
         ss << _object_name << "has no flat surface !" << std::endl;
         return ss.str().c_str();
+    }
+
+    void PlaceGenerator::displayPoint(const geometry_msgs::Point &p){
+        geometry_msgs::PoseStamped ps;
+        ps.pose.position = p;
+        ps.header.frame_id = "/odom_combined";
+        ps.pose.orientation.x = 0;
+        ps.pose.orientation.y = 0;
+        ps.pose.orientation.z = 0;
+        ps.pose.orientation.w = 1;
+        visual_tools_.get()->publishCuboid(ps.pose, 0.01, 0.01, 0.01, rviz_visual_tools::colors::LIME_GREEN );
+        visual_tools_.get()->trigger();
+        std::stringstream ss;
+        ss << "Point:\n x:" << p.x << "\n y:" << p.y << "\n z:" << p.z << std::endl ;
+        ROS_INFO(ss.str().c_str());
     }
 
 }

@@ -156,6 +156,7 @@ namespace actioncontroller {
         for (int i = 0; i < samples; ++i) {
             //compute the pose for the xy plan
             //create a pose desiredDistBetweenWristAndTarget away from the target center.
+
             poses.push_back( generatePose(randomDouble,
                                             origin,
                                             affine3dFromAngleAxis(0, unif(randomDouble) * M_PI, 0),
@@ -166,15 +167,16 @@ namespace actioncontroller {
             poses.push_back( generatePose(randomDouble,
                                           origin,
                                           affine3dFromAngleAxis(unif(randomDouble) * M_PI, 0, 0),
-                                          affine3dFromAngleAxis(0.5*M_PI, 0, 0) ,
+                                          affine3dFromAngleAxis(0, 0, -0.5*M_PI) ,
                                           y_frameTranslation) );
 
             //compute the pose for the xz plan
             poses.push_back( generatePose(randomDouble,
                                           origin,
                                           affine3dFromAngleAxis(0, 0, unif(randomDouble) * M_PI),
-                                          affine3dFromAngleAxis(1 * M_PI, 0, 0) ,
+                                          affine3dFromAngleAxis(-0.5 * M_PI, 0, 0) ,
                                           z_frameTranslation) );
+
         }
 
 
@@ -232,7 +234,7 @@ namespace actioncontroller {
     }
 
     void GraspGenerator::affine3dToPoseMsg(Eigen::Affine3d m, geometry_msgs::PoseStamped &p){
-        p.header.frame_id = "map";
+        p.header.frame_id = "odom_combined";
         Eigen::Vector3d v = m.translation();
         p.pose.position.x = (float)v(0);
         p.pose.position.y = (float)v(1);

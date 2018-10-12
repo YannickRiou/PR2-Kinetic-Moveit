@@ -68,7 +68,7 @@ namespace actioncontroller {
                                                     const Eigen::Affine3d &orientationFrameRotation,
                                                     const Eigen::Affine3d &frameTranslation);
 
-        Eigen::Affine3d affine3dFromAngleAxis(double radianX, double radianY, double radianZ) const;
+            Eigen::Affine3d affine3dFromAngleAxis(double radianX, double radianY, double radianZ) const;
     };
 }
 

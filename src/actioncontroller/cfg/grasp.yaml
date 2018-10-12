@@ -50,12 +50,61 @@ grasp:
   - pre :
       direction :
         header_frame_id : "base_footprint"
-        vector_x : -1.0
+        vector_x : 1.0
         min_distance : 0.1
         desired_distance : 0.20
     post :
       direction :
         header_frame_id : "base_footprint"
-        vector_x : 1.0    
+        vector_x : -1.0
+        min_distance : 0.05
+        desired_distance : 0.20
+  - pre :
+      direction :
+        header_frame_id : "base_footprint"
+        vector_x : 1.0
+        min_distance : 0.1
+        desired_distance : 0.20
+    post :
+      direction :
+        header_frame_id : "base_footprint"
+        vector_x : 1.0
+        vector_z : 1.0
+        min_distance : 0.05
+        desired_distance : 0.20
+  - pre :
+        direction :
+          header_frame_id : "base_footprint"
+          vector_x : 1.0
+          min_distance : 0.1
+          desired_distance : 0.20
+    post :
+      direction :
+        header_frame_id : "base_footprint"
+        vector_z : 1.0
+        min_distance : 0.05
+        desired_distance : 0.20
+  - pre :
+      direction :
+        header_frame_id : "base_footprint"
+        vector_y : -1.0
+        min_distance : 0.1
+        desired_distance : 0.20
+    post :
+      direction :
+        header_frame_id : "base_footprint"
+        vector_z : 1.0
+        min_distance : 0.05
+        desired_distance : 0.20
+  - pre :
+      direction :
+        header_frame_id : "base_footprint"
+        vector_y : 1.0
+        min_distance : 0.1
+        desired_distance : 0.20
+    post :
+      direction :
+        header_frame_id : "base_footprint"
+        vector_z : 1.0
         min_distance : 0.05
         desired_distance : 0.20

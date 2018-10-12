@@ -193,22 +193,28 @@ namespace actioncontroller{
 
         bool pick(std::string group, std::string object){
 
+
+            actioncontroller::PlaceGenerator test( objects["tableLaas"] );
+            test.get_possibleLocations(10);
+            /*
             if( objects.find(object) == objects.end() ){
                 ROS_INFO(std::string("Object do not exist").c_str());
                 return false;
             }
             move_head(object);
             //Create the planning scene
-
+            current_scene.removeCollisionObjects( current_scene.getKnownObjectNames() );
             std::vector<moveit_msgs::CollisionObject> vec;
             //ROS_INFO("Nombre d'objets = %i dans la fonction pick", objects.size());
             {
                 std::lock_guard<std::mutex> lock(mutex);
                 for(const auto& element : objects){
                     vec.push_back(element.second);
+                    move_group.detachObject(element.second.id);
                     ROS_INFO( element.second.id.c_str() );
                 }
             }
+
             current_scene.applyCollisionObjects(vec);
             std::stringstream ss;
 
@@ -234,35 +240,7 @@ namespace actioncontroller{
             std::vector<geometry_msgs::PoseStamped> pose;
 
             grasps = gg.generateGrasp();
-            /*
-            geometry_msgs::PoseStamped p;
-            p.header.frame_id = "/map";
-            p.pose.position.x = objects[object].mesh_poses[0].position.x - 0.175   ;
-            p.pose.position.y = objects[object].mesh_poses[0].position.y ;
-            p.pose.position.z = objects[object].mesh_poses[0].position.z + 0.01 ;
-            p.pose.orientation.x = 0;
-            p.pose.orientation.y = 0;
-            p.pose.orientation.z = 0;
-            p.pose.orientation.w = 1;
-            moveit_msgs::Grasp g;
-            g.grasp_pose = p;
 
-
-            g.pre_grasp_approach.direction.header.frame_id = "base_footprint";
-            g.pre_grasp_approach.direction.vector.z = -1.0;
-            g.pre_grasp_approach.min_distance = 0.1;
-            g.pre_grasp_approach.desired_distance = 0.20;
-
-            g.post_grasp_retreat.direction.header.frame_id = "base_footprint";
-            g.post_grasp_retreat.direction.vector.z = 1.0;
-            g.post_grasp_retreat.min_distance = 0.05;
-            g.post_grasp_retreat.desired_distance = 0.20;
-
-            openGripper(g.pre_grasp_posture);
-
-            closedGripper(g.grasp_posture);
-             grasps.push_back(g);
-            */
             std::stringstream grasp_info;
             grasp_info << "number of grasps: " << grasps.size();
             ROS_INFO(grasp_info.str().c_str());
@@ -276,6 +254,8 @@ namespace actioncontroller{
                 return false;
             }
 
+            */
+
         }
 
         bool place(std::string group, std::string object, geometry_msgs::Pose pose){
@@ -285,7 +265,7 @@ namespace actioncontroller{
 
             // Setting place location pose
             // +++++++++++++++++++++++++++
-            place_location[0].place_pose.header.frame_id = "/map";
+            place_location[0].place_pose.header.frame_id = "/odom_combined";
 
             /* While placing it is the exact location of the center of the object. */
             place_location[0].place_pose.pose.position.x = pose.position.x ;

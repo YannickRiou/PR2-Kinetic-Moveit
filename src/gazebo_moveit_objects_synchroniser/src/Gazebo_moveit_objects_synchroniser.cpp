@@ -43,10 +43,9 @@ int main(int argc, char **argv){
                     if(clientObjectProperties.call(modelState)){
                         sceneObject.mesh_poses[0] = modelState.response.pose;
                         //Moving the object to fit the reference frame of odom combined
-                        //Have to be fixed by removing gap between odom_combined and map that is the frame of the object
-                        sceneObject.mesh_poses[0].position.z = sceneObject.mesh_poses[0].position.z - 0.05;
+                        sceneObject.mesh_poses[0].position.z = sceneObject.mesh_poses[0].position.z;
                         sceneObject.header.stamp = modelState.response.header.stamp;
-                        sceneObject.header.frame_id = "/map";
+                        sceneObject.header.frame_id = "/odom_combined";
                         sceneObject.header.seq = modelState.response.header.seq;
                     }
                     sceneObject.operation = sceneObject.ADD;

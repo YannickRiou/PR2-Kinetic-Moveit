@@ -23,7 +23,7 @@ int main(int argc, char** argv)
         tools.callingActionController(action, msg);
 
         action = "place.right_arm";
-        tools.createActionControllerMessage(action, object, 1.6, 0.0, 0.90, 1.0, 0, 0, 0, msg);
+        tools.createActionControllerMessage(action, object, 1.48, 0.0, 0.90, 1.0, 0, 0, 0, msg);
         tools.callingActionController(action, msg);
     }
 
