@@ -1,3 +1,4 @@
 string action
 geometry_msgs/Pose pose
-string object
+string objectA
+string objectB

@@ -10,27 +10,35 @@
 #include "geometry_msgs/Point.h"
 #include "moveit_msgs/CollisionObject.h"
 #include "moveit_visual_tools/moveit_visual_tools.h"
+#include "ActionControllerTools.h"
+#include "moveit_msgs/PlaceLocation.h"
+#include "GraspGenerator.h"
 
 
 namespace actioncontroller{
 
     class PlaceGenerator {
         private:
+
+            actioncontroller::GraspGenerator _graspGen;
+            int _samples;
+            double _topObjectHeight;
+            actioncontroller::ActionControllerTools tools;
             moveit_msgs::CollisionObject _object;
             std::vector<geometry_msgs::Point> _topConvexHull;
             geometry_msgs::Point _topVertice;
             std::vector<geometry_msgs::Point> _topVertices;
             std::vector<geometry_msgs::PoseStamped> _possibleLocations;
-            moveit_visual_tools::MoveItVisualToolsPtr visual_tools_;
+
         public:
-            std::vector<geometry_msgs::PoseStamped> get_possibleLocations(int samples);
-            PlaceGenerator( moveit_msgs::CollisionObject obj );
+            std::vector<geometry_msgs::PoseStamped> getPossibleLocations();
+            PlaceGenerator( std::string path, moveit_msgs::CollisionObject obj , double topObjectHeight, int samples );
             std::vector<geometry_msgs::Point> getTopVertices();
             void generateTopConvexHull();
-            std::vector<geometry_msgs::PoseStamped> samplePossiblePlaceLocation(int samples);
-            void setTopVertice();
+            std::vector<geometry_msgs::PoseStamped> samplePossiblePlaceLocation();
+            void setTopVertices();
             double crossProductXY(geometry_msgs::Point A, geometry_msgs::Point B, geometry_msgs::Point C );
-            void displayPoint(const geometry_msgs::Point &p);
+            std::vector<moveit_msgs::PlaceLocation> generatePlaces();
     };
 
 
@@ -40,6 +48,16 @@ namespace actioncontroller{
 
     public:
         explicit NoflatSurfaceExeption(std::string object_name);
+        const char * what () const noexcept;
+
+    };
+
+    class NoMeshInObjectExeption : public std::exception{
+    private:
+        std::string _object_name;
+
+    public:
+        explicit NoMeshInObjectExeption(std::string object_name);
         const char * what () const noexcept;
 
     };

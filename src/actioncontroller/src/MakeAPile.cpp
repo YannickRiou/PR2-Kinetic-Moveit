@@ -15,17 +15,17 @@ int main(int argc, char** argv)
 	actioncontroller::ActionControllerGoal msg;
 	actioncontroller::ActionControllerTools tools;
 
-    std::vector<std::string> objects = {"cube0", "cube0_0", "cube0_1"};
+    std::vector<std::string> objects = {"tableLaas", "cube0", "cube0_0", "cube0_1"};
 
-    for(const auto& object : objects){
+    //for (int i = 1; i < objects.size() ; ++i) {
         action = "pick.right_arm";
-        tools.createActionControllerMessage(action, object , msg);
+        tools.createActionControllerMessage(action, objects[1] , msg);
         tools.callingActionController(action, msg);
 
-        action = "place.right_arm";
-        tools.createActionControllerMessage(action, object, 1.48, 0.0, 0.90, 1.0, 0, 0, 0, msg);
+        action = "placeOn.right_arm";
+        tools.createActionControllerMessage(action, objects[1], objects[0] , msg);
         tools.callingActionController(action, msg);
-    }
+    //}
 
 
 

@@ -29,9 +29,12 @@
 #include <functional>
 #include <utility>
 #include <PlaceGenerator.h>
+#include "GraspGenerator.h"
 
 //Grasp generator
-#include "GraspGenerator.h"
+#include "PickGenerator.h"
+
+#define GRASP_FILE "/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/cfg/grasp.yaml"
 
 namespace actioncontroller{
 
@@ -44,45 +47,6 @@ namespace actioncontroller{
         std::map<std::string, moveit_msgs::CollisionObject> objects;
 
         std::mutex mutex;
-        void openGripper(trajectory_msgs::JointTrajectory& posture){
-            posture.joint_names.resize(6);
-            posture.joint_names[0] = "r_gripper_joint";
-            posture.joint_names[1] = "r_gripper_motor_screw_joint";
-            posture.joint_names[2] = "r_gripper_l_finger_joint";
-            posture.joint_names[3] = "r_gripper_r_finger_joint";
-            posture.joint_names[4] = "r_gripper_r_finger_tip_joint";
-            posture.joint_names[5] = "r_gripper_l_finger_tip_joint";
-
-            posture.points.resize(1);
-            posture.points[0].positions.resize(6);
-            posture.points[0].positions[0] = 1;
-            posture.points[0].positions[1] = 1;
-            posture.points[0].positions[2] = 0.477;
-            posture.points[0].positions[3] = 0.477;
-            posture.points[0].positions[4] = 0.477;
-            posture.points[0].positions[5] = 0.477;
-            posture.points[0].time_from_start = ros::Duration(5);
-        }
-
-        void closedGripper(trajectory_msgs::JointTrajectory& posture){
-            posture.joint_names.resize(6);
-            posture.joint_names[0] = "r_gripper_joint";
-            posture.joint_names[1] = "r_gripper_motor_screw_joint";
-            posture.joint_names[2] = "r_gripper_l_finger_joint";
-            posture.joint_names[3] = "r_gripper_r_finger_joint";
-            posture.joint_names[4] = "r_gripper_r_finger_tip_joint";
-            posture.joint_names[5] = "r_gripper_l_finger_tip_joint";
-
-            posture.points.resize(1);
-            posture.points[0].positions.resize(6);
-            posture.points[0].positions[0] = 0.0;
-            posture.points[0].positions[1] = 0.0;
-            posture.points[0].positions[2] = 0.40;
-            posture.points[0].positions[3] = 0.40;
-            posture.points[0].positions[4] = 0.40;
-            posture.points[0].positions[5] = 0.40;
-            posture.points[0].time_from_start = ros::Duration(5);
-        }
 
         bool move_arms(std::string group, geometry_msgs::Pose pose){
             moveit::planning_interface::MoveGroupInterface local_move_group(group);
@@ -193,29 +157,25 @@ namespace actioncontroller{
 
         bool pick(std::string group, std::string object){
 
-
-            actioncontroller::PlaceGenerator test( objects["tableLaas"] );
-            test.get_possibleLocations(10);
-            /*
             if( objects.find(object) == objects.end() ){
                 ROS_INFO(std::string("Object do not exist").c_str());
                 return false;
             }
             move_head(object);
             //Create the planning scene
-            current_scene.removeCollisionObjects( current_scene.getKnownObjectNames() );
+            _current_scene.removeCollisionObjects( _current_scene.getKnownObjectNames() );
             std::vector<moveit_msgs::CollisionObject> vec;
             //ROS_INFO("Nombre d'objets = %i dans la fonction pick", objects.size());
             {
                 std::lock_guard<std::mutex> lock(mutex);
                 for(const auto& element : objects){
                     vec.push_back(element.second);
-                    move_group.detachObject(element.second.id);
+                    _move_group.detachObject(element.second.id);
                     ROS_INFO( element.second.id.c_str() );
                 }
             }
 
-            current_scene.applyCollisionObjects(vec);
+            _current_scene.applyCollisionObjects(vec);
             std::stringstream ss;
 
             ss << "Object to pick pose is :\n x: " << objects[ object ].mesh_poses[0].position.x <<
@@ -231,12 +191,12 @@ namespace actioncontroller{
 
             geometry_msgs::PoseStamped p;
             p.header.frame_id = objects[object].header.frame_id;
-            p.pose.position.x = objects[object].mesh_poses[0].position.x ; //- 0.175   ;
+            p.pose.position.x = objects[object].mesh_poses[0].position.x ;
             p.pose.position.y = objects[object].mesh_poses[0].position.y ;
-            p.pose.position.z = objects[object].mesh_poses[0].position.z ; //+ 0.01 ;
+            p.pose.position.z = objects[object].mesh_poses[0].position.z ;
 
             std::vector<moveit_msgs::Grasp> grasps;
-            GraspGenerator gg("/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/cfg/grasp.yaml", p, 100 );
+            PickGenerator gg( GRASP_FILE , p, 100 );
             std::vector<geometry_msgs::PoseStamped> pose;
 
             grasps = gg.generateGrasp();
@@ -244,21 +204,20 @@ namespace actioncontroller{
             std::stringstream grasp_info;
             grasp_info << "number of grasps: " << grasps.size();
             ROS_INFO(grasp_info.str().c_str());
-            ROS_INFO(move_group.getEndEffectorLink().c_str());
-            move_group.allowReplanning(true);
-            move_group.setSupportSurfaceName("tableLaas");
-            moveit::planning_interface::MoveItErrorCode sucess = move_group.pick(object, grasps);
+            ROS_INFO(_move_group.getEndEffectorLink().c_str());
+            _move_group.allowReplanning(true);
+            _move_group.setSupportSurfaceName("tableLaas");
+            moveit::planning_interface::MoveItErrorCode sucess = _move_group.pick(object, grasps);
             if(moveit::planning_interface::MoveItErrorCode::SUCCESS == sucess.val){
                 return true;
             }else{
                 return false;
             }
 
-            */
-
         }
 
         bool place(std::string group, std::string object, geometry_msgs::Pose pose){
+            ROS_INFO(std::string("Placing").c_str());
             move_head(pose);
             std::vector<moveit_msgs::PlaceLocation> place_location;
             place_location.resize(1);
@@ -267,7 +226,7 @@ namespace actioncontroller{
             // +++++++++++++++++++++++++++
             place_location[0].place_pose.header.frame_id = "/odom_combined";
 
-            /* While placing it is the exact location of the center of the object. */
+            // While placing it is the exact location of the center of the object.
             place_location[0].place_pose.pose.position.x = pose.position.x ;
             place_location[0].place_pose.pose.position.y = pose.position.y ;
             place_location[0].place_pose.pose.position.z = pose.position.z ;
@@ -275,29 +234,30 @@ namespace actioncontroller{
 
             // Setting pre-place approach
             // ++++++++++++++++++++++++++
-            /* Defined with respect to frame_id */
+            // Defined with respect to frame_id
             place_location[0].pre_place_approach.direction.header.frame_id = "base_footprint";
-            /* Direction is set as negative z axis */
+            // Direction is set as negative z axis
             place_location[0].pre_place_approach.direction.vector.z = -1.0;
             place_location[0].pre_place_approach.min_distance = 0.0001;
             place_location[0].pre_place_approach.desired_distance = 0.20;
 
             // Setting post-grasp retreat
             // ++++++++++++++++++++++++++
-            /* Defined with respect to frame_id */
+            // Defined with respect to frame_id
             place_location[0].post_place_retreat.direction.header.frame_id = "base_footprint";
-            /* Direction is set as negative y axis */
+            // Direction is set as negative y axis
             place_location[0].post_place_retreat.direction.vector.z = 1.0;
             place_location[0].post_place_retreat.min_distance = 0.0001;
             place_location[0].post_place_retreat.desired_distance = 0.30;
 
             // Setting posture of eef after placing object
             // +++++++++++++++++++++++++++++++++++++++++++
-            /* Similar to the pick case */
-            openGripper(place_location[0].post_place_posture);
+            // Similar to the pick case
+
+            place_location[0].post_place_posture = _graspGen.getOpenGripper();
 
             // Call place to place the object using the place locations given.
-            moveit::planning_interface::MoveItErrorCode sucess = move_group.place(object, place_location);
+            moveit::planning_interface::MoveItErrorCode sucess = _move_group.place(object, place_location);
             if(moveit::planning_interface::MoveItErrorCode::SUCCESS == sucess.val){
                 return true;
             }else{
@@ -308,34 +268,65 @@ namespace actioncontroller{
 
         bool placeAOnB(std::string group, std::string objectA, std::string objectB ){
 
-            /*
-            PlaceGenerator::PlaceGenerator placeGenerator(objects[objectB]);
+            if( objects.find(objectA) == objects.end() || objects.find(objectB) == objects.end()  ){
+                ROS_INFO(std::string("Object do not exist").c_str());
+                return false;
+            }
+            move_head(objectB);
+            //Create the planning scene
+            _current_scene.removeCollisionObjects( _current_scene.getKnownObjectNames() );
+            std::vector<moveit_msgs::CollisionObject> vec;
+            //ROS_INFO("Nombre d'objets = %i dans la fonction pick", objects.size());
+            {
+                std::lock_guard<std::mutex> lock(mutex);
+                for(const auto& element : objects){
+                    vec.push_back(element.second);
+                    _move_group.detachObject(element.second.id);
+                    ROS_INFO( element.second.id.c_str() );
+                }
+            }
 
-            samplePossiblePlaceLocation(100);
+            _current_scene.applyCollisionObjects(vec);
+            std::stringstream ss;
 
-            moveit::planning_interface::MoveItErrorCode sucess = move_group.place(object, place_location);
+            ss << "Object to place pose is :\n x: " << objects[ objectA ].mesh_poses[0].position.x <<
+               "\n y: " << objects[ objectA ].mesh_poses[0].position.y <<
+               "\n z: " << objects[ objectA ].mesh_poses[0].position.z << std::endl;
+
+            ROS_INFO(ss.str().c_str());
+
+            ss.clear();
+            ss << "Object to place on pose is :\n x: " << objects[ objectB ].mesh_poses[0].position.x <<
+               "\n y: " << objects[ objectB ].mesh_poses[0].position.y <<
+               "\n z: " << objects[ objectB ].mesh_poses[0].position.z << std::endl;
+
+            actioncontroller::PlaceGenerator placeGenerator( GRASP_FILE, objects[objectB], 0.06, 100);
+            std::vector<moveit_msgs::PlaceLocation> place_location;
+            place_location = placeGenerator.generatePlaces() ;
+
+            moveit::planning_interface::MoveItErrorCode sucess = _move_group.place(objectA, place_location);
             if(moveit::planning_interface::MoveItErrorCode::SUCCESS == sucess.val){
                 return true;
             }else{
                 return false;
             }
-            */
         }
 
 
     protected:
         //Action server
         ros::NodeHandle nh_;
-        actionlib::SimpleActionServer<actioncontroller::ActionControllerAction> as_;
-        actioncontroller::ActionControllerFeedback feedback_;
-        actioncontroller::ActionControllerResult result_;
-        std::string action_name_;
-        ros::Subscriber sub_moveit_objects;
-        ros::Publisher planning_scene_diff_publisher;
+        actionlib::SimpleActionServer<actioncontroller::ActionControllerAction> _as;
+        actioncontroller::ActionControllerFeedback _feedback;
+        actioncontroller::ActionControllerResult _result;
+        std::string _action_name;
+        ros::Subscriber _sub_moveit_objects;
+        ros::Publisher _planning_scene_diff_publisher;
+        actioncontroller::GraspGenerator _graspGen;
 
         //Moveit
-        moveit::planning_interface::MoveGroupInterface move_group;
-        moveit::planning_interface::PlanningSceneInterface current_scene;
+        moveit::planning_interface::MoveGroupInterface _move_group;
+        moveit::planning_interface::PlanningSceneInterface _current_scene;
 
         //Move base client
 
@@ -356,14 +347,16 @@ namespace actioncontroller{
     public:
 
         ActionController(std::string name) :
-                as_(nh_, name, boost::bind(&ActionController::executeCB, this, _1), false),
-                action_name_(name),
-                move_group("right_arm")
+                _as(nh_, name, boost::bind(&ActionController::executeCB, this, _1), false),
+                _action_name(name),
+                _move_group("right_arm"),
+                _graspGen(GRASP_FILE)
+
         {
-            sub_moveit_objects = nh_.subscribe("moveit_objects", 1000, &ActionController::objects_update, this );
-            planning_scene_diff_publisher = nh_.advertise<moveit_msgs::PlanningScene>("planning_scene", 1);
-            move_group.setPlannerId("TRRTkConfigDefault");
-            as_.start();
+            _sub_moveit_objects = nh_.subscribe("moveit_objects", 1000, &ActionController::objects_update, this );
+            _planning_scene_diff_publisher = nh_.advertise<moveit_msgs::PlanningScene>("planning_scene", 1);
+            _move_group.setPlannerId("TRRTkConfigDefault");
+            _as.start();
         }
 
 
@@ -375,24 +368,26 @@ namespace actioncontroller{
             //ROS_INFO("Nombre d'objets = %i dans l'action callback", objects.size());
 
             if(msg->goal.action == "stareAt"){
-                feedback_.success = move_head( msg->goal.pose );
+                _feedback.success = move_head( msg->goal.pose );
             }else if(msg->goal.action == "stareAtObject"){
-                feedback_.success = move_head( (std::string)msg->goal.object );
+                _feedback.success = move_head( (std::string)msg->goal.objectA );
             }else if(msg->goal.action == "pick.left_arm" || msg->goal.action == "pick.right_arm" ){
-                feedback_.success = pick( (std::string)msg->goal.action, (std::string)msg->goal.object);
+                _feedback.success = pick( (std::string)msg->goal.action, (std::string)msg->goal.objectA);
             }else if(msg->goal.action == "place.left_arm" || msg->goal.action == "place.right_arm" ){
-                feedback_.success = place( (std::string)msg->goal.action, (std::string)msg->goal.object, msg->goal.pose);
+                _feedback.success = place( (std::string)msg->goal.action, (std::string)msg->goal.objectA, msg->goal.pose);
+            }else if(msg->goal.action == "placeOn.left_arm" || msg->goal.action == "placeOn.right_arm" ){
+                _feedback.success = placeAOnB( (std::string)msg->goal.action, (std::string)msg->goal.objectA,(std::string)msg->goal.objectB);
             }else if(msg->goal.action == "base" ){
-                feedback_.success = move_base( msg->goal.pose );
+                _feedback.success = move_base( msg->goal.pose );
             }else if(msg->goal.action == "torso" ){
-                feedback_.success = move_body( (std::string)msg->goal.action, msg->goal.pose );
+                _feedback.success = move_body( (std::string)msg->goal.action, msg->goal.pose );
             }else if(msg->goal.action == "left_arm" || msg->goal.action == "right_arm" ){
-                feedback_.success = move_arms((std::string)msg->goal.action, msg->goal.pose);
+                _feedback.success = move_arms((std::string)msg->goal.action, msg->goal.pose);
             }else{
                 ROS_INFO(std::string("The required order do not exist").c_str());
             }
-            result_.success = feedback_.success;
-            as_.setSucceeded(result_);
+            _result.success = _feedback.success;
+            _as.setSucceeded(_result);
         }
     };
 

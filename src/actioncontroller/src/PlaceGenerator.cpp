@@ -9,53 +9,109 @@
 
 namespace actioncontroller{
 
-    PlaceGenerator::PlaceGenerator(moveit_msgs::CollisionObject obj) {
+    PlaceGenerator::PlaceGenerator(std::string path, moveit_msgs::CollisionObject obj, double topObjectHeight, int samples) : _graspGen(path) {
+        _samples = samples;
         _object = obj;
-        visual_tools_.reset(new moveit_visual_tools::MoveItVisualTools("/odom_combined","/moveit_visual_markers"));
+        _topObjectHeight = topObjectHeight;
     }
 
-    std::vector<geometry_msgs::PoseStamped> PlaceGenerator::samplePossiblePlaceLocation(int samples) {
-        return std::vector<geometry_msgs::PoseStamped>();
-    }
+    std::vector<geometry_msgs::PoseStamped> PlaceGenerator::samplePossiblePlaceLocation() {
+        std::vector<geometry_msgs::PoseStamped> poses;
 
-    void PlaceGenerator::setTopVertice() {
-        for (int i = 0; i < _object.meshes.size() ; ++i) {
-            for (int j = 0; j < _object.meshes[i].vertices.size() ; ++j) {
-                if(_object.meshes[i].vertices[j].z > _topVertice.z){
-                    _topVertices.clear();
-                    _topVertice = _object.meshes[i].vertices[j];
-                    _topVertices.push_back(_object.meshes[i].vertices[j]);
-
-                }else if(_object.meshes[i].vertices[j].z == _topVertice.z){
-                    _topVertices.push_back(_object.meshes[i].vertices[j]);
+        double maxX, minX, maxY, minY = 0;
+        for (int i = 0; i < _topVertices.size() ; ++i) {
+            if(_topVertices[i].x > maxX){
+                maxX = _topVertices[i].x;
+            }else{
+                if(_topVertices[i].x < minX){
+                    minX = _topVertices[i].x;
+                }
+            }
+            if(_topVertices[i].y > maxY){
+                maxY = _topVertices[i].y;
+            }else{
+                if(_topVertices[i].y < minY){
+                    minY = _topVertices[i].y;
                 }
             }
         }
-        //s'il n'y a pas assez de vertices pour faire une surface
-        if(_topVertices.size() < 3){
-            throw NoflatSurfaceExeption(std::string(_object.id));
+
+        std::uniform_real_distribution<double> unif(0, 10000);
+        std::default_random_engine randomDouble;
+
+        for (int i = 0; i < _samples ; ++i) {
+            ROS_INFO(std::string("Generating point for placing").c_str());
+            geometry_msgs::PoseStamped p;
+            p.header.frame_id = _object.header.frame_id;
+            p.pose.orientation.x = 0;
+            p.pose.orientation.y = 0;
+            p.pose.orientation.z = 0;
+            p.pose.orientation.w = 1;
+            p.pose.position.x = minX +( std::fmod( unif(randomDouble) , maxX ) );
+            p.pose.position.y = minY +( std::fmod( unif(randomDouble) , maxY ) );
+            p.pose.position.z =  _topVertice.z + ( _topObjectHeight / 2 );
+            tools.displayPoseStampedMsg(p);
         }
-        for (int k = 0; k < _topVertices.size() ; ++k) {
-            displayPoint( _topVertices[k] );
+
+        return poses;
+    }
+
+    void PlaceGenerator::setTopVertices() {
+
+        if(!_object.meshes.empty()){
+            std::stringstream ss;
+            ss << "number of meshes: " << _object.meshes.size() ;
+            ROS_INFO(ss.str().c_str());
+            _topVertice = _object.meshes[0].vertices[0];
+            tools.displayPoint(_topVertice);
+            for (int i = 0; i < _object.meshes.size() ; ++i) {
+                ss.clear();
+                ss << "number of vertice in mesh " << i << " : " << _object.meshes[i].vertices.size();
+                ROS_INFO(ss.str().c_str());
+                for (int j = 0; j < _object.meshes[i].vertices.size() ; ++j) {
+                    if(_object.meshes[i].vertices[j].z > _topVertice.z){
+                        ROS_INFO(std::string("new Top vertex").c_str());
+                        _topVertices.clear();
+                        _topVertice = _object.meshes[i].vertices[j];
+                        _topVertices.push_back(_object.meshes[i].vertices[j]);
+
+                    }else if(_object.meshes[i].vertices[j].z == _topVertice.z){
+                        _topVertices.push_back(_object.meshes[i].vertices[j]);
+                    }
+                }
+            }
+            //s'il n'y a pas assez de vertices pour faire une surface
+            if(_topVertices.size() < 3){
+                throw NoflatSurfaceExeption(std::string(_object.id));
+            }
+            for (int k = 0; k < _topVertices.size() ; ++k) {
+                tools.displayPoint( _topVertices[k] );
+            }
+        }else{
+            throw NoMeshInObjectExeption(std::string(_object.id));
         }
+
     }
 
     std::vector<geometry_msgs::Point> PlaceGenerator::getTopVertices() {
         if(_topVertices.size() == 0){
-            setTopVertice();
+            setTopVertices();
         }
         return _topVertices;
     }
 
-    std::vector<geometry_msgs::PoseStamped> PlaceGenerator::get_possibleLocations(int samples){
-        if(_possibleLocations.size() == 0){
+    std::vector<geometry_msgs::PoseStamped> PlaceGenerator::getPossibleLocations(){
+        if(_possibleLocations.empty()){
             //Il faudra considérer que l'on peut avoir une orientation inversée. On va partir du principe que l'object fournit est dans un référentiel orienté correctement.
             try{
-                setTopVertice();
+                ROS_INFO(std::string("getting top vertices").c_str());
+                setTopVertices();
+                ROS_INFO(std::string("getting convex Hull").c_str());
                 generateTopConvexHull();
-                samplePossiblePlaceLocation(samples);
+                ROS_INFO(std::string("getting top vertices").c_str());
+                samplePossiblePlaceLocation();
             }
-            catch(NoflatSurfaceExeption e){
+            catch(std::exception e){
                 ROS_INFO(e.what());
             }
         }
@@ -85,8 +141,28 @@ namespace actioncontroller{
         _topConvexHull.resize(k-1);
         ROS_INFO("Convex Hull");
         for (int j = 0; j < _topConvexHull.size() ; ++j) {
-            displayPoint(_topConvexHull[j]);
+            tools.displayPoint(_topConvexHull[j]);
         }
+    }
+
+    std::vector<moveit_msgs::PlaceLocation> PlaceGenerator::generatePlaces() {
+        std::vector<moveit_msgs::PlaceLocation> locations;
+        ROS_INFO("creating place");
+        std::stringstream ss;
+        ss << "Grasp Number " <<  _graspGen.getProvidedGraspsNumber();
+        ROS_INFO(ss.str().c_str());
+        std::vector<geometry_msgs::PoseStamped> targets = getPossibleLocations();
+        for(geometry_msgs::PoseStamped target : targets){
+            for (unsigned i = 0; i < _graspGen.getProvidedGraspsNumber() ; ++i) {
+                moveit_msgs::PlaceLocation pl;
+                pl.place_pose = target;
+                pl.pre_place_approach = _graspGen.generateGraspMove(i, "pre");
+                pl.post_place_retreat = _graspGen.generateGraspMove(i, "post");
+                pl.post_place_posture = _graspGen.getOpenGripper();
+                locations.push_back(pl);
+            }
+        }
+        return locations;
     }
 
     NoflatSurfaceExeption::NoflatSurfaceExeption(std::string object_name) {
@@ -99,19 +175,13 @@ namespace actioncontroller{
         return ss.str().c_str();
     }
 
-    void PlaceGenerator::displayPoint(const geometry_msgs::Point &p){
-        geometry_msgs::PoseStamped ps;
-        ps.pose.position = p;
-        ps.header.frame_id = "/odom_combined";
-        ps.pose.orientation.x = 0;
-        ps.pose.orientation.y = 0;
-        ps.pose.orientation.z = 0;
-        ps.pose.orientation.w = 1;
-        visual_tools_.get()->publishCuboid(ps.pose, 0.01, 0.01, 0.01, rviz_visual_tools::colors::LIME_GREEN );
-        visual_tools_.get()->trigger();
-        std::stringstream ss;
-        ss << "Point:\n x:" << p.x << "\n y:" << p.y << "\n z:" << p.z << std::endl ;
-        ROS_INFO(ss.str().c_str());
+    NoMeshInObjectExeption::NoMeshInObjectExeption(const std::string object_name)  {
+        _object_name = object_name;
     }
 
+    const char * NoMeshInObjectExeption::what () const noexcept{
+        std::stringstream ss;
+        ss << _object_name << "has an empty mesh !" << std::endl;
+        return ss.str().c_str();
+    }
 }
