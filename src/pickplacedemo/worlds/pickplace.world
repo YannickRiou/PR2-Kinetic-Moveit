@@ -81,48 +81,48 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
     <state world_name='default'>
-      <sim_time>4560 273000000</sim_time>
-      <real_time>366 90508426</real_time>
-      <wall_time>1536915415 222889566</wall_time>
-      <iterations>365703</iterations>
+      <sim_time>5100 488000000</sim_time>
+      <real_time>130 960240297</real_time>
+      <wall_time>1539896106 66398702</wall_time>
+      <iterations>129530</iterations>
       <model name='adream'>
-        <pose frame=''>-0.644791 5.56415 -0.025937 0 7e-06 -0.000719</pose>
+        <pose frame=''>-0.644831 5.56397 -0.025929 8e-06 -5e-06 -0.000764</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>-0.644791 5.56415 0.024063 0 7e-06 -0.000719</pose>
+          <pose frame=''>-0.644832 5.56397 0.024071 8e-06 -5e-06 -0.000764</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0.295769 0.233156 -5.54185 3.11436 0.038813 0.003133</acceleration>
-          <wrench>0.295769 0.233156 -5.54185 0 -0 0</wrench>
+          <acceleration>-0.370803 -0.197021 2.43379 -0.67691 -0.041587 -3.14016</acceleration>
+          <wrench>-0.370803 -0.197021 2.43379 0 -0 0</wrench>
         </link>
       </model>
       <model name='cube0'>
-        <pose frame=''>1.27849 -0.567243 0.829995 0 1.7e-05 -0.000601</pose>
+        <pose frame=''>1.28906 -0.472844 0.82998 1.3e-05 -3e-06 0.025445</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>1.27849 -0.567243 0.829995 0 1.7e-05 -0.000601</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-3.14103 -0.000358 -4.25257 0.382419 -0.778418 0.001304</acceleration>
-          <wrench>-0.314103 -3.6e-05 -0.425257 0 -0 0</wrench>
+          <pose frame=''>1.28906 -0.472844 0.82998 1.3e-05 -3e-06 0.025445</pose>
+          <velocity>0.000374 0.000125 -0.014017 0.013735 -0.005817 -0.002074</velocity>
+          <acceleration>0.620343 -1.09102 -8.70896 0.768286 -1.565 -2.07514</acceleration>
+          <wrench>0.062034 -0.109102 -0.870896 0 -0 0</wrench>
         </link>
       </model>
       <model name='cube0_0'>
-        <pose frame=''>1.28368 -0.399061 0.829995 0 1.7e-05 -0.000574</pose>
+        <pose frame=''>1.28216 -0.339223 0.829982 -1.8e-05 -4e-06 -0.044853</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>1.28368 -0.399061 0.829995 0 1.7e-05 -0.000574</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-3.14334 -0.000348 -4.23816 0.382192 -0.849097 0.001243</acceleration>
-          <wrench>-0.314334 -3.5e-05 -0.423816 0 -0 0</wrench>
+          <pose frame=''>1.28216 -0.339223 0.829982 -1.8e-05 -4e-06 -0.044853</pose>
+          <velocity>0.00044 -0.005353 -0.011637 -0.0123 -0.005726 -1e-06</velocity>
+          <acceleration>0.68665 -4.64939 -5.1505 -1.76134 -1.44413 -0.002738</acceleration>
+          <wrench>0.068665 -0.464939 -0.51505 0 -0 0</wrench>
         </link>
       </model>
       <model name='cube0_1'>
-        <pose frame=''>1.28885 -0.218644 0.829995 4e-06 2.4e-05 -0.00028</pose>
+        <pose frame=''>1.28574 -0.183813 0.829984 -5.4e-05 -9e-06 -0.118488</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>1.28885 -0.218644 0.829995 4e-06 2.4e-05 -0.00028</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-2.67212 -0.023911 -2.66411 2.42805 0.118144 -3.13992</acceleration>
-          <wrench>-0.267212 -0.002391 -0.266411 0 -0 0</wrench>
+          <pose frame=''>1.28574 -0.183813 0.829984 -5.4e-05 -9e-06 -0.118488</pose>
+          <velocity>0.000405 -0.011731 -0.008815 -0.04573 -0.006872 -1e-06</velocity>
+          <acceleration>0.652802 -8.85095 -0.948836 1.84948 -0.55878 3.13873</acceleration>
+          <wrench>0.06528 -0.885095 -0.094884 0 -0 0</wrench>
         </link>
       </model>
       <model name='ground_plane'>
@@ -136,13 +136,13 @@
         </link>
       </model>
       <model name='tableLaas'>
-        <pose frame=''>1.57024 -0.059309 0.749998 3.14159 -0 1.54701</pose>
+        <pose frame=''>1.48784 -0.143955 -0.050013 0 1.9e-05 -1.53939</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>1.57024 -0.059309 0.749998 3.14159 -0 1.54701</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-3.4535 0.010705 -1.57994 3.12663 1.46361 -3.14072</acceleration>
-          <wrench>-34.535 0.107053 -15.7993 0 -0 0</wrench>
+          <pose frame=''>1.48784 -0.143955 -0.050013 0 1.9e-05 -1.53939</pose>
+          <velocity>-3.9e-05 0.001217 -0.005981 0.02434 0.000765 0</velocity>
+          <acceleration>-0.038671 1.21673 -5.98102 -0.792816 0.765064 -0.000424</acceleration>
+          <wrench>-0.386708 12.1674 -59.8102 0 -0 0</wrench>
         </link>
       </model>
       <light name='sun'>
@@ -154,7 +154,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>0.505478 -0.030152 1.92168 0 0.87071 -0.339319</pose>
+        <pose frame=''>0.766468 4.25144 3.4133 -0 0.66271 -1.64733</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
@@ -220,87 +220,6 @@
         <gravity>1</gravity>
       </link>
       <pose frame=''>-0.044274 5.46716 0 0 -0 0</pose>
-    </model>
-    <model name='tableLaas'>
-      <link name='link_0'>
-        <inertial>
-          <mass>10</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://tableLaas/meshes/tableLaas.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </visual>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <uri>model://tableLaas/meshes/tableLaas.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <surface>
-            <friction>
-              <ode>
-                <mu>15</mu>
-                <mu2>15</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
-              </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
-            </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
-            <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
-              <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
-              </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
-            </contact>
-          </surface>
-          <max_contacts>10</max_contacts>
-        </collision>
-        <self_collide>0</self_collide>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-      <pose frame=''>1.34876 0.043037 0 0 -0 0</pose>
     </model>
     <model name='cube0'>
       <link name='link_0'>
@@ -586,6 +505,54 @@
       <static>0</static>
       <allow_auto_disable>1</allow_auto_disable>
       <pose frame=''>1.31065 -0.210614 0 0 -0 0</pose>
+    </model>
+    <model name='tableLaas'>
+      <link name='link_0'>
+        <inertial>
+          <mass>10</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://tableLaas/meshes/tableLaas.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://tableLaas/meshes/tableLaas.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-0.036823 -0.191907 0 0 -0 0</pose>
     </model>
   </world>
 </sdf>
