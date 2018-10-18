@@ -3,7 +3,7 @@ bin/
 lib/
 msg_gen/
 srv_gen/
-logs/
+logs/*
 
 #Clion
 .idea/

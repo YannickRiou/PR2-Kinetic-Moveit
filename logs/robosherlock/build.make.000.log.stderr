@@ -1,42 +1,42 @@
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/annotation/src/FeatureAnnotator.cpp:[m[K In member function ‘[01m[Kvoid FeatureAnnotator::setupAlgorithm(cv::Algorithm*, std::__cxx11::string)[m[K’:
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/annotation/src/FeatureAnnotator.cpp:225:38:[m[K [01;35m[Kwarning: [m[Kparameter ‘[01m[Kalgorithm[m[K’ set but not used [-Wunused-but-set-parameter]
+[01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/annotation/src/FeatureAnnotator.cpp:[m[K In member function ‘[01m[Kvoid FeatureAnnotator::setupAlgorithm(cv::Algorithm*, std::__cxx11::string)[m[K’:
+[01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/annotation/src/FeatureAnnotator.cpp:225:38:[m[K [01;35m[Kwarning: [m[Kparameter ‘[01m[Kalgorithm[m[K’ set but not used [-Wunused-but-set-parameter]
    void setupAlgorithm(cv::Algorithm *algorithm, std::string name)
 [01;32m[K                                      ^[m[K
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/io/src/UnrealVisionBridge.cpp:[m[K In member function ‘[01m[Kvirtual bool UnrealVisionBridge::setData(uima::CAS&, uint64_t)[m[K’:
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/io/src/UnrealVisionBridge.cpp:281:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Know[m[K’ [-Wunused-variable]
+[01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/io/src/UnrealVisionBridge.cpp:[m[K In member function ‘[01m[Kvirtual bool UnrealVisionBridge::setData(uima::CAS&, uint64_t)[m[K’:
+[01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/io/src/UnrealVisionBridge.cpp:281:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Know[m[K’ [-Wunused-variable]
    uint64_t now = std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
 [01;32m[K            ^[m[K
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/io/src/Storage.cpp:[m[K In member function ‘[01m[Kvoid rs::Storage::setupDBScripts()[m[K’:
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/io/src/Storage.cpp:146:53:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool mongo::DBClientWithCommands::eval(const string&, const string&)[m[K’ is deprecated: deprecated in MongoDB 3.0 [-Wdeprecated-declarations]
+[01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/io/src/Storage.cpp:[m[K In member function ‘[01m[Kvoid rs::Storage::setupDBScripts()[m[K’:
+[01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/io/src/Storage.cpp:146:53:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool mongo::DBClientWithCommands::eval(const string&, const string&)[m[K’ is deprecated: deprecated in MongoDB 3.0 [-Wdeprecated-declarations]
      if(!db.eval(dbName, "function(){" + script + "}"))
 [01;32m[K                                                     ^[m[K
 In file included from [01m[K/opt/ros/kinetic/include/mongo/client/dbclient_rs.h:23:0[m[K,
                  from [01m[K/opt/ros/kinetic/include/mongo/client/dbclient.h:59[m[K,
-                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/io/include/rs/io/Storage.h:28[m[K,
-                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/io/src/Storage.cpp:30[m[K:
+                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/io/include/rs/io/Storage.h:28[m[K,
+                 from [01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/io/src/Storage.cpp:30[m[K:
 [01m[K/opt/ros/kinetic/include/mongo/client/dbclientinterface.h:1184:10:[m[K [01;36m[Knote: [m[Kdeclared here
      bool eval(const std::string& dbname, const std::string& jscode) {
 [01;32m[K          ^[m[K
-In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/io/src/visualizer.cpp:28:0[m[K:
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/io/include/rs/io/visualizer.h:[m[K In constructor ‘[01m[Krs::Visualizer::Visualizer(const string&, bool)[m[K’:
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/io/include/rs/io/visualizer.h:70:19:[m[K [01;35m[Kwarning: [m[K‘[01m[Krs::Visualizer::nh[m[K’ will be initialized after [-Wreorder]
+In file included from [01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/io/src/visualizer.cpp:28:0[m[K:
+[01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/io/include/rs/io/visualizer.h:[m[K In constructor ‘[01m[Krs::Visualizer::Visualizer(const string&, bool)[m[K’:
+[01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/io/include/rs/io/visualizer.h:70:19:[m[K [01;35m[Kwarning: [m[K‘[01m[Krs::Visualizer::nh[m[K’ will be initialized after [-Wreorder]
    ros::NodeHandle nh;
 [01;32m[K                   ^[m[K
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/io/include/rs/io/visualizer.h:63:14:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kbool rs::Visualizer::headless_[m[K’ [-Wreorder]
+[01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/io/include/rs/io/visualizer.h:63:14:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kbool rs::Visualizer::headless_[m[K’ [-Wreorder]
    bool save, headless_;
 [01;32m[K              ^[m[K
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/io/src/visualizer.cpp:34:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [-Wreorder]
+[01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/io/src/visualizer.cpp:34:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [-Wreorder]
  Visualizer::Visualizer(const std::string &savePath, bool headless) : windowImage("Image Viewer"), windowCloud("Cloud Viewer"), annotator(NULL), names(), index(0),
 [01;32m[K ^[m[K
-/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/flowcontrol/src/RSControledAnalysisEngine.cpp: In instantiation of ‘[01m[Kbool RSControledAnalysisEngine::drawResulstOnImage(const std::vector<bool>&, const std::vector<std::__cxx11::basic_string<char> >&, std::__cxx11::string&) [with T = rs::Object; std::__cxx11::string = std::__cxx11::basic_string<char>][m[K’:
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/flowcontrol/src/RSControledAnalysisEngine.cpp:404:29:[m[K   required from here
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/flowcontrol/src/RSControledAnalysisEngine.cpp:229:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Know[m[K’ [-Wunused-variable]
+/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/flowcontrol/src/RSControledAnalysisEngine.cpp: In instantiation of ‘[01m[Kbool RSControledAnalysisEngine::drawResulstOnImage(const std::vector<bool>&, const std::vector<std::__cxx11::basic_string<char> >&, std::__cxx11::string&) [with T = rs::Object; std::__cxx11::string = std::__cxx11::basic_string<char>][m[K’:
+[01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/flowcontrol/src/RSControledAnalysisEngine.cpp:404:29:[m[K   required from here
+[01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/flowcontrol/src/RSControledAnalysisEngine.cpp:229:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Know[m[K’ [-Wunused-variable]
    uint64_t now = sceneCas.getScene().timestamp();
 [01;32m[K            ^[m[K
-/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/flowcontrol/src/RSControledAnalysisEngine.cpp: In instantiation of ‘[01m[Kbool RSControledAnalysisEngine::drawResulstOnImage(const std::vector<bool>&, const std::vector<std::__cxx11::basic_string<char> >&, std::__cxx11::string&) [with T = rs::Cluster; std::__cxx11::string = std::__cxx11::basic_string<char>][m[K’:
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/flowcontrol/src/RSControledAnalysisEngine.cpp:408:29:[m[K   required from here
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/flowcontrol/src/RSControledAnalysisEngine.cpp:229:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Know[m[K’ [-Wunused-variable]
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/flowcontrol/src/RSAggregatedAnalysisEngine.cpp:[m[K In member function ‘[01m[Kuima::TyErrorId RSAggregatedAnalysisEngine::annotatorProcess(int, uima::CAS&, uima::ResultSpecification&)[m[K’:
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/robosherlock/src/flowcontrol/src/RSAggregatedAnalysisEngine.cpp:105:12:[m[K [01;35m[Kwarning: [m[Kconverting to non-pointer type ‘[01m[Klong int[m[K’ from NULL [-Wconversion-null]
+/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/flowcontrol/src/RSControledAnalysisEngine.cpp: In instantiation of ‘[01m[Kbool RSControledAnalysisEngine::drawResulstOnImage(const std::vector<bool>&, const std::vector<std::__cxx11::basic_string<char> >&, std::__cxx11::string&) [with T = rs::Cluster; std::__cxx11::string = std::__cxx11::basic_string<char>][m[K’:
+[01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/flowcontrol/src/RSControledAnalysisEngine.cpp:408:29:[m[K   required from here
+[01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/flowcontrol/src/RSControledAnalysisEngine.cpp:229:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Know[m[K’ [-Wunused-variable]
+[01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/flowcontrol/src/RSAggregatedAnalysisEngine.cpp:[m[K In member function ‘[01m[Kuima::TyErrorId RSAggregatedAnalysisEngine::annotatorProcess(int, uima::CAS&, uima::ResultSpecification&)[m[K’:
+[01m[K/home/david/PR2-Kinetic-Xenial/src/robosherlock/src/flowcontrol/src/RSAggregatedAnalysisEngine.cpp:105:12:[m[K [01;35m[Kwarning: [m[Kconverting to non-pointer type ‘[01m[Klong int[m[K’ from NULL [-Wconversion-null]
      return NULL;
 [01;32m[K            ^[m[K
