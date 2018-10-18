@@ -2,8 +2,6 @@
 // Created by dtrimoul on 10/11/18.
 //
 
-#include <PlaceGenerator.h>
-#include <rviz_visual_tools/rviz_visual_tools.h>
 
 #include "PlaceGenerator.h"
 
@@ -40,17 +38,17 @@ namespace actioncontroller{
         std::default_random_engine randomDouble;
 
         for (int i = 0; i < _samples ; ++i) {
-            ROS_INFO(std::string("Generating point for placing").c_str());
+            //ROS_INFO(std::string("Generating point for placing").c_str());
             geometry_msgs::PoseStamped p;
             p.header.frame_id = _object.header.frame_id;
             p.pose.orientation.x = 0;
             p.pose.orientation.y = 0;
             p.pose.orientation.z = 0;
             p.pose.orientation.w = 1;
-            p.pose.position.x = minX +( std::fmod( unif(randomDouble) , maxX ) );
+            p.pose.position.x =  ( minX +( std::fmod( unif(randomDouble) , maxX ) ) );
             p.pose.position.y = minY +( std::fmod( unif(randomDouble) , maxY ) );
             p.pose.position.z =  _topVertice.z + ( _topObjectHeight / 2 );
-            tools.displayPoseStampedMsg(p);
+            //tools.displayPoseStampedMsg(p);
         }
 
         return poses;
@@ -63,7 +61,7 @@ namespace actioncontroller{
             ss << "number of meshes: " << _object.meshes.size() ;
             ROS_INFO(ss.str().c_str());
             _topVertice = _object.meshes[0].vertices[0];
-            tools.displayPoint(_topVertice);
+            //tools.displayPoint(_topVertice);
             for (int i = 0; i < _object.meshes.size() ; ++i) {
                 ss.clear();
                 ss << "number of vertice in mesh " << i << " : " << _object.meshes[i].vertices.size();
@@ -84,9 +82,10 @@ namespace actioncontroller{
             if(_topVertices.size() < 3){
                 throw NoflatSurfaceExeption(std::string(_object.id));
             }
-            for (int k = 0; k < _topVertices.size() ; ++k) {
+            convertMeshPoinToReferenceFrame();
+            /*for (int k = 0; k < _topVertices.size() ; ++k) {
                 tools.displayPoint( _topVertices[k] );
-            }
+            }*/
         }else{
             throw NoMeshInObjectExeption(std::string(_object.id));
         }
@@ -115,6 +114,7 @@ namespace actioncontroller{
                 ROS_INFO(e.what());
             }
         }
+        return _possibleLocations;
     }
 
     double PlaceGenerator::crossProductXY(geometry_msgs::Point O, geometry_msgs::Point A, geometry_msgs::Point B ){
@@ -145,7 +145,7 @@ namespace actioncontroller{
         }
     }
 
-    std::vector<moveit_msgs::PlaceLocation> PlaceGenerator::generatePlaces() {
+    std::vector<moveit_msgs::PlaceLocation> PlaceGenerator::generatePlaceLocations() {
         std::vector<moveit_msgs::PlaceLocation> locations;
         ROS_INFO("creating place");
         std::stringstream ss;
@@ -163,6 +163,29 @@ namespace actioncontroller{
             }
         }
         return locations;
+    }
+
+    void PlaceGenerator::convertMeshPoinToReferenceFrame() {
+        geometry_msgs::PoseStamped p;
+        p.pose.position = _object.mesh_poses[0].position;
+        p.pose.orientation = _object.mesh_poses[0].orientation;
+        Eigen::Affine3d Tranform_World_Object;
+        ROS_INFO("reference Frame Transformation");
+
+        tools.poseMsgToAffine3d( p, Tranform_World_Object );
+
+
+        tools.displayAffine3d(Tranform_World_Object);
+        for (int i = 0; i < _topVertices.size() ; ++i) {
+            Eigen::Affine3d m(Eigen::Translation3d( _topVertices[i].x, _topVertices[i].y, _topVertices[i].z) );
+            tools.displayAffine3d(m);
+            m = Tranform_World_Object * m ;
+            tools.displayAffine3d(m);
+            Eigen::Vector3d v = m.translation();
+            _topVertices[i].x = v.x();
+            _topVertices[i].y = v.y();
+            _topVertices[i].z = v.z();
+        }
     }
 
     NoflatSurfaceExeption::NoflatSurfaceExeption(std::string object_name) {

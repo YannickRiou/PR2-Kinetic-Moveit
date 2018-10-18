@@ -206,7 +206,7 @@ namespace actioncontroller{
             ROS_INFO(grasp_info.str().c_str());
             ROS_INFO(_move_group.getEndEffectorLink().c_str());
             _move_group.allowReplanning(true);
-            _move_group.setSupportSurfaceName("tableLaas");
+            //_move_group.setSupportSurfaceName("tableLaas");
             moveit::planning_interface::MoveItErrorCode sucess = _move_group.pick(object, grasps);
             if(moveit::planning_interface::MoveItErrorCode::SUCCESS == sucess.val){
                 return true;
@@ -217,6 +217,15 @@ namespace actioncontroller{
         }
 
         bool place(std::string group, std::string object, geometry_msgs::Pose pose){
+
+            if(_current_scene.getAttachedObjects().empty()){
+                ROS_INFO(std::string("No object in hand").c_str());
+                return false;
+            }
+            if(_current_scene.getAttachedObjects().find(object) == _current_scene.getAttachedObjects().end()){
+                ROS_INFO(std::string("Trying to place the wrong object").c_str());
+                return false;
+            }
             ROS_INFO(std::string("Placing").c_str());
             move_head(pose);
             std::vector<moveit_msgs::PlaceLocation> place_location;
@@ -289,6 +298,10 @@ namespace actioncontroller{
             _current_scene.applyCollisionObjects(vec);
             std::stringstream ss;
 
+            actioncontroller::PlaceGenerator placeGenerator( GRASP_FILE, objects[objectB], 0.06, 100);
+            std::vector<moveit_msgs::PlaceLocation> place_location;
+            place_location = placeGenerator.generatePlaceLocations() ;
+
             ss << "Object to place pose is :\n x: " << objects[ objectA ].mesh_poses[0].position.x <<
                "\n y: " << objects[ objectA ].mesh_poses[0].position.y <<
                "\n z: " << objects[ objectA ].mesh_poses[0].position.z << std::endl;
@@ -300,9 +313,8 @@ namespace actioncontroller{
                "\n y: " << objects[ objectB ].mesh_poses[0].position.y <<
                "\n z: " << objects[ objectB ].mesh_poses[0].position.z << std::endl;
 
-            actioncontroller::PlaceGenerator placeGenerator( GRASP_FILE, objects[objectB], 0.06, 100);
-            std::vector<moveit_msgs::PlaceLocation> place_location;
-            place_location = placeGenerator.generatePlaces() ;
+            ROS_INFO(ss.str().c_str());
+
 
             moveit::planning_interface::MoveItErrorCode sucess = _move_group.place(objectA, place_location);
             if(moveit::planning_interface::MoveItErrorCode::SUCCESS == sucess.val){

@@ -49,7 +49,7 @@ namespace actioncontroller {
         std::default_random_engine randomDouble;
 
         Eigen::Affine3d origin;
-        poseMsgToAffine3d(target, origin);
+        tools.poseMsgToAffine3d(target, origin);
         ROS_INFO(std::string("origin").c_str());
         tools.displayAffine3d(origin);
 
@@ -65,26 +65,27 @@ namespace actioncontroller {
         Eigen::Affine3d z_frameTranslation(Eigen::Translation3d(Eigen::Vector3d(desiredDistBetweenWristAndTarget, 0,0)));
 
         for (int i = 0; i < samples; ++i) {
-            //compute the pose for the xy plan
+            //compute the pose for the xz plan
             //create a pose desiredDistBetweenWristAndTarget away from the target center.
 
             poses.push_back( generatePose(origin,
-                                            affine3dFromAngleAxis(0, unif(randomDouble) * M_PI, 0),
-                                            affine3dFromAngleAxis(1 * M_PI, 1 * M_PI, 0) ,
+                                            tools.affine3dFromAngleAxis(0, unif(randomDouble) * M_PI, 0),
+                                            tools.affine3dFromAngleAxis( 0, M_PI, 0) ,
                                             x_frameTranslation) );
 
+            /*I have to define plan constraint for approach depending of the grasp orientation / position
             //compute the pose for the yz plan
             poses.push_back( generatePose(origin,
-                                          affine3dFromAngleAxis(unif(randomDouble) * M_PI, 0, 0),
-                                          affine3dFromAngleAxis(0, 0, -0.5*M_PI) ,
+                                          tools.affine3dFromAngleAxis(unif(randomDouble) * M_PI, 0, 0),
+                                          tools.affine3dFromAngleAxis(0, 0, -0.5*M_PI) ,
                                           y_frameTranslation) );
 
-            //compute the pose for the xz plan
+            //compute the pose for the xy plan
             poses.push_back( generatePose(origin,
-                                          affine3dFromAngleAxis(0, 0, unif(randomDouble) * M_PI),
-                                          affine3dFromAngleAxis(-0.5 * M_PI, 0, 0) ,
+                                          tools.affine3dFromAngleAxis(0, 0, unif(randomDouble) * M_PI),
+                                          tools.affine3dFromAngleAxis(0.5 * M_PI, M_PI, 0) ,
                                           z_frameTranslation) );
-
+            */
         }
 
 
@@ -92,18 +93,10 @@ namespace actioncontroller {
 
     }
 
-    Eigen::Affine3d PickGenerator::affine3dFromAngleAxis(double radianX, double radianY, double radianZ) const {
-        Eigen::Affine3d orientationFrameRotation;
-        orientationFrameRotation = Eigen::AngleAxisd(radianX, Eigen::Vector3d::UnitX())
-                                     * Eigen::AngleAxisd(radianY, Eigen::Vector3d::UnitY())
-                                     * Eigen::AngleAxisd(radianZ, Eigen::Vector3d::UnitZ());
-        return orientationFrameRotation;
-    }
-
     geometry_msgs::PoseStamped PickGenerator::generatePose(const Eigen::Affine3d &origin,
-                                        const Eigen::Affine3d &sampleRotation,
-                                        const Eigen::Affine3d &orientationFrameRotation,
-                                        const Eigen::Affine3d &frameTranslation) {
+                                                           const Eigen::Affine3d &sampleRotation,
+                                                           const Eigen::Affine3d &orientationFrameRotation,
+                                                           const Eigen::Affine3d &frameTranslation) {
         geometry_msgs::PoseStamped p;
 
         ROS_INFO(std::string("sampleRotation").c_str());
@@ -124,35 +117,10 @@ namespace actioncontroller {
         tools.displayAffine3d(new_point);
 
         //store the pose
-        affine3dToPoseMsg(new_point, p);
+        tools.affine3dToPoseMsg(new_point, p);
         tools.displayPoseStampedMsg(p);
         return p;
     }
 
-    void PickGenerator::poseMsgToAffine3d(geometry_msgs::PoseStamped &p, Eigen::Affine3d &m){
-        /* m = Eigen::Affine3d::fromPositionOrientationScale(Eigen::Vector3d(p.pose.position.x, p.pose.position.y, p.pose.position.z),
-                Eigen::Quaterniond(p.pose.orientation.x, p.pose.orientation.y, p.pose.orientation.z, p.pose.orientation.w) ,
-                Eigen::Ma );
-        */
-        auto &o = p.pose.orientation;
-        Eigen::Quaterniond q(o.w, o.x, o.y, o.z);
-        auto &pose = p.pose.position;
-        Eigen::Translation3d t(pose.x, pose.y, pose.z);
-        m = t * q;
-    }
-
-    void PickGenerator::affine3dToPoseMsg(Eigen::Affine3d m, geometry_msgs::PoseStamped &p){
-        p.header.frame_id = "odom_combined";
-        Eigen::Vector3d v = m.translation();
-        p.pose.position.x = (float)v(0);
-        p.pose.position.y = (float)v(1);
-        p.pose.position.z = (float)v(2);
-        Eigen::Matrix3d rot = m.rotation() ;
-        Eigen::Quaterniond q(rot);
-        p.pose.orientation.x = (float)q.x();
-        p.pose.orientation.y = (float)q.y();
-        p.pose.orientation.z = (float)q.z();
-        p.pose.orientation.w = (float)q.w();
-    }
 
 }

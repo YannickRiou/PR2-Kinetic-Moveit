@@ -1,44 +1,44 @@
-[  0%] Built target ar_track_alvar_msgs_generate_messages_cpp
 [  0%] Built target geometry_msgs_generate_messages_cpp
-[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionFeedback
+[  0%] Built target ar_track_alvar_msgs_generate_messages_cpp
 [  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerFeedback
-[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerAction
-[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerResult
-[  0%] Built target _actioncontroller_generate_messages_check_deps_actiongoal
 [  0%] Built target actionlib_msgs_generate_messages_cpp
 [  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionGoal
 [  0%] Built target std_msgs_generate_messages_cpp
-[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerGoal
-[  0%] Built target ar_track_alvar_msgs_generate_messages_py
-[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target _actioncontroller_generate_messages_check_deps_actiongoal
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerResult
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionFeedback
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerAction
 [  1%] [34m[1mCompiling Java code for actioncontroller[0m
-[  1%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionResult
-[  1%] Built target actionlib_msgs_generate_messages_py
+[  1%] Built target ar_track_alvar_msgs_generate_messages_py
+[  1%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerGoal
 [  1%] Built target geometry_msgs_generate_messages_py
+[  1%] Built target actionlib_msgs_generate_messages_py
+[  1%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionResult
 [  1%] Built target actionlib_msgs_generate_messages_lisp
+[  1%] Built target std_msgs_generate_messages_py
 [  1%] Built target geometry_msgs_generate_messages_lisp
 [  1%] Built target std_msgs_generate_messages_lisp
-[  1%] Built target geometry_msgs_generate_messages_java
 [  1%] Built target ar_track_alvar_msgs_generate_messages_lisp
+[  1%] Built target geometry_msgs_generate_messages_java
+[  1%] Built target geometry_msgs_generate_messages_eus
 [  1%] Built target ar_track_alvar_msgs_generate_messages_eus
 [  1%] Built target actionlib_msgs_generate_messages_eus
 [  1%] Built target ar_track_alvar_msgs_generate_messages_nodejs
-[  1%] Built target geometry_msgs_generate_messages_eus
+[  1%] Built target std_msgs_generate_messages_nodejs
 [  1%] Built target std_msgs_generate_messages_eus
 [  1%] Built target actionlib_msgs_generate_messages_nodejs
-[  1%] Built target geometry_msgs_generate_messages_nodejs
-[  1%] Built target std_msgs_generate_messages_nodejs
-[35m[1mScanning dependencies of target make_a_pile[0m
-[ 14%] Built target actioncontroller_generate_messages_java
-[ 29%] Built target actioncontroller_generate_messages_java_gradle
-[ 36%] Built target actioncontroller_generate_messages_cpp
-[ 47%] Built target actioncontroller_generate_messages_lisp
-[ 68%] Built target actioncontroller_generate_messages_eus
-[ 75%] Built target setup
-[ 78%] Built target actioncontroller_generate_messages_py
-[ 84%] Built target actioncontroller_generate_messages_nodejs
-[ 85%] [32mBuilding CXX object CMakeFiles/make_a_pile.dir/src/MakeAPile.cpp.o[0m
-[ 85%] Built target actioncontroller_generate_messages
-[ 96%] Built target action_controller
-[ 98%] [32m[1mLinking CXX executable /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/actioncontroller/lib/actioncontroller/make_a_pile[0m
-[100%] Built target make_a_pile
+[  3%] Built target actioncontroller_generate_messages_java_gradle
+[  3%] Built target geometry_msgs_generate_messages_nodejs
+[ 15%] Built target actioncontroller_generate_messages_java
+[ 47%] Built target actioncontroller_generate_messages_cpp
+[ 57%] Built target actioncontroller_generate_messages_lisp
+[ 66%] Built target setup
+[ 66%] Built target actioncontroller_generate_messages_py
+[ 75%] Built target make_a_pile
+[ 89%] Built target actioncontroller_generate_messages_eus
+[ 89%] Built target actioncontroller_generate_messages_nodejs
+[ 89%] Built target actioncontroller_generate_messages
+[35m[1mScanning dependencies of target action_controller[0m
+[ 91%] [32mBuilding CXX object CMakeFiles/action_controller.dir/src/PlaceGenerator.cpp.o[0m
+[ 92%] [32m[1mLinking CXX executable /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/actioncontroller/lib/actioncontroller/action_controller[0m
+[100%] Built target action_controller

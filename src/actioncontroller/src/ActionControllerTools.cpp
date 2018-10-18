@@ -106,5 +106,39 @@ namespace actioncontroller{
                 ROS_INFO(ss.str().c_str());
             }
 
+            void ActionControllerTools::poseMsgToAffine3d(geometry_msgs::PoseStamped &p, Eigen::Affine3d &m){
+                /* m = Eigen::Affine3d::fromPositionOrientationScale(Eigen::Vector3d(p.pose.position.x, p.pose.position.y, p.pose.position.z),
+                        Eigen::Quaterniond(p.pose.orientation.x, p.pose.orientation.y, p.pose.orientation.z, p.pose.orientation.w) ,
+                        Eigen::Ma );
+                */
+                auto &o = p.pose.orientation;
+                Eigen::Quaterniond q(o.w, o.x, o.y, o.z);
+                auto &pose = p.pose.position;
+                Eigen::Translation3d t(pose.x, pose.y, pose.z);
+                m = t * q;
+            }
+
+            void ActionControllerTools::affine3dToPoseMsg(Eigen::Affine3d m, geometry_msgs::PoseStamped &p){
+                p.header.frame_id = "odom_combined";
+                Eigen::Vector3d v = m.translation();
+                p.pose.position.x = (float)v(0);
+                p.pose.position.y = (float)v(1);
+                p.pose.position.z = (float)v(2);
+                Eigen::Matrix3d rot = m.rotation() ;
+                Eigen::Quaterniond q(rot);
+                p.pose.orientation.x = (float)q.x();
+                p.pose.orientation.y = (float)q.y();
+                p.pose.orientation.z = (float)q.z();
+                p.pose.orientation.w = (float)q.w();
+            }
+
+            Eigen::Affine3d ActionControllerTools::affine3dFromAngleAxis(double radianX, double radianY, double radianZ) const {
+        Eigen::Affine3d orientationFrameRotation;
+        orientationFrameRotation = Eigen::AngleAxisd(radianX, Eigen::Vector3d::UnitX())
+                                   * Eigen::AngleAxisd(radianY, Eigen::Vector3d::UnitY())
+                                   * Eigen::AngleAxisd(radianZ, Eigen::Vector3d::UnitZ());
+        return orientationFrameRotation;
+    }
+
 
 }

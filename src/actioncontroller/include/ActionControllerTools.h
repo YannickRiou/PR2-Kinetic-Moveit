@@ -35,6 +35,12 @@ namespace actioncontroller{
         void displayPoseStampedMsg(geometry_msgs::PoseStamped p);
 
         void displayPoint(const geometry_msgs::Point &p);
+
+        void poseMsgToAffine3d(geometry_msgs::PoseStamped &p, Eigen::Affine3d &m);
+
+        void affine3dToPoseMsg(Eigen::Affine3d m, geometry_msgs::PoseStamped &p);
+
+        Eigen::Affine3d affine3dFromAngleAxis(double radianX, double radianY, double radianZ) const;
     };
 }
 

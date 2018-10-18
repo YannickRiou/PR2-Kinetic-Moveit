@@ -9,7 +9,6 @@
 #include "geometry_msgs/PoseStamped.h"
 #include "geometry_msgs/Point.h"
 #include "moveit_msgs/CollisionObject.h"
-#include "moveit_visual_tools/moveit_visual_tools.h"
 #include "ActionControllerTools.h"
 #include "moveit_msgs/PlaceLocation.h"
 #include "GraspGenerator.h"
@@ -29,6 +28,7 @@ namespace actioncontroller{
             geometry_msgs::Point _topVertice;
             std::vector<geometry_msgs::Point> _topVertices;
             std::vector<geometry_msgs::PoseStamped> _possibleLocations;
+            void convertMeshPoinToReferenceFrame();
 
         public:
             std::vector<geometry_msgs::PoseStamped> getPossibleLocations();
@@ -38,7 +38,8 @@ namespace actioncontroller{
             std::vector<geometry_msgs::PoseStamped> samplePossiblePlaceLocation();
             void setTopVertices();
             double crossProductXY(geometry_msgs::Point A, geometry_msgs::Point B, geometry_msgs::Point C );
-            std::vector<moveit_msgs::PlaceLocation> generatePlaces();
+            std::vector<moveit_msgs::PlaceLocation> generatePlaceLocations();
+
     };
 
 
