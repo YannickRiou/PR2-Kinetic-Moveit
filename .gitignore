@@ -3,8 +3,8 @@ bin/
 lib/
 msg_gen/
 srv_gen/
-logs/
-
+logs/*
+.catkin_tools/
 #Clion
 .idea/
 cmake-build-debug/

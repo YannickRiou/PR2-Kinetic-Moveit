@@ -92,8 +92,9 @@ find_package(Boost REQUIRED system filesystem date_time thread)
    DEPENDENCIES
    actionlib_msgs
    std_msgs
-		 geometry_msgs
+	 geometry_msgs
    ar_track_alvar_msgs
+   actioncontroller
    # Or other packages containing msgs
  )
 
@@ -140,7 +141,7 @@ catkin_package(
     interactive_markers
     actionlib_msgs
     ar_track_alvar_msgs
-        gazebo_moveit_objects_synchroniser
+    gazebo_moveit_objects_synchroniser
   	DEPENDS
     EIGEN3
 )
