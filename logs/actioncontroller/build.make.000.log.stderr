@@ -1,7 +1,10 @@
-make[2]: Warning: File 'CMakeFiles/setup.dir/depend.make' has modification time 0.0007 s in the future
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/setUp.cpp:4:53:[m[K [01;31m[Kfatal error: [m[Kactioncontroller/ActionControllerAction.h: No such file or directory
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionControllerTools.cpp:2:0[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/include/ActionControllerTools.h:5:53:[m[K [01;31m[Kfatal error: [m[Kactioncontroller/ActionControllerAction.h: No such file or directory
 compilation terminated.
-make[2]: *** [CMakeFiles/setup.dir/src/setUp.cpp.o] Error 1
+make[2]: *** [CMakeFiles/setup.dir/src/ActionControllerTools.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/SetUp.cpp:4:53:[m[K [01;31m[Kfatal error: [m[Kactioncontroller/ActionControllerAction.h: No such file or directory
+compilation terminated.
+make[2]: *** [CMakeFiles/setup.dir/src/SetUp.cpp.o] Error 1
 make[1]: *** [CMakeFiles/setup.dir/all] Error 2
-make[1]: *** Waiting for unfinished jobs....
 make: *** [all] Error 2

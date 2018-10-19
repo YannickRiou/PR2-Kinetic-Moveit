@@ -1,157 +1,96 @@
-[  0%] Built target ar_track_alvar_msgs_generate_messages_cpp
-[  0%] Built target geometry_msgs_generate_messages_cpp
-[  0%] Built target actionlib_msgs_generate_messages_cpp
-[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerGoal
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerFeedback
 [  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerResult
 [  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionGoal
-[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionFeedback
-[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerFeedback
 [  0%] Built target _actioncontroller_generate_messages_check_deps_actiongoal
 [  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerAction
-[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionResult
+[  0%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionFeedback
+[  0%] Built target actionlib_msgs_generate_messages_cpp
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[  0%] Built target ar_track_alvar_msgs_generate_messages_cpp
 [  0%] Built target std_msgs_generate_messages_cpp
-[  0%] Built target actionlib_msgs_generate_messages_py
-[  0%] Built target std_msgs_generate_messages_py
 [  1%] [34m[1mCompiling Java code for actioncontroller[0m
-[  1%] Built target geometry_msgs_generate_messages_py
-[  1%] Built target actionlib_msgs_generate_messages_lisp
 [  1%] Built target ar_track_alvar_msgs_generate_messages_py
-[  1%] Built target geometry_msgs_generate_messages_lisp
-[  1%] Built target ar_track_alvar_msgs_generate_messages_lisp
+[  1%] Built target geometry_msgs_generate_messages_py
+[  1%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerGoal
+[  1%] Built target _actioncontroller_generate_messages_check_deps_ActionControllerActionResult
+[  1%] Built target actionlib_msgs_generate_messages_py
+[  1%] Built target std_msgs_generate_messages_py
 [  1%] Built target std_msgs_generate_messages_lisp
+[  1%] Built target geometry_msgs_generate_messages_lisp
+[  1%] Built target actionlib_msgs_generate_messages_lisp
+[  1%] Built target ar_track_alvar_msgs_generate_messages_lisp
+[  1%] Built target ar_track_alvar_msgs_generate_messages_eus
 [  1%] Built target geometry_msgs_generate_messages_java
 [  1%] Built target geometry_msgs_generate_messages_eus
 [  1%] Built target actionlib_msgs_generate_messages_eus
 [  1%] Built target std_msgs_generate_messages_eus
-[  1%] Built target ar_track_alvar_msgs_generate_messages_eus
-[  1%] Built target ar_track_alvar_msgs_generate_messages_nodejs
-[  1%] Built target std_msgs_generate_messages_nodejs
-[  1%] Built target actionlib_msgs_generate_messages_nodejs
-[  1%] Built target geometry_msgs_generate_messages_nodejs
-[ 24%] Built target actioncontroller_generate_messages_java
-[ 28%] Built target setup
-[ 28%] Built target actioncontroller_generate_messages_py
-[ 73%] Built target actioncontroller_generate_messages_cpp
-[ 73%] Built target actioncontroller_generate_messages_lisp
-[ 73%] Built target make_a_pile
-[ 79%] Built target actioncontroller_generate_messages_eus
-[ 94%] Built target actioncontroller_generate_messages_nodejs
-[35m[1mScanning dependencies of target action_controller[0m
-[ 96%] Built target actioncontroller_generate_messages_java_gradle
-[ 96%] Built target actioncontroller_generate_messages
-[ 98%] [32mBuilding CXX object CMakeFiles/action_controller.dir/src/ActionController.cpp.o[0m
-In file included from [01m[K/opt/ros/kinetic/include/ros/ros.h:40:0[m[K,
-                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:2[m[K:
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:[m[K In member function ‘[01m[Kbool actioncontroller::ActionController::move_head(std::__cxx11::string)[m[K’:
-[01m[K/opt/ros/kinetic/include/ros/console.h:346:176:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [-Wformat-security]
-     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, __VA_ARGS__)
-[01;32m[K                                                                                                                                                                                ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:349:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
-     ROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER(0, __VA_ARGS__)
-[01;32m[K     ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:379:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
-       ROSCONSOLE_PRINT_AT_LOCATION(__VA_ARGS__); \
-[01;32m[K       ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:561:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
- #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
-[01;32m[K                                   ^[m[K
-[01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
- #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
-[01;32m[K                       ^[m[K
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:132:17:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
-                 ROS_INFO(std::string("Object do not exist").c_str());
-[01;32m[K                 ^[m[K
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:[m[K In member function ‘[01m[Kbool actioncontroller::ActionController::pick(std::__cxx11::string, std::__cxx11::string)[m[K’:
-[01m[K/opt/ros/kinetic/include/ros/console.h:346:176:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [-Wformat-security]
-     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, __VA_ARGS__)
-[01;32m[K                                                                                                                                                                                ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:349:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
-     ROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER(0, __VA_ARGS__)
-[01;32m[K     ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:379:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
-       ROSCONSOLE_PRINT_AT_LOCATION(__VA_ARGS__); \
-[01;32m[K       ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:561:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
- #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
-[01;32m[K                                   ^[m[K
-[01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
- #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
-[01;32m[K                       ^[m[K
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:193:17:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
-                 ROS_INFO(std::string("Object do not exist").c_str());
-[01;32m[K                 ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:346:176:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [-Wformat-security]
-     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, __VA_ARGS__)
-[01;32m[K                                                                                                                                                                                ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:349:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
-     ROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER(0, __VA_ARGS__)
-[01;32m[K     ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:379:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
-       ROSCONSOLE_PRINT_AT_LOCATION(__VA_ARGS__); \
-[01;32m[K       ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:561:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
- #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
-[01;32m[K                                   ^[m[K
-[01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
- #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
-[01;32m[K                       ^[m[K
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:205:21:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
-                     ROS_INFO( element.second.id.c_str() );
-[01;32m[K                     ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:346:176:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [-Wformat-security]
-     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, __VA_ARGS__)
-[01;32m[K                                                                                                                                                                                ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:349:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
-     ROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER(0, __VA_ARGS__)
-[01;32m[K     ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:379:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
-       ROSCONSOLE_PRINT_AT_LOCATION(__VA_ARGS__); \
-[01;32m[K       ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:561:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
- #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
-[01;32m[K                                   ^[m[K
-[01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
- #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
-[01;32m[K                       ^[m[K
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:215:13:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
-             ROS_INFO(ss.str().c_str());
-[01;32m[K             ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:346:176:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [-Wformat-security]
-     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, __VA_ARGS__)
-[01;32m[K                                                                                                                                                                                ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:349:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
-     ROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER(0, __VA_ARGS__)
-[01;32m[K     ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:379:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
-       ROSCONSOLE_PRINT_AT_LOCATION(__VA_ARGS__); \
-[01;32m[K       ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:561:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
- #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
-[01;32m[K                                   ^[m[K
-[01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
- #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
-[01;32m[K                       ^[m[K
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:219:13:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
-             ROS_INFO(info2.str().c_str());
-[01;32m[K             ^[m[K
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:[m[K In member function ‘[01m[Kvoid actioncontroller::ActionController::executeCB(const ActionControllerGoalConstPtr&)[m[K’:
-[01m[K/opt/ros/kinetic/include/ros/console.h:346:176:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [-Wformat-security]
-     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, __VA_ARGS__)
-[01;32m[K                                                                                                                                                                                ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:349:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
-     ROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER(0, __VA_ARGS__)
-[01;32m[K     ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:379:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
-       ROSCONSOLE_PRINT_AT_LOCATION(__VA_ARGS__); \
-[01;32m[K       ^[m[K
-[01m[K/opt/ros/kinetic/include/ros/console.h:561:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
- #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
-[01;32m[K                                   ^[m[K
-[01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
- #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
-[01;32m[K                       ^[m[K
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionController.cpp:379:17:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
-                 ROS_INFO(std::string("The required order do not exist").c_str());
-[01;32m[K                 ^[m[K
-[100%] [32m[1mLinking CXX executable /home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/actioncontroller/lib/actioncontroller/action_controller[0m
-[100%] Built target action_controller
+[  3%] Built target actioncontroller_generate_messages_java_gradle
+[  3%] Built target ar_track_alvar_msgs_generate_messages_nodejs
+[  3%] Built target std_msgs_generate_messages_nodejs
+[  3%] Built target actionlib_msgs_generate_messages_nodejs
+[  3%] Built target geometry_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target actioncontroller_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target actioncontroller_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target actioncontroller_generate_messages_py[0m
+[35m[1mScanning dependencies of target make_a_pile[0m
+[35m[1mScanning dependencies of target actioncontroller_generate_messages_java[0m
+[  5%] [32mBuilding CXX object CMakeFiles/setup.dir/src/SetUp.cpp.o[0m
+[  7%] [34m[1mGenerating Lisp code from actioncontroller/ActionControllerActionResult.msg[0m
+[ 10%] [34m[1mGenerating C++ code from actioncontroller/ActionControllerActionResult.msg[0m
+[ 10%] [34m[1mGenerating Python from MSG actioncontroller/ActionControllerActionResult[0m
+[ 12%] Built target actioncontroller_generate_messages_java
+[ 14%] [32mBuilding CXX object CMakeFiles/setup.dir/src/ActionControllerTools.cpp.o[0m
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionControllerTools.cpp:2:0[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/include/ActionControllerTools.h:5:53:[m[K [01;31m[Kfatal error: [m[Kactioncontroller/ActionControllerAction.h: No such file or directory
+compilation terminated.
+CMakeFiles/setup.dir/build.make:86: recipe for target 'CMakeFiles/setup.dir/src/ActionControllerTools.cpp.o' failed
+make[2]: *** [CMakeFiles/setup.dir/src/ActionControllerTools.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+[ 17%] [34m[1mGenerating Python from MSG actioncontroller/ActionControllerAction[0m
+[ 17%] [34m[1mGenerating Python from MSG actioncontroller/ActionControllerGoal[0m
+[ 19%] [34m[1mGenerating C++ code from actioncontroller/ActionControllerAction.msg[0m
+[ 21%] [34m[1mGenerating Lisp code from actioncontroller/ActionControllerAction.msg[0m
+[ 22%] [34m[1mGenerating Lisp code from actioncontroller/ActionControllerGoal.msg[0m
+[ 24%] [34m[1mGenerating Python from MSG actioncontroller/ActionControllerActionGoal[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/make_a_pile.dir/src/MakeAPile.cpp.o[0m
+[ 28%] [34m[1mGenerating Lisp code from actioncontroller/ActionControllerActionGoal.msg[0m
+[ 29%] [34m[1mGenerating C++ code from actioncontroller/ActionControllerGoal.msg[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/make_a_pile.dir/src/ActionControllerTools.cpp.o[0m
+[ 33%] [34m[1mGenerating Python from MSG actioncontroller/actiongoal[0m
+[ 35%] [34m[1mGenerating Lisp code from actioncontroller/actiongoal.msg[0m
+[ 36%] [34m[1mGenerating C++ code from actioncontroller/ActionControllerActionGoal.msg[0m
+[ 38%] [34m[1mGenerating Lisp code from actioncontroller/ActionControllerFeedback.msg[0m
+[ 40%] [34m[1mGenerating Python from MSG actioncontroller/ActionControllerFeedback[0m
+[ 42%] [34m[1mGenerating Lisp code from actioncontroller/ActionControllerActionFeedback.msg[0m
+[ 43%] [34m[1mGenerating C++ code from actioncontroller/actiongoal.msg[0m
+[ 45%] [34m[1mGenerating Python from MSG actioncontroller/ActionControllerActionFeedback[0m
+[ 47%] [34m[1mGenerating Lisp code from actioncontroller/ActionControllerResult.msg[0m
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/actioncontroller/include/actioncontroller/ActionControllerAction.h:19:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/SetUp.cpp:4[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/actioncontroller/include/actioncontroller/ActionControllerActionResult.h:20:53:[m[K [01;31m[Kfatal error: [m[Kactioncontroller/ActionControllerResult.h: No such file or directory
+compilation terminated.
+CMakeFiles/setup.dir/build.make:62: recipe for target 'CMakeFiles/setup.dir/src/SetUp.cpp.o' failed
+make[2]: *** [CMakeFiles/setup.dir/src/SetUp.cpp.o] Error 1
+CMakeFiles/Makefile2:3186: recipe for target 'CMakeFiles/setup.dir/all' failed
+make[1]: *** [CMakeFiles/setup.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/actioncontroller/include/actioncontroller/ActionControllerAction.h:19:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/include/ActionControllerTools.h:5[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/src/ActionControllerTools.cpp:2[m[K:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/devel/.private/actioncontroller/include/actioncontroller/ActionControllerActionResult.h:20:53:[m[K [01;31m[Kfatal error: [m[Kactioncontroller/ActionControllerResult.h: No such file or directory
+compilation terminated.
+[ 49%] [34m[1mGenerating Python from MSG actioncontroller/ActionControllerResult[0m
+CMakeFiles/make_a_pile.dir/build.make:86: recipe for target 'CMakeFiles/make_a_pile.dir/src/ActionControllerTools.cpp.o' failed
+make[2]: *** [CMakeFiles/make_a_pile.dir/src/ActionControllerTools.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+[ 50%] [34m[1mGenerating C++ code from actioncontroller/ActionControllerFeedback.msg[0m
+[ 54%] [34m[1mGenerating C++ code from actioncontroller/ActionControllerActionFeedback.msg[0m
+[ 54%] [34m[1mGenerating C++ code from actioncontroller/ActionControllerResult.msg[0m
+[ 54%] Built target actioncontroller_generate_messages_lisp
+[ 56%] [34m[1mGenerating Python msg __init__.py for actioncontroller[0m
+[ 56%] Built target actioncontroller_generate_messages_cpp
+[ 56%] Built target actioncontroller_generate_messages_py
+CMakeFiles/Makefile2:4087: recipe for target 'CMakeFiles/make_a_pile.dir/all' failed
+make[1]: *** [CMakeFiles/make_a_pile.dir/all] Error 2
+Makefile:138: recipe for target 'all' failed
+make: *** [all] Error 2

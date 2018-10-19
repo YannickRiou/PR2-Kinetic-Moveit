@@ -1,0 +1,111 @@
+open:
+  joint_size : 6
+  joint :
+    - "r_gripper_joint"
+    - "r_gripper_motor_screw_joint"
+    - "r_gripper_l_finger_joint"
+    - "r_gripper_r_finger_joint"
+    - "r_gripper_r_finger_tip_joint"
+    - "r_gripper_l_finger_tip_joint"
+  position :
+    - 1
+    - 1
+    - 0.477
+    - 0.477
+    - 0.477
+    - 0.477
+  time_from_start : 5
+
+close :
+  joint_size : 6
+  joint :
+    - "r_gripper_joint"
+    - "r_gripper_motor_screw_joint"
+    - "r_gripper_l_finger_joint"
+    - "r_gripper_r_finger_joint"
+    - "r_gripper_r_finger_tip_joint"
+    - "r_gripper_l_finger_tip_joint"
+  position :
+    - 0.0
+    - 0.0
+    - 0.40
+    - 0.40
+    - 0.40
+    - 0.40
+  time_from_start : 5
+
+grasp:
+  - pre :
+      direction :
+        header_frame_id : "base_footprint"
+        vector_z : -1.0
+        min_distance : 0.1
+        desired_distance : 0.20
+    post :
+      direction :
+        header_frame_id : "base_footprint"
+        vector_z : 1.0
+        min_distance : 0.05
+        desired_distance : 0.20
+  - pre :
+      direction :
+        header_frame_id : "base_footprint"
+        vector_x : 1.0
+        min_distance : 0.1
+        desired_distance : 0.20
+    post :
+      direction :
+        header_frame_id : "base_footprint"
+        vector_x : -1.0
+        vector_z : 1.0
+        min_distance : 0.05
+        desired_distance : 0.20
+  - pre :
+      direction :
+        header_frame_id : "base_footprint"
+        vector_x : 1.0
+        min_distance : 0.1
+        desired_distance : 0.20
+    post :
+      direction :
+        header_frame_id : "base_footprint"
+        vector_x : 1.0
+        vector_z : 1.0
+        min_distance : 0.05
+        desired_distance : 0.20
+  - pre :
+        direction :
+          header_frame_id : "base_footprint"
+          vector_x : 1.0
+          min_distance : 0.1
+          desired_distance : 0.20
+    post :
+      direction :
+        header_frame_id : "base_footprint"
+        vector_z : 1.0
+        min_distance : 0.05
+        desired_distance : 0.20
+  - pre :
+      direction :
+        header_frame_id : "base_footprint"
+        vector_y : -1.0
+        min_distance : 0.1
+        desired_distance : 0.20
+    post :
+      direction :
+        header_frame_id : "base_footprint"
+        vector_z : 1.0
+        min_distance : 0.05
+        desired_distance : 0.20
+  - pre :
+      direction :
+        header_frame_id : "base_footprint"
+        vector_y : 1.0
+        min_distance : 0.1
+        desired_distance : 0.20
+    post :
+      direction :
+        header_frame_id : "base_footprint"
+        vector_z : 1.0
+        min_distance : 0.05
+        desired_distance : 0.20
