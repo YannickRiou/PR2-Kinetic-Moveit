@@ -50,13 +50,13 @@ namespace actioncontroller {
 
         Eigen::Affine3d origin;
         tools.poseMsgToAffine3d(target, origin);
-        ROS_INFO(std::string("origin").c_str());
+        ROS_DEBUG(std::string("origin").c_str());
         tools.displayAffine3d(origin);
 
         //create the to transformation matrix
         Eigen::Affine3d originToReferenceFrame;
         originToReferenceFrame = origin.inverse();
-        ROS_INFO(std::string("originToReferenceFrame").c_str());
+        ROS_DEBUG(std::string("originToReferenceFrame").c_str());
         tools.displayAffine3d(originToReferenceFrame);
 
         // A factoriser
@@ -99,21 +99,21 @@ namespace actioncontroller {
                                                            const Eigen::Affine3d &frameTranslation) {
         geometry_msgs::PoseStamped p;
 
-        ROS_INFO(std::string("sampleRotation").c_str());
+        ROS_DEBUG(std::string("sampleRotation").c_str());
         tools.displayAffine3d(sampleRotation);
 
         Eigen::Affine3d new_point = sampleRotation * frameTranslation ;
-        ROS_INFO(std::string("new_point").c_str());
+        ROS_DEBUG(std::string("new_point").c_str());
         tools.displayAffine3d(new_point);
 
         //change orientation to face toward the target
         new_point =  new_point * orientationFrameRotation  ;
-        ROS_INFO(std::string("Rotated new_point").c_str());
+        ROS_DEBUG(std::string("Rotated new_point").c_str());
         tools.displayAffine3d(new_point);
 
         //Transform the createdPose to map frame
         new_point =  origin * new_point  ;
-        ROS_INFO(std::string("new_point in map frame").c_str());
+        ROS_DEBUG(std::string("new_point in map frame").c_str());
         tools.displayAffine3d(new_point);
 
         //store the pose

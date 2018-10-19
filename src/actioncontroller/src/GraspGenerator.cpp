@@ -15,7 +15,7 @@ namespace actioncontroller {
     }
 
     moveit_msgs::GripperTranslation GraspGenerator::generateGraspMove(int graspNumber, std::string moveType) {
-        ROS_INFO("Building approach and retreat");
+        ROS_DEBUG("Building approach and retreat");
         moveit_msgs::GripperTranslation j;
         j.direction.header.frame_id = _providedGrasps["grasp"][graspNumber][moveType]["direction"]["header_frame_id"].as<std::string>();
         if(_providedGrasps["grasp"][graspNumber][moveType]["direction"]["vector_x"] != NULL){
@@ -33,13 +33,13 @@ namespace actioncontroller {
     }
 
     void GraspGenerator::setOpenGripper(){
-        ROS_INFO("creating the gripper openning");
+        ROS_DEBUG("creating the gripper openning");
         _openGripper.joint_names.resize(_providedGrasps["open"]["joint"].size());
-        ROS_INFO("Parsing join");
+        ROS_DEBUG("Parsing join");
         for(unsigned i=0; i < _providedGrasps["open"]["joint"].size(); ++i){
             _openGripper.joint_names[i] =  _providedGrasps["open"]["joint"][i].as<std::string>() ;
         }
-        ROS_INFO("Parsing join values");
+        ROS_DEBUG("Parsing join values");
         _openGripper.points.resize(1);
         _openGripper.points[0].positions.resize(_providedGrasps["open"]["joint"].size());
         for(unsigned i=0; i < _providedGrasps["open"]["position"].size(); ++i){
@@ -50,7 +50,7 @@ namespace actioncontroller {
     }
 
     void GraspGenerator::setClosedGripper(){
-        ROS_INFO("creating the gripper closing");
+        ROS_DEBUG("creating the gripper closing");
         _closeGripper.joint_names.resize(_providedGrasps["close"]["joint"].size());
         for(unsigned i=0; i < _providedGrasps["close"]["joint"].size() ; ++i){
             _closeGripper.joint_names[i] = _providedGrasps["close"]["joint"][i].as<std::string>()  ;

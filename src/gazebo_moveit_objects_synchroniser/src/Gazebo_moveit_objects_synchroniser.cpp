@@ -50,7 +50,7 @@ int main(int argc, char **argv){
                     }
                     sceneObject.operation = sceneObject.ADD;
                     collidingObjects.push_back(sceneObject);
-                }catch(GazeboMeshManager::IoException exc){
+                }catch(GazeboMeshManager::IoException &exc){
                     ROS_INFO(exc.what());
                 }
             }

@@ -42,8 +42,6 @@ namespace actioncontroller{
     {
     private:
 
-
-
         std::map<std::string, moveit_msgs::CollisionObject> objects;
 
         std::mutex mutex;
@@ -162,20 +160,7 @@ namespace actioncontroller{
                 return false;
             }
             move_head(object);
-            //Create the planning scene
-            _current_scene.removeCollisionObjects( _current_scene.getKnownObjectNames() );
-            std::vector<moveit_msgs::CollisionObject> vec;
-            //ROS_INFO("Nombre d'objets = %i dans la fonction pick", objects.size());
-            {
-                std::lock_guard<std::mutex> lock(mutex);
-                for(const auto& element : objects){
-                    vec.push_back(element.second);
-                    _move_group.detachObject(element.second.id);
-                    ROS_INFO( element.second.id.c_str() );
-                }
-            }
-
-            _current_scene.applyCollisionObjects(vec);
+            updateObjectCollisionScene();
             std::stringstream ss;
 
             ss << "Object to pick pose is :\n x: " << objects[ object ].mesh_poses[0].position.x <<
@@ -206,7 +191,8 @@ namespace actioncontroller{
             ROS_INFO(grasp_info.str().c_str());
             ROS_INFO(_move_group.getEndEffectorLink().c_str());
             _move_group.allowReplanning(true);
-            //_move_group.setSupportSurfaceName("tableLaas");
+
+            _move_group.setSupportSurfaceName("tableLaas");
             moveit::planning_interface::MoveItErrorCode sucess = _move_group.pick(object, grasps);
             if(moveit::planning_interface::MoveItErrorCode::SUCCESS == sucess.val){
                 return true;
@@ -226,6 +212,7 @@ namespace actioncontroller{
                 ROS_INFO(std::string("Trying to place the wrong object").c_str());
                 return false;
             }
+            updateObjectCollisionScene();
             ROS_INFO(std::string("Placing").c_str());
             move_head(pose);
             std::vector<moveit_msgs::PlaceLocation> place_location;
@@ -283,22 +270,11 @@ namespace actioncontroller{
             }
             move_head(objectB);
             //Create the planning scene
-            _current_scene.removeCollisionObjects( _current_scene.getKnownObjectNames() );
-            std::vector<moveit_msgs::CollisionObject> vec;
-            //ROS_INFO("Nombre d'objets = %i dans la fonction pick", objects.size());
-            {
-                std::lock_guard<std::mutex> lock(mutex);
-                for(const auto& element : objects){
-                    vec.push_back(element.second);
-                    _move_group.detachObject(element.second.id);
-                    ROS_INFO( element.second.id.c_str() );
-                }
-            }
+            updateObjectCollisionScene();
 
-            _current_scene.applyCollisionObjects(vec);
             std::stringstream ss;
 
-            actioncontroller::PlaceGenerator placeGenerator( GRASP_FILE, objects[objectB], 0.06, 100);
+            actioncontroller::PlaceGenerator placeGenerator( GRASP_FILE, objects[objectB], 0.06, 1000);
             std::vector<moveit_msgs::PlaceLocation> place_location;
             place_location = placeGenerator.generatePlaceLocations() ;
 
@@ -316,12 +292,29 @@ namespace actioncontroller{
             ROS_INFO(ss.str().c_str());
 
 
+            _move_group.setSupportSurfaceName(objectA);
             moveit::planning_interface::MoveItErrorCode sucess = _move_group.place(objectA, place_location);
             if(moveit::planning_interface::MoveItErrorCode::SUCCESS == sucess.val){
                 return true;
             }else{
                 return false;
             }
+        }
+
+        void updateObjectCollisionScene() {
+            _current_scene.removeCollisionObjects(_current_scene.getKnownObjectNames() );
+            std::vector<moveit_msgs::CollisionObject> vec;
+
+            {
+                std::lock_guard<std::mutex> lock(mutex);
+                for(const auto& element : objects){
+                    vec.push_back(element.second);
+                    _move_group.detachObject(element.second.id);
+                    ROS_INFO( element.second.id.c_str() );
+                }
+            }
+
+            _current_scene.applyCollisionObjects(vec);
         }
 
 

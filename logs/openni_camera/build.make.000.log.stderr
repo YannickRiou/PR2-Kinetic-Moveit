@@ -13,6 +13,17 @@ In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camer
 [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camera/openni_camera/src/openni_driver.cpp:239:44:[m[K [01;35m[Kwarning: [m[Kcall to ‘[01m[Kxn::Context::CreateProductionTree[m[K’ declared with attribute warning: This function is deprecated: Please use other overload
          context_.CreateProductionTree(info);
 [01;32m[K                                            ^[m[K
+In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camera/openni_camera/include/openni_camera/openni_device.h:44:0[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camera/openni_camera/include/openni_camera/openni_device_oni.h:41[m[K,
+                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camera/openni_camera/src/openni_device_oni.cpp:37[m[K:
+[01m[K/usr/include/ni/XnCppWrapper.h:[m[K In member function ‘[01m[KXnStatus xn::Context::OpenFileRecording(const XnChar*)[m[K’:
+[01m[K/usr/include/ni/XnCppWrapper.h:9548:61:[m[K [01;35m[Kwarning: [m[Kcall to ‘[01m[KxnContextOpenFileRecording[m[K’ declared with attribute warning: This function is deprecated: Please use xnContextOpenFileRecordingEx() instead
+    return xnContextOpenFileRecording(m_pContext, strFileName);
+[01;32m[K                                                             ^[m[K
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camera/openni_camera/src/openni_device_oni.cpp:[m[K In constructor ‘[01m[Kopenni_wrapper::DeviceONI::DeviceONI(xn::Context&, const string&, bool, bool)[m[K’:
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camera/openni_camera/src/openni_device_oni.cpp:54:57:[m[K [01;35m[Kwarning: [m[Kcall to ‘[01m[Kxn::Context::OpenFileRecording[m[K’ declared with attribute warning: This function is deprecated: Use other overload!
+   status = context_.OpenFileRecording(file_name.c_str());
+[01;32m[K                                                         ^[m[K
 [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camera/openni_camera/src/openni_device.cpp:[m[K In constructor ‘[01m[Kopenni_wrapper::OpenNIDevice::OpenNIDevice(xn::Context&, const xn::NodeInfo&, const xn::NodeInfo&, const xn::NodeInfo&, const xn::NodeInfo&)[m[K’:
 [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camera/openni_camera/src/openni_device.cpp:59:89:[m[K [01;35m[Kwarning: [m[Kcall to ‘[01m[Kxn::Context::CreateProductionTree[m[K’ declared with attribute warning: This function is deprecated: Please use other overload
    XnStatus status = context_.CreateProductionTree (const_cast<xn::NodeInfo&>(depth_node));
@@ -34,16 +45,3 @@ In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camer
 [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camera/openni_camera/src/openni_device.cpp:663:57:[m[K [01;35m[Kwarning: [m[Kcall to ‘[01m[Kxn::Context::CreateProductionTree[m[K’ declared with attribute warning: This function is deprecated: Please use other overload
          context_.CreateProductionTree(device_node_info_);
 [01;32m[K                                                         ^[m[K
-In file included from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camera/openni_camera/include/openni_camera/openni_device.h:44:0[m[K,
-                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camera/openni_camera/include/openni_camera/openni_device_oni.h:41[m[K,
-                 from [01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camera/openni_camera/src/openni_device_oni.cpp:37[m[K:
-[01m[K/usr/include/ni/XnCppWrapper.h:[m[K In member function ‘[01m[KXnStatus xn::Context::OpenFileRecording(const XnChar*)[m[K’:
-[01m[K/usr/include/ni/XnCppWrapper.h:9548:61:[m[K [01;35m[Kwarning: [m[Kcall to ‘[01m[KxnContextOpenFileRecording[m[K’ declared with attribute warning: This function is deprecated: Please use xnContextOpenFileRecordingEx() instead
-    return xnContextOpenFileRecording(m_pContext, strFileName);
-[01;32m[K                                                             ^[m[K
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camera/openni_camera/src/openni_device_oni.cpp:[m[K In constructor ‘[01m[Kopenni_wrapper::DeviceONI::DeviceONI(xn::Context&, const string&, bool, bool)[m[K’:
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/openni_camera/openni_camera/src/openni_device_oni.cpp:54:57:[m[K [01;35m[Kwarning: [m[Kcall to ‘[01m[Kxn::Context::OpenFileRecording[m[K’ declared with attribute warning: This function is deprecated: Use other overload!
-   status = context_.OpenFileRecording(file_name.c_str());
-[01;32m[K                                                         ^[m[K
-make[2]: Warning: File 'CMakeFiles/openni_nodelet.dir/depend.make' has modification time 0.00032 s in the future
-make[2]: warning:  Clock skew detected.  Your build may be incomplete.

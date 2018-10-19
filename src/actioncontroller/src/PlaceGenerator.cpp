@@ -16,23 +16,27 @@ namespace actioncontroller{
     std::vector<geometry_msgs::PoseStamped> PlaceGenerator::samplePossiblePlaceLocation() {
         std::vector<geometry_msgs::PoseStamped> poses;
 
-        double maxX, minX, maxY, minY = 0;
-        for (int i = 0; i < _topVertices.size() ; ++i) {
-            if(_topVertices[i].x > maxX){
-                maxX = _topVertices[i].x;
-            }else{
-                if(_topVertices[i].x < minX){
-                    minX = _topVertices[i].x;
-                }
+        double minX = 10000;
+        double minY = 10000;
+        double maxX = -10000;
+        double maxY = -10000;
+
+        for (int i = 0; i < _topConvexHull.size() ; ++i) {
+            if(_topConvexHull[i].x > maxX){
+                maxX = _topConvexHull[i].x;
             }
-            if(_topVertices[i].y > maxY){
-                maxY = _topVertices[i].y;
-            }else{
-                if(_topVertices[i].y < minY){
-                    minY = _topVertices[i].y;
-                }
+            if(_topConvexHull[i].x < minX){
+                minX = _topConvexHull[i].x;
+            }
+
+            if(_topConvexHull[i].y > maxY){
+                maxY = _topConvexHull[i].y;
+            }
+            if(_topConvexHull[i].y < minY){
+                minY = _topConvexHull[i].y;
             }
         }
+
 
         std::uniform_real_distribution<double> unif(0, 10000);
         std::default_random_engine randomDouble;
@@ -45,11 +49,14 @@ namespace actioncontroller{
             p.pose.orientation.y = 0;
             p.pose.orientation.z = 0;
             p.pose.orientation.w = 1;
-            p.pose.position.x =  ( minX +( std::fmod( unif(randomDouble) , maxX ) ) );
-            p.pose.position.y = minY +( std::fmod( unif(randomDouble) , maxY ) );
-            p.pose.position.z =  _topVertice.z + ( _topObjectHeight / 2 );
-            //tools.displayPoseStampedMsg(p);
+            p.pose.position.x =  ( minX +( std::fmod( unif(randomDouble) , maxX - minX ) ) );
+            p.pose.position.y = minY +( std::fmod( unif(randomDouble) , maxY - minY ) );
+            p.pose.position.z =  _topConvexHull[0].z + ( _topObjectHeight / 2 );
+            tools.displayPoseStampedMsg(p);
         }
+        std::stringstream ss;
+        ss << "minX:" << minX << "\nmaxX" << maxX << "\nminY:" << minY << "\nmaxY" << maxY << "\n" ;
+        ROS_INFO(ss.str().c_str());
 
         return poses;
     }
@@ -61,31 +68,42 @@ namespace actioncontroller{
             ss << "number of meshes: " << _object.meshes.size() ;
             ROS_INFO(ss.str().c_str());
             _topVertice = _object.meshes[0].vertices[0];
-            //tools.displayPoint(_topVertice);
+            tools.displayPoint(_topVertice);
             for (int i = 0; i < _object.meshes.size() ; ++i) {
                 ss.clear();
                 ss << "number of vertice in mesh " << i << " : " << _object.meshes[i].vertices.size();
                 ROS_INFO(ss.str().c_str());
                 for (int j = 0; j < _object.meshes[i].vertices.size() ; ++j) {
-                    if(_object.meshes[i].vertices[j].z > _topVertice.z){
+                    /*
+                    ss.clear();
+                    ss << _object.meshes[i].vertices[j].z << "\n" ;
+                    ROS_INFO(ss.str().c_str());
+                     */
+                    if(_object.meshes[i].vertices[j].z > _topVertice.z + 0.01){
                         ROS_INFO(std::string("new Top vertex").c_str());
                         _topVertices.clear();
                         _topVertice = _object.meshes[i].vertices[j];
                         _topVertices.push_back(_object.meshes[i].vertices[j]);
-
-                    }else if(_object.meshes[i].vertices[j].z == _topVertice.z){
+                    }else if( ( _object.meshes[i].vertices[j].z > _topVertice.z - 0.01 ) && ( _object.meshes[i].vertices[j].z < _topVertice.z + 0.01 ) ){
+                        ROS_INFO(std::string("Adding new top vertex").c_str());
                         _topVertices.push_back(_object.meshes[i].vertices[j]);
+                    }else{
+
                     }
                 }
             }
+
             //s'il n'y a pas assez de vertices pour faire une surface
             if(_topVertices.size() < 3){
                 throw NoflatSurfaceExeption(std::string(_object.id));
             }
             convertMeshPoinToReferenceFrame();
-            /*for (int k = 0; k < _topVertices.size() ; ++k) {
+
+            ROS_INFO("Top vertices");
+            for (int k = 0; k < _topVertices.size() ; ++k) {
                 tools.displayPoint( _topVertices[k] );
-            }*/
+            }
+
         }else{
             throw NoMeshInObjectExeption(std::string(_object.id));
         }
@@ -110,7 +128,7 @@ namespace actioncontroller{
                 ROS_INFO(std::string("getting top vertices").c_str());
                 samplePossiblePlaceLocation();
             }
-            catch(std::exception e){
+            catch(const NoflatSurfaceExeption& e){
                 ROS_INFO(e.what());
             }
         }
@@ -194,7 +212,7 @@ namespace actioncontroller{
 
     const char * NoflatSurfaceExeption::what () const noexcept{
         std::stringstream ss;
-        ss << _object_name << "has no flat surface !" << std::endl;
+        ss << _object_name << "has no flat surface !" ;
         return ss.str().c_str();
     }
 
@@ -204,7 +222,7 @@ namespace actioncontroller{
 
     const char * NoMeshInObjectExeption::what () const noexcept{
         std::stringstream ss;
-        ss << _object_name << "has an empty mesh !" << std::endl;
+        ss << _object_name << "has an empty mesh !" ;
         return ss.str().c_str();
     }
 }

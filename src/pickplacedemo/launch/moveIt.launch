@@ -4,7 +4,7 @@
   <param name="/use_sim_time" value="true" />
   
 
-  <include file="$(find pr2_moveit_config)/launch/move_group.launch">
+  <include file="$(find pickplacedemo)/launch/move_group.launch">
   	#Comment the remap to work on real PR2
   	<remap from="/joint_states" to="/robot/joint_states"/>
     <arg name="publish_monitored_planning_scene" value="true" />

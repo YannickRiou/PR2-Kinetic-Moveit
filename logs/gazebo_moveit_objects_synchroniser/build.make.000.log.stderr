@@ -16,6 +16,6 @@ In file included from [01m[K/opt/ros/kinetic/include/ros/ros.h:40:0[m[K,
 [01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
  #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
 [01;32m[K                       ^[m[K
-[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/gazebo_moveit_objects_synchroniser/src/Gazebo_moveit_objects_synchroniser.cpp:59:21:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
-                     ROS_INFO(exc.c_str());
+[01m[K/home/dtrimoul/PR2-Kinetic-Xenial/src/gazebo_moveit_objects_synchroniser/src/Gazebo_moveit_objects_synchroniser.cpp:54:21:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+                     ROS_INFO(exc.what());
 [01;32m[K                     ^[m[K
