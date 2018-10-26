@@ -42,16 +42,14 @@ namespace actioncontroller{
         std::default_random_engine randomDouble;
 
         for (int i = 0; i < _samples ; ++i) {
-            //ROS_INFO(std::string("Generating point for placing").c_str());
+            ROS_INFO(std::string("Generating point for placing").c_str());
             geometry_msgs::PoseStamped p;
             p.header.frame_id = _object.header.frame_id;
-            p.pose.orientation.x = 0;
-            p.pose.orientation.y = 0;
-            p.pose.orientation.z = 0;
-            p.pose.orientation.w = 1;
+            p.pose.orientation = tf::createQuaternionMsgFromRollPitchYaw(0, 0, 0);
             p.pose.position.x =  ( minX +( std::fmod( unif(randomDouble) , maxX - minX ) ) );
             p.pose.position.y = minY +( std::fmod( unif(randomDouble) , maxY - minY ) );
-            p.pose.position.z =  _topConvexHull[0].z + ( _topObjectHeight / 2 );
+            p.pose.position.z =  _topConvexHull[0].z + ( _topObjectHeight - (_topObjectHeight / 3)  ) ;
+            _possibleLocations.push_back(p);
             tools.displayPoseStampedMsg(p);
         }
         std::stringstream ss;
@@ -132,6 +130,9 @@ namespace actioncontroller{
                 ROS_INFO(e.what());
             }
         }
+        std::stringstream ss;
+        ss << "Number of locations :" << _possibleLocations.size();
+        ROS_INFO(ss.str().c_str());
         return _possibleLocations;
     }
 
@@ -169,9 +170,9 @@ namespace actioncontroller{
         std::stringstream ss;
         ss << "Grasp Number " <<  _graspGen.getProvidedGraspsNumber();
         ROS_INFO(ss.str().c_str());
-        std::vector<geometry_msgs::PoseStamped> targets = getPossibleLocations();
-        for(geometry_msgs::PoseStamped target : targets){
+        for(geometry_msgs::PoseStamped target : getPossibleLocations() ){
             for (unsigned i = 0; i < _graspGen.getProvidedGraspsNumber() ; ++i) {
+                std::cout << "building a location" << std::endl;
                 moveit_msgs::PlaceLocation pl;
                 pl.place_pose = target;
                 pl.pre_place_approach = _graspGen.generateGraspMove(i, "pre");
@@ -180,6 +181,10 @@ namespace actioncontroller{
                 locations.push_back(pl);
             }
         }
+
+        ss.clear();
+        ss << "Number of Place locations :" << locations.size();
+        ROS_INFO(ss.str().c_str());
         return locations;
     }
 

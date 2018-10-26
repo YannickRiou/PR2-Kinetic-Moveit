@@ -64,11 +64,11 @@ namespace actioncontroller {
         _closeGripper.points[0].time_from_start = d;
     }
 
-    const trajectory_msgs::JointTrajectory &GraspGenerator::getOpenGripper() const {
+    trajectory_msgs::JointTrajectory &GraspGenerator::getOpenGripper() {
         return _openGripper;
     }
 
-    const trajectory_msgs::JointTrajectory &GraspGenerator::getCloseGripper() const {
+    trajectory_msgs::JointTrajectory &GraspGenerator::getCloseGripper() {
         return _closeGripper;
     }
 

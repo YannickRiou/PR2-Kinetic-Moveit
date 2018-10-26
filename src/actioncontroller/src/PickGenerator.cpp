@@ -13,10 +13,10 @@ namespace actioncontroller {
     }
 
     std::vector<moveit_msgs::Grasp> PickGenerator::generateGrasp(){
-        ROS_INFO("creating grasps");
+        ROS_DEBUG("creating grasps");
         std::stringstream ss;
         ss << "Grasp Number " <<  _graspGen.getProvidedGraspsNumber();
-        ROS_INFO(ss.str().c_str());
+        ROS_DEBUG(ss.str().c_str());
         std::vector<moveit_msgs::Grasp> grasps;
         std::vector<geometry_msgs::PoseStamped> targets = generatePoseOrientation();
         for(geometry_msgs::PoseStamped target : targets){
@@ -43,7 +43,7 @@ namespace actioncontroller {
     void PickGenerator::cubePoseGenerator(std::vector<geometry_msgs::PoseStamped> &poses, geometry_msgs::PoseStamped target ,double distFingerWrist, double cubeSize, int samples ){
         //double endEffectorLength = sqrt( pow(endEffetor.pose.position.x - wrist.pose.position.x, 2 ) + pow(endEffetor.pose.position.y - wrist.pose.position.y, 2 ) + pow(endEffetor.pose.position.z - wrist.pose.position.z , 2 ) );
         //double desiredDistBetweenWristAndTarget = (cubeSize / 2) - fingerLength + endEffectorLength;
-        ROS_INFO(std::string("Starting the cube grasp generation").c_str());
+        ROS_DEBUG(std::string("Starting the cube grasp generation").c_str());
         double desiredDistBetweenWristAndTarget = distFingerWrist;
         std::uniform_real_distribution<double> unif(0,2);
         std::default_random_engine randomDouble;

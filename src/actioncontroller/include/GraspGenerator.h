@@ -26,8 +26,8 @@ namespace actioncontroller {
     public:
             int getProvidedGraspsNumber();
 
-            const trajectory_msgs::JointTrajectory &getOpenGripper() const;
-            const trajectory_msgs::JointTrajectory &getCloseGripper() const;
+            trajectory_msgs::JointTrajectory &getOpenGripper() ;
+            trajectory_msgs::JointTrajectory &getCloseGripper() ;
             GraspGenerator(std::string pathToFile);
             moveit_msgs::GripperTranslation generateGraspMove(int graspNumber, std::string moveType);
 

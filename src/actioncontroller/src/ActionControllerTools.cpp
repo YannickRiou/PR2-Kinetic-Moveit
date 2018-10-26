@@ -50,20 +50,23 @@ namespace actioncontroller{
             void ActionControllerTools::callingActionController(std::string part, actioncontroller::ActionControllerGoal &msg){
                 actionlib::SimpleActionClient<actioncontroller::ActionControllerAction> ac_("action_controller", true);
                 while(!ac_.waitForServer(ros::Duration(5.0))){
-                        ROS_INFO("Waiting for the action server to come up");
+                        ROS_DEBUG(std::string("Waiting for the action server to come up").c_str());
                     }
 
-                ROS_INFO("Sending goal to ActionController");
+                ROS_DEBUG(std::string("Sending goal to ActionController").c_str());
                 ac_.sendGoal(msg);
-                ROS_INFO("wating for result");
+                ROS_DEBUG(std::string("wating for result").c_str());
 
                 ac_.waitForResult();
+                std::stringstream ss;
 
                 bool success = (ac_.getState() == actionlib::SimpleClientGoalState::SUCCEEDED);
                 if(success)
-                    ROS_INFO("Move %s success", part.c_str());
+                    ss << "Move " << success << " " << part.c_str();
                 else
-                    ROS_INFO("Failed to move %s", part.c_str());
+                    ss << "Failed to move " << part.c_str();
+
+                ROS_DEBUG(ss.str().c_str());
             }
 
             void ActionControllerTools::displayPoseStampedMsg(geometry_msgs::PoseStamped p){
@@ -78,7 +81,7 @@ namespace actioncontroller{
                    << "\norientation_W : " << p.pose.orientation.w;
                 visual_tools_.get()->publishCuboid(p.pose, 0.01, 0.01, 0.01, rviz_visual_tools::BLUE );
                 visual_tools_.get()->trigger();
-                ROS_INFO(ss.str().c_str());
+                ROS_DEBUG(ss.str().c_str());
             }
 
             void ActionControllerTools::displayAffine3d(Eigen::Affine3d affine){
@@ -88,7 +91,7 @@ namespace actioncontroller{
                    << m(1,0) << "," << m(1,1) << "," << m(1,2) << "," << m(1,3) << ",\n"
                    << m(2,0) << "," << m(2,1) << "," << m(2,2) << "," << m(2,3) << ",\n"
                    << m(3,0) << "," << m(3,1) << "," << m(3,2) << "," << m(3,3) << ";\n" ;
-                ROS_INFO(ss.str().c_str());
+                ROS_DEBUG(ss.str().c_str());
             }
 
             void ActionControllerTools::displayPoint(const geometry_msgs::Point &p){
@@ -103,7 +106,7 @@ namespace actioncontroller{
                 visual_tools_.get()->trigger();
                 std::stringstream ss;
                 ss << "Point:\n x:" << p.x << "\n y:" << p.y << "\n z:" << p.z << std::endl ;
-                ROS_INFO(ss.str().c_str());
+                ROS_DEBUG(ss.str().c_str());
             }
 
             void ActionControllerTools::poseMsgToAffine3d(geometry_msgs::PoseStamped &p, Eigen::Affine3d &m){

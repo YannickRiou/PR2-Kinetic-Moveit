@@ -24,6 +24,7 @@ namespace actioncontroller{
             double _topObjectHeight;
             actioncontroller::ActionControllerTools tools;
             moveit_msgs::CollisionObject _object;
+            std::vector<shape_msgs::Mesh> _objectMeshesInObjectFrame;
             std::vector<geometry_msgs::Point> _topConvexHull;
             geometry_msgs::Point _topVertice;
             std::vector<geometry_msgs::Point> _topVertices;
