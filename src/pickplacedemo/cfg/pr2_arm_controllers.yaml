@@ -27,8 +27,8 @@ r_arm_controller:
       - r_wrist_roll_joint
     constraints:
       goal_time: 5.0
-      trajectory: 5
-      goal: 5
+      trajectory: 1
+      goal: 1
       stopped_velocity_tolerance: 0.5
 
 
@@ -63,6 +63,6 @@ l_arm_controller:
       - l_wrist_roll_joint
     constraints:
       goal_time: 5.0
-      trajectory: 5
-      goal: 5
+      trajectory: 1
+      goal: 1
       stopped_velocity_tolerance: 0.5

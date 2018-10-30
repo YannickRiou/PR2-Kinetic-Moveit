@@ -15,7 +15,6 @@ namespace actioncontroller{
 
     std::vector<geometry_msgs::PoseStamped> PlaceGenerator::samplePossiblePlaceLocation() {
         std::vector<geometry_msgs::PoseStamped> poses;
-
         double minX = 10000;
         double minY = 10000;
         double maxX = -10000;
@@ -36,54 +35,63 @@ namespace actioncontroller{
                 minY = _topConvexHull[i].y;
             }
         }
+        //We create a safety border for the sampling ton be in the middle of the object
+        double xBorderDistance = (maxX - minX) / 4 ;
+        double yBorderDistance = (maxY - minY) / 4 ;
 
+        maxX = maxX - xBorderDistance;
+        minX = minX + xBorderDistance;
+
+        maxY = maxY - yBorderDistance;
+        minY = minY + yBorderDistance;
 
         std::uniform_real_distribution<double> unif(0, 10000);
         std::default_random_engine randomDouble;
 
         for (int i = 0; i < _samples ; ++i) {
-            ROS_INFO(std::string("Generating point for placing").c_str());
+            ROS_DEBUG(std::string("Generating point for placing").c_str());
             geometry_msgs::PoseStamped p;
             p.header.frame_id = _object.header.frame_id;
             p.pose.orientation = tf::createQuaternionMsgFromRollPitchYaw(0, 0, 0);
             p.pose.position.x =  ( minX +( std::fmod( unif(randomDouble) , maxX - minX ) ) );
             p.pose.position.y = minY +( std::fmod( unif(randomDouble) , maxY - minY ) );
-            p.pose.position.z =  _topConvexHull[0].z + ( _topObjectHeight - (_topObjectHeight / 3)  ) ;
+            p.pose.position.z =  _topConvexHull[0].z +  ( _topObjectHeight / 2 ) ;
             _possibleLocations.push_back(p);
             tools.displayPoseStampedMsg(p);
         }
         std::stringstream ss;
         ss << "minX:" << minX << "\nmaxX" << maxX << "\nminY:" << minY << "\nmaxY" << maxY << "\n" ;
-        ROS_INFO(ss.str().c_str());
+        ROS_DEBUG(ss.str().c_str());
 
         return poses;
     }
 
     void PlaceGenerator::setTopVertices() {
 
+
         if(!_object.meshes.empty()){
             std::stringstream ss;
             ss << "number of meshes: " << _object.meshes.size() ;
-            ROS_INFO(ss.str().c_str());
+            ROS_DEBUG(ss.str().c_str());
             _topVertice = _object.meshes[0].vertices[0];
             tools.displayPoint(_topVertice);
             for (int i = 0; i < _object.meshes.size() ; ++i) {
                 ss.clear();
                 ss << "number of vertice in mesh " << i << " : " << _object.meshes[i].vertices.size();
-                ROS_INFO(ss.str().c_str());
+                ROS_DEBUG(ss.str().c_str());
                 for (int j = 0; j < _object.meshes[i].vertices.size() ; ++j) {
                     /*
                     ss.clear();
                     ss << _object.meshes[i].vertices[j].z << "\n" ;
-                    ROS_INFO(ss.str().c_str());
+                    ROS_DEBUG(ss.str().c_str());
                      */
                     if(_object.meshes[i].vertices[j].z > _topVertice.z + 0.01){
-                        ROS_INFO(std::string("new Top vertex").c_str());
+                        ROS_DEBUG(std::string("new Top vertex").c_str());
                         _topVertices.clear();
                         _topVertice = _object.meshes[i].vertices[j];
                         _topVertices.push_back(_object.meshes[i].vertices[j]);
                     }else if( ( _object.meshes[i].vertices[j].z > _topVertice.z - 0.01 ) && ( _object.meshes[i].vertices[j].z < _topVertice.z + 0.01 ) ){
-                        ROS_INFO(std::string("Adding new top vertex").c_str());
+                        ROS_DEBUG(std::string("Adding new top vertex").c_str());
                         _topVertices.push_back(_object.meshes[i].vertices[j]);
                     }else{
 
@@ -93,11 +101,11 @@ namespace actioncontroller{
 
             //s'il n'y a pas assez de vertices pour faire une surface
             if(_topVertices.size() < 3){
-                throw NoflatSurfaceExeption(std::string(_object.id));
+                throw NoFlatSurfaceException(std::string(_object.id));
             }
-            convertMeshPoinToReferenceFrame();
 
-            ROS_INFO("Top vertices");
+
+            ROS_DEBUG("Top vertices");
             for (int k = 0; k < _topVertices.size() ; ++k) {
                 tools.displayPoint( _topVertices[k] );
             }
@@ -116,23 +124,24 @@ namespace actioncontroller{
     }
 
     std::vector<geometry_msgs::PoseStamped> PlaceGenerator::getPossibleLocations(){
+        convertMeshesToReferenceFrame( _object.meshes );
         if(_possibleLocations.empty()){
             //Il faudra considérer que l'on peut avoir une orientation inversée. On va partir du principe que l'object fournit est dans un référentiel orienté correctement.
             try{
-                ROS_INFO(std::string("getting top vertices").c_str());
+                ROS_DEBUG(std::string("getting top vertices").c_str());
                 setTopVertices();
-                ROS_INFO(std::string("getting convex Hull").c_str());
+                ROS_DEBUG(std::string("getting convex Hull").c_str());
                 generateTopConvexHull();
-                ROS_INFO(std::string("getting top vertices").c_str());
+                ROS_DEBUG(std::string("getting top vertices").c_str());
                 samplePossiblePlaceLocation();
             }
-            catch(const NoflatSurfaceExeption& e){
+            catch(const NoFlatSurfaceException& e){
                 ROS_INFO(e.what());
             }
         }
         std::stringstream ss;
         ss << "Number of locations :" << _possibleLocations.size();
-        ROS_INFO(ss.str().c_str());
+        ROS_DEBUG(ss.str().c_str());
         return _possibleLocations;
     }
 
@@ -158,7 +167,7 @@ namespace actioncontroller{
             _topConvexHull[k++] = _topVertices[i-1];
         }
         _topConvexHull.resize(k-1);
-        ROS_INFO("Convex Hull");
+        ROS_DEBUG("Convex Hull");
         for (int j = 0; j < _topConvexHull.size() ; ++j) {
             tools.displayPoint(_topConvexHull[j]);
         }
@@ -166,13 +175,12 @@ namespace actioncontroller{
 
     std::vector<moveit_msgs::PlaceLocation> PlaceGenerator::generatePlaceLocations() {
         std::vector<moveit_msgs::PlaceLocation> locations;
-        ROS_INFO("creating place");
+        ROS_DEBUG("creating place");
         std::stringstream ss;
         ss << "Grasp Number " <<  _graspGen.getProvidedGraspsNumber();
-        ROS_INFO(ss.str().c_str());
+        ROS_DEBUG(ss.str().c_str());
         for(geometry_msgs::PoseStamped target : getPossibleLocations() ){
             for (unsigned i = 0; i < _graspGen.getProvidedGraspsNumber() ; ++i) {
-                std::cout << "building a location" << std::endl;
                 moveit_msgs::PlaceLocation pl;
                 pl.place_pose = target;
                 pl.pre_place_approach = _graspGen.generateGraspMove(i, "pre");
@@ -184,38 +192,41 @@ namespace actioncontroller{
 
         ss.clear();
         ss << "Number of Place locations :" << locations.size();
-        ROS_INFO(ss.str().c_str());
+        ROS_DEBUG(ss.str().c_str());
         return locations;
     }
 
-    void PlaceGenerator::convertMeshPoinToReferenceFrame() {
-        geometry_msgs::PoseStamped p;
-        p.pose.position = _object.mesh_poses[0].position;
-        p.pose.orientation = _object.mesh_poses[0].orientation;
-        Eigen::Affine3d Tranform_World_Object;
-        ROS_INFO("reference Frame Transformation");
-
-        tools.poseMsgToAffine3d( p, Tranform_World_Object );
-
-
-        tools.displayAffine3d(Tranform_World_Object);
-        for (int i = 0; i < _topVertices.size() ; ++i) {
-            Eigen::Affine3d m(Eigen::Translation3d( _topVertices[i].x, _topVertices[i].y, _topVertices[i].z) );
-            tools.displayAffine3d(m);
-            m = Tranform_World_Object * m ;
-            tools.displayAffine3d(m);
-            Eigen::Vector3d v = m.translation();
-            _topVertices[i].x = v.x();
-            _topVertices[i].y = v.y();
-            _topVertices[i].z = v.z();
+    void PlaceGenerator::convertMeshesToReferenceFrame(std::vector<shape_msgs::Mesh> &meshes){
+        for (int i = 0; i < meshes.size() ; ++i) {
+            for (int j = 0; j < meshes[i].vertices.size() ; ++j) {
+                convertMeshPointToReferenceFrame(meshes[i].vertices[j]);
+            }
         }
     }
 
-    NoflatSurfaceExeption::NoflatSurfaceExeption(std::string object_name) {
+    void PlaceGenerator::convertMeshPointToReferenceFrame(geometry_msgs::Point &p) {
+        geometry_msgs::PoseStamped p_s;
+        p_s.pose.position = _object.mesh_poses[0].position;
+        p_s.pose.orientation = _object.mesh_poses[0].orientation;
+        Eigen::Affine3d Tranform_World_Object;
+        ROS_DEBUG("reference Frame Transformation");
+        tools.poseMsgToAffine3d( p_s, Tranform_World_Object );
+        tools.displayAffine3d(Tranform_World_Object);
+        Eigen::Affine3d m(Eigen::Translation3d( p.x, p.y, p.z) );
+        tools.displayAffine3d(m);
+        m = Tranform_World_Object * m ;
+        tools.displayAffine3d(m);
+        Eigen::Vector3d v = m.translation();
+        p.x = v.x();
+        p.y = v.y();
+        p.z = v.z();
+    }
+
+    NoFlatSurfaceException::NoFlatSurfaceException(std::string object_name) {
         _object_name = object_name;
     }
 
-    const char * NoflatSurfaceExeption::what () const noexcept{
+    const char * NoFlatSurfaceException::what () const noexcept{
         std::stringstream ss;
         ss << _object_name << "has no flat surface !" ;
         return ss.str().c_str();

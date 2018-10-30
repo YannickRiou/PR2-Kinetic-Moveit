@@ -24,12 +24,12 @@ namespace actioncontroller{
             double _topObjectHeight;
             actioncontroller::ActionControllerTools tools;
             moveit_msgs::CollisionObject _object;
-            std::vector<shape_msgs::Mesh> _objectMeshesInObjectFrame;
             std::vector<geometry_msgs::Point> _topConvexHull;
             geometry_msgs::Point _topVertice;
             std::vector<geometry_msgs::Point> _topVertices;
             std::vector<geometry_msgs::PoseStamped> _possibleLocations;
-            void convertMeshPoinToReferenceFrame();
+            void convertMeshPointToReferenceFrame(geometry_msgs::Point &p);
+            void convertMeshesToReferenceFrame(std::vector<shape_msgs::Mesh> &meshes);
 
         public:
             std::vector<geometry_msgs::PoseStamped> getPossibleLocations();
@@ -44,12 +44,12 @@ namespace actioncontroller{
     };
 
 
-    class NoflatSurfaceExeption : public std::exception{
+    class NoFlatSurfaceException : public std::exception{
     private:
         std::string _object_name;
 
     public:
-        explicit NoflatSurfaceExeption(std::string object_name);
+        explicit NoFlatSurfaceException(std::string object_name);
         const char * what () const noexcept;
 
     };
