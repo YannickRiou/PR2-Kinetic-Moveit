@@ -40,6 +40,7 @@
 				(over all (robot_at ?r ?l))
 				(over all (cube_at ?c ?l))
 				(over all (empty_hand ?r))
+				(over all (top_free ?c))
 				)
 	:effect 	(and 
 				(at end (not (empty_hand ?r))) 
@@ -74,8 +75,8 @@
 	:effect 	(and 
 				(at end (empty_hand ?r))
 				(at end (not (in_hand ?r ?o)))
-				(at end (not (top_free ?u)))
 				(at end (cube_at ?o ?l))
+				(at end (not (top_free ?u)))
 				(at end (on_top ?u ?o))
 				)
 )

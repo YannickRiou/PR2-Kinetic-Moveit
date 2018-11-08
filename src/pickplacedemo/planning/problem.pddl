@@ -1,8 +1,8 @@
 (define (problem task)
 (:domain pickplacedemo)
 (:objects
-    tablelaas commode - location
-    pr2_0 - robot
+    tablelaas commode corner - location
+    pr2_0 pr2_1 - robot
     cube0 cube0_0 cube0_1 - cube
 )
 (:init
@@ -11,11 +11,14 @@
     (cube_at cube0_1 commode)
 
     (occupied tablelaas)
-    (not (occupied commode))
+    (occupied commode)
+    (not (occupied corner))
 
     (robot_at pr2_0 tablelaas)
+    (robot_at pr2_1 commode)
 
     (empty_hand pr2_0)
+    (empty_hand pr2_1)
 
 
 
