@@ -43,8 +43,20 @@ namespace actioncontroller{
     private:
 
         std::map<std::string, moveit_msgs::CollisionObject> objects;
-
+        actioncontroller::ActionControllerTools tools;
         std::mutex mutex;
+
+        bool setup(){
+            geometry_msgs::Pose right_arm;
+            geometry_msgs::Pose left_arm;
+            geometry_msgs::Pose torso;
+            tools.posePopulator(right_arm, -0.1, -0.7, 1, 0, 0, 0, 1.0 );
+            tools.posePopulator(left_arm,  -0.1, 0.7, 1, 0, 0, 0, 1.0 );
+            tools.posePopulator(torso, 0, 0, 0.3, 0, 0, 0, 1.0 );
+            move_arms("right_arm", right_arm );
+            move_arms("left_arm", left_arm );
+            move_body("torso", torso );
+        }
 
         bool move_arms(std::string group, geometry_msgs::Pose pose){
             moveit::planning_interface::MoveGroupInterface local_move_group(group);
@@ -90,16 +102,6 @@ namespace actioncontroller{
                 ROS_INFO("The base failed to move for some reason");
 
             return success;
-        }
-
-        bool move_head(std::string object){
-
-            if( objects.find(object) == objects.end() ){
-                ROS_INFO(std::string("Object do not exist").c_str());
-                return false;
-            }
-
-            return move_head( objects[ object ].mesh_poses[0] );
         }
 
         bool move_body(std::string group, geometry_msgs::Pose pose){
@@ -153,7 +155,29 @@ namespace actioncontroller{
             return success;
         }
 
-        bool pick(std::string group, std::string object){
+        bool goto_location(std::vector<std::string> command){
+
+            //a remplacer par une liste de position possible à proximité
+
+            geometry_msgs::Pose temporaryPose = objects[command[3]].mesh_poses[0];
+            temporaryPose.position.x -= 0.50;
+            ROS_INFO("calling move base");
+            move_base(temporaryPose);
+        }
+
+        bool move_head(std::vector<std::string> command){
+            std::string object = command[1];
+
+            if( objects.find(object) == objects.end() ){
+                ROS_INFO(std::string("Object do not exist").c_str());
+                return false;
+            }
+
+            return move_head( objects[ object ].mesh_poses[0] );
+        }
+
+        bool pick(std::vector<std::string> command){
+            std::string object = command[3];
 
             if( objects.find(object) == objects.end() ){
                 ROS_INFO(std::string("Object do not exist").c_str());
@@ -165,7 +189,7 @@ namespace actioncontroller{
             }
 
 
-            move_head(object);
+            move_head(objects[object].mesh_poses[0]);
             _current_scene.removeCollisionObjects(_current_scene.getKnownObjectNames() );
             updateObjectCollisionScene();
             std::stringstream ss;
@@ -199,7 +223,7 @@ namespace actioncontroller{
             ROS_INFO(_move_group.getEndEffectorLink().c_str());
             _move_group.allowReplanning(true);
 
-            _move_group.setSupportSurfaceName("tableLaas");
+            _move_group.setSupportSurfaceName("tablelaas");
             moveit::planning_interface::MoveItErrorCode sucess = _move_group.pick(object, grasps);
             if(moveit::planning_interface::MoveItErrorCode::SUCCESS == sucess.val){
                 return true;
@@ -208,8 +232,8 @@ namespace actioncontroller{
             }
 
         }
-
-        bool place(std::string group, std::string object, geometry_msgs::Pose pose){
+        /*
+        bool place(std::vector<std::string> command){
 
             if(_current_scene.getAttachedObjects().empty()){
                 ROS_INFO(std::string("No object in hand").c_str());
@@ -270,14 +294,25 @@ namespace actioncontroller{
             }
 
         }
+        */
+        bool placeAOnB(std::vector<std::string> command ){
+            std::string objectA;
+            std::string objectB;
 
-        bool placeAOnB(std::string group, std::string objectA, std::string objectB ){
+            if(command[0] == "placeat"){
+                objectA = command[2];
+                objectB = command[3];
+            }else{
+                objectA = command[3];
+                objectB = command[4];
+            }
 
             if( objects.find(objectA) == objects.end() || objects.find(objectB) == objects.end()  ){
                 ROS_INFO(std::string("Object do not exist").c_str());
                 return false;
             }
-            move_head(objectB);
+
+            move_head(objects[objectA].mesh_poses[0]);
             //Create the planning scene
             updateObjectCollisionScene();
 
@@ -370,7 +405,6 @@ namespace actioncontroller{
                 _action_name(name),
                 _move_group("right_arm"),
                 _graspGen(GRASP_FILE)
-
         {
             _sub_moveit_objects = nh_.subscribe("moveit_objects", 1000, &ActionController::objects_update, this );
             _planning_scene_diff_publisher = nh_.advertise<moveit_msgs::PlanningScene>("planning_scene", 1);
@@ -384,24 +418,29 @@ namespace actioncontroller{
 
         void executeCB(const actioncontroller::ActionControllerGoalConstPtr &msg){
 
-            //ROS_INFO("Nombre d'objets = %i dans l'action callback", objects.size());
-
-            if(msg->goal.action == "stareAt"){
-                _feedback.success = move_head( msg->goal.pose );
-            }else if(msg->goal.action == "stareAtObject"){
-                _feedback.success = move_head( (std::string)msg->goal.objectA );
-            }else if(msg->goal.action == "pick.left_arm" || msg->goal.action == "pick.right_arm" ){
-                _feedback.success = pick( (std::string)msg->goal.action, (std::string)msg->goal.objectA);
-            }else if(msg->goal.action == "place.left_arm" || msg->goal.action == "place.right_arm" ){
-                _feedback.success = place( (std::string)msg->goal.action, (std::string)msg->goal.objectA, msg->goal.pose);
-            }else if(msg->goal.action == "placeOn.left_arm" || msg->goal.action == "placeOn.right_arm" ){
-                _feedback.success = placeAOnB( (std::string)msg->goal.action, (std::string)msg->goal.objectA,(std::string)msg->goal.objectB);
-            }else if(msg->goal.action == "base" ){
-                _feedback.success = move_base( msg->goal.pose );
-            }else if(msg->goal.action == "torso" ){
-                _feedback.success = move_body( (std::string)msg->goal.action, msg->goal.pose );
-            }else if(msg->goal.action == "left_arm" || msg->goal.action == "right_arm" ){
-                _feedback.success = move_arms((std::string)msg->goal.action, msg->goal.pose);
+            std::vector<std::string> command;
+            std::string data = (std::string)msg->data;
+            std::stringstream ss;
+            ss << "Command received : " << data;
+            ROS_INFO(ss.str().c_str());
+            std::istringstream iss(data);
+            while(std::getline(iss, data, ' ')){
+                command.push_back(data);
+            }
+            if(command[0] == "stareAt"){
+                _feedback.success = move_head( command );
+            }else if(command[0] == "stareAtObject"){
+                _feedback.success = move_head( command );
+            }else if(command[0] == "pick" ){
+                _feedback.success = pick( command );
+                //}else if(command[0] == "place" ){
+                //   _feedback.success = place( command);
+            }else if(command[0] == "placeon" || command[0] == "placeat" ){
+                _feedback.success = placeAOnB( command);
+            }else if(command[0] == "goto_location" ){
+                _feedback.success = goto_location( command );
+            }else if(command[0] == "setup" ){
+                _feedback.success = setup();
             }else{
                 ROS_INFO(std::string("The required order do not exist").c_str());
             }

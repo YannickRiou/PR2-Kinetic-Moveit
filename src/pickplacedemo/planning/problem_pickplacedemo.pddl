@@ -6,12 +6,11 @@
     pr2_0 - robot
 )
 (:init
-    (robot_at pr2_0 tableLaas)
-    (occupied tableLaas)
-    (not (occupied commode))
-    (cube_at cube0 commode)
-    (cube_at cube0_0 commode)
-    (cube_at cube0_1 commode)
+    (unready pr2_0)
+    (robot_at pr2_0 commode)
+    (cube_at cube0 tableLaas)
+    (cube_at cube0_0 tableLaas)
+    (cube_at cube0_1 tableLaas)
     (empty_hand pr2_0)
     (top_free cube0)
     (top_free cube0_0)

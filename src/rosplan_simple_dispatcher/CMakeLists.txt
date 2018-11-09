@@ -1,34 +1,25 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(gazebo_moveit_objects_synchroniser)
+project(rosplan_simple_dispatcher)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 add_compile_options(-std=c++11)
-find_package(Eigen3 REQUIRED)
 
-# Eigen 3.2 (Wily) only provides EIGEN3_INCLUDE_DIR, not EIGEN3_INCLUDE_DIRS
-if(NOT EIGEN3_INCLUDE_DIRS)
-    set(EIGEN3_INCLUDE_DIRS ${EIGEN3_INCLUDE_DIR})
-endif()
+
+find_package(Boost REQUIRED system filesystem date_time thread)
+
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS
-  roscpp
-  rospy
-  std_msgs
-        actionlib_msgs
-        rospy
+find_package(catkin REQUIRED
         roscpp
-        moveit_core
-        moveit_msgs
-        moveit_visual_tools
-        moveit_ros_planning
-        moveit_ros_planning_interface
-        pluginlib
-        geometric_shapes
-        gazebo_ros
+        rospy
+        std_msgs
+        actionlib
         message_generation
-)
+        actionlib_msgs
+        geometry_msgs
+        actioncontroller
+        )
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -64,11 +55,11 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
- add_message_files(
-   FILES
-  CollisionObjectArray.msg
+# add_message_files(
+#   FILES
+#   Message1.msg
 #   Message2.msg
-)
+# )
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -85,12 +76,8 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
- generate_messages(
-    DEPENDENCIES
-    std_msgs
-    moveit_msgs
-    gazebo_moveit_objects_synchroniser
- )
+#generate_messages(
+#)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -122,10 +109,11 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-  INCLUDE_DIRS include
-#  LIBRARIES gazebo_moveit_objects_synchroniser
-  CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
-#  DEPENDS system_lib
+        LIBRARIES
+        INCLUDE_DIRS
+        include
+        CATKIN_DEPENDS
+        actionlib_msgs
 )
 
 ###########
@@ -134,43 +122,29 @@ catkin_package(
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
-
 include_directories(
-        include
-        ${CATKIN_DEVEL_PREFIX}/include
-        ${catkin_INCLUDE_DIRS}
-        ${EIGEN3_INCLUDE_DIRS}
-        /usr/include/sdformat-4.0
-        /usr/include/gazebo-7
-        /opt/ros/kinetic/include
         SYSTEM
+        include
         ${THIS_PACKAGE_INCLUDE_DIRS}
-        ${Boost_INCLUDE_DIR}
-        /usr/include/ignition/math2
-)
-
-link_directories(${catkin_LIBRARY_DIRS})
-
-add_executable(${PROJECT_NAME} src/Gazebo_moveit_objects_synchroniser.cpp src/GazeboMeshManager.cpp include/gazebo_moveit_objects_synchroniser/GazeboMeshManager.h)
-add_dependencies(${PROJECT_NAME} ${PROJECT_NAME}_generate_messages_cpp)
-target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${Boost_LIBRARIES})
-install(TARGETS ${PROJECT_NAME} DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+        ${CATKIN_DEVEL_PREFIX}/include)
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/gazebo_moveit_objects_synchroniser.cpp
+#   src/${PROJECT_NAME}/rosplan_simple_dispatcher.cpp
 # )
+include_directories(${catkin_INCLUDE_DIRS})
+link_directories(${catkin_LIBRARY_DIRS})
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
 # add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/gazebo_plugin_fake_perception_to_moveit_node.cpp)
-
+add_executable(${PROJECT_NAME} src/rosplan_simple_dispatcher.cpp)
+target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+#install(TARGETS ${PROJECT_NAME} DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -226,7 +200,7 @@ install(TARGETS ${PROJECT_NAME} DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_gazebo_plugin_fake_perception_to_moveit.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_rosplan_simple_dispatcher.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

@@ -6,14 +6,12 @@
     cube0 cube0_0 cube0_1 - cube
 )
 (:init
-    (cube_at cube0 commode)
-    (cube_at cube0_0 commode)
-    (cube_at cube0_1 commode)
+    (cube_at cube0 tablelaas)
+    (cube_at cube0_0 tablelaas)
+    (cube_at cube0_1 tablelaas)
 
-    (occupied tablelaas)
-    (not (occupied commode))
 
-    (robot_at pr2_0 tablelaas)
+    (robot_at pr2_0 commode)
 
     (empty_hand pr2_0)
 
@@ -22,6 +20,8 @@
     (top_free cube0)
     (top_free cube0_0)
     (top_free cube0_1)
+
+    (unready pr2_0)
 
 )
 (:goal (and
