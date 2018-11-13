@@ -16,22 +16,26 @@
 	(in_hand ?r - robot ?c - cube)
 	(on_top ?u - cube ?o - cube)
 	(top_free ?c - cube)
-	(unready ?r - robot)
+	(not_ready ?r - robot)
+	(ready ?r - robot)
 )
 
 (:durative-action setup
 	:parameters (?r - robot)
-	:duration ( = ?duration 30)
-	:condition (at start (unready ?r)) 	
-	:effect	(at end (not (unready ?r)))
+	:duration ( = ?duration 90)
+	:condition (over all (not_ready ?r))
+	:effect	(at end(ready ?r))
 )
 
 
 (:durative-action goto_location
 	:parameters (?r -robot ?source - location ?destination - location)
 	:duration ( = ?duration 60)
-	:condition 	(over all (robot_at ?r ?source))
-	:effect	(and 
+	:condition 	(and 
+				(over all (robot_at ?r ?source))
+				(over all (ready ?r))
+				)
+	:effect	(and
 			(at end(robot_at ?r ?destination))
 			(at end(not (robot_at ?r ?source)))
 			) 
@@ -45,6 +49,7 @@
 				(over all (cube_at ?c ?l))
 				(over all (empty_hand ?r))
 				(over all (top_free ?c))
+				;;(over all (not (not_ready ?r)))
 				)
 	:effect 	(and 
 				(at end (not (empty_hand ?r))) 
@@ -59,6 +64,7 @@
 	:condition 	(and 
 				(over all (robot_at ?r ?l))
 				(over all (in_hand ?r ?c))
+				;;(over all (not (not_ready ?r)))
 				)
 	:effect 	(and 
 				(at end (empty_hand ?r))
@@ -68,13 +74,14 @@
 )
 
 (:durative-action placeOn
-	:parameters (?r - robot ?l - location ?u - cube ?o - cube)
+	:parameters (?r - robot ?l - location ?o - cube ?u - cube)
 	:duration ( = ?duration 30)
 	:condition 	(and 
 				(over all (robot_at ?r ?l))
 				(over all (cube_at ?u ?l))
 				(over all (in_hand ?r ?o))
 				(over all (top_free ?u))
+				;;(over all (not (not_ready ?r)))
 				)
 	:effect 	(and 
 				(at end (empty_hand ?r))

@@ -21,7 +21,8 @@
     (top_free cube0_0)
     (top_free cube0_1)
 
-    (unready pr2_0)
+    (not_ready pr2_0)
+
 
 )
 (:goal (and

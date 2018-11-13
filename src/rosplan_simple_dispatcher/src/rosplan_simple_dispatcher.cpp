@@ -60,14 +60,18 @@ int main(int argc, char **argv){
         if(planStep < _plan.size()){
             actioncontroller::ActionControllerGoal msg;
             msg.data = _plan[planStep];
+            std::stringstream ss;
+            ss << "calling action controller to execute : " << _plan[planStep] ;
+            ROS_INFO(ss.str().c_str());
             ac.sendGoal(msg);
             ac.waitForResult();
 
             bool success = (ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED);
 
-            if(success)
+            if(success){
                 ROS_INFO("Success");
-            else
+                planStep++;
+            }else
                 ROS_INFO("FAIL");
         }
         ros::spinOnce();
