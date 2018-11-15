@@ -46,11 +46,7 @@
 	</node>
 
 	<!-- plan dispatching -->
-	<node name="rosplan_plan_dispatcher" pkg="rosplan_planning_system" type="pddl_simple_plan_dispatcher" respawn="false" output="screen">
-		<param name="knowledge_base"        value="rosplan_knowledge_base" />
-		<param name="plan_topic"            value="/rosplan_parsing_interface/complete_plan" />
-		<param name="action_dispatch_topic" value="action_controller" />
-		<param name="action_feedback_topic" value="action_feedback" />
+	<node name="rosplan_simple_dispatcher" pkg="rosplan_simple_dispatcher" type="rosplan_simple_dispatcher" respawn="false" output="screen">
 	</node>
 
 

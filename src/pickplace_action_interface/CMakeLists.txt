@@ -1,26 +1,18 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(rosplan_simple_dispatcher)
+project(pickplace_action_interface)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
-add_compile_options(-std=c++11)
-
-
-find_package(Boost REQUIRED system filesystem date_time thread)
+# add_compile_options(-std=c++11)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED
-        roscpp
-        rospy
-        std_msgs
-        actionlib
-        message_generation
-        actionlib_msgs
-        geometry_msgs
-        actioncontroller
-        rosplan_knowledge_msgs
-        )
+find_package(catkin REQUIRED COMPONENTS
+  roscpp
+  rosplan_action_interface
+  rosplan_dispatch_msgs
+  rospy
+)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -77,8 +69,10 @@ find_package(catkin REQUIRED
 # )
 
 ## Generate added messages and services with any dependencies listed here
-#generate_messages(
-#)
+# generate_messages(
+#   DEPENDENCIES
+#   rosplan_dispatch_msgs
+# )
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -110,12 +104,10 @@ find_package(catkin REQUIRED
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-        LIBRARIES
-        INCLUDE_DIRS
-        include
-        CATKIN_DEPENDS
-        actionlib_msgs
-        rosplan_knowledge_msgs
+#  INCLUDE_DIRS include
+#  LIBRARIES pickplace_action_interface
+#  CATKIN_DEPENDS roscpp rosplan_action_interface rosplan_dispatch_msgs rospy
+#  DEPENDS system_lib
 )
 
 ###########
@@ -125,28 +117,25 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-        SYSTEM
-        include
-        ${THIS_PACKAGE_INCLUDE_DIRS}
-        ${CATKIN_DEVEL_PREFIX}/include)
+# include
+  ${catkin_INCLUDE_DIRS}
+)
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/rosplan_simple_dispatcher.cpp
+#   src/${PROJECT_NAME}/pickplace_action_interface.cpp
 # )
-include_directories(${catkin_INCLUDE_DIRS})
-link_directories(${catkin_LIBRARY_DIRS})
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
 # add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(${PROJECT_NAME} src/rosplan_simple_dispatcher.cpp)
-target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${Boost_LIBRARIES})
-#install(TARGETS ${PROJECT_NAME} DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+# add_executable(${PROJECT_NAME}_node src/pickplace_action_interface_node.cpp)
+
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -202,7 +191,7 @@ target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_rosplan_simple_dispatcher.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_pickplace_action_interface.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

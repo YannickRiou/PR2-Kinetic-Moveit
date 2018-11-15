@@ -10,6 +10,7 @@
 #include "std_msgs/String.h"
 #include <regex>
 #include <mutex>
+#include "rosplan_knowledge_msgs/GetDomainOperatorDetailsService.h"
 
 std::vector<std::string> _plan;
 bool isChanged = false;
@@ -45,6 +46,9 @@ int main(int argc, char **argv){
     ros::Subscriber sub = n.subscribe("/rosplan_planner_interface/planner_output", 1000, new_plan_callback);
     actionlib::SimpleActionClient<actioncontroller::ActionControllerAction> ac("action_controller", true);
     ros::Rate loop_rate(10);
+
+
+
     //ac.waitForServer();
     int planStep;
     while(ros::ok()){
@@ -54,7 +58,14 @@ int main(int argc, char **argv){
             std::cout << "cancelled" << std::endl;
             //kill the previous plan thread
             std::cout << "new Plan" << std::endl;
+
+            //load new domain.
+            ros::ServiceClient client = n.serviceClient<rosplan_knowledge_msgs::GetDomainOperatorDetailsService>( "/rosplan_knowledge_base/domain/operator_details");
+            rosplan_knowledge_msgs::GetDomainOperatorDetailsService srv;
+
+
             isChanged = false;
+
         }
 
         if(planStep < _plan.size()){
@@ -62,6 +73,9 @@ int main(int argc, char **argv){
             msg.data = _plan[planStep];
             std::stringstream ss;
             ss << "calling action controller to execute : " << _plan[planStep] ;
+
+
+
             ROS_INFO(ss.str().c_str());
             ac.sendGoal(msg);
             ac.waitForResult();
@@ -71,6 +85,7 @@ int main(int argc, char **argv){
             if(success){
                 ROS_INFO("Success");
                 planStep++;
+                //mise à jours des prédicats et des faits.
             }else
                 ROS_INFO("FAIL");
         }

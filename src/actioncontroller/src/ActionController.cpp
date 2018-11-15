@@ -118,6 +118,7 @@ namespace actioncontroller{
             msg.min_duration = ros::Duration(2.0);
 
             ac_.sendGoal(msg);
+            ac_.waitForResult();
 
             bool success = (ac_.getState() == actionlib::SimpleClientGoalState::SUCCEEDED);
 
