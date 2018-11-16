@@ -11,10 +11,16 @@
 #include <regex>
 #include <mutex>
 #include "rosplan_knowledge_msgs/GetDomainOperatorDetailsService.h"
+#include "rosplan_simple_dispatcher/RPAction.h"
+#include "rosplan_dispatch_msgs/CompletePlan.h"
 
-std::vector<std::string> _plan;
+rosplan_dispatch_msgs::CompletePlan _plan;
 bool isChanged = false;
 std::mutex mutex;
+std::map<std::string, rosplan_knowledge_msgs::DomainFormula> predicates;
+rosplan_knowledge_msgs::DomainFormula params;
+rosplan_knowledge_msgs::DomainOperator op;
+ros::Publisher pddl_action_parameters_pub;
 
 
 std::vector<std::string> generatePlanFromMsg( std::string msg){
@@ -33,61 +39,39 @@ std::vector<std::string> generatePlanFromMsg( std::string msg){
     return plan;
 }
 
-void new_plan_callback(const std_msgs::String::ConstPtr& msg){
+void new_plan_callback(const rosplan_dispatch_msgs::CompletePlan plan){
     isChanged = true;
     std::lock_guard<std::mutex> lock(mutex);
-    _plan = generatePlanFromMsg(std::string(msg->data));
+    _plan = plan;
 }
 
 int main(int argc, char **argv){
 
     ros::init(argc, argv, "rosplan_simple_dispatcher");
     ros::NodeHandle n;
-    ros::Subscriber sub = n.subscribe("/rosplan_planner_interface/planner_output", 1000, new_plan_callback);
-    actionlib::SimpleActionClient<actioncontroller::ActionControllerAction> ac("action_controller", true);
+    ros::Subscriber sub = n.subscribe("/rosplan_parsing_interface/complete_plan", 1000, new_plan_callback);
     ros::Rate loop_rate(10);
 
-
-
-    //ac.waitForServer();
     int planStep;
     while(ros::ok()){
+
         if(isChanged){
             planStep = 0;
             //cancel the current action in the
             std::cout << "cancelled" << std::endl;
             //kill the previous plan thread
             std::cout << "new Plan" << std::endl;
-
-            //load new domain.
-            ros::ServiceClient client = n.serviceClient<rosplan_knowledge_msgs::GetDomainOperatorDetailsService>( "/rosplan_knowledge_base/domain/operator_details");
-            rosplan_knowledge_msgs::GetDomainOperatorDetailsService srv;
-
-
             isChanged = false;
 
         }
 
-        if(planStep < _plan.size()){
-            actioncontroller::ActionControllerGoal msg;
-            msg.data = _plan[planStep];
-            std::stringstream ss;
-            ss << "calling action controller to execute : " << _plan[planStep] ;
 
+        if(planStep < _plan.plan.size()){
+            RPAction rpa;
+            rpa.runActionInterface(n, _plan.plan[planStep].name);
+            rpa.concreteCallback( _plan.plan[planStep] );
+            rpa.dispatchCallback( _plan.plan[planStep] );
 
-
-            ROS_INFO(ss.str().c_str());
-            ac.sendGoal(msg);
-            ac.waitForResult();
-
-            bool success = (ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED);
-
-            if(success){
-                ROS_INFO("Success");
-                planStep++;
-                //mise à jours des prédicats et des faits.
-            }else
-                ROS_INFO("FAIL");
         }
         ros::spinOnce();
         loop_rate.sleep();

@@ -20,6 +20,7 @@ find_package(catkin REQUIRED
         geometry_msgs
         actioncontroller
         rosplan_knowledge_msgs
+        rosplan_dispatch_msgs
         )
 
 ## System dependencies are found with CMake's conventions
@@ -116,6 +117,7 @@ catkin_package(
         CATKIN_DEPENDS
         actionlib_msgs
         rosplan_knowledge_msgs
+        rosplan_dispatch_msgs
 )
 
 ###########
@@ -144,7 +146,7 @@ link_directories(${catkin_LIBRARY_DIRS})
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(${PROJECT_NAME} src/rosplan_simple_dispatcher.cpp)
+add_executable(${PROJECT_NAME} src/rosplan_simple_dispatcher.cpp src/RPAction.cpp)
 target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 #install(TARGETS ${PROJECT_NAME} DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 ## Rename C++ executable without prefix
