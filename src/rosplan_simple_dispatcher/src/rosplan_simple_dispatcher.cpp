@@ -10,17 +10,13 @@
 #include "std_msgs/String.h"
 #include <regex>
 #include <mutex>
+#include "rosplan_simple_dispatcher/RPAKbUpdater.h"
 #include "rosplan_knowledge_msgs/GetDomainOperatorDetailsService.h"
-#include "rosplan_simple_dispatcher/RPAction.h"
 #include "rosplan_dispatch_msgs/CompletePlan.h"
 
-rosplan_dispatch_msgs::CompletePlan _plan;
+std::vector<std::string> _plan;
 bool isChanged = false;
 std::mutex mutex;
-std::map<std::string, rosplan_knowledge_msgs::DomainFormula> predicates;
-rosplan_knowledge_msgs::DomainFormula params;
-rosplan_knowledge_msgs::DomainOperator op;
-ros::Publisher pddl_action_parameters_pub;
 
 
 std::vector<std::string> generatePlanFromMsg( std::string msg){
@@ -39,17 +35,18 @@ std::vector<std::string> generatePlanFromMsg( std::string msg){
     return plan;
 }
 
-void new_plan_callback(const rosplan_dispatch_msgs::CompletePlan plan){
+void new_plan_callback(const std_msgs::String::ConstPtr& msg){
     isChanged = true;
     std::lock_guard<std::mutex> lock(mutex);
-    _plan = plan;
+    _plan = generatePlanFromMsg(std::string(msg->data));
 }
 
 int main(int argc, char **argv){
 
     ros::init(argc, argv, "rosplan_simple_dispatcher");
     ros::NodeHandle n;
-    ros::Subscriber sub = n.subscribe("/rosplan_parsing_interface/complete_plan", 1000, new_plan_callback);
+    ros::Subscriber sub = n.subscribe("/rosplan_planner_interface/planner_output", 1000, new_plan_callback);
+    actionlib::SimpleActionClient<actioncontroller::ActionControllerAction> ac("action_controller", true);
     ros::Rate loop_rate(10);
 
     int planStep;
@@ -65,12 +62,41 @@ int main(int argc, char **argv){
 
         }
 
+        for (int i = 0; i < _plan.size() ; ++i) {
+            std::cout << _plan[i] << std::endl;
+        }
 
-        if(planStep < _plan.plan.size()){
-            RPAction rpa;
-            rpa.runActionInterface(n, _plan.plan[planStep].name);
-            rpa.concreteCallback( _plan.plan[planStep] );
-            rpa.dispatchCallback( _plan.plan[planStep] );
+        if(planStep < _plan.size()){
+
+            //singleton
+            RPAKbUpdater rku(n);
+            //call the operators topic for operators detail and store them for later use
+            rku.storeOperatorDetails(_plan[planStep] );
+            //create param tuple with key and value
+            rku.createConcretePredicates();
+            //update at start predicates
+            rku.updateAtStart();
+            //call the action server
+            actioncontroller::ActionControllerGoal msg;
+            msg.data = _plan[planStep];
+            std::stringstream ss;
+            ss << "calling action controller to execute : " << _plan[planStep] ;
+            ROS_INFO(ss.str().c_str());
+            ac.sendGoal(msg);
+            ac.waitForResult();
+
+            bool success = (ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED);
+
+            if(success){
+                ROS_INFO("Success");
+                planStep++;
+                //update at end predicates
+                rku.updateAtEnd();
+                //mise à jours des prédicats et des faits.
+            }else
+                ROS_INFO("FAIL");
+
+
 
         }
         ros::spinOnce();

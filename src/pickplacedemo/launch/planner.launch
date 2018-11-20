@@ -45,7 +45,6 @@
 		<param name="plan_topic"     value="complete_plan" />
 	</node>
 
-	<!-- plan dispatching -->
 	<node name="rosplan_simple_dispatcher" pkg="rosplan_simple_dispatcher" type="rosplan_simple_dispatcher" respawn="false" output="screen">
 		<param name="knowledge_base" value="rosplan_knowledge_base" />
 	</node>
