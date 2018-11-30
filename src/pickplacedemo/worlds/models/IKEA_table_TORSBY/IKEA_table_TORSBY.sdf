@@ -1,0 +1,78 @@
+<sdf version='1.6'>
+  <model name='IKEA_table_TORSBY'>
+    <link name='IKEA_table_TORSBY'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>15</mass>
+        <inertia>
+          <ixx>0.001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.001</iyy>
+          <iyz>0</iyz>
+          <izz>0.001</izz>
+        </inertia>
+      </inertial>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <gravity>1</gravity>
+      <visual name='IKEA_table_TORSBY'>
+      <material>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <ambient>0 0 0 1</ambient>
+      </material>
+      <collision name='IKEA_table_TORSBY_collision'>
+        <pose frame=''>0 0 0.35 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.4 0.9 0.04</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='IKEA_table_TORSBY_collision_1'>
+        <pose frame=''>0.675 0.425 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.025 0.025 0.75</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='IKEA_table_TORSBY_collision_2'>
+        <pose frame=''>0.675 -0.425 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.025 0.025 0.75</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='IKEA_table_TORSBY_collision_3'>
+        <pose frame=''>-0.675 0.425 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.025 0.025 0.75</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='IKEA_table_TORSBY_collision_4'>
+        <pose frame=''>-0.675 -0.425 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.025 0.025 0.75</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='IKEA_table_TORSBY_visual'>
+        <pose frame=''>0 0 0 1.57075 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://laas_objects/res/obj/IKEA_table_TORSBY.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
