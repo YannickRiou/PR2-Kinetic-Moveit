@@ -31,6 +31,7 @@ int main(int argc, char **argv){
             for(int i=0; i < worldProperties.response.model_names.size(); ++i){
                 moveit_msgs::CollisionObject sceneObject;
                 sceneObject.id = worldProperties.response.model_names[i] ;
+                std::transform( sceneObject.id.begin(), sceneObject.id.end(), sceneObject.id.begin(), ::tolower);
                 GazeboMeshManager::GazeboMeshManager gazeboMeshManager;
                 shape_msgs::Mesh m;
                 try {

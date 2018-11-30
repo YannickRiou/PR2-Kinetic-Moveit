@@ -1,5 +1,5 @@
 #goal definition
-actioncontroller/actiongoal goal
+string data
 ---
 #result definition
 bool success

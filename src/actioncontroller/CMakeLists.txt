@@ -6,35 +6,35 @@ add_compile_options(-std=c++11)
 
 find_package(Eigen3 REQUIRED)
 find_package(yaml-cpp REQUIRED)
+find_package(Boost REQUIRED system filesystem date_time thread)
 
 # Eigen 3.2 (Wily) only provides EIGEN3_INCLUDE_DIR, not EIGEN3_INCLUDE_DIRS
 if(NOT EIGEN3_INCLUDE_DIRS)
-  set(EIGEN3_INCLUDE_DIRS ${EIGEN3_INCLUDE_DIR})
+    set(EIGEN3_INCLUDE_DIRS ${EIGEN3_INCLUDE_DIR})
 endif()
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED 
-	actionlib_msgs 
-	rospy 
-	roscpp
-	moveit_core
-  moveit_visual_tools
-  moveit_ros_planning
-  moveit_ros_planning_interface
-  pluginlib
-	geometric_shapes
-	move_base_msgs
-  message_generation
-  std_msgs
-  ar_track_alvar_msgs
-  shape_tools
+find_package(catkin REQUIRED
+        actionlib_msgs
+        actionlib
+        rospy
+        roscpp
+        moveit_core
+        moveit_visual_tools
+        moveit_ros_planning
+        moveit_ros_planning_interface
+        pluginlib
+        geometric_shapes
+        move_base_msgs
+        message_generation
+        std_msgs
+        ar_track_alvar_msgs
+        shape_tools
         gazebo_moveit_objects_synchroniser
-)
+        )
 
-## System dependencies are found with CMake's conventions
-find_package(Boost REQUIRED system filesystem date_time thread)
 
 
 ## Uncomment this if the package has a setup.py. This macro ensures
@@ -67,12 +67,12 @@ find_package(Boost REQUIRED system filesystem date_time thread)
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
- add_message_files(
-   FILES
-   actiongoal.msg
-#   Message1.msg
-#   Message2.msg
- )
+add_message_files(
+        FILES
+        actiongoal.msg
+        #   Message1.msg
+        #   Message2.msg
+)
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -82,21 +82,21 @@ find_package(Boost REQUIRED system filesystem date_time thread)
 # )
 
 ## Generate actions in the 'action' folder
- add_action_files(
-   DIRECTORY action
-   FILES ActionController.action
- )
+add_action_files(
+        DIRECTORY action
+        FILES ActionController.action
+)
 
 ## Generate added messages and services with any dependencies listed here
- generate_messages(
-   DEPENDENCIES
-   actionlib_msgs
-   std_msgs
-	 geometry_msgs
-   ar_track_alvar_msgs
-   actioncontroller
-   # Or other packages containing msgs
- )
+generate_messages(
+        DEPENDENCIES
+        actionlib_msgs
+        std_msgs
+        geometry_msgs
+        ar_track_alvar_msgs
+        actioncontroller
+        # Or other packages containing msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -129,21 +129,20 @@ find_package(Boost REQUIRED system filesystem date_time thread)
 ## DEPENDS: system dependencies of this project that dependent projects also need
 
 catkin_package(
-  LIBRARIES
-    interactivity_utils
-  INCLUDE_DIRS
-		include
-  CATKIN_DEPENDS
-	move_base_msgs
-    moveit_core
-    moveit_visual_tools
-    moveit_ros_planning_interface
-    interactive_markers
-    actionlib_msgs
-    ar_track_alvar_msgs
-    gazebo_moveit_objects_synchroniser
-  	DEPENDS
-    EIGEN3
+        LIBRARIES
+        INCLUDE_DIRS
+        include
+        CATKIN_DEPENDS
+        move_base_msgs
+        moveit_core
+        moveit_visual_tools
+        moveit_ros_planning_interface
+        interactive_markers
+        actionlib_msgs
+        ar_track_alvar_msgs
+        gazebo_moveit_objects_synchroniser
+        DEPENDS
+        EIGEN3
 )
 
 ###########
@@ -153,7 +152,7 @@ catkin_package(
 
 include_directories(
         SYSTEM
-		include
+        include
         ${THIS_PACKAGE_INCLUDE_DIRS}
         ${Boost_INCLUDE_DIR}
         ${EIGEN3_INCLUDE_DIRS}
@@ -167,13 +166,13 @@ add_dependencies(action_controller actioncontroller_generate_messages_cpp)
 target_link_libraries(action_controller ${catkin_LIBRARIES} ${Boost_LIBRARIES} yaml-cpp)
 install(TARGETS action_controller DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
-add_executable(make_a_pile src/MakeAPile.cpp src/ActionControllerTools.cpp)
-target_link_libraries(make_a_pile ${catkin_LIBRARIES} ${Boost_LIBRARIES})
-install(TARGETS make_a_pile DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+#add_executable(make_a_pile src/MakeAPile.cpp src/ActionControllerTools.cpp)
+#target_link_libraries(make_a_pile ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+#install(TARGETS make_a_pile DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
-add_executable(setup src/SetUp.cpp src/ActionControllerTools.cpp)
-target_link_libraries(setup ${catkin_LIBRARIES} ${Boost_LIBRARIES})
-install(TARGETS setup DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+#add_executable(setup src/SetUp.cpp src/ActionControllerTools.cpp)
+#target_link_libraries(setup ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+#install(TARGETS setup DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
 
 
@@ -186,7 +185,7 @@ install(TARGETS setup DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
 # all install targets should use catkin DESTINATION variables
 # See http://ros.org/doc/api/catkin/html/adv_user_guide/variables.html
- 
+
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
 # install(PROGRAMS

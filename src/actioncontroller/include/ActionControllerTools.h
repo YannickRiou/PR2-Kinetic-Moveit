@@ -20,6 +20,8 @@ namespace actioncontroller{
     public:
         ActionControllerTools();
 
+        void posePopulator(geometry_msgs::Pose &p, float x, float y, float z, float ox, float oy, float oz, float ow);
+/*
         void createActionControllerMessage(std::string group_id, float x, float y, float z, float w, float ox, float oy, float oz, actioncontroller::ActionControllerGoal &msg);
 
         void createActionControllerMessage(std::string group_id, std::string object, actioncontroller::ActionControllerGoal &msg);
@@ -27,7 +29,7 @@ namespace actioncontroller{
         void createActionControllerMessage(std::string group_id, std::string objectA, std::string objectB, actioncontroller::ActionControllerGoal &msg);
 
         void createActionControllerMessage(std::string group_id, std::string object, float x, float y, float z, float w, float ox, float oy, float oz, actioncontroller::ActionControllerGoal &msg);
-
+*/
         void callingActionController(std::string part, actioncontroller::ActionControllerGoal &msg);
 
         void displayAffine3d(Eigen::Affine3d m);
