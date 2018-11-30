@@ -48,8 +48,6 @@
 				(over all (robot_at ?r ?l))
 				(over all (cube_at ?c ?l))
 				(over all (empty_hand ?r))
-				(over all (top_free ?c))
-				;;(over all (not (not_ready ?r)))
 				)
 	:effect 	(and 
 				(at end (not (empty_hand ?r))) 
