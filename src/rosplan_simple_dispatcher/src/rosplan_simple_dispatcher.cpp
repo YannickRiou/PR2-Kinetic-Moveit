@@ -62,10 +62,6 @@ int main(int argc, char **argv){
 
         }
 
-        for (int i = 0; i < _plan.size() ; ++i) {
-            std::cout << _plan[i] << std::endl;
-        }
-
         if(planStep < _plan.size()){
 
             //singleton
@@ -95,8 +91,6 @@ int main(int argc, char **argv){
                 //mise à jours des prédicats et des faits.
             }else
                 ROS_INFO("FAIL");
-
-
 
         }
         ros::spinOnce();

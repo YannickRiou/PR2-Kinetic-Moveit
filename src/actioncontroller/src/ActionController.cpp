@@ -52,7 +52,7 @@ namespace actioncontroller{
             geometry_msgs::Pose torso;
             tools.posePopulator(right_arm, -0.1, -0.7, 1, 0, 0, 0, 1.0 );
             tools.posePopulator(left_arm,  -0.1, 0.7, 1, 0, 0, 0, 1.0 );
-            tools.posePopulator(torso, 0, 0, 0.3, 0, 0, 0, 1.0 );
+            tools.posePopulator(torso, 0, 0, 0.2, 0, 0, 0, 1.0 );
             move_arms("right_arm", right_arm );
             move_arms("left_arm", left_arm );
             move_body("torso", torso );
