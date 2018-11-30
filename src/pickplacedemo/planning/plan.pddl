@@ -10,7 +10,11 @@ b (10.000 | 90.000)b (8.000 | 150.001)b (7.000 | 180.002)b (4.000 | 210.003)b (2
 ; States evaluated: 128
 ; Cost: 270.003
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ; Time 0.04
+=======
+; Time 0.06
+>>>>>>> Stashed changes
 =======
 ; Time 0.06
 >>>>>>> Stashed changes

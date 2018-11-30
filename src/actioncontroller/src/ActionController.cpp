@@ -53,7 +53,11 @@ namespace actioncontroller{
             tools.posePopulator(right_arm, -0.1, -0.7, 1, 0, 0, 0, 1.0 );
             tools.posePopulator(left_arm,  -0.1, 0.7, 1, 0, 0, 0, 1.0 );
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             tools.posePopulator(torso, 0, 0, 0.2, 0, 0, 0, 1.0 );
+=======
+            tools.posePopulator(torso, 0, 0, 0.3, 0, 0, 0, 1.0 );
+>>>>>>> Stashed changes
 =======
             tools.posePopulator(torso, 0, 0, 0.3, 0, 0, 0, 1.0 );
 >>>>>>> Stashed changes

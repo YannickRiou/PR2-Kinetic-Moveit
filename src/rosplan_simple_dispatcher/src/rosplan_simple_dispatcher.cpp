@@ -63,11 +63,17 @@ int main(int argc, char **argv){
         }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
         for (int i = 0; i < _plan.size() ; ++i) {
             std::cout << _plan[i] << std::endl;
         }
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         if(planStep < _plan.size()){
 
@@ -100,6 +106,11 @@ int main(int argc, char **argv){
                 ROS_INFO("FAIL");
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 =======
 
 

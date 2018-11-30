@@ -49,8 +49,11 @@
 				(over all (cube_at ?c ?l))
 				(over all (empty_hand ?r))
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 				(over all (top_free ?c))
 				;;(over all (not (not_ready ?r)))
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 				)
