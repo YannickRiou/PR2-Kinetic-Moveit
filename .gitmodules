@@ -1,0 +1,2 @@
+[submodule "src/rosplan"]
+	url = https://github.com/KCL-Planning/ROSPlan

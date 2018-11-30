@@ -62,6 +62,13 @@ int main(int argc, char **argv){
 
         }
 
+<<<<<<< Updated upstream
+=======
+        for (int i = 0; i < _plan.size() ; ++i) {
+            std::cout << _plan[i] << std::endl;
+        }
+
+>>>>>>> Stashed changes
         if(planStep < _plan.size()){
 
             //singleton
@@ -92,6 +99,11 @@ int main(int argc, char **argv){
             }else
                 ROS_INFO("FAIL");
 
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
         }
         ros::spinOnce();
         loop_rate.sleep();
