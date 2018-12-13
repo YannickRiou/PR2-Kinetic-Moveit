@@ -12,7 +12,6 @@ find_package(catkin REQUIRED COMPONENTS
         pluginlib
         roscpp
         uwds
-        uwds_msgs
         moveit_custom_msgs
         )
 

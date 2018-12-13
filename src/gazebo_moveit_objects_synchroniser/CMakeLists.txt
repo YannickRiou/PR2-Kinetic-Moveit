@@ -4,7 +4,7 @@ project(gazebo_moveit_objects_synchroniser)
 ## Compile as C++11, supported in ROS Kinetic and newer
 add_compile_options(-std=c++11)
 find_package(Eigen3 REQUIRED)
-
+find_package(SDFormat REQUIRED)
 # Eigen 3.2 (Wily) only provides EIGEN3_INCLUDE_DIR, not EIGEN3_INCLUDE_DIRS
 if(NOT EIGEN3_INCLUDE_DIRS)
     set(EIGEN3_INCLUDE_DIRS ${EIGEN3_INCLUDE_DIR})
@@ -140,9 +140,9 @@ include_directories(
         ${CATKIN_DEVEL_PREFIX}/include
         ${catkin_INCLUDE_DIRS}
         ${EIGEN3_INCLUDE_DIRS}
-        /usr/include/sdformat-4.0
         /usr/include/gazebo-7
         /opt/ros/kinetic/include
+        ${SDFormat_INCLUDE_DIRS}
         SYSTEM
         ${THIS_PACKAGE_INCLUDE_DIRS}
         ${Boost_INCLUDE_DIR}
