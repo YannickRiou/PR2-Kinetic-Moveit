@@ -1,2 +1,12 @@
 [submodule "src/rosplan"]
 	url = https://github.com/KCL-Planning/ROSPlan
+[submodule "src/uwds"]
+	url = https://github.com/underworlds-robot/uwds.git
+[submodule "src/laas_objects"]
+	url = https://github.com/LAAS-HRI/laas_objects.git
+[submodule "src/uwds_basic_clients"]
+	url = https://github.com/underworlds-robot/uwds_basic_clients.git
+[submodule "src/uwds_msgs"]
+	url = https://github.com/underworlds-robot/uwds_msgs.git
+[submodule "src/uwds_qsr_clients"]
+	url = https://github.com/underworlds-robot/uwds_qsr_clients.git

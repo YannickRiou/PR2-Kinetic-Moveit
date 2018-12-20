@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <!-- Entry point for using OpenNI devices -->
 <launch>
 
@@ -38,9 +39,9 @@
   <arg name="load_driver" default="false" />
   <arg name="publish_tf" default="false" />
   <!-- Processing Modules -->
-  <arg name="rgb_processing"                  default="true"/>
-  <arg name="ir_processing"                   default="true"/>
-  <arg name="depth_processing"                default="true"/>
+  <arg name="rgb_processing"                  default="false"/>
+  <arg name="ir_processing"                   default="false"/>
+  <arg name="depth_processing"                default="false"/>
   <arg name="depth_registered_processing"     default="true"/>
   <arg name="disparity_processing"            default="true"/>
   <arg name="disparity_registered_processing" default="true"/>
@@ -107,10 +108,10 @@
   
   </group> <!-- camera -->
 
-  <!-- Load reasonable defaults for the relative pose between cameras -->
+  <!-- Load reasonable defaults for the relative pose between cameras 
   <include if="$(arg publish_tf)"
 	   file="$(find rgbd_launch)/launch/kinect_frames.launch">
     <arg name="camera" value="$(arg camera)" />
   </include>
-
+  -->
 </launch>

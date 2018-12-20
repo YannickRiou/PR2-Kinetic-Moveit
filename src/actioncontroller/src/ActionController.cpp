@@ -224,7 +224,7 @@ namespace actioncontroller{
             ROS_INFO(_move_group.getEndEffectorLink().c_str());
             _move_group.allowReplanning(true);
 
-            _move_group.setSupportSurfaceName("tablelaas");
+            //_move_group.setSupportSurfaceName("tablelaas");
             moveit::planning_interface::MoveItErrorCode sucess = _move_group.pick(object, grasps);
             if(moveit::planning_interface::MoveItErrorCode::SUCCESS == sucess.val){
                 return true;
