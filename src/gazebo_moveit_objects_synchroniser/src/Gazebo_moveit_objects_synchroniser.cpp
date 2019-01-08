@@ -8,20 +8,20 @@
 #include "gazebo_moveit_objects_synchroniser/GazeboMeshManager.h"
 #include "gazebo_msgs/GetWorldProperties.h"
 #include "gazebo_msgs/GetModelState.h"
-#include "gazebo_moveit_objects_synchroniser/CollisionObjectArray.h"
+#include "moveit_custom_msgs/CollisionObjectArray.h"
 
 
 int main(int argc, char **argv){
 
     ros::init(argc, argv, "Gazebo_moveIT_Object_Synchroniser");
     ros::NodeHandle n;
-    ros::Publisher pub = n.advertise<gazebo_moveit_objects_synchroniser::CollisionObjectArray>("moveit_objects", 1000);
+    ros::Publisher pub = n.advertise<moveit_custom_msgs::CollisionObjectArray>("moveit_objects", 1000);
     ros::ServiceClient clientWorldProperties = n.serviceClient<gazebo_msgs::GetWorldProperties>("/gazebo/get_world_properties");
     ros::ServiceClient clientObjectProperties = n.serviceClient<gazebo_msgs::GetModelState>("/gazebo/get_model_state");
     ros::Rate freq(1);
 
     std::vector<moveit_msgs::CollisionObject> collidingObjects;
-    gazebo_moveit_objects_synchroniser::CollisionObjectArray collidingObjectsMsg;
+    moveit_custom_msgs::CollisionObjectArray collidingObjectsMsg;
 
     gazebo_msgs::GetWorldProperties worldProperties;
     while(ros::ok()){

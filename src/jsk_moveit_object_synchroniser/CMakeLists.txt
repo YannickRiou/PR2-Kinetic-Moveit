@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(gazebo_moveit_objects_synchroniser)
+project(jsk_moveit_object_synchroniser)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
+# add_compile_options(-std=c++11)
 add_compile_options(-std=c++11)
 find_package(Eigen3 REQUIRED)
 find_package(SDFormat REQUIRED)
@@ -14,7 +15,6 @@ endif()
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   roscpp
-  rospy
   std_msgs
         actionlib_msgs
         rospy
@@ -65,11 +65,11 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
- add_message_files(
-   FILES
-  CollisionObjectArray.msg
+# add_message_files(
+#   FILES
+#   Message1.msg
 #   Message2.msg
-)
+# )
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -86,12 +86,11 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
- generate_messages(
-    DEPENDENCIES
-    std_msgs
-    moveit_msgs
-    gazebo_moveit_objects_synchroniser
- )
+# generate_messages(
+#   DEPENDENCIES
+#   std_msgs
+# )
+
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -123,10 +122,23 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-  INCLUDE_DIRS include
-#  LIBRARIES gazebo_moveit_objects_synchroniser
-  CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
+#  INCLUDE_DIRS include
+#  LIBRARIES jsk_moveit_object_synchroniser
+#  CATKIN_DEPENDS roscpp std_msgs
 #  DEPENDS system_lib
+)
+
+###########
+## Build ##
+###########
+
+## Specify additional locations of header files
+## Your package locations should be listed before other locations
+catkin_package(
+        INCLUDE_DIRS include
+        #  LIBRARIES gazebo_moveit_objects_synchroniser
+        CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
+        #  DEPENDS system_lib
 )
 
 ###########
@@ -152,40 +164,9 @@ include_directories(
 
 link_directories(${catkin_LIBRARY_DIRS})
 
-add_executable(${PROJECT_NAME} src/Gazebo_moveit_objects_synchroniser.cpp src/GazeboMeshManager.cpp include/gazebo_moveit_objects_synchroniser/GazeboMeshManager.h)
-add_dependencies(${PROJECT_NAME} ${PROJECT_NAME}_generate_messages_cpp)
+add_executable(${PROJECT_NAME}  src/jsk_moveit_object_synchroniser.cpp)
 target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 install(TARGETS ${PROJECT_NAME} DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
-
-## Declare a C++ library
-# add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/gazebo_moveit_objects_synchroniser.cpp
-# )
-
-## Add cmake target dependencies of the library
-## as an example, code may need to be generated before libraries
-## either from message generation or dynamic reconfigure
-# add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-
-## Declare a C++ executable
-## With catkin_make all packages are built within a single CMake context
-## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/gazebo_plugin_fake_perception_to_moveit_node.cpp)
-
-## Rename C++ executable without prefix
-## The above recommended prefix causes long target names, the following renames the
-## target back to the shorter version for ease of user use
-## e.g. "rosrun someones_pkg node" instead of "rosrun someones_pkg someones_pkg_node"
-# set_target_properties(${PROJECT_NAME}_node PROPERTIES OUTPUT_NAME node PREFIX "")
-
-## Add cmake target dependencies of the executable
-## same as for the library above
-# add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-
-## Specify libraries to link a library or executable target against
-# target_link_libraries(${PROJECT_NAME}_node
-#   ${catkin_LIBRARIES}
-# )
 
 #############
 ## Install ##
@@ -227,7 +208,7 @@ install(TARGETS ${PROJECT_NAME} DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_gazebo_plugin_fake_perception_to_moveit.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_jsk_moveit_object_synchroniser.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

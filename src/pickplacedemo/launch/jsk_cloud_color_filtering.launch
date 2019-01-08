@@ -13,7 +13,7 @@
   <node name="image_view_color_filtering"
         pkg="image_view" type="image_view"
         if="$(arg debug_mode)">
-    <remap from="image" to="HSI_color_filter/cluster_decomposer/mask/blue"/>
+    <remap from="image" to="HSI_color_filter/cluster_decomposer/mask"/>
   </node>
 
   <include file="$(find jsk_pcl_ros)/launch/hsi_color_filter.launch">

@@ -6,7 +6,7 @@
   <arg name="start_server" default="false"/>
   <arg name="nodelet_manager" default="/head_mount_kinect2/head_mount_kinect2_nodelet_manager"/>
   <arg name="launch-prefix" default=""/>
-
+  <arg name="namespace" value="red_cube"/>
   <arg name="debug_mode" default="false"/>
   <arg name="input_cloud" default="/head_mount_kinect2/depth_registered/points"/>
 
@@ -17,13 +17,14 @@
   <arg name="i_max" default="216" />
   <arg name="i_min" default="42" />
 
-  <node name="image_view_color_filtering"
+  <node name="image_view_color_filtering_red"
         pkg="image_view" type="image_view"
         if="$(arg debug_mode)">
-    <remap from="image" to="HSI_color_filter/cluster_decomposer/mask/red"/>
+    <remap from="image" to="HSI_color_filter/cluster_decomposer/mask/"/>
   </node>
 
   <include file="$(find jsk_pcl_ros)/launch/hsi_color_filter.launch">
+    <arg name="DEFAULT_NAMESPACE" value="$(arg namespace)"/>
     <arg name="INPUT" value="$(arg input_cloud)"/>
     <arg name="h_max" value="$(arg h_max)" />
     <arg name="h_min" value="$(arg h_min)" />
@@ -33,11 +34,11 @@
     <arg name="i_min" value="$(arg i_min)" />
   </include>
 
-  <node name="bounding_box_array_to_bounding_box"
+  <node name="bounding_box_array_to_bounding_box_$(arg namespace)"
         pkg="jsk_pcl_ros_utils"
         type="bounding_box_array_to_bounding_box">
-    <remap from="~input" to="HSI_color_filter/boxes"/>
-    <remap from="~output" to="red_cube_bb"/>
+    <remap from="~input" to="$(arg namespace)/boxes"/>
+    <remap from="~output" to="/object_bb/$(arg namespace)"/>
     <param name="~index" value="0"/>
   </node>
 
