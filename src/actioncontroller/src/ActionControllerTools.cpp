@@ -8,42 +8,7 @@ namespace actioncontroller{
     ActionControllerTools::ActionControllerTools(){
         visual_tools_.reset(new moveit_visual_tools::MoveItVisualTools("/odom_combined","/moveit_visual_markers"));
     }
-/*
-            void ActionControllerTools::createActionControllerMessage(std::string group_id, float x, float y, float z, float w, float ox, float oy, float oz, actioncontroller::ActionControllerGoal &msg){
-                msg.goal.action = group_id;
-                msg.goal.pose.position.x = x;
-                msg.goal.pose.position.y = y;
-                msg.goal.pose.position.z = z;
-                msg.goal.pose.orientation.x = ox;
-                msg.goal.pose.orientation.y = oy;
-                msg.goal.pose.orientation.z = oz;
-                msg.goal.pose.orientation.w = w;
-            }
 
-            void ActionControllerTools::createActionControllerMessage(std::string group_id, std::string object, actioncontroller::ActionControllerGoal &msg){
-                msg.goal.action = group_id;
-                msg.goal.objectA = object;
-            }
-
-            void
-            ActionControllerTools::createActionControllerMessage(std::string group_id, std::string objectA, std::string objectB,
-                                                                 actioncontroller::ActionControllerGoal &msg) {
-                createActionControllerMessage(group_id, objectA, msg);
-                msg.goal.objectB = objectB;
-            }
-
-            void ActionControllerTools::createActionControllerMessage(std::string group_id, std::string object, float x, float y, float z, float w, float ox, float oy, float oz, actioncontroller::ActionControllerGoal &msg){
-                msg.goal.action = group_id;
-                msg.goal.pose.position.x = x;
-                msg.goal.pose.position.y = y;
-                msg.goal.pose.position.z = z;
-                msg.goal.pose.orientation.x = ox;
-                msg.goal.pose.orientation.y = oy;
-                msg.goal.pose.orientation.z = oz;
-                msg.goal.pose.orientation.w = w;
-                msg.goal.objectA = object;
-            }
-*/
     void ActionControllerTools::callingActionController(std::string part, actioncontroller::ActionControllerGoal &msg){
         actionlib::SimpleActionClient<actioncontroller::ActionControllerAction> ac_("action_controller", true);
         while(!ac_.waitForServer(ros::Duration(5.0))){
@@ -107,10 +72,6 @@ namespace actioncontroller{
     }
 
     void ActionControllerTools::poseMsgToAffine3d(geometry_msgs::PoseStamped &p, Eigen::Affine3d &m){
-        /* m = Eigen::Affine3d::fromPositionOrientationScale(Eigen::Vector3d(p.pose.position.x, p.pose.position.y, p.pose.position.z),
-                Eigen::Quaterniond(p.pose.orientation.x, p.pose.orientation.y, p.pose.orientation.z, p.pose.orientation.w) ,
-                Eigen::Ma );
-        */
         auto &o = p.pose.orientation;
         Eigen::Quaterniond q(o.w, o.x, o.y, o.z);
         auto &pose = p.pose.position;

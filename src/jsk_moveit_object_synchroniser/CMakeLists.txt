@@ -29,6 +29,7 @@ find_package(catkin REQUIRED COMPONENTS
         gazebo_ros
         message_generation
         moveit_custom_msgs
+        jsk_recognition_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -141,6 +142,7 @@ catkin_package(
         #  DEPENDS system_lib
 )
 
+
 ###########
 ## Build ##
 ###########
@@ -164,7 +166,7 @@ include_directories(
 
 link_directories(${catkin_LIBRARY_DIRS})
 
-add_executable(${PROJECT_NAME}  src/jsk_moveit_object_synchroniser.cpp)
+add_executable(${PROJECT_NAME}  src/jsk_moveit_object_synchroniser.cpp src/ObjectTopicHandler.cpp include/jsk_moveit_object_synchroniser/ObjectTopicHandler.h)
 target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 install(TARGETS ${PROJECT_NAME} DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
@@ -207,11 +209,15 @@ install(TARGETS ${PROJECT_NAME} DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 ## Testing ##
 #############
 
+include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
+add_executable(${PROJECT_NAME}_test test/jsk_moveit_Test.cpp src/ObjectTopicHandler.cpp include/jsk_moveit_object_synchroniser/ObjectTopicHandler.h)
+target_link_libraries(${PROJECT_NAME}_test gtest gtest_main ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_jsk_moveit_object_synchroniser.cpp)
-# if(TARGET ${PROJECT_NAME}-test)
-#   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
-# endif()
+#catkin_add_gtest(${PROJECT_NAME}-test test/test_jsk_moveit_object_synchroniser.cpp)
+#if(TARGET ${PROJECT_NAME}-test)
+#  target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
+#endif()
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)

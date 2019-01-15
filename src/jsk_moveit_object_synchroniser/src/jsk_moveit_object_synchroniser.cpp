@@ -9,6 +9,7 @@
 #include "ros/ros.h"
 #include "moveit_msgs/CollisionObject.h"
 #include "moveit_custom_msgs/CollisionObjectArray.h"
+#include "jsk_moveit_object_synchroniser/ObjectTopicHandler.h"
 
 
 
@@ -16,25 +17,31 @@ void getObjectTopic(ros::master::V_TopicInfo);
 
 int main(int argc, char **argv){
 
-    ros::init(argc, argv, "Gazebo_moveIT_Object_Synchroniser");
+    ros::init(argc, argv, "jsk_moveit_object_synchroniser");
     ros::NodeHandle n;
     ros::Publisher pub = n.advertise<moveit_custom_msgs::CollisionObjectArray>("moveit_objects", 1000);
     ros::Rate freq(100);
 
-    std::vector<moveit_msgs::CollisionObject> collidingObjects;
-    moveit_custom_msgs::CollisionObjectArray collidingObjectsMsg;
+
+    std::map<std::string, moveit_msgs::CollisionObject> _objectDatabase;
+    ObjectTopicHandler top1(n, "/object_bb/green_cube", _objectDatabase );
+    top1.initTopic();
+    ObjectTopicHandler top2(n, "/object_bb/red_cube", _objectDatabase );
+    top2.initTopic();
+    ObjectTopicHandler top3(n, "/object_bb/blue_cube", _objectDatabase );
+    top3.initTopic();
+    ObjectTopicHandler top4(n, "/object_bb/table", _objectDatabase );
+    top4.initTopic();
+    //getting object topic from jsk
+    //ros::master::V_TopicInfo obj_top;
+    //getObjectTopic( obj_top );
 
     while(ros::ok()){
-        //getting object topic from jsk
-        ros::master::V_TopicInfo obj_top;
-        getObjectTopic( obj_top );
 
-        //create the subscriber for each object
-
-        //check the object list
-
-        //build a moveit object from list
-
+        moveit_custom_msgs::CollisionObjectArray collidingObjectsMsg;
+        for(std::pair<std::string, moveit_msgs::CollisionObject> e : _objectDatabase){
+            collidingObjectsMsg.data.push_back(e.second);
+        }
         //publish the list
         pub.publish( collidingObjectsMsg );
         //ROS_INFO("List clean");
