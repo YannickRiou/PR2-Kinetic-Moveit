@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+	<include file="$(find pickplacedemo)/launch/red_cube.launch" />
+	<include file="$(find pickplacedemo)/launch/blue_cube.launch" />
+	<include file="$(find pickplacedemo)/launch/green_cube.launch" />
+	<include file="$(find pickplacedemo)/launch/table.launch"/>
+</launch>

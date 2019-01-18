@@ -5,12 +5,13 @@
 #include "uwds_moveit_scene_publisher/UwdsMoveitCollisionObjectPublisher.h"
 
 
-namespace uwds_moveit_collision_object_publisher
+
+namespace uwds_moveit_scene_publisher
 {
     void UwdsMoveitCollisionObjectPublisher::onInit()
     {
         // ros param init comes here (thresholds etc.)
-        pub_ = nh_.get()->advertise<moveit_custom_msgs::CollisionObjectArray>("moveit_objects", 1000);
+        pub_ = nh_->advertise<moveit_custom_msgs::CollisionObjectArray>("moveit_objects", 1000);
         uwds::ReconfigurableClient::onInit();
         // Not after due to default configuration that happend in the init ;)
 
@@ -20,6 +21,7 @@ namespace uwds_moveit_collision_object_publisher
                                    const std_msgs::Header& header,
                                    const Invalidations& invalidations)
     {
+        std::cout << "test" << std::endl;
         // Here goes the code that is executed on every changes
         moveit_custom_msgs::CollisionObjectArray objects;
         for (const auto& subject_id : invalidations.node_ids_updated)
@@ -45,18 +47,22 @@ namespace uwds_moveit_collision_object_publisher
                     object.meshes.push_back(mesh);
                     object.mesh_poses.push_back(geometry_msgs::Pose());
                 }
+                object.operation = object.ADD;
                 objects.data.push_back(object);
             }
         }
         //publish the object array
         pub_.publish(objects);
+
+        std::cout << "coucou maman" << std::endl;
     }
 
     void UwdsMoveitCollisionObjectPublisher::onReconfigure(const std::vector<std::string>& new_input_worlds)
     {
         // Here goes the code that is executed on each reconfiguration
+
     }
 }
 
 #include <pluginlib/class_list_macros.h>
-PLUGINLIB_EXPORT_CLASS(uwds_moveit_collision_object_publisher::UwdsMoveitCollisionObjectPublisher, nodelet::Nodelet)
+PLUGINLIB_EXPORT_CLASS(uwds_moveit_scene_publisher::UwdsMoveitCollisionObjectPublisher, nodelet::Nodelet)

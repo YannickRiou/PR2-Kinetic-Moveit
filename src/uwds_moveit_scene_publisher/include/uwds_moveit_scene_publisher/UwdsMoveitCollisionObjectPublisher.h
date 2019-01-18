@@ -12,7 +12,7 @@
 using namespace uwds_msgs;
 using namespace uwds;
 
-namespace uwds_moveit_collision_object_publisher {
+namespace uwds_moveit_scene_publisher {
 
     class UwdsMoveitCollisionObjectPublisher : public uwds::ReconfigurableClient  {
     private:
@@ -21,7 +21,7 @@ namespace uwds_moveit_collision_object_publisher {
         /**@brief
          * The default constructor.
          */
-        UwdsMoveitCollisionObjectPublisher(): uwds::ReconfigurableClient(uwds::FILTER) {}
+        UwdsMoveitCollisionObjectPublisher(): uwds::ReconfigurableClient(uwds::READER) {}
 
         /**@brief
          * The default destructor.
@@ -41,22 +41,6 @@ namespace uwds_moveit_collision_object_publisher {
          * @param world The world that have been updated
          * @param nodes_id_updated The node IDs that have been updated
          * @param situations_id_updated The situation IDs that have been updated
-         */
-        virtual void onChanges(const std::string& world,
-                               const std_msgs::Header header,
-                               const std::vector<std::string> nodes_id_updated,
-                               const std::vector<std::string> nodes_id_deleted,
-                               const std::vector<std::string> situations_id_updated,
-                               const std::vector<std::string> situations_id_deleted,
-                               const std::vector<std::string> meshes_id_updated,
-                               const std::vector<std::string> meshes_id_deleted);
-
-        /** @brief
-         * This method is called when there is a change in a world.
-         *
-         * @param world The world that have been updated
-         * @param header The header
-         * @param invalidations The invalidations received
          */
         virtual void onChanges(const std::string& world,
                                const std_msgs::Header& header,

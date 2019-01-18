@@ -1,0 +1,7 @@
+<library path="lib/libuwds_moveit_bridge">
+  <class name="uwds_moveit_bridge/UwdsObjectCollisionPublisher"
+         type="uwds_moveit_bridge::UwdsObjectCollisionPublisher"
+         base_class_type="nodelet::Nodelet">
+    <description>This client publish moveit collision objects</description>
+  </class>-->
+</library>

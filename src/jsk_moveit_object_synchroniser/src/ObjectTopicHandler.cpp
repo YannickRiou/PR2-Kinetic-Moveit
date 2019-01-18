@@ -39,6 +39,7 @@ ObjectTopicHandler ObjectTopicHandler::operator()(ros::NodeHandle nh, std::strin
 /// \param msg jsk Boundingbox message
 void ObjectTopicHandler::topicCallback(const jsk_recognition_msgs::BoundingBox::ConstPtr &msg) {
 
+
     std::cout << "msg received on " << _topicName << std::endl;
     std::cout << "_moveitObjects size " << _moveitObjects.size() << std::endl;
 
@@ -97,13 +98,13 @@ void
 ObjectTopicHandler::addVerticesToMesh(const geometry_msgs::Vector3 &dimensions, const geometry_msgs::Pose &position,
                                       shape_msgs::Mesh &m) {
     m.vertices.resize(8);
-    std::cout << dimensions.x << std::endl;
+    //std::cout << dimensions.x << std::endl;
     std::cout << position.position.x << std::endl;
-    std::cout << dimensions.y << std::endl;
+    //std::cout << dimensions.y << std::endl;
     std::cout << position.position.y << std::endl;
-    std::cout << dimensions.z << std::endl;
+    //std::cout << dimensions.z << std::endl;
     std::cout << position.position.z << std::endl;
-    
+
     m.vertices[0] = generatePoint(
             position.position.x - (dimensions.x / 200),
             position.position.y + (dimensions.y / 200),

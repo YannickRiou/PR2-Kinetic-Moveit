@@ -1,4 +1,4 @@
-<library path="lib/libuuwds_moveit_scene_publisher">
+<library path="lib/libuwds_moveit_scene_publisher">
   <class name="uwds_moveit_scene_publisher/UwdsMoveitCollisionObjectPublisher"
          type="uwds_moveit_scene_publisher::UwdsMoveitCollisionObjectPublisher"
          base_class_type="nodelet::Nodelet">

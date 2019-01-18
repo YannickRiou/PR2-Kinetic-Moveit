@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(uwds_moveit_scene_publisher)
+project(uwds_moveit_bridge)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 add_compile_options(-std=c++11)
@@ -8,12 +8,13 @@ add_compile_options(-std=c++11)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-        nodelet
-        pluginlib
-        roscpp
-        uwds
-        moveit_custom_msgs
-        )
+  nodelet
+  pluginlib
+  roscpp
+  uwds
+  uwds_msgs
+  moveit_custom_msgs
+)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -72,7 +73,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate added messages and services with any dependencies listed here
 # generate_messages(
 #   DEPENDENCIES
-#   std_msgs#   uwds_msgs
+#   uwds_msgs
 # )
 
 ################################################
@@ -105,10 +106,10 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-        INCLUDE_DIRS include
-        LIBRARIES ${PROJECT_NAME}
-        CATKIN_DEPENDS nodelet pluginlib roscpp uwds_msgs uwds
-        #  DEPENDS system_lib
+  INCLUDE_DIRS include
+  LIBRARIES ${PROJECT_NAME}
+  CATKIN_DEPENDS nodelet pluginlib roscpp uwds_msgs uwds
+#  DEPENDS system_lib
 )
 
 ###########
@@ -118,28 +119,14 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-        SYSTEM
-        include
-        ${THIS_PACKAGE_INCLUDE_DIRS}
-        ${Boost_INCLUDE_DIR}
-        ${EIGEN3_INCLUDE_DIRS}
-        ${CATKIN_DEVEL_PREFIX}/include)
-
-include_directories(include ${catkin_INCLUDE_DIRS})
-link_directories(${catkin_LIBRARY_DIRS})
-
-add_library(${PROJECT_NAME} src/UwdsMoveitCollisionObjectPublisher.cpp )
-#add_executable(${PROJECT_NAME} src/UwdsMoveitCollisionObjectPublisher.cpp)
-#add_dependencies(${PROJECT_NAME} ${PROJECT_NAME}_generate_messages_cpp)
-#target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${Boost_LIBRARIES} yaml-cpp)
-target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES})
-#install(TARGETS ${PROJECT_NAME} DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+  include
+  ${catkin_INCLUDE_DIRS}
+)
 
 ## Declare a C++ library
-# add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/uwds_moveit_scene_publisher.cpp
-# )
-
+add_library(${PROJECT_NAME}
+   src/uwds_object_collision_publisher.cpp
+)
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
@@ -148,7 +135,7 @@ target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES})
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/uwds_moveit_scene_publisher_node.cpp)
+# add_executable(${PROJECT_NAME}_node src/uwds_moveit_bridge_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -161,9 +148,9 @@ target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES})
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(${PROJECT_NAME}_node
-#   ${catkin_LIBRARIES}
-# )
+target_link_libraries(${PROJECT_NAME}
+  ${catkin_LIBRARIES}
+)
 
 #############
 ## Install ##
@@ -205,7 +192,7 @@ target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES})
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_uwds_moveit_scene_publisher.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_uwds_moveit_bridge.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

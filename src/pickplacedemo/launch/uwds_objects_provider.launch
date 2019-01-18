@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="output" default="screen"/>
+  <arg name="respawn" default="false"/>
+  <arg name="start_manager" default="true"/>
+  <arg name="start_debug" default="true"/>
+  <arg name="start_server" default="false"/>
+  <arg name="nodelet_manager" default="uwds_nodelet_manager"/>
+  <arg name="nodelet_manager_debug" default="uwds_nodelet_manager_debug"/>
+  <arg name="launch-prefix" default=""/>
+
+  <arg name="global_frame_id" default="map"/>
+
+  <node name="$(arg nodelet_manager_debug)"
+        pkg="nodelet" type="nodelet"
+        args="manager"
+        respawn="$(arg respawn)"
+        output="$(arg output)"
+        launch-prefix="$(arg launch-prefix)"
+        if="$(arg start_debug)"/>
+
+  <node name="blue_cube_provider"
+        pkg="nodelet" type="nodelet"
+        args="load uwds_basic_clients/SimpleObjectProvider $(arg nodelet_manager)"
+        output="$(arg output)"
+        launch-prefix="$(arg launch-prefix)">
+    <remap from="~input" to="/object_bb/blue_cube"/>
+    <rosparam subst_value="true">
+      global_frame_id: $(arg global_frame_id)
+      object_name: blue_cube
+      object_model: $(find laas_objects)/res/blend/blue_cube.blend
+      output_world: blue_cube
+    </rosparam>
+  </node>
+
+  <node name="red_cube_provider"
+        pkg="nodelet" type="nodelet"
+        args="load uwds_basic_clients/SimpleObjectProvider $(arg nodelet_manager)"
+        output="$(arg output)"
+        launch-prefix="$(arg launch-prefix)">
+    <remap from="~input" to="/object_bb/red_cube"/>
+    <rosparam subst_value="true">
+      global_frame_id: $(arg global_frame_id)
+      object_name: red_cube
+      object_model: $(find laas_objects)/res/blend/red_cube.blend
+      output_world: red_cube
+    </rosparam>
+  </node>
+
+  <node name="green_cube_provider"
+        pkg="nodelet" type="nodelet"
+        args="load uwds_basic_clients/SimpleObjectProvider $(arg nodelet_manager)"
+        output="$(arg output)"
+        launch-prefix="$(arg launch-prefix)">
+    <remap from="~input" to="/object_bb/green_cube"/>
+    <rosparam subst_value="true">
+      global_frame_id: $(arg global_frame_id)
+      object_name: green_cube
+      object_model: $(find laas_objects)/res/blend/green_cube.blend
+      output_world: green_cube
+    </rosparam>
+  </node>
+
+  <node name="table_provider"
+        pkg="nodelet" type="nodelet"
+        args="load uwds_basic_clients/SimpleObjectProvider $(arg nodelet_manager)"
+        output="$(arg output)"
+        launch-prefix="$(arg launch-prefix)">
+    <remap from="~input" to="/object_bb/table"/>
+    <rosparam subst_value="true">
+      global_frame_id: $(arg global_frame_id)
+      object_name: table
+      object_model: $(find laas_objects)/res/blend/IKEA_table_TORSBY.blend
+      output_world: table
+    </rosparam>
+  </node>
+
+  <node name="world_merger"
+        pkg="nodelet" type="nodelet"
+        args="load uwds_basic_clients/WorldMerger $(arg nodelet_manager)"
+        output="$(arg output)"
+        launch-prefix="$(arg launch-prefix)">
+    <rosparam subst_value="true">
+      global_frame_id: $(arg global_frame_id)
+      default_inputs: env table blue_cube red_cube green_cube
+      output_world: merged
+    </rosparam>
+  </node>
+
+</launch>
