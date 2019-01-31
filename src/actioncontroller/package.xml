@@ -65,7 +65,7 @@
   <depend>move_base_msgs</depend>
   <depend>ar_track_alvar_msgs</depend>
   <depend>shape_tools</depend>
-  <depend>gazebo_moveit_objects_synchroniser</depend>
+  <depend>moveit_custom_msgs</depend>
 
 
 

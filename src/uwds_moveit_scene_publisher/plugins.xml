@@ -1,7 +1,0 @@
-<library path="lib/libuwds_moveit_scene_publisher">
-  <class name="uwds_moveit_scene_publisher/UwdsMoveitCollisionObjectPublisher"
-         type="uwds_moveit_scene_publisher::UwdsMoveitCollisionObjectPublisher"
-         base_class_type="nodelet::Nodelet">
-    <description>This client monitor the relations</description>
-  </class>-->
-</library>

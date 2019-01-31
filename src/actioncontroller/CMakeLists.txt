@@ -32,7 +32,7 @@ find_package(catkin REQUIRED
         std_msgs
         ar_track_alvar_msgs
         shape_tools
-        gazebo_moveit_objects_synchroniser
+        moveit_custom_msgs
         )
 
 
@@ -140,7 +140,7 @@ catkin_package(
         interactive_markers
         actionlib_msgs
         ar_track_alvar_msgs
-        gazebo_moveit_objects_synchroniser
+        moveit_custom_msgs
         DEPENDS
         EIGEN3
 )

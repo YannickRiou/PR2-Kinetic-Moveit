@@ -17,32 +17,46 @@ namespace uwds_moveit_bridge
                          const Invalidations& invalidations)
   {
         // Here goes the code that is executed on every changes
+
     moveit_custom_msgs::CollisionObjectArray objects;
     for (const auto& node_id : invalidations.node_ids_updated)
     {
       uwds_msgs::Node node = this->worlds()[world].scene().nodes()[node_id];
       if(node.type == uwds::MESH)
       {
-        //build a new moveit object
-        moveit_msgs::CollisionObject object;
-        //Modifier le header pour que la frame soit celle de l'object world/name
-        object.header.frame_id = world + "/" + node.name;
-        object.id = node.id;
-        for (const auto mesh_id : getNodeMeshes(node)) {
-          shape_msgs::Mesh mesh;
-          mesh.vertices = meshes()[mesh_id].vertices;
-          //copy des triangles
-          for(const auto triangle : mesh.triangles) {
-            shape_msgs::MeshTriangle tri;
-            tri.vertex_indices = triangle.vertex_indices;
-            mesh.triangles.push_back(tri);
-          }
+          //build a new moveit object
+          moveit_msgs::CollisionObject object;
+          //Modifier le header pour que la frame soit celle de l'object world/name
+          object.header.frame_id = global_frame_id_;
+          object.id = world + "/" + node.name;
 
-          object.meshes.push_back(mesh);
-          object.mesh_poses.push_back(geometry_msgs::Pose());
-        }
-        object.operation = object.ADD;
-        objects.data.push_back(object);
+          std::vector<std::string> mesh_ids;
+          for(auto property : node.properties)
+          {
+              if(property.name=="meshes")
+              {
+                  boost::split(mesh_ids, property.data, boost::is_any_of(","), boost::token_compress_on);
+                  break;
+              }
+          }
+          for(auto mesh_id : mesh_ids) {
+                  shape_msgs::Mesh mesh;
+                  mesh.vertices = meshes()[mesh_id].vertices;
+                  //copy des triangles
+                  for (const auto &triangle : meshes()[mesh_id].triangles) {
+                      shape_msgs::MeshTriangle tri;
+                      tri.vertex_indices = triangle.vertex_indices;
+                      mesh.triangles.push_back(tri);
+                  }
+
+                  object.meshes.push_back(mesh);
+                  object.mesh_poses.push_back( node.position.pose );
+
+              object.operation = object.ADD;
+              objects.data.push_back(object);
+          }
+          object.operation = object.ADD;
+          objects.data.push_back(object);
       }
     }
     //publish the object array

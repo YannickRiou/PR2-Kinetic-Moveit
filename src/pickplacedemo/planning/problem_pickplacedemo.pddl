@@ -1,27 +1,27 @@
 (define (problem task)
     (:domain pickplacedemo)
     (:objects
-        tableLaas commode - location
-        cube0 cube0_0 cube0_1 - cube
+        IKEA_table_TORSBYl commode - location
+        cube_blue cube_red cube_green - cube
         pr2_0 - robot
     )
     (:init
         (robot_at pr2_0 commode)
-        (cube_at cube0 tableLaas)
-        (cube_at cube0_0 tableLaas)
-        (cube_at cube0_1 tableLaas)
+        (cube_at cube_blue IKEA_table_TORSBYl)
+        (cube_at cube_red IKEA_table_TORSBYl)
+        (cube_at cube_green IKEA_table_TORSBYl)
         (empty_hand pr2_0)
-        (top_free cube0)
-        (top_free cube0_0)
-        (top_free cube0_1)
+        (top_free cube_blue)
+        (top_free cube_red)
+        (top_free cube_green)
         (not_ready pr2_0)
     )
     (:goal 
         (and
-        (cube_at cube0 tableLaas)
-        (cube_at cube0_0 tableLaas)
-        (on_top cube0 cube0_0)
-        (on_top cube0_0 cube0_1)
+        (cube_at cube_blue IKEA_table_TORSBYl)
+        (cube_at cube_red IKEA_table_TORSBYl)
+        (on_top cube_blue cube_red)
+        (on_top cube_red cube_green)
         )
     )
 )

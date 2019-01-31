@@ -1,0 +1,7 @@
+<launch>
+	<include file="$(find uwds_basic_clients)/launch/env_provider.launch"/>
+	<include file="$(find uwds)/launch/uwds_server.launch"/>
+	<include file="$(find pickplacedemo)/launch/uwds_object_detection_client.launch"/>
+	<include file="$(find pickplacedemo)/launch/uwds_objects_provider.launch"/>
+	<include file="$(find uwds_moveit_bridge)/launch/uwds_object_collision_publisher.launch"/>
+</launch>

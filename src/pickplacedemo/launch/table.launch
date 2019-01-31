@@ -29,6 +29,8 @@
     <arg name="i_min" value="$(arg i_min)" />
   </include>
 
+  
+
   <node name="bounding_box_array_to_bounding_box_$(arg namespace)"
         pkg="jsk_pcl_ros_utils"
         type="bounding_box_array_to_bounding_box">

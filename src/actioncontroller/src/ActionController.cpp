@@ -19,7 +19,7 @@
 #include <shape_tools/solid_primitive_dims.h>
 
 #include <boost/algorithm/string.hpp>
-#include <gazebo_moveit_objects_synchroniser/CollisionObjectArray.h>
+#include "moveit_custom_msgs/CollisionObjectArray.h"
 
 //Shared Memory map
 #include <mutex>
@@ -68,47 +68,17 @@ namespace actioncontroller{
             if(success){
                 local_move_group.move();
             }else{
-                ROS_INFO_NAMED("ActionController", "No path found for %s", group.c_str() );
+                ROS_DEBUG_NAMED("ActionController", "No path found for %s", group.c_str() );
             }
             return success;
         }
 
-        bool move_base(geometry_msgs::Pose pose){
-
-            actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> ac_("move_base", true);
-            while(!ac_.waitForServer(ros::Duration(5.0))){
-                ROS_INFO("Waiting for the move_base action server to come up");
-            }
-            move_base_msgs::MoveBaseGoal goal;
-            goal.target_pose.header.frame_id = "odom_combined";
-            goal.target_pose.header.stamp = ros::Time::now();
-            goal.target_pose.pose.position.x = pose.position.x;
-            goal.target_pose.pose.position.y = pose.position.y;
-            goal.target_pose.pose.position.z = pose.position.z;
-            goal.target_pose.pose.orientation.w = pose.orientation.w;
-            ROS_INFO("Sending goal to move base");
-            ac_.sendGoal(goal);
-            ROS_INFO("wating for result");
-
-            ac_.waitForResult();
-            bool success = (ac_.getState() == actionlib::SimpleClientGoalState::SUCCEEDED);
-
-            if(success)
-                ROS_INFO("Hooray, the base moved to x: %s, y:%s, z:%s",
-                         (std::to_string(pose.position.x)).c_str(),
-                         (std::to_string(pose.position.y)).c_str(),
-                         (std::to_string(pose.position.z)).c_str()  );
-            else
-                ROS_INFO("The base failed to move for some reason");
-
-            return success;
-        }
 
         bool move_body(std::string group, geometry_msgs::Pose pose){
 
             actionlib::SimpleActionClient<pr2_controllers_msgs::SingleJointPositionAction> ac_("torso_controller/position_joint_action", true);
             while(!ac_.waitForServer(ros::Duration(5.0))){
-                ROS_INFO("Waiting for the torso action server to come up");
+                ROS_DEBUG("Waiting for the torso action server to come up");
             }
             //Get the pose of the object and convert it to a head msg
             pr2_controllers_msgs::SingleJointPositionGoal msg;
@@ -123,65 +93,91 @@ namespace actioncontroller{
             bool success = (ac_.getState() == actionlib::SimpleClientGoalState::SUCCEEDED);
 
             if(success)
-                ROS_INFO("Success");
+                ROS_DEBUG("Success");
             else
-                ROS_INFO("FAIL");
-
-            return success;
-        }
-
-        bool move_head(geometry_msgs::Pose pose){
-
-            actionlib::SimpleActionClient<pr2_controllers_msgs::PointHeadAction> ac_("head_traj_controller/point_head_action", true);
-            while(!ac_.waitForServer(ros::Duration(5.0))){
-                ROS_INFO("Waiting for the head_traj_controller action server to come up");
-            }
-            //Get the pose of the object and convert it to a head msg
-            pr2_controllers_msgs::PointHeadGoal msg;
-            //msg.header.stamp = ros::Time::now();
-            msg.target.header.frame_id = "odom_combined";
-            msg.target.point.x = pose.position.x;
-            msg.target.point.y = pose.position.y;
-            msg.target.point.z = pose.position.z;
-
-            ac_.sendGoal(msg);
-
-            bool success = (ac_.getState() == actionlib::SimpleClientGoalState::SUCCEEDED);
-
-            if(success)
-                ROS_INFO(std::string("Success").c_str());
-            else
-                ROS_INFO(std::string("FAIL").c_str());
+                ROS_DEBUG("FAIL");
 
             return success;
         }
 
         bool goto_location(std::vector<std::string> command){
 
+            std::string object = command[3];
+            move_head(object);
             //a remplacer par une liste de position possible à proximité
-
-            geometry_msgs::Pose temporaryPose = objects[command[3]].mesh_poses[0];
-            temporaryPose.position.x -= 0.50;
-            ROS_INFO("calling move base");
-            move_base(temporaryPose);
-        }
-
-        bool move_head(std::vector<std::string> command){
-            std::string object = command[1];
-
             if( objects.find(object) == objects.end() ){
-                ROS_INFO(std::string("Object do not exist").c_str());
+                ROS_DEBUG(std::string("Object do not exist").c_str());
                 return false;
             }
 
-            return move_head( objects[ object ].mesh_poses[0] );
+            ROS_DEBUG("calling move base");
+
+
+            actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> ac_("move_base", true);
+            while(!ac_.waitForServer(ros::Duration(5.0))){
+                ROS_DEBUG("Waiting for the move_base action server to come up");
+            }
+            move_base_msgs::MoveBaseGoal goal;
+            goal.target_pose.header.frame_id = objects[object].header.frame_id;
+            goal.target_pose.header.stamp = ros::Time::now();
+            goal.target_pose.pose = objects[object].mesh_poses[0];
+            //Arbitrary pose will have to do a wiser positioning
+            goal.target_pose.pose.position.x = goal.target_pose.pose.position.x - 0.50;
+
+            ROS_DEBUG("Sending goal to move base");
+            ac_.sendGoal(goal);
+            ROS_DEBUG("wating for result");
+
+            ac_.waitForResult();
+            bool success = (ac_.getState() == actionlib::SimpleClientGoalState::SUCCEEDED);
+
+            if(success)
+                ROS_DEBUG("Hooray, the base moved to x: %s, y:%s, z:%s",
+                          (std::to_string(goal.target_pose.pose.position.x)).c_str(),
+                          (std::to_string(goal.target_pose.pose.position.y)).c_str(),
+                          (std::to_string(goal.target_pose.pose.position.z)).c_str()  );
+            else
+                ROS_DEBUG("The base failed to move for some reason");
+
+            return success;
+        }
+
+        bool move_head( std::string object ){
+
+            if( objects.find(object) == objects.end() ){
+                ROS_DEBUG(std::string("Object do not exist").c_str());
+                return false;
+            }
+
+            actionlib::SimpleActionClient<pr2_controllers_msgs::PointHeadAction> ac_("head_traj_controller/point_head_action", true);
+            while(!ac_.waitForServer(ros::Duration(5.0))){
+                ROS_DEBUG("Waiting for the head_traj_controller action server to come up");
+            }
+            //Get the pose of the object and convert it to a head msg
+            pr2_controllers_msgs::PointHeadGoal msg;
+            //msg.header.stamp = ros::Time::now();
+            msg.target.header.frame_id = objects[ object ].header.frame_id;
+            msg.target.point.x = objects[ object ].mesh_poses[0].position.x;
+            msg.target.point.y = objects[ object ].mesh_poses[0].position.y;
+            msg.target.point.z = objects[ object ].mesh_poses[0].position.z;
+            ac_.sendGoal(msg);
+
+            bool success = (ac_.getState() == actionlib::SimpleClientGoalState::SUCCEEDED);
+
+            if(success)
+                ROS_DEBUG(std::string("Success").c_str());
+            else
+                ROS_DEBUG(std::string("FAIL").c_str());
+
+            return success;
         }
 
         bool pick(std::vector<std::string> command){
             std::string object = command[3];
 
+            move_head(object);
             if( objects.find(object) == objects.end() ){
-                ROS_INFO(std::string("Object do not exist").c_str());
+                ROS_DEBUG(std::string("Object do not exist").c_str());
                 return false;
             }
 
@@ -189,8 +185,6 @@ namespace actioncontroller{
                 _move_group.detachObject(object.first);
             }
 
-
-            move_head(objects[object].mesh_poses[0]);
             _current_scene.removeCollisionObjects(_current_scene.getKnownObjectNames() );
             updateObjectCollisionScene();
             std::stringstream ss;
@@ -199,11 +193,11 @@ namespace actioncontroller{
                "\n y: " << objects[ object ].mesh_poses[0].position.y <<
                "\n z: " << objects[ object ].mesh_poses[0].position.z << std::endl;
 
-            ROS_INFO(ss.str().c_str());
+            ROS_DEBUG(ss.str().c_str());
 
             std::stringstream info2;
             info2 << "Trying to pick " << object << " in " <<  std::string( objects[ object ].id ) << " reference frame";
-            ROS_INFO(info2.str().c_str());
+            ROS_DEBUG(info2.str().c_str());
 
 
             geometry_msgs::PoseStamped p;
@@ -220,8 +214,8 @@ namespace actioncontroller{
 
             std::stringstream grasp_info;
             grasp_info << "number of grasps: " << grasps.size();
-            ROS_INFO(grasp_info.str().c_str());
-            ROS_INFO(_move_group.getEndEffectorLink().c_str());
+            ROS_DEBUG(grasp_info.str().c_str());
+            ROS_DEBUG(_move_group.getEndEffectorLink().c_str());
             _move_group.allowReplanning(true);
 
             //_move_group.setSupportSurfaceName("tablelaas");
@@ -237,16 +231,16 @@ namespace actioncontroller{
         bool place(std::vector<std::string> command){
 
             if(_current_scene.getAttachedObjects().empty()){
-                ROS_INFO(std::string("No object in hand").c_str());
+                ROS_DEBUG(std::string("No object in hand").c_str());
                 return false;
             }
             if(_current_scene.getAttachedObjects().find(object) == _current_scene.getAttachedObjects().end()){
-                ROS_INFO(std::string("Trying to place the wrong object").c_str());
+                ROS_DEBUG(std::string("Trying to place the wrong object").c_str());
                 return false;
             }
 
             //updateObjectCollisionScene();
-            ROS_INFO(std::string("Placing").c_str());
+            ROS_DEBUG(std::string("Placing").c_str());
             move_head(pose);
             std::vector<moveit_msgs::PlaceLocation> place_location;
             place_location.resize(1);
@@ -308,12 +302,14 @@ namespace actioncontroller{
                 objectB = command[4];
             }
 
+
+            move_head(objectB);
+
             if( objects.find(objectA) == objects.end() || objects.find(objectB) == objects.end()  ){
-                ROS_INFO(std::string("Object do not exist").c_str());
+                ROS_DEBUG(std::string("Object do not exist").c_str());
                 return false;
             }
 
-            move_head(objects[objectA].mesh_poses[0]);
             //Create the planning scene
             updateObjectCollisionScene();
 
@@ -329,20 +325,20 @@ namespace actioncontroller{
                "\n y: " << objects[ objectA ].mesh_poses[0].position.y <<
                "\n z: " << objects[ objectA ].mesh_poses[0].position.z << std::endl;
 
-            ROS_INFO(ss.str().c_str());
+            ROS_DEBUG(ss.str().c_str());
 
             ss.clear();
             ss << "Object to place on pose is :\n x: " << objects[ objectB ].mesh_poses[0].position.x <<
                "\n y: " << objects[ objectB ].mesh_poses[0].position.y <<
                "\n z: " << objects[ objectB ].mesh_poses[0].position.z << std::endl;
 
-            ROS_INFO(ss.str().c_str());
+            ROS_DEBUG(ss.str().c_str());
 
             _move_group.setPlanningTime(45.0);
             _move_group.setSupportSurfaceName(objectA);
             ss.clear();
             ss << "Number of location : " << place_location.size() ;
-            ROS_INFO(ss.str().c_str());
+            ROS_DEBUG(ss.str().c_str());
             moveit::planning_interface::MoveItErrorCode sucess = _move_group.place(objectA, place_location);
 
             if(moveit::planning_interface::MoveItErrorCode::SUCCESS == sucess.val){
@@ -361,7 +357,7 @@ namespace actioncontroller{
                 for(const auto& element : objects){
                     vec.push_back(element.second);
                     //_move_group.detachObject(element.second.id);
-                    //ROS_INFO( element.second.id.c_str() );
+                    ROS_DEBUG( element.second.id.c_str() );
                 }
             }
             _current_scene.applyCollisionObjects(vec);
@@ -385,17 +381,17 @@ namespace actioncontroller{
 
         //Move base client
 
-        void objects_update(const gazebo_moveit_objects_synchroniser::CollisionObjectArray::ConstPtr &msg) {
-            //ROS_INFO("message received");
+        void objects_update(const moveit_custom_msgs::CollisionObjectArray::ConstPtr &msg) {
+            ROS_DEBUG("message received");
             for(int i=0; i<msg->data.size(); i++){
                 std::lock_guard<std::mutex> lock(mutex);
                 if(!objects.insert( std::pair<std::string, moveit_msgs::CollisionObject>( (std::string)msg->data[i].id , msg->data[i])).second){
-                    //std::string info = "object " + msg->data[i].id +  " frame id is " + msg->data[i].header.frame_id;
-                    //ROS_INFO(info.c_str());
+                    std::string info = "object " + msg->data[i].id +  " frame id is " + msg->data[i].header.frame_id;
+                    ROS_DEBUG(info.c_str());
                     objects[ msg->data[i].id ] = msg->data[i];
                 }
             }
-            //ROS_INFO("Nombre d'objets = %i", objects.size());
+            ROS_DEBUG("Nombre d'objets = %i", objects.size());
         }
 
 
@@ -407,7 +403,7 @@ namespace actioncontroller{
                 _move_group("right_arm"),
                 _graspGen(GRASP_FILE)
         {
-            _sub_moveit_objects = nh_.subscribe("moveit_objects", 1000, &ActionController::objects_update, this );
+            _sub_moveit_objects = nh_.subscribe("uwds_moveit_objects", 1000, &ActionController::objects_update, this );
             _planning_scene_diff_publisher = nh_.advertise<moveit_msgs::PlanningScene>("planning_scene", 1);
             _move_group.setPlannerId("TRRTkConfigDefault");
             _as.start();
@@ -423,15 +419,13 @@ namespace actioncontroller{
             std::string data = (std::string)msg->data;
             std::stringstream ss;
             ss << "Command received : " << data;
-            ROS_INFO(ss.str().c_str());
+            ROS_DEBUG(ss.str().c_str());
             std::istringstream iss(data);
             while(std::getline(iss, data, ' ')){
                 command.push_back(data);
             }
             if(command[0] == "stareAt"){
-                _feedback.success = move_head( command );
-            }else if(command[0] == "stareAtObject"){
-                _feedback.success = move_head( command );
+                _feedback.success = move_head( command[1] );
             }else if(command[0] == "pick" ){
                 _feedback.success = pick( command );
                 //}else if(command[0] == "place" ){
@@ -443,7 +437,7 @@ namespace actioncontroller{
             }else if(command[0] == "setup" ){
                 _feedback.success = setup();
             }else{
-                ROS_INFO(std::string("The required order do not exist").c_str());
+                ROS_DEBUG(std::string("The required order do not exist").c_str());
             }
             _result.success = _feedback.success;
             _as.setSucceeded(_result);

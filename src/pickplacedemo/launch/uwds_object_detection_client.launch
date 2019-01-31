@@ -1,7 +1,31 @@
 <?xml version="1.0"?>
 <launch>
-	<include file="$(find pickplacedemo)/launch/red_cube.launch" />
-	<include file="$(find pickplacedemo)/launch/blue_cube.launch" />
-	<include file="$(find pickplacedemo)/launch/green_cube.launch" />
-	<include file="$(find pickplacedemo)/launch/table.launch"/>
+	<arg name="input_cloud" default="/head_mount_kinect2/filtered_cloud"/>
+
+  	<node pkg="robot_self_filter" type="self_filter" clear_params="true" name="self_filter" respawn="true" output="screen">
+    	<remap from="cloud_in" to="/head_mount_kinect2/depth_registered/points"/>
+	    <remap from="cloud_out" to="/head_mount_kinect2/filtered_cloud"/>
+      	<param name="sensor_frame" value="head_mount_kinect2_rgb_optical_frame" />
+      	<rosparam command="load" file="$(find pickplacedemo)/launch/robot_self_filter.yaml" />
+      	<param name="use_rgb" value="true"/>
+      	<param name="keep_organized" value="true"/>
+      	<param name="subsample_value" type="double" value="0.0"/>
+    </node>
+
+	<include file="$(find pickplacedemo)/launch/red_cube.launch" >
+		<arg name="input_cloud" value="$(arg input_cloud)"/>
+	</include>
+	<include file="$(find pickplacedemo)/launch/blue_cube.launch" >
+		<arg name="input_cloud" value="$(arg input_cloud)"/>
+	</include>
+	<include file="$(find pickplacedemo)/launch/green_cube.launch" >
+		<arg name="input_cloud" value="$(arg input_cloud)"/>
+	</include>
+
+	<!--
+	<include file="$(find pickplacedemo)/launch/table.launch">
+		<arg name="input_cloud" value="$(arg input_cloud)"/>
+	</include>
+	-->
+	
 </launch>
