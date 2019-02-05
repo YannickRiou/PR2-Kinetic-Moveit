@@ -36,26 +36,18 @@ sudo apt -y install libsdformat4-dev
 sudo apt -y install ros-kinetic-gazebo-ros
 sudo apt -y install ros-kinetic-pose-cov-ops
 sudo apt -y install ros-kinetic-jsk-recognition-msgs
-
-
-#gestion des contrler pour teleop
-
-
+sudo apt -y install ros-kinetic-pr2-gazebo
+sudo apt -y install ros-kinetic-pr2-moveit-config
+sudo apt -y install ros-kinetic-jsk-pcl-ros
 
 catkin_make
 source ~/PR2-Kinetic-Xenial/devel/setup.bash
 
-#intallation du package de vision
 
+echo "export KINECT2=true" >> $HOME/.bashrc
+echo "export ROBOT_INITIAL_POSE=\"-Y 1.55 -x 4.5 -y 5\"" >> $HOME/.bashrc
+echo "source /opt/ros/kinetic/setup.bash"
+echo "source PR2-Kinetic-Xenial/devel/setup.bash"
 
-
-#mkdir -p ~/moveItTuto/src
-#cd ~/moveItTuto/src
-#git clone https://github.com/ros-planning/moveit_tutorials.git
-#sudo pip install pyassimp
-#cd ~/moveItTuto
-#catkin_make
-#source ~/moveItTuto/devel/setup.bash
-
-echo "KINECT2=true" >> $HOME/.bashrc
-echo "ROBOT_INITIAL_POSE="-Y 1.55 -x 4.5 -y 5"" >> $HOME/.bashrc
+mkdir ~/.gazebo/models
+cp ~/PR2-Kinetic-Xenial/src/pickplacedemo/worlds/models/* ~/.gazebo/models/
