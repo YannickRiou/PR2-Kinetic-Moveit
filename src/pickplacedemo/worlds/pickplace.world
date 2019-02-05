@@ -82,48 +82,28 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
     <state world_name='default'>
-      <sim_time>5241 763000000</sim_time>
-      <real_time>144 462996575</real_time>
-      <wall_time>1544004226 566796540</wall_time>
-      <iterations>141275</iterations>
-      <model name='IKEA_table_TORSBY'>
-        <pose frame=''>1.7286 0.042869 0.375 0 -0 1.57393</pose>
-        <scale>1 1 1</scale>
-        <link name='IKEA_table_TORSBY'>
-          <pose frame=''>1.7286 0.042869 0.375 0 -0 1.57393</pose>
-          <velocity>0.003961 -9e-06 0.004765 2.5e-05 0.010563 0</velocity>
-          <acceleration>3.96121 -0.009466 4.76488 -3.11635 -1.13846 3.14159</acceleration>
-          <wrench>59.4182 -0.141984 71.4732 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='adream'>
-        <pose frame=''>-0.644866 5.56382 -0.025931 7e-06 2.7e-05 -0.000801</pose>
-        <scale>1 1 1</scale>
-        <link name='link_0'>
-          <pose frame=''>-0.644864 5.56382 0.024069 7e-06 2.7e-05 -0.000801</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0.089443 0.241297 -7.79406 -1.26022 -0.836315 3.13952</acceleration>
-          <wrench>0.089443 0.241297 -7.79406 0 -0 0</wrench>
-        </link>
-      </model>
+      <sim_time>6125 331000000</sim_time>
+      <real_time>173 664030893</real_time>
+      <wall_time>1549384225 92067997</wall_time>
+      <iterations>172975</iterations>
       <model name='blue_cube'>
-        <pose frame=''>1.56133 -0.242155 0.77249 0 -8.3e-05 -5.7e-05</pose>
+        <pose frame=''>4.27536 7.14555 0.711605 0.000466 -0.000529 0</pose>
         <scale>1 1 1</scale>
         <link name='blue_cube'>
-          <pose frame=''>1.56133 -0.242155 0.77249 0 -8.3e-05 -5.7e-05</pose>
-          <velocity>0.004602 -1.8e-05 -0.001514 -2.6e-05 -0.118839 0</velocity>
-          <acceleration>11.0945 -0.019448 7.09119 2.37129 -0.674434 -3.14145</acceleration>
-          <wrench>1.10945 -0.001945 0.709119 0 -0 0</wrench>
+          <pose frame=''>4.27536 7.14555 0.711605 0.000466 -0.000529 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='green_cube'>
-        <pose frame=''>1.54129 -0.003038 0.77249 -0 -8.2e-05 3.8e-05</pose>
+        <pose frame=''>3.96991 7.38088 0.711553 0.000466 -0.000529 0</pose>
         <scale>1 1 1</scale>
         <link name='green_cube'>
-          <pose frame=''>1.54129 -0.003038 0.77249 -0 -8.2e-05 3.8e-05</pose>
-          <velocity>0.004605 -1.8e-05 -0.001424 -3.4e-05 -0.118702 0</velocity>
-          <acceleration>11.0905 -0.019685 7.35997 2.3816 -0.516565 -3.14136</acceleration>
-          <wrench>1.10905 -0.001969 0.735997 0 -0 0</wrench>
+          <pose frame=''>3.96991 7.38088 0.711553 0.000466 -0.000529 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='ground_plane'>
@@ -137,13 +117,23 @@
         </link>
       </model>
       <model name='red_cube'>
-        <pose frame=''>1.53753 0.191946 0.77249 -0 -8.2e-05 1.9e-05</pose>
+        <pose frame=''>4.1526 7.33905 0.71163 0.000466 -0.000529 -1e-06</pose>
         <scale>1 1 1</scale>
         <link name='red_cube'>
-          <pose frame=''>1.53753 0.191946 0.77249 -0 -8.2e-05 1.9e-05</pose>
-          <velocity>0.004603 -1.4e-05 -0.001403 -0.000179 -0.118798 0</velocity>
-          <acceleration>11.0952 -0.024086 7.40952 2.56049 -0.612397 -3.1413</acceleration>
-          <wrench>1.10952 -0.002409 0.740952 0 -0 0</wrench>
+          <pose frame=''>4.1526 7.33905 0.71163 0.000466 -0.000529 -1e-06</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='walls'>
+        <pose frame=''>0.031295 0.085595 -0.071375 0.000464 -0.000531 0.003662</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>0.031295 0.085595 -0.071375 0.000464 -0.000531 0.003662</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <light name='sun'>
@@ -155,7 +145,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>-1.37386 0.925851 2.14237 0 0.62671 -0.459332</pose>
+        <pose frame=''>7.65442 5.34475 6.94166 0 0.881798 2.74373</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
@@ -173,13 +163,13 @@
       </attenuation>
       <cast_shadows>1</cast_shadows>
     </light>
-    <model name='adream'>
+    <wind/>
+    <model name='walls'>
       <link name='link_0'>
-        <pose frame=''>0 0 0.05 0 -0 0</pose>
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>model://adream/meshes/adream_empty.dae</uri>
+              <uri>model://walls/meshes/walls.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -187,8 +177,7 @@
         <collision name='collision'>
           <geometry>
             <mesh>
-              <uri>model://adream/meshes/adream_empty.dae</uri>
-              <scale>1 1 1</scale>
+              <uri>model://walls/meshes/walls.dae</uri>
             </mesh>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -216,189 +205,10 @@
             <izz>1</izz>
           </inertia>
           <mass>1</mass>
-          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-        <enable_wind>0</enable_wind>
+        <kinematic>1</kinematic>
       </link>
-      <pose frame=''>-0.044274 5.46716 0 0 -0 0</pose>
-    </model>
-    <wind/>
-    <model name='IKEA_table_TORSBY'>
-      <link name='IKEA_table_TORSBY'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <inertial>
-          <pose frame=''>0 0 0 0 -0 0</pose>
-          <mass>15</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <self_collide>0</self_collide>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-        <collision name='IKEA_table_TORSBY_collision'>
-          <pose frame=''>0 0 0.35 0 -0 0</pose>
-          <geometry>
-            <box>
-              <size>1.4 0.9 0.04</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode>
-                <mu>15</mu>
-                <mu2>15</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
-              </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
-            </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
-            <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
-              <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>100000</kp>
-                <kd>1</kd>
-                <max_vel>0</max_vel>
-                <min_depth>0</min_depth>
-              </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>100000</kp>
-                <kd>1</kd>
-              </bullet>
-            </contact>
-          </surface>
-          <max_contacts>10</max_contacts>
-        </collision>
-        <collision name='IKEA_table_TORSBY_collision_1'>
-          <pose frame=''>0.675 0.425 0 0 -0 0</pose>
-          <geometry>
-            <box>
-              <size>0.025 0.025 0.75</size>
-            </box>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <collision name='IKEA_table_TORSBY_collision_2'>
-          <pose frame=''>0.675 -0.425 0 0 -0 0</pose>
-          <geometry>
-            <box>
-              <size>0.025 0.025 0.75</size>
-            </box>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <collision name='IKEA_table_TORSBY_collision_3'>
-          <pose frame=''>-0.675 0.425 0 0 -0 0</pose>
-          <geometry>
-            <box>
-              <size>0.025 0.025 0.75</size>
-            </box>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <collision name='IKEA_table_TORSBY_collision_4'>
-          <pose frame=''>-0.675 -0.425 0 0 -0 0</pose>
-          <geometry>
-            <box>
-              <size>0.025 0.025 0.75</size>
-            </box>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='IKEA_table_TORSBY_visual'>
-          <material>
-            <diffuse>0 0 0 1</diffuse>
-            <specular>0 0 0 1</specular>
-            <emissive>0 0 0 1</emissive>
-            <ambient>0 0 0 1</ambient>
-          </material>
-          <pose frame=''>0 0 0 1.57075 -0 0</pose>
-          <geometry>
-            <mesh>
-              <scale>1 1 1</scale>
-              <uri>model://laas_objects/res/obj/IKEA_table_TORSBY.obj</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <enable_wind>0</enable_wind>
-      </link>
-      <pose frame=''>1.72867 0.041618 0 0 -0 0</pose>
+      <pose frame=''>1.17847 0.310628 0 0 -0 0</pose>
     </model>
     <model name='blue_cube'>
       <link name='blue_cube'>
@@ -486,9 +296,8 @@
             </box>
           </geometry>
         </visual>
-        <enable_wind>0</enable_wind>
       </link>
-      <pose frame=''>1.2234 -0.173116 0 0 -0 0</pose>
+      <pose frame=''>3.44147 7.00843 0 0 -0 0</pose>
     </model>
     <model name='green_cube'>
       <link name='green_cube'>
@@ -576,9 +385,8 @@
             </box>
           </geometry>
         </visual>
-        <enable_wind>0</enable_wind>
       </link>
-      <pose frame=''>1.22714 0.037031 0 0 -0 0</pose>
+      <pose frame=''>3.70581 7.03366 0 0 -0 0</pose>
     </model>
     <model name='red_cube'>
       <link name='red_cube'>
@@ -666,9 +474,8 @@
             </box>
           </geometry>
         </visual>
-        <enable_wind>0</enable_wind>
       </link>
-      <pose frame=''>1.23132 0.223295 0 0 -0 0</pose>
+      <pose frame=''>4.15262 7.05274 0 0 -0 0</pose>
     </model>
   </world>
 </sdf>

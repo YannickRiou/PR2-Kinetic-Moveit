@@ -50,3 +50,6 @@ source ~/PR2-Kinetic-Xenial/devel/setup.bash
 #cd ~/moveItTuto
 #catkin_make
 #source ~/moveItTuto/devel/setup.bash
+
+echo "KINECT2=true" >> $HOME/.bashrc
+echo "ROBOT_INITIAL_POSE="-Y 1.55 -x 4.5 -y 5"" >> $HOME/.bashrc

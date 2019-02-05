@@ -9,8 +9,8 @@ b (8.000 | 90.000)b (6.000 | 150.001)b (5.000 | 180.002)b (3.000 | 210.003)b (2.
 ; Cost: 270.003
 ; Time 0.00
 0.000: (setup pr2_0)  [90.000]
-90.001: (goto_location pr2_0 commode table)  [60.000]
-150.002: (pick pr2_0 table cube_green)  [30.000]
-180.003: (placeon pr2_0 table cube_green cube_red)  [30.000]
-210.003: (pick pr2_0 table cube_red)  [30.000]
-240.003: (placeon pr2_0 table cube_red cube_blue)  [30.000]
+90.001: (goto_location pr2_0 commode ikea_table_torsbyl)  [60.000]
+150.002: (pick pr2_0 ikea_table_torsbyl cube_green)  [30.000]
+180.003: (placeon pr2_0 ikea_table_torsbyl cube_green cube_red)  [30.000]
+210.003: (pick pr2_0 ikea_table_torsbyl cube_red)  [30.000]
+240.003: (placeon pr2_0 ikea_table_torsbyl cube_red cube_blue)  [30.000]

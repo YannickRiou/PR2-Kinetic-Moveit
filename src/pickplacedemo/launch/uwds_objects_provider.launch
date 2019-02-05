@@ -60,7 +60,7 @@
       output_world: green_cube
     </rosparam>
   </node>
-
+<!--
   <node name="table_provider"
         pkg="nodelet" type="nodelet"
         args="load uwds_basic_clients/SimpleObjectProvider $(arg nodelet_manager)"
@@ -74,7 +74,7 @@
       output_world: table
     </rosparam>
   </node>
-
+-->
   <node name="world_merger"
         pkg="nodelet" type="nodelet"
         args="load uwds_basic_clients/WorldMerger $(arg nodelet_manager)"

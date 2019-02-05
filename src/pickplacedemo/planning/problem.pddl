@@ -1,14 +1,14 @@
 (define (problem task)
 (:domain pickplacedemo)
 (:objects
-    table commode - location
+    ikea_table_torsbyl commode - location
     pr2_0 - robot
     cube_blue cube_red cube_green - cube
 )
 (:init
-    (cube_at cube_blue table)
-    (cube_at cube_red table)
-    (cube_at cube_green table)
+    (cube_at cube_blue ikea_table_torsbyl)
+    (cube_at cube_red ikea_table_torsbyl)
+    (cube_at cube_green ikea_table_torsbyl)
 
 
     (robot_at pr2_0 commode)
@@ -26,8 +26,8 @@
 
 )
 (:goal (and
-    (cube_at cube_blue table)
-    (cube_at cube_red table)
+    (cube_at cube_blue ikea_table_torsbyl)
+    (cube_at cube_red ikea_table_torsbyl)
     (on_top cube_blue cube_red)
     (on_top cube_red cube_green)
 ))

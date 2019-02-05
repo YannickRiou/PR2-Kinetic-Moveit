@@ -29,6 +29,7 @@ namespace uwds_moveit_bridge
           //Modifier le header pour que la frame soit celle de l'object world/name
           object.header.frame_id = global_frame_id_;
           object.id = world + "/" + node.name;
+          ROS_INFO(std::string("Building " + world + "/" + node.name).c_str());
 
           std::vector<std::string> mesh_ids;
           for(auto property : node.properties)
