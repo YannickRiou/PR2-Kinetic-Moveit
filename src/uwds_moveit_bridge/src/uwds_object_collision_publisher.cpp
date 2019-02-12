@@ -19,20 +19,22 @@ namespace uwds_moveit_bridge
         // Here goes the code that is executed on every changes
 
     moveit_custom_msgs::CollisionObjectArray objects;
-    for (const auto& node_id : invalidations.node_ids_updated)
+    for (const auto& node : worlds()[world].scene().nodes())
     {
-      uwds_msgs::Node node = this->worlds()[world].scene().nodes()[node_id];
-      if(node.type == uwds::MESH)
+
+      if(node->type == uwds::MESH)
       {
           //build a new moveit object
           moveit_msgs::CollisionObject object;
           //Modifier le header pour que la frame soit celle de l'object world/name
           object.header.frame_id = global_frame_id_;
-          object.id = world + "/" + node.name;
-          ROS_INFO(std::string("Building " + world + "/" + node.name).c_str());
+          std::string name = boost::algorithm::to_lower_copy(node->name);
+
+          object.id = world + "/" + name;
+          ROS_INFO(std::string("Building " + world + "/" + name).c_str());
 
           std::vector<std::string> mesh_ids;
-          for(auto property : node.properties)
+          for(auto property : node->properties)
           {
               if(property.name=="meshes")
               {
@@ -51,13 +53,16 @@ namespace uwds_moveit_bridge
                   }
 
                   object.meshes.push_back(mesh);
-                  object.mesh_poses.push_back( node.position.pose );
+                  object.mesh_poses.push_back( node->position.pose );
 
               object.operation = object.ADD;
               objects.data.push_back(object);
           }
           object.operation = object.ADD;
           objects.data.push_back(object);
+          std::stringstream ss;
+          ss << "objects size : "  << objects.data.size();
+          ROS_INFO(ss.str().c_str());
       }
     }
     //publish the object array

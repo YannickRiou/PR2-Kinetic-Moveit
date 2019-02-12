@@ -34,6 +34,9 @@
 //Grasp generator
 #include "PickGenerator.h"
 
+//regex
+#include <regex>
+
 #define GRASP_FILE "/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/cfg/grasp.yaml"
 
 namespace actioncontroller{
@@ -385,8 +388,11 @@ namespace actioncontroller{
             ROS_DEBUG("message received");
             for(int i=0; i<msg->data.size(); i++){
                 std::lock_guard<std::mutex> lock(mutex);
-                if(!objects.insert( std::pair<std::string, moveit_msgs::CollisionObject>( (std::string)msg->data[i].id , msg->data[i])).second){
-                    std::string info = "object " + msg->data[i].id +  " frame id is " + msg->data[i].header.frame_id;
+                std::string name;
+                std::regex world_regex("[a-z]*\/");
+                name = std::regex_replace((std::string)msg->data[i].id , world_regex, "$1");
+                if(!objects.insert( std::pair<std::string, moveit_msgs::CollisionObject>( (std::string)name , msg->data[i])).second){
+                    std::string info = "object " + name +  " frame id is " + msg->data[i].header.frame_id;
                     ROS_DEBUG(info.c_str());
                     objects[ msg->data[i].id ] = msg->data[i];
                 }

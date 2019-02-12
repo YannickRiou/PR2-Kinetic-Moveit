@@ -4,6 +4,7 @@
 #include <uwds/uwds.h>
 #include <uwds/reconfigurable_client.h>
 #include "moveit_custom_msgs/CollisionObjectArray.h"
+#include <boost/algorithm/string.hpp>
 
 using namespace uwds_msgs;
 using namespace uwds;
