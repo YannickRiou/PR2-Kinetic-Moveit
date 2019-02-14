@@ -39,6 +39,11 @@ sudo apt -y install ros-kinetic-jsk-recognition-msgs
 sudo apt -y install ros-kinetic-pr2-gazebo
 sudo apt -y install ros-kinetic-pr2-moveit-config
 sudo apt -y install ros-kinetic-jsk-pcl-ros
+sudo apt -y install ros-kinetic-moveit
+sudo apt -y install ros-kinetic-moveit-pr2 ros-kinetic-pr2-moveit-config ros-kinetic-pr2-moveit-plugins
+sudo apt -y install ros-kinetic-pr2-navigation ros-kinetic-navigation
+sudo apt -y install ros-kinetic-tf-tools
+
 
 catkin_make
 source ~/PR2-Kinetic-Xenial/devel/setup.bash
