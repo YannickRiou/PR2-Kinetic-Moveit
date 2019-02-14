@@ -1,4 +1,9 @@
 <launch>
+    
+  <arg name="initial_pose_x" default="0.0"/>
+  <arg name="initial_pose_y" default="0.0"/>
+  <arg name="initial_pose_a" default="0.0"/>
+
 
 <!-- Run the map server -->
   <node name="map_server" pkg="map_server" type="map_server" args="$(find pickplacedemo)/map/my_map.yaml">
@@ -43,6 +48,10 @@
     <param name="transform_tolerance" value="0.1"/>
     <param name="recovery_alpha_slow" value="0.0"/>
     <param name="recovery_alpha_fast" value="0.0"/>
+
+    <param name="initial_pose_x" value="4.5"/>
+    <param name="initial_pose_y" value="5"/>
+    <param name="initial_pose_a" value="1.57"/>
   </node>
 
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">

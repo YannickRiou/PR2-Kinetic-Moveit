@@ -27,7 +27,6 @@ namespace uwds_moveit_bridge
           //build a new moveit object
           moveit_msgs::CollisionObject object;
           //Modifier le header pour que la frame soit celle de l'object world/name
-          object.header.frame_id = global_frame_id_;
           std::string name = boost::algorithm::to_lower_copy(node->name);
 
           object.id = world + "/" + name;

@@ -125,7 +125,7 @@ namespace actioncontroller{
             goal.target_pose.header.stamp = ros::Time::now();
             goal.target_pose.pose = objects[object].mesh_poses[0];
             //Arbitrary pose will have to do a wiser positioning
-            goal.target_pose.pose.position.x = goal.target_pose.pose.position.x - 0.50;
+            goal.target_pose.pose.position.x = goal.target_pose.pose.position.y - 0.50;
 
             ROS_DEBUG("Sending goal to move base");
             ac_.sendGoal(goal);
