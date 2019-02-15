@@ -30,7 +30,6 @@ find_package(catkin REQUIRED
         move_base_msgs
         message_generation
         std_msgs
-        ar_track_alvar_msgs
         shape_tools
         moveit_custom_msgs
         )
@@ -93,7 +92,6 @@ generate_messages(
         actionlib_msgs
         std_msgs
         geometry_msgs
-        ar_track_alvar_msgs
         actioncontroller
         # Or other packages containing msgs
 )
@@ -139,7 +137,6 @@ catkin_package(
         moveit_ros_planning_interface
         interactive_markers
         actionlib_msgs
-        ar_track_alvar_msgs
         moveit_custom_msgs
         DEPENDS
         EIGEN3

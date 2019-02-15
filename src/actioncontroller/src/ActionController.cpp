@@ -37,7 +37,7 @@
 //regex
 #include <regex>
 
-#define GRASP_FILE "/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/cfg/grasp.yaml"
+#define GRASP_FILE "~/PR2-Kinetic-Xenial/src/actioncontroller/cfg/grasp.yaml"
 
 namespace actioncontroller{
 

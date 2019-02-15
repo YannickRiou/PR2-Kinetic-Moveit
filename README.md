@@ -11,48 +11,16 @@ cd PR2-Kinetic-Xenial
 echo "Installing dependencies"
 sudo apt -y install libgtk2.0-dev libfcl0.5 libfcl-0.5-dev scons libbson-dev libglew-dev libglew1.13 ros-kinetic-octomap ros-kinetic-octomap-mapping ros-kinetic-octomap-msgs ros-kinetic-octomap-ros ros-kinetic-octomap-rviz-plugins ros-kinetic-octomap-server ros-kinetic-geometric-shapes ros-kinetic-warehouse-ros ros-kinetic-srdfdom ros-kinetic-object-recognition-msgs ros-kinetic-navigation ros-kinetic-ivcon ros-kinetic-convex-decomposition python-pip
 
-sudo apt -y install ros-kinetic-pr2-common
-sudo apt -y install ros-kinetic-image-geometry
-sudo apt -y install ros-kinetic-cv-bridge
-sudo apt -y install ros-kinetic-perceptions-pctl
-sudo apt -y install ros-kinetic-gazebo-plugins
-sudo apt -y install ros-kinetic-ompl
-sudo apt -y install ros-kinetic-pr2-controllers-msgs
-sudo apt -y install ros-kinetic-rgbd-launch
-sudo apt -y install ros-kinetic-freenect-launch
-sudo apt -y install ros-kinetic-robot-model
-sudo apt -y install ros-kinetic-rqt-gui
-sudo apt -y install ros-kinetic-cmake-modules
-sudo apt -y install ros-kinetic-control-msgs
-sudo apt -y install ros-kinetic-geometry 
-sudo apt -y install ros-kinetic-tf2-geometry-msgs
-sudo apt -y install ros-kinetic-roslint
-sudo apt -y install ros-kinetic-filters
-sudo apt -y install flex ros-kinetic-mongodb-store ros-kinetic-tf2-bullet freeglut3-dev python-catkin-tools
-sudo apt -y install ros-kinetic-laser-assembler
-sudo apt -y install ros-kinetic-diagnostic-msgs
-sudo apt -y install ros-kinetic-pr2-controllers-msgs
-sudo apt -y install libsdformat4-dev
-sudo apt -y install ros-kinetic-gazebo-ros
-sudo apt -y install ros-kinetic-pose-cov-ops
-sudo apt -y install ros-kinetic-jsk-recognition-msgs
-sudo apt -y install ros-kinetic-pr2-gazebo
-sudo apt -y install ros-kinetic-pr2-moveit-config
-sudo apt -y install ros-kinetic-jsk-pcl-ros
-sudo apt -y install ros-kinetic-moveit
-sudo apt -y install ros-kinetic-moveit-pr2 ros-kinetic-pr2-moveit-config ros-kinetic-pr2-moveit-plugins
-sudo apt -y install ros-kinetic-pr2-navigation ros-kinetic-navigation
-sudo apt -y install ros-kinetic-tf-tools
+sudo apt -y install ros-kinetic-pr2-common ros-kinetic-image-geometry ros-kinetic-cv-bridge ros-kinetic-perceptions-pctl ros-kinetic-gazebo-plugins ros-kinetic-ompl ros-kinetic-pr2-controllers-msgs ros-kinetic-rgbd-launch ros-kinetic-freenect-launch ros-kinetic-robot-model ros-kinetic-rqt-gui ros-kinetic-cmake-modules ros-kinetic-control-msgs ros-kinetic-geometry  ros-kinetic-tf2-geometry-msgs ros-kinetic-roslint ros-kinetic-filters flex ros-kinetic-mongodb-store ros-kinetic-tf2-bullet freeglut3-dev python-catkin-tools ros-kinetic-laser-assembler ros-kinetic-diagnostic-msgs ros-kinetic-pr2-controllers-msgs libsdformat4-dev ros-kinetic-gazebo-ros ros-kinetic-pose-cov-ops ros-kinetic-jsk-recognition-msgs ros-kinetic-pr2-gazebo ros-kinetic-pr2-moveit-config ros-kinetic-jsk-pcl-ros ros-kinetic-moveit ros-kinetic-moveit-pr2 ros-kinetic-pr2-moveit-config ros-kinetic-pr2-moveit-plugins ros-kinetic-pr2-navigation ros-kinetic-navigation ros-kinetic-tf-tools ros-kinetic-pose-cov-ops ros-kinetic-jsk-recognition-msgs ros-kinetic-ar-track-alvar-msgs ros-kinetic-pr2-gazebo ros-kinetic-pr2-gazebo-plugins ros-kinetic-jsk-pcl-ros ros-kinetic-jsk-pcl-ros-utils
 
-
-catkin_make
+catkin build
 source ~/PR2-Kinetic-Xenial/devel/setup.bash
 
+echo "source ~/PR2-Kinetic-Xenial/devel/setup.bash" >> $HOME/.bashrc
+echo "source /opt/ros/kinetic/setup.bash" >> $HOME/.bashrc
 
-echo "export KINECT2=true" >> $HOME/.bashrc
+echo "export KINECT2="true"" >> $HOME/.bashrc
 echo "export ROBOT_INITIAL_POSE=\"-Y 1.55 -x 4.5 -y 5\"" >> $HOME/.bashrc
-echo "source /opt/ros/kinetic/setup.bash"
-echo "source PR2-Kinetic-Xenial/devel/setup.bash"
 
 mkdir ~/.gazebo/models
 cp ~/PR2-Kinetic-Xenial/src/pickplacedemo/worlds/models/* ~/.gazebo/models/
