@@ -1,17 +1,19 @@
 
 # Project Setup
 ## ROS INSTALL
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu `lsb_release -sc` main" > /etc/apt/sources.list.d/ros-latest.list'
+```sh
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu `lsb_release -sc` main" > /etc/apt/sources.list.d/ros-latest.list'	
 wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
 sudo apt-get update
 sudo apt-get upgrade
-
+```
 ## Repo Clonning
+```sh
 echo "Creating catkin Workspace for PR2 and MoveIt packages in your home"
 cd ~
 git clone --recurse-submodules https://github.com/DavidTrimoulet/PR2-Kinetic-Xenial.git
 cd PR2-Kinetic-Xenial
-
+```
 ## Dependencies
 ```sh
 echo "Installing dependencies"
