@@ -140,7 +140,7 @@ include_directories(
         ${CATKIN_DEVEL_PREFIX}/include
         ${catkin_INCLUDE_DIRS}
         ${EIGEN3_INCLUDE_DIRS}
-        /usr/include/sdformat-4.0
+        /usr/include/sdformat-4.4
         /usr/include/gazebo-7
         /opt/ros/kinetic/include
         SYSTEM
