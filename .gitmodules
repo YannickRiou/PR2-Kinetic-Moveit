@@ -1,0 +1,8 @@
+[submodule "src/rosplan"]
+	url = https://github.com/KCL-Planning/ROSPlan
+    path = src/rosplan
+    fetchRecurseSubmodules = true
+
+[submodule "src/occupancy_grid_utils"]
+	url = https://github.com/clearpathrobotics/occupancy_grid_utils.git
+    path = src/occupancy_grid_utils
