@@ -4,7 +4,7 @@ echo "Creating catkin Workspace for PR2 and MoveIt packages in your home"
 cd ~
 mkdir ws_pr2
 cd ws_pr2
-git clone --branch master --recurse-submodules https://github.com/DavidTrimoulet/PR2-Kinetic-Xenial.git .
+git clone --branch master --recurse-submodules https://github.com/YannickRiou/PR2-Kinetic-Moveit.git .
 mkdir -p src/vision_visp/
 mkdir -p src/ar_track_alvar/
 rosdep install --from-paths src/vision_visp/ --rosdistro kinetic
