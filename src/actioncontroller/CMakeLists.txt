@@ -30,7 +30,7 @@ find_package(catkin REQUIRED
   std_msgs
   ar_track_alvar_msgs
   shape_tools
-        gazebo_moveit_objects_synchroniser
+  gazebo_moveit_objects_synchroniser
 )
 
 ## System dependencies are found with CMake's conventions
@@ -162,25 +162,20 @@ include_directories(
 include_directories(${catkin_INCLUDE_DIRS})
 link_directories(${catkin_LIBRARY_DIRS})
 
-add_executable(action_controller src/ActionController.cpp src/PickGenerator.cpp include/PickGenerator.h src/PlaceGenerator.cpp include/PlaceGenerator.h src/ActionControllerTools.cpp src/GraspGenerator.cpp include/GraspGenerator.h)
+add_executable(action_controller src/ActionController.cpp src/PickGenerator.cpp src/PlaceGenerator.cpp src/ActionControllerTools.cpp src/GraspGenerator.cpp)
 add_dependencies(action_controller actioncontroller_generate_messages_cpp)
 target_link_libraries(action_controller ${catkin_LIBRARIES} ${Boost_LIBRARIES} yaml-cpp)
 install(TARGETS action_controller DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
 add_executable(make_a_pile src/MakeAPile.cpp src/ActionControllerTools.cpp)
-add_dependencies(action_controller actioncontroller_generate_messages_cpp)
+add_dependencies(make_a_pile actioncontroller_generate_messages_cpp)
 target_link_libraries(make_a_pile ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 install(TARGETS make_a_pile DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
 add_executable(setup src/SetUp.cpp src/ActionControllerTools.cpp)
-add_dependencies(action_controller actioncontroller_generate_messages_cpp)
+add_dependencies(setup actioncontroller_generate_messages_cpp)
 target_link_libraries(setup ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 install(TARGETS setup DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
-
-
-
-
-
 
 #############
 ## Install ##
