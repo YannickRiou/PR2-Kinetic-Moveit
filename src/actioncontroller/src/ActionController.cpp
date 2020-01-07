@@ -34,7 +34,7 @@
 //Grasp generator
 #include "PickGenerator.h"
 
-#define GRASP_FILE "/home/dtrimoul/PR2-Kinetic-Xenial/src/actioncontroller/cfg/grasp.yaml"
+#define GRASP_FILE "~/ws_pr2/src/actioncontroller/cfg/grasp.yaml"
 
 namespace actioncontroller{
 
